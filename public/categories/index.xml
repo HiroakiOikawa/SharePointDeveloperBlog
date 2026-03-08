@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Categories on Microsoft 365 Developer</title>
+    <link>http://localhost:1313/categories/</link>
+    <description>Recent content in Categories on Microsoft 365 Developer</description>
+    <generator>Hugo -- 0.157.0</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 08 Mar 2026 10:00:00 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>開発環境</title>
+      <link>http://localhost:1313/categories/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/</link>
+      <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
+      <guid>http://localhost:1313/categories/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

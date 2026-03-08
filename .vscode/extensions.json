@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    // Markdown 執筆
+    "yzhang.markdown-all-in-one",      // 見出し補完・TOC生成・プレビュー
+    "esbenp.prettier-vscode",          // Markdownフォーマッタ
+    "davidanson.vscode-markdownlint",  // Markdownのlint
+
+    // Hugo
+    "rusnasonov.vscode-hugo",          // Hugo テンプレート構文ハイライト
+    "budparr.language-hugo-vscode",    // Hugo ショートコード補完
+
+    // YAML（hugo.yaml / Front Matter編集）
+    "redhat.vscode-yaml",
+
+    // Git / GitHub
+    "eamodio.gitlens",                 // Git操作の可視化
+    "github.vscode-github-actions",    // GitHub Actions YAMLのlint
+
+    // その他
+    "streetsidesoftware.code-spell-checker"  // スペルチェック
+  ]
+}

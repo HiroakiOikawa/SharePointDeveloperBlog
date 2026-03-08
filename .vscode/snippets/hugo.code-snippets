@@ -1,0 +1,89 @@
+{
+  // ===============================================================
+  // Hugo PaperMod 用スニペット集
+  // 使い方: Markdownファイルで "hfm" などとタイプして Tab
+  // ===============================================================
+
+  "Hugo Front Matter（通常記事）": {
+    "prefix": "hfm",
+    "description": "PaperMod 通常記事の Front Matter",
+    "body": [
+      "---",
+      "title: \"${1:記事タイトル}\"",
+      "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:00+09:00",
+      "draft: true",
+      "description: \"${2:記事の概要（SEO・OGPに使われる）}\"",
+      "tags: [\"${3:タグ1}\", \"${4:タグ2}\"]",
+      "categories: [\"${5:カテゴリ}\"]",
+      "series: [\"${6:シリーズ名}\"]",
+      "cover:",
+      "  image: \"/images/${7:cover.png}\"",
+      "  alt: \"${8:画像の説明}\"",
+      "  relative: false",
+      "showToc: true",
+      "tocopen: true",
+      "---",
+      "",
+      "## はじめに",
+      "",
+      "$0"
+    ]
+  },
+
+  "Hugo Front Matter（ドラフトなし）": {
+    "prefix": "hfmp",
+    "description": "PaperMod 公開記事の Front Matter（draft: false）",
+    "body": [
+      "---",
+      "title: \"${1:記事タイトル}\"",
+      "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}T${CURRENT_HOUR}:${CURRENT_MINUTE}:00+09:00",
+      "draft: false",
+      "description: \"${2:記事の概要}\"",
+      "tags: [\"${3:タグ1}\", \"${4:タグ2}\"]",
+      "categories: [\"${5:カテゴリ}\"]",
+      "showToc: true",
+      "tocopen: true",
+      "---",
+      "",
+      "$0"
+    ]
+  },
+
+  "Hugo AdSense ショートコード": {
+    "prefix": "hads",
+    "description": "記事内に AdSense 広告を挿入するショートコード",
+    "body": [
+      "{{< adsense >}}"
+    ]
+  },
+
+  "Hugo コードブロック": {
+    "prefix": "hcode",
+    "description": "言語指定付きコードブロック",
+    "body": [
+      "```${1|bash,yaml,python,go,terraform,json,dockerfile|}",
+      "${2:コード}",
+      "```",
+      "$0"
+    ]
+  },
+
+  "Hugo 画像（Figureショートコード）": {
+    "prefix": "hfig",
+    "description": "Hugo の figure ショートコードで画像を挿入",
+    "body": [
+      "{{< figure src=\"/images/${1:image.png}\" alt=\"${2:説明}\" caption=\"${3:キャプション}\" >}}"
+    ]
+  },
+
+  "Hugo 注意書きブロック": {
+    "prefix": "hnote",
+    "description": "blockquote を使った注意書き",
+    "body": [
+      "> **${1|📝 Note,⚠️ Warning,💡 Tip,❗ Important|}**",
+      "> ${2:内容}",
+      "",
+      "$0"
+    ]
+  }
+}

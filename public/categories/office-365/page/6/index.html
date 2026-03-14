@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 6 - Office 365</title>
+
+
+<link rel="canonical" href="http://localhost:1313/categories/office-365/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="Office 365">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/categories/office-365/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="Office 365">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/categories/office-365/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9945-sharepoint-framework-v1-7/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint">SharePoint</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Framework v1.7 の変更点</h2>
+                        
+                        <p class="article-summary"><p>SharePoint Framework 1.7 の変更点をまとめました。
+プレビュー段階のものがほとんどですが、Dynamic Data が正式リリースになりました。</p>
+<h1 id="主な変更点">主な変更点
+</h1><h2 id="dynamic-data">Dynamic Data
+</h2><p>Web パーツ同士の連携を可能にするための仕組み。
+Web パーツ A が自身の情報を動的データとして他の Web パーツに公開し、Web パーツ B が Web パーツ A の動的データをリアルタイムに読み取るということができるようになります。
+<a class="link" href="https://docs.microsoft.com/ja-jp/sharepoint/dev/spfx/dynamic-data"  target="_blank" rel="noopener"
+    >動的データを使用した、SharePoint Framework コンポーネントの接続</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年2月2日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9914-sharepoint-framework-v1-7-0-v1-7-1-docker-image/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint">SharePoint</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Framework v1.7.0, v1.7.1 Docker image 使用時の注意点</h2>
+                        
+                        <p class="article-summary"><h1 id="はじめに">はじめに
+</h1><p>Waldek Mastykarz さんが github で公開している docker-spfx ですが、先日 SharePoint Framework v1.7.0、v1.7.1 に対応したイメージが公開されました。
+早速この最新イメージを使って環境構築を行ってみました。
+これまでのイメージもそうだったのですが、使用するためには色々と山あり谷ありなので、きちんと動くまでに私が行ったことをメモしておきたいと思います。</p>
+<h1 id="docker-spfx">docker-spfx
+</h1><p>最新の docker-spfx は、以下の URL からダウンロード可能です。
+<a class="link" href="https://github.com/waldekmastykarz/docker-spfx"  target="_blank" rel="noopener"
+    >https://github.com/waldekmastykarz/docker-spfx</a>
+docker-spfx を使った環境構築の基本については、<a class="link" href="https://www.slideshare.net/HiroakiOikawa/sharepoint-framework-extension"  target="_blank" rel="noopener"
+    >昨年 bootcamp にて使用した資料</a>を参照してください。
+なお、最新版である version 1.7.0、1.7.1 のイメージは資料通りに作ってもうまくいかないので、この記事に記載の方法で適宜読み替えてください。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年2月2日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9902-docker-sharepoint-framework/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint">SharePoint</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Docker で SharePoint Framework 開発環境を構築する際の注意事項</h2>
+                        
+                        <p class="article-summary"><p>Docker を使って SharePoint Framework の開発環境を構築することで、プロジェクト毎の異なる環境要件にも対応できるようになります。
+これにより、例えばプロジェクト毎に SharePoint Framework のバージョンが異なっていたとしても、それぞれのバージョンの Docker 環境を作って問題なく開発することができます。
+SharePoint Framework はバージョンアップの頻度が高いため、こうしたバージョンを固定させる環境の仕組みづくりが非常に重要になり、マイクロソフトのサイトでも Docker を使った開発環境についての記載があります。
+<a class="link" href="https://docs.microsoft.com/ja-jp/sharepoint/dev/spfx/team-based-development-on-sharepoint-framework"  target="_blank" rel="noopener"
+    >SharePoint Framework におけるチーム ベースの開発</a>
+ 
+とても便利な Docker を使った開発環境ですが、いざ構築しようとするといろいろと問題が発生します。
+この投稿では 、私が Docker で SPFx 開発環境を構築する際に発生した問題について、分かっている限りの対応策を紹介したいと思います。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年1月27日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9898-sharepoint-framework-extension/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2016">SharePoint 2016</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Framework Extension (拡張機能) 基礎講座</h2>
+                        
+                        <p class="article-summary"><p>SharePoint Framework Extension (拡張機能) の開発をこれからはじめる方向けに、以下の手順をまとめました。</p>
+<ul>
+<li>開発環境の構築</li>
+<li>Application Customizer の開発</li>
+<li>Field Customizer の開発</li>
+<li>Command Set の開発</li>
+</ul>
+<p> 
+この資料は 2018 年 10 月 27 日に開催した、Global Office 365 Developer Bootcamp でハンズオン用の資料として作成したものになりますが、実際にハンズオンをしてみると環境により色々な問題が起きて、開発環境の構築をするだけでも一苦労という感じでした。
+開発環境構築時のポイントについては別途まとめたいと思いますが、開発環境の構築さえできてしまえば、それぞれの開発については資料を見て進められるかと思います。
+ 
+SharePoint Framework の開発は、これまでの SharePoint 開発と全く異なる環境、言語での開発となるため、新しく覚えないといけないことが多く最初のハードルがとにかく高い印象がありますが、そのハードルを越えるために本資料が少しでもお役に立てれば幸いです。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2018年10月28日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9891-bootcamp/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AA%E3%81%A9">勉強会・イベントなど</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">今度の Bootcamp で使用する環境</h2>
+                        
+                        <p class="article-summary"><p><a class="link" href="https://connpass.com/event/91901/"  target="_blank" rel="noopener"
+    ><img loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px"></a>
+ただいま、10/27 開催の Global Office 365 Developer Bootcamp in Japan に向けてスライドやらハンズオンのネタやらを準備しているところです。
+今回は SharePoint Framework を使った開発のハンズオンになるので、マイクロソフト系開発者が当たり前のように使っている Visual Studio 2017 を使うことはありません。
+Web フロント開発の経験がない方だと、もしかすると普段はあまり使うことのない環境で開発をすることになるため、ハンズオンでは開発環境の構築から行う予定です。
+ 
+ただ、開発環境構築のために色々ダウンロードしなければならず、会場の Wifi を使ってみんなが一斉にダウンロードをすると時間がかかってしまう可能性が高いです。
+ということで、私のハンズオンにご参加いただく方は可能であれば以下の事前設定を終えておいていただけると、この後のハンズオンがスムーズに進められるかと思います。
+①以下のスライドに記載のツール類のインストール
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2018/10/o365devbootchamp2018.png"  target="_blank" rel="noopener"
+    ><img class="gallery-image" data-flex-basis="320px" data-flex-grow="133" height="225" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9891-bootcamp/o365devbootchamp2018-300x225.png" width="300"></a>
+②Docker イメージのダウンロード
+PowerShell を起動して、以下のコマンドを実行
+docker pull waldekm/spfx:1.5.1
+ 
+事前準備としてご協力いただけると幸いです。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2018年10月7日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9883-office-365-kintone/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Office 365 と kintone の連携</h2>
+                        
+                        <p class="article-summary"><p>Office 365 と kintone の両方を使い分けている場合、この二つの優れたツールをシームレスに連携できれば・・・と考えることが多々あると思います。
+そのニーズに応えるため、Microsoft Flow には kintone と繋ぐためのコネクタが提供されています。
+<a class="link" href="https://developer.cybozu.io/hc/ja/articles/360000361506-MSSummary"  target="_blank" rel="noopener"
+    >kintone コネクタ (Microsoft Flow) を使う前に知っておきたいこと10選</a>
+ 
+kintone コネクタを使用すればプログラムを書くことなく Office 365 と kintone を連携させることができます！
+ですが、有料なんですよね・・・Flow の有料プランでなければ、kintone コネクタが使えないのです。
+ 
+ということで、この度、サイボウズさんからお話をいただき kintone コネクタを使わずに、Office 365 と kintone を連携させる方法を記事にしました。
+そして、先日サイボウズさんの cybozu developer netowrk に公開していただきました！
+<a class="link" href="https://developer.cybozu.io/hc/ja/articles/360015230092-MSSummary"  target="_blank" rel="noopener"
+    >Outlookアドインを使ってOutlookの中にkintoneのデータを表示する</a>
+こちらの記事を参考にしていただければ、プログラムを書く必要はありますが Office 365 と kintone を連携させることができます、しかも無料！
+ 
+ぜひ、参考にしていただければと思います。
+ 
+なお、kintone を使ったことがないけど、試してみたいなという Office Developer の方は、cyboze developer network への登録をお勧めします。
+登録は無料で、1 年間、開発者ライセンスとして、kintone を使うことができます。
+<a class="link" href="https://developer.cybozu.io/hc/ja/articles/200929540"  target="_blank" rel="noopener"
+    >developer network へようこそ</a>
+ 
+逆に、Office 365 を使ったことがないけど、試してみたいなという kintone developer の方は、Office 365 試用版への登録をお勧めします。
+こちら試用期間は30日間となってます。
+<a class="link" href="https://signup.microsoft.com/signup?offerid=B07A1127-DE83-4a6d-9F85-2C104BDAE8B4&amp;dl=ENTERPRISEPACK&amp;culture=ja-JP&amp;country=JP&amp;ali=1"  target="_blank" rel="noopener"
+    >Office 365 Enterprise E3 試用版 申込ページ</a>
+ 
+結構手軽にできるので、ぜひ試してみてください。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2018年9月16日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9868-global-office-365-developer-bootcamp-2018-japan-sharepoint-framework/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AA%E3%81%A9">勉強会・イベントなど</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Global Office 365 Developer Bootcamp 2018 - Japan にて SharePoint Framework のハンズオンをやります</h2>
+                        
+                        <p class="article-summary"><p>１年ぶりの更新です・・・
+ブログ、再開しますよ！
+がんばって( ｀ー´)ノ
+さて、告知です。
+来る 2018年10月27日、マイクロソフト@品川にて、「Global Office 365 Developer Bootcamp 2018 - Japan」というイベントを開催します。
+このイベントは世界規模で行われている同名イベントの日本ローカルバージョンです。
+MVPの太田さんが中心となり集まったスピーカー陣が、それぞれの得意分野についてハンズオン形式で参加者の方々に情報提供をするイベントになります。
+イベントの詳細は、イベントページをご覧ください。
+<a class="link" href="https://connpass.com/event/91901/"  target="_blank" rel="noopener"
+    >![]</a>
+ちなみに私は、SharePoint Framework 拡張機能を使ったモダンページのカスタマイズのハンズオンを担当します。
+ただ、、、驚いたことにこのイベント既に定員オーバーで、ただいまキャンセル待ちの状態です。
+参加登録がまだの方、もしかしたら参加できるかもしれませんので、諦めずにキャンセル待ち登録してみてください！
+皆さんのご参加、お待ちしてます。
+ 
+ここからは、ちょっと話を変えまして余談を。
+お時間ある方はお付き合いください。
+最近の私について簡単にご報告。
+2012年に会社を立ち上げてからずっとといえばずっとなのですが、新規のお客様からも古くからお付き合いいただいているお客様からも、SharePoint案件やOffice開発、スマホアプリ開発など、大変多くの引き合いをいただいています。
+そのため、慢性的な人材不足で私も多くの案件を並行して対応している状況で・・・
+で、最近大きな案件が１つ終わったので、またMVP活動をちゃんとやっていこうという感じになっています。
+これからまた定期的にブログも更新していきたいと思います！（自分でおしりに火をつけないと動かないタイプ・・・）
+そんな訳で、突然ですが人材募集！
+こんな私ではありますが、
+・私たちと一緒に働きたい
+・SharePointのスキルを高めたい
+・小さな会社でシステム開発の一通りの経験をしたい
+・有名どころのお客様の案件に携わりたい
+・すっごいアイディアがあるけど理解してくれる人がいないから話を聞いてくれ！
+・とにかく楽しい仕事がしたい
+というような思いをお持ちの特異な方がいらっしゃれば、ぜひご連絡ください！
+はい、突然の告知失礼しました。
+それでは、今後ともよろしくお願いいたします。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2018年8月18日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9857-outlook/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Outlook アドイン開発入門</h2>
+                        
+                        <p class="article-summary"><p><a class="link" href="https://adventar.org/calendars/2585"  target="_blank" rel="noopener"
+    >Office 365 Advent Calendar 2017</a> 向けの記事として、Outlook アドイン開発入門のスライドを作成しました。
+SlideShare にアップしたので、参考にしてみてください。
+といっても、Outlook アドイン開発の本当に初歩の初歩的な内容しか書いていないのですが・・・
+ </p>
+<p><strong><a class="link" href="//www.slideshare.net/HiroakiOikawa/outlook-84075168"  title="Outlook アドイン開発入門"
+    >Outlook アドイン開発入門</a></strong>  from <strong><a class="link" href="https://www.slideshare.net/HiroakiOikawa"  target="_blank" rel="noopener"
+    >Hiroaki Oikawa</a></strong></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2017年12月14日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9829-onedrive/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">OneDrive 同期クライアントによる同期を制限する</h2>
+                        
+                        <p class="article-summary"><p>OneDrive 同期クライアントを使っている場合、OneDrive for Business 上のデータの情報漏洩対策として、会社 PC では同期を許可するけど、自宅 PC は同期を許可させたくないという話はよくあることかと思います。
+SharePoint 管理コンソールから「Set-SPOTenantSyncClientRestriction」を実行すると、上記のような制限をかけることができるようになります。
+また、「Get-SPOTenantSyncClientRestriction」で現在の状態を確認することができます。</p>
+<pre tabindex="0"><code># テナントに接続 (URL は SharePoint 管理センターの URL です
+PS&gt; Connect-SPOService https://[テナント名]-admin.sharepoint.com
+# 現在のOneDrive同期設定を確認
+PS&gt; Get-SPOTenantSyncClientRestriction
+TenantRestrictionEnabled : False
+AllowedDomainList : {}
+BlockMacSync : False
+ExcludedFileExtensions : {}
+OptOutOfGrooveBlock : False
+OptOutOfGrooveSoftBlock : False
+DisableReportProblemDialog : False
+# 同期を許可するドメインのドメインGUIDを取得する
+PS&gt; $domains = (Get-ADForest).Domains; foreach($d in $domains) {Get-ADDomain -Identity $d | Select ObjectGuid}
+ObjectGuid
+----------
+99999999-9999-9999-9999-999999999999
+# OneDrive 同期制限をかけ、上記ドメインのみ同期を許可する
+PS&gt; Set-SPOTenantSyncClientRestriction -Enable -DomainGuids &#34;99999999-9999-9999-9999-999999999999&#34;
+TenantRestrictionEnabled : True
+AllowedDomainList : {99999999-9999-9999-9999-999999999999}
+BlockMacSync : False
+ExcludedFileExtensions : {}
+OptOutOfGrooveBlock : False
+OptOutOfGrooveSoftBlock : False
+DisableReportProblemDialog : False
+</code></pre><p>制限がかかった状態の OneDrive for Business に OneDrive 同期クライアントで同期をしようとすると、使用中の PC が同期が許可されたドメインに属する PC でない場合に、以下のエラーが表示されます。
+<img alt="Set-SPOTenantSyncClientRestriction" class="gallery-image" data-flex-basis="375px" data-flex-grow="156" height="226" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9829-onedrive/Set-SPOTenantSyncClientRestriction.png" width="354">
+なお、エラーが出ていても同期ができないだけで、過去に同期されたファイルはローカルに残り続けます。
+制限を解除する場合は「Remove-SPOTenantSyncClientRestriction」を実行します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2017年3月26日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9817-office-365-ie-edge/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E5%85%A8%E8%88%AC">全般</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Office 365 では外字が使えない！ (IE, Edge の話)</h2>
+                        
+                        <p class="article-summary"><p>時折ご質問いただく Office 365 の外字対応問題。
+ネットを検索しても本件についての情報が全然出てこなかったので、ここにメモしておきます。
+日本では古くから外字が使われていますが、SharePoint Online をはじめ、Office 365 は現在のところ外字には対応していないようです。
+そのため、外字登録をした環境で Office 365 を使用すると、アイコンが文字化けするような事象が発生します。
+本件についてサービスリクエストでも念のため確認しましたが「Office 365 は現在のところ外字には対応していません」という回答でした。
+ではどうするかですが、基本的には以下の３択になりますね。
+・外字を使うのを止める
+・あきらめて文字化けを受け入れる（Office 365 が外字対応されるのを待ち続ける）
+・IE、Edge 以外のブラウザを使用する
+あるいは、Office 365 で使用されているコードとバッティングしないコードを調べて外字登録しなおすというのも考えられますが、日々進化(変化)し続けるサービスを相手に、この対応策は現実的ではないかなと思います。
+IE、Edge を使っていて、外字登録をしている環境の方々はご注意ください。
+今は文字化けしていなくても、何かのタイミングで文字化けが発生するということも考えられますので。
+■ご参考
+Answers
+<a class="link" href="https://answers.microsoft.com/ja-jp/msoffice/forum/msoffice_account/%e5%a4%96%e5%ad%97%e7%99%bb%e9%8c%b2%e3%82%92/71e47c02-655b-43d1-bdbb-2cba6f303781"  target="_blank" rel="noopener"
+    >外字登録をしている端末から Office 365 ポータルへアクセスすると、アイコンに反映されてしまう。</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2017年1月13日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/categories/office-365/page/5/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/categories/office-365/">
+        1
+    </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/office-365/page/2/"
+                aria-label="Page 2">
+                2
+            </a><a class="page-link "href="/categories/office-365/page/3/"
+                aria-label="Page 3">
+                3
+            </a><a class="page-link "href="/categories/office-365/page/4/"
+                aria-label="Page 4">
+                4
+            </a><a class="page-link "href="/categories/office-365/page/5/"
+                aria-label="Page 5">
+                5
+            </a><a class="page-link current"aria-current="page"href="/categories/office-365/page/6/"
+                aria-label="Page 6">
+                6
+            </a><a class="page-link "href="/categories/office-365/page/7/"
+                aria-label="Page 7">
+                7
+            </a><a class="page-link "href="/categories/office-365/page/8/"
+                aria-label="Page 8">
+                8
+            </a><a class="page-link "href="/categories/office-365/page/9/"
+                aria-label="Page 9">
+                9
+            </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/office-365/page/10/"aria-label="Page 10">
+        10
+    </a><a class="page-link "href="/categories/office-365/page/7/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

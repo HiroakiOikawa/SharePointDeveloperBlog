@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 7 - 開発とプログラミング</title>
+
+
+<link rel="canonical" href="http://localhost:1313/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="開発とプログラミング">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="開発とプログラミング">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9610-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">エラーページの表示を切り替える方法</h2>
+                        
+                        <p class="article-summary"><p>SharePoint 開発をしていると一度は悩む(?)、どこでもキャッチしていない例外(未処理の例外)が起きた時に表示するエラーページを切り替える方法についてまとめました。</p>
+<h4 id="切り替え方法">切り替え方法
+</h4><p>エラーページは SharePoint の IIS サイトの物理フォルダにある web.config の以下の属性の設定により切り替えることができます。
+・SharePoint タグ配下にある SafeMode タグの CallStack 属性
+・system.web タグ配下にある customErrors タグの mode 属性
+・system.web タグ配下にある compilation タグの debug 属性
+SharePoint の IIS サイトは以下の場所にあります。
+C:\inetpub\wwwroot\wss\VirtualDirectories\80 ←最後の 80 はポート番号
+また、_layouts フォルダ配下のアプリケーションページ等で発生した未処理の例外に対するエラーページの表示切り替えを行う場合は、_layouts フォルダ配下にある web.config の customErrors タグの設定も忘れずに行ってください。
+_layouts フォルダは以下の場所にあります。
+C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS
+※15 フォルダは SharePoint のバージョンにより数字が異なります。2013 の場合は 15 となります。
+web.config の各属性の具体的な設定は以下の通りとなります。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2015年1月31日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9593-jslink-js/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">カスタムフィールドの JSLink プロパティに指定した JS を変更しても反映されない場合の対処法</h2>
+                        
+                        <p class="article-summary"><p>カスタムフィールドで JSLink を使う場合に、SPField.JSLink プロパティで指定した JavaScript ファイルがキャッシュされてしまい、JavaScript を変更しても変更内容が反映されないという状況が起きたので、その場合の対処方法を記載します。
+ちなみに、以下の条件下以外で JSLink を使ったことがないので、JavaScript ファイルがキャッシュされること自体が普通に起きることなのかどうかは未確認です。
+今回開発したカスタムフィールでの JSLink 周りの状態は以下の通り。</p>
+<ul>
+<li>JSLink プロパティで指定した JavaScript ファイルは、Layouts フォルダ配下の自前のフォルダに配置。</li>
+<li>ダウンロード最小化戦略フィーチャーはアクティブ状態。</li>
+<li>JavaScript ファイル内で、RegisterModuleInit 関数で JavaScript ファイルを登録する処理を実行。</li>
+</ul>
+<p><strong>対処方法</strong>
+Visual Studio のデバッグ実行の最中に、カスタムフィールドをリストから一度削除しもう一度付け直すことで、変更後の JavaScript が実行されることを確認しました。
+なお、ブラウザの履歴削除や Ctrl+F5、iireset コマンドの実行ではダメでした。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2015年1月26日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5631-sharepoint-app-asp-net-mvc-js/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint app を ASP.NET MVC で作った際にプロジェクトに含まれている JS ファイルについて</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>Visual Studio 2013 では、SharePoint app (apps for SharePoint のこと) を作成する際に、
+・ASP.NET Web Forms Application (初代 ASP.NET の頃から存在するイベントドリブンなフレームワーク)
+・ASP.NET MVC Web Application (Model-View-Controller パターンなフレームワーク)
+のどちらかを最初に選択してプロジェクトを作ります。
+<img alt="image_3_40136282" class="gallery-image" data-flex-basis="332px" data-flex-grow="138" height="464" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5631-sharepoint-app-asp-net-mvc-js/image_3_40136282.png" width="642">
+※上図の通り、デフォルトは ASP.NET MVC Web Application となっています。
+ASP.NET MVC Web Application 形式でプロジェクトを作成すると、モバイルデバイス向け開発に便利ないくつかの JavaScript ファイルが最初からプロジェクトに含まれているのですが、これらの JS ファイルについては Project_Readme.html 等を読んでも特に説明がなく、SharePoint app 開発用の msdn の記事をあさってもなかなか情報が見つかりません。
+ということで、プロジェクトに最初から含まれている JS ファイルは何のために使うものなのか調べてみました。
+ASP.NET MVC Web Application での開発をバリバリやっていらっしゃる方や、モバイルデバイス向けの開発をされている方にとっては「そんなことも知らないの！？」ということかもしれませんが、古い人間な私には分からなかったので、一応ここにまとめておきます。。。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2014年5月3日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5621-office-365-api-tools/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Office 365 API Tools を使ってみた</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>SharePoint Conference 2014 で発表された Office 365 API。
+この Office 365 API を Visual Studio 2013 からより手軽に利用できるようにするためのツールとして先日リリースされた、<a class="link" href="http://blogs.msdn.com/b/officeapps/archive/2014/03/12/announcing-office-365-api-tools-for-visual-studio-preview.aspx"  target="_blank" rel="noopener"
+    >Office 365 API Tools</a> を早速使ってみましたので、使用方法など残しておきたいと思います。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2014年3月14日</time>
+                            <span>読了時間: 2分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5591-sharepoint/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint ソリューションの開発環境を構築する</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>SharePoint 2013 のソリューションを開発するための環境を構築する方法を説明します。
+なお、SharePoint 用アプリや Office 用アプリの開発環境構築については、以下の記事をご参照ください。
+<a class="link" href="http://sharepoint.orivers.jp/Article/174"  target="_blank" rel="noopener"
+    >SharePoint 用アプリおよび Office 用アプリの開発環境を構築する</a>
+SharePoint ソリューションの開発環境は、SharePoint と Visual Studio を同居させる必要がありますので、全開発環境に SharePoint をインストールすることとなります。
+そのため、全開発環境にサーバー OS も必要になり、非常にコストがかかることとなります。
+従って、開発期間が短いのであれば、<a class="link" href="http://technet.microsoft.com/ja-jp/bb291020.aspx"  target="_blank" rel="noopener"
+    >評価版</a>で環境をそろえるということも検討されるとよいかと思います。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年12月29日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5391-net-csom-sharepoint-online/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">.NET CSOM による SharePoint Online への接続</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>.NET 版の Client Side Object Model を使って SharePoint Online に接続するためのサンプルコードをご紹介します。</p>
+<h3 id="サンプルコード">サンプルコード
+</h3><p>以下は、SharePoint Online に接続するための部分的なコードになります。</p>
+<pre tabindex="0"><code>1: SecureString securePassword = new SecureString();
+</code></pre><pre tabindex="0"><code>2: foreach (char passwordChar in password)
+</code></pre><pre tabindex="0"><code>3: {
+</code></pre><pre tabindex="0"><code>4: securePassword.AppendChar(passwordChar);
+</code></pre><pre tabindex="0"><code>5: }
+</code></pre><pre tabindex="0"><code>6:  
+</code></pre><pre tabindex="0"><code>7: ClientContext context = new ClientContext(siteUrl);
+</code></pre><pre tabindex="0"><code>8: context.Credentials =
+</code></pre><pre tabindex="0"><code>9: new SharePointOnlineCredentials(accountName, securePassword);
+</code></pre><h3 id="サンプルコードの説明">サンプルコードの説明
+</h3><p>１行目の <a class="link" href="http://msdn.microsoft.com/ja-jp/library/system.security.securestring.aspx"  target="_blank" rel="noopener"
+    >SecureString</a> というクラスは、.NET でパスワードなどセキュアな文字列情報を扱うためのクラスで、SharePoint Online へ接続するためのパスワードを格納するために使っています。
+SecureString への値の格納は少々面倒なのですが、２行目から５行目の部分で行っています。
+この例では、password という string 型の変数にユーザーが指定した SharePoint Online へのパスワードが格納されている前提で、securePassword という変数に１文字ずつパスワード文字列を格納しています。
+７行目で SharePoint への接続を管理する <a class="link" href="http://msdn.microsoft.com/ja-jp/library/office/apps/microsoft.sharepoint.client.clientcontext.aspx"  target="_blank" rel="noopener"
+    >ClientContext</a> クラスのインスタンス(context変数)を、接続先サイトの URL (siteUrl変数)を渡して生成しています。
+８、９行目では、７行目で生成した ClientContext の Credentials プロパティに <a class="link" href="http://msdn.microsoft.com/ja-jp/library/office/apps/microsoft.sharepoint.client.sharepointonlinecredentials.aspx"  target="_blank" rel="noopener"
+    >SharePointOnlineCredentials</a> クラスのインスタンスを渡しています。
+この SharePointOnlineCredentials クラスが SharePoint Online に接続するための資格情報などを持っており、これを使うことで SharePoint Online に接続することができるようになります。
+資格情報として、ログインに使用するアカウント名(accountName変数)と、パスワード(securePassword変数)を指定しています。
+これらは、SharePoint Online のログインページで入力しているものと同じものになります。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年8月26日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5351-sharepoint/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint の発行ページ用リッチテキストエディタに独自のスタイルを追加する方法。</h2>
+                        
+                        <p class="article-summary"><p>SharePoint の発行ページ用リッチテキストエディタに独自のスタイルを追加する方法。
+<a class="link" href="http://t.co/In2dZvO6TY"  target="_blank" rel="noopener"
+    >http://t.co/In2dZvO6TY</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年8月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5361-sharepoint-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2013 の場合の独自スタイルの追加方法。</h2>
+                        
+                        <p class="article-summary"><p>SharePoint 2013 の場合の独自スタイルの追加方法。
+<a class="link" href="http://t.co/wO5YDmWvsI"  target="_blank" rel="noopener"
+    >http://t.co/wO5YDmWvsI</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年8月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5371-sharepoint-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2013 ワークフロー開発入門の資料を公開しました</h2>
+                        
+                        <p class="article-summary"><p>先日の Japan SharePoint Group in 大阪で説明させていただいた「SharePoint 2013 ワークフロー開発入門」の資料を公開しました。
+SharePoint ワークフロー開発入門
+<a class="link" href="http://www.slideshare.net/HiroakiOikawa/jpsps20130803oikawa"  title="http://www.slideshare.net/HiroakiOikawa/jpsps20130803oikawa"
+     target="_blank" rel="noopener"
+    >http://www.slideshare.net/HiroakiOikawa/jpsps20130803oikawa</a>
+セッションではデモを使った説明をしていたのですが、スライドにその内容は含まれていません。
+デモでやった内容は、別の記事として書いていきたいと思います。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年8月21日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5331-sharepoint-office/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 用アプリおよび Office 用アプリの開発環境を構築する</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>SharePoint 2013 の SharePoint 用アプリ (apps for SharePoint) および Office 2013 の Office 用アプリ (apps for Office) を開発するための環境を構築します。
+開発環境としては、Napa というブラウザ上で動作する簡易開発環境も存在するのですが、今回は Visual Studio を使った開発環境を対象とします。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年6月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/6/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">
+        1
+    </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/3/"
+                aria-label="Page 3">
+                3
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/4/"
+                aria-label="Page 4">
+                4
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/5/"
+                aria-label="Page 5">
+                5
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/6/"
+                aria-label="Page 6">
+                6
+            </a><a class="page-link current"aria-current="page"href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/7/"
+                aria-label="Page 7">
+                7
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/8/"
+                aria-label="Page 8">
+                8
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/9/"
+                aria-label="Page 9">
+                9
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/10/"
+                aria-label="Page 10">
+                10
+            </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/11/"aria-label="Page 11">
+        11
+    </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/8/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

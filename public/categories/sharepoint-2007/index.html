@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>SharePoint 2007</title>
+
+
+<link rel="canonical" href="http://localhost:1313/categories/sharepoint-2007/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="SharePoint 2007">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/categories/sharepoint-2007/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="SharePoint 2007">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/categories/sharepoint-2007/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9690-sharepoint/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E5%85%A8%E8%88%AC">全般</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint のサポート期限</h2>
+                        
+                        <p class="article-summary"><p>最近サポート切れの話を聞くことがあったので調べてみました。
+SharePoint のサポート期限が記載されたページが、マイクロソフトのサポートサイトにあります。
+<a class="link" href="http://support.microsoft.com/lifecycle?sort=PN&amp;alpha=sharepoint&amp;Filter=FilterNO"  target="_blank" rel="noopener"
+    >マイクロソフトサポートライフサイクル</a>現時点の各バージョンのメインストリームサポートは以下の通りです。
+※最新のサービスパックを適用している場合のサポート期限になっています。</p>
+<table>
+  <thead>
+      <tr>
+          <th>製品</th>
+          <th>メインストリームサポート期限</th>
+          <th>延長サポート期限</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>SharePoint Server 2013</td>
+          <td>2018/04/10</td>
+          <td>2023/04/11</td>
+      </tr>
+      <tr>
+          <td>SharePoint Server 2010</td>
+          <td>2015/10/13</td>
+          <td>2020/10/13</td>
+      </tr>
+      <tr>
+          <td>SharePoint Server 2007</td>
+          <td>2012/10/09</td>
+          <td>2017/10/10</td>
+      </tr>
+  </tbody>
+</table>
+<p>メインストリームサポートと延長サポートの違いについては、こちらに説明があります。
+<a class="link" href="http://support.microsoft.com/lifecycle?sort=PN&amp;alpha=sharepoint&amp;Filter=FilterNO#gp/lifePolicy"  target="_blank" rel="noopener"
+    >よくある質問</a>
+今年で SharePoint Server 2010 がメインストリームサポートから外れます。
+O365 への移行を考えてみる良い機会かもしれないですね。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2015年2月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9610-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">エラーページの表示を切り替える方法</h2>
+                        
+                        <p class="article-summary"><p>SharePoint 開発をしていると一度は悩む(?)、どこでもキャッチしていない例外(未処理の例外)が起きた時に表示するエラーページを切り替える方法についてまとめました。</p>
+<h4 id="切り替え方法">切り替え方法
+</h4><p>エラーページは SharePoint の IIS サイトの物理フォルダにある web.config の以下の属性の設定により切り替えることができます。
+・SharePoint タグ配下にある SafeMode タグの CallStack 属性
+・system.web タグ配下にある customErrors タグの mode 属性
+・system.web タグ配下にある compilation タグの debug 属性
+SharePoint の IIS サイトは以下の場所にあります。
+C:\inetpub\wwwroot\wss\VirtualDirectories\80 ←最後の 80 はポート番号
+また、_layouts フォルダ配下のアプリケーションページ等で発生した未処理の例外に対するエラーページの表示切り替えを行う場合は、_layouts フォルダ配下にある web.config の customErrors タグの設定も忘れずに行ってください。
+_layouts フォルダは以下の場所にあります。
+C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS
+※15 フォルダは SharePoint のバージョンにより数字が異なります。2013 の場合は 15 となります。
+web.config の各属性の具体的な設定は以下の通りとなります。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2015年1月31日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5641-sharepoint-sysprep/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint が導入済みのサーバーは、sysprep 非対応</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>複数の開発者に SharePoint の開発環境を提供するために、SharePoint や Visual Studio を導入した環境をマスターイメージとして作成し、この環境を複製して各開発者に提供するということは、チーム開発を行う上では良くある話かと思います。
+また、開発環境に限らず、SharePoint の動作検証環境を丸っと複製したいというニーズもあると思います。
+このようなニーズを満たすための方法としてよくあるのは、仮想環境を丸ごとコピーして複製するとか、マスターとなるイメージを作成してそこから環境を構築するとかという手段が思いつきます。
+ただ、そのまま仮想環境を丸ごとコピーすると、コンピュータ名や SID が被ってしまったりするため、複製された各環境がネットワーク的に分断された状態を作らなければ、何かと問題が起きてしまいます。
+そのような状況になるのを防ぐため、環境を丸ごとコピーするような場合には、sysprep を使えばいいと考えるかと思います。
+sysprep を使うことでコピーされた環境を初めて立ち上げる際にコンピュータ名などを設定しなおすことができるようになりますので。
+※sysprep についての情報は<a class="link" href="http://www.atmarkit.co.jp/ait/articles/1307/12/news062.html"  target="_blank" rel="noopener"
+    >こちら</a>
+この手法を SharePoint が入った環境で行うとどうなるか・・・・ということを調べてみました。
+結果は目に見えてはいたのですが、一応。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2014年7月13日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5571-knowledgelake/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">ドキュメントソリューション　KnowledgeLake</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>これまで製品紹介やレビューといったことをこのブログでやってきたことはなかったのですが、これを機にそういうことも少ししてみようかと思っています。
+ということで、第一弾は既に各所で紹介記事が書かれていますが、PFU社のドキュメントソリューションである<a class="link" href="http://www.pfu.fujitsu.com/sharepoint/"  target="_blank" rel="noopener"
+    >KnowledgeLake</a>です。</p>
+<h3 id="ドキュメントソリューションとは">ドキュメントソリューションとは？
+</h3><p>SharePointの利用方法は数々ありますが、その代表格はドキュメント管理ではないでしょうか。
+SharePointには、ドキュメントに対して会社で取り決めたタグを付与する管理メタデータ機能や、承認ワークフロー、情報管理ポリシーといったライフサイクル管理系の機能、そして検索機能などなど、ドキュメント管理に関する機能は数多く実装されており、SharePointユーザーは少なからずこれらの機能を使っているかと思います。
+このようなドキュメント管理機能を業務と結び付けて、業務効率化を実現する文書活用系のソリューションが、ドキュメントソリューションとなります。</p>
+<h3 id="knowledgelakeの特徴">KnowledgeLakeの特徴
+</h3><p>今回紹介するKnowledgeLakeという製品は、上記のようなSharePointが持つドキュメント管理機能を強化する、ソフトウェアと対応スキャナが一体となったソリューションで、端的にいうとスキャナから取り込んだ文書を簡単にSharePointに登録することができ、登録したドキュメントを効率的に検索、利活用することができるようになります。</p>
+<h3 id="製品ごとの説明">製品ごとの説明
+</h3><p>KnowledgeLakeは4つのソフトウェアと対応するスキャナで構成されており、基本的には全ソフトウェアを組み合わせて使うものですが、個別に導入・利用することも可能です。
+以下が、4つのソフトウェアとなります。(ロゴ、説明文は製品紹介資料から抜粋）</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>image_thumb_18539358</td>
+          <td>SharePointのライブラリ機能を“業務システム”に拡張する機能をSharePointに追加します。 スキャナ登録機能、高度で柔軟な検索機能、専用ビューワで、SharePointの登録、検索、閲覧機能を大幅に強化します。 その他の主な機能：注釈・メモ、データベース連携によるタグ付け（インデックス化）等</td>
+      </tr>
+      <tr>
+          <td>image_thumb_1_18539358</td>
+          <td>他システム（既存の基幹システム や 業務アプリケーション）の画面上の項目をキーにして、ワンクリックで SharePoint から文書を取得します。 その際に、他システム側のカスタマイズは不要です。他システム上のキーワードを元にした登録も可能です。 ※Unifyを使用するには、Imaging もしくは Connect が必要です。 既存システムとの連携可否を事前に確認する必要があります。</td>
+      </tr>
+      <tr>
+          <td>image_6_18539358</td>
+          <td>業務用イメージスキャナ「fiシリーズ」と連携し、紙文書のスキャン、インデックス作成およびSharePointのライブラリへ文書を登録します。 OCR・バーコード認識など入力業務を効率化します。既に電子化済みのデータの一括登録も可能です。</td>
+      </tr>
+      <tr>
+          <td>image_thumb_3_18539358</td>
+          <td>Microsoft Officeライクなインタフェースで、SharePointのライブラリへの登録、検索、閲覧を簡単に利用できる、クライアントアプリケーションです。 スキャナ登録に加えて、Officeアドインを使えば、Officeアプリケーション（Word, Excel, PowerPoint, Outlook）から直接SharePointのライブラリへ登録することも可能です。</td>
+      </tr>
+  </tbody>
+</table>
+<p>この中から私が注目＆おすすめしたいのは、KnowledgeLake Capture for SharePoint です。
+Capture は、紙文書を一括でSharePointに登録するための機能を備えた製品です。
+業務効率化のためのドキュメント管理を検討する場合、必ず問題になるのが紙文書の取り扱いです。
+紙文書を完全にゼロにできれば良いのですが、一気に紙文書ゼロを実現することは現実的には難しいと思います。
+そうすると、どうしても紙文書の管理をどうするかという話になるわけですが、そんな時にこのCaptureが非常に有効かと思います。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年11月25日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5181-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">ドキュメントライブラリにファイルをアップロードする</h2>
+                        
+                        <p class="article-summary"><p>C# を使ってドキュメントライブラリにファイルをアップロードするには、WebClient クラスを使うのが手軽です。</p>
+<pre tabindex="0"><code>using (WebClient client = new WebClient())
+{
+client.UseDefaultCredentials = true;
+client.UploadFile(url, &#34;PUT&#34;, filename);
+}
+</code></pre><p>3 行目は Windows にログインしているユーザーの情報を使って SharePoint にログインすることを示しています。
+4 行目は url で指定されたドキュメントライブラリに、filename で指定されたファイルを PUT でアップロードすることを示しています。
+PUT でのアップロードになるので、サーバー側は WebDAV アクセスを受信できるようにしておく必要があります。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年3月10日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5171-caml-5/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">CAML クエリーで今日や今日から 5 日前の日を指定する</h2>
+                        
+                        <p class="article-summary"><p>CAML クエリーで、「締切日が今日以前」や「締切日が今日より 5 日前」という条件を指定する場合、今日という変数は Today タグで指定します。
+また、Today タグの OffsetDays 属性で 5 日前とか 3 日後といった +- の日付を指定します。
+例：締切日が今日以前</p>
+<pre tabindex="0"><code>1: &lt;Query&gt;
+</code></pre><pre tabindex="0"><code>2: &lt;Where&gt;
+</code></pre><pre tabindex="0"><code>3: &lt;Leq&gt;
+</code></pre><pre tabindex="0"><code>4: &lt;FieldRef Name=&#34;DueDate&#34; /&gt;
+</code></pre><pre tabindex="0"><code>5: &lt;Value Type=&#34;DateTime&#34;&gt;
+</code></pre><pre tabindex="0"><code>6: &lt;Today /&gt;
+</code></pre><pre tabindex="0"><code>7: &lt;/Value&gt;
+</code></pre><pre tabindex="0"><code>8: &lt;/Leq&gt;
+</code></pre><pre tabindex="0"><code>9: &lt;/Where&gt;
+</code></pre><pre tabindex="0"><code>10: &lt;/Query&gt;
+</code></pre><p> 
+例：締切日が今日より5日前</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年3月10日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5101-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E5%85%A8%E8%88%AC">全般</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">画像ライブラリによって自動生成されるサムネイル画像にアクセスする</h2>
+                        
+                        <p class="article-summary"><p>SharePoint (2007, 2010, 2013, Online) の画像ライブラリには、サムネイル画像を自動生成する機能があります。
+画像ライブラリはこの機能により、縮小表示ビューでのサムネイル表示用の画像と、プロパティ表示ページで表示する少し大きめの画像を生成・表示しています。
+ 
+SharePoint 2013 画像ライブラリの縮小表示ビュー
+<img alt="image_2_79160A06" class="gallery-image" data-flex-basis="239px" data-flex-grow="99" height="492" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5101-post/image_2_79160A06.png" width="491">
+ 
+SharePoint 2013 の画像ライブラリのプロパティ表示ページ
+<img alt="image_4_27035CBF" class="gallery-image" data-flex-basis="262px" data-flex-grow="109" height="558" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5101-post/image_4_27035CBF.png" width="610">
+ 
+これら二種類の画像は、画像ライブラリにファイルをアップロードした時点で自動生成されます。
+自動生成された画像ファイルには一意のURLが割り当てられるため、この URL にアクセスすることで縮小表示の画像を表示することができます。
+ 
+ 
+たとえば、site というサイトの photo という画像ライブラリに moon.jpg というファイルをアップロードした場合の自動生成画像の URL は以下になります。
+ 
+縮小表示ビューの画像の URL：
+http://site/photo/_t/moon_jpg.jpg
+ 
+プロパティ表示ページの画像の URL：
+http://site/photo/_w/moon_jpg.jpg
+ 
+ポイントは、ライブラリ名の後に「/t」「/w」が入ること、元の拡張子の「.」がアンダーバーになり、新しい拡張子として「.jpg」が付くことです。
+この点だけ押さえておけば自動生成された画像にアクセスできるので、自前で画像一覧などのページを作るときには役に立つのではないでしょうか。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2012年12月16日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4961-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">言語に応じたサイトにリダイレクトする方法</h2>
+                        
+                        <p class="article-summary"><p>SharePoint は多言語対応の仕組みとして、バリエーションという機能を持っており、言語ごとにサイトを作ることで、ブラウザの言語設定に応じたサイトへ自動的にリダイレクトする機能があります。
+バリエーションを計画する（オンプレ）
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/cc262404.aspx"  title="http://technet.microsoft.com/ja-jp/library/cc262404.aspx"
+     target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/cc262404.aspx</a>
+多言語機能の概要（Office 365）
+<a class="link" href="http://office.microsoft.com/ja-jp/sharepoint-online-enterprise-help/HA101867790.aspx?CTT=5&amp;origin=HA102034913"  title="http://office.microsoft.com/ja-jp/sharepoint-online-enterprise-help/HA101867790.aspx?CTT=5&amp;origin=HA102034913"
+     target="_blank" rel="noopener"
+    >http://office.microsoft.com/ja-jp/sharepoint-online-enterprise-help/HA101867790.aspx?CTT=5&amp;origin=HA102034913</a>
+バリエーション機能を使うことで言語に応じたリダイレクトはできるのですが、バリエーション機能を使うためには発行機能を有効にする必要があったり、各国語サイトへのコンテンツ配信の仕組みを検討したりと、リダイレクトさせるだけでも、色々考えることがあります。
+単純に言語に応じて、適切なサイトにリダイレクトさせたいというニーズを満たすだけであれば、バリエーションを使わずに JavaScript で済ませてしまうこともできます。
+以下が、そのやり方になります。
+<strong>JavaScriptでブラウザの言語を取得してリダイレクトする方法</strong>
+JavaScript だけで言語に応じたリダイレクトをさせたい場合は、以下のコードを js ファイルとして保存し、リダイレクト元のサイトのドキュメントライブラリにアップロードし、リダイレクト元サイトのページにコンテンツエディタ Web パーツを配置して js ファイルを読み込むようにしてください。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2012年10月30日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4331-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E5%85%A8%E8%88%AC">全般</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">ベストプラクティスに従い設定を分析する</h2>
+                        
+                        <p class="article-summary"><p>SharePointにはたくさんの設定項目がありますが、これらの設定項目が最良の状態になっているかどうかを自動的に調べてくれるツールが、マイクロソフトから無償で提供されています。
+それが、Microsoft Best Practices Analyzer for SharePointです。
+このツールを使うと、SharePointの各種設定について、ベストプラクティスと異なる部分を重要度別にレポートしてくれます。
+英語しかないツールですが、ファーム構築後に一度このツールを実行して、設定状況を確認してみるとよいと思います。
+**＜インストール方法＞**以下のサイトからファイルをダウンロード＆実行し、適当なフォルダに解凍してください。
+<a class="link" href="http://www.microsoft.com/downloads/details.aspx?familyid=cb944b27-9d6b-4a1f-b3e1-778efda07df8&amp;displaylang=en"  target="_blank" rel="noopener"
+    >http://www.microsoft.com/downloads/details.aspx?familyid=cb944b27-9d6b-4a1f-b3e1-778efda07df8&displaylang=en</a>
+いろいろと動作条件があるので、可能であればインデックスサーバーとかにインストールするのが良いと思います。
+**＜実行方法＞**このツールは、コマンドラインで動作します。
+コマンドプロンプトを立ち上げ、ツールを解凍したフォルダまで移動し、以下のコマンドを入力して実行してください。</p>
+<pre tabindex="0"><code>1: sharepointbpa -cmd analyze -substitutions SERVER\_NAME centraladminservername
+</code></pre><p>[centraladminservername]の部分には、全体管理サイトをホストするサーバーのホスト名を入力してください。
+それ以外のところは上記のままで良いです。
+処理が完了すると、ツールを解凍したのと同じフォルダに、sharepointbpa.report.htmというファイルが作成されます。
+このファイルに、設定に関する分析結果が記録されています。
+**＜結果サンプル＞**試しに、SharePointをインストールして構成ウィザードが終わったばかりの状態でツールを実行してみました。
+その時に出力されたレポートは以下になります。ご参考までに。
+Microsoft Best Practices Analyzer for Microsoft Windows SharePoint Services 3.0 and the 2007 Microsoft Office System</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年11月1日</time>
+                            <span>読了時間: 2分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4321-sharepoint-server-2007-beta2-technical-refresh/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Server 2007 Beta2 Technical Refresh のインストール</h2>
+                        
+                        <p class="article-summary"><p>製品版出荷前の最後の公開リリースになるかもしれない、Beta 2 TRが先日ついにリリースされました。
+日本ではあまり大々的に取り上げられていないけど、これを待ち望んでいた人は多いはず。
+自分もそのうちの一人で、MOSSの検証をしていていくつかうまくいかない機能とかがあったので早くTRで試したいと思ってました。
+ということで、早速ダウンロードしてインストールしてみたので、まずはファイルのダウンロードから、MOSSへ適用するまでの手順をめもります。
+インストール手順書が米MSサイトにあります。
+いろいろなパターンに対応した手順が書いてありますが、どれもかなりめんどくさい手順になっています。
+正直ちょっとやる気なくします・・・
+<a class="link" href="http://www.microsoft.com/downloads/details.aspx?displaylang=ja&amp;FamilyID=920B9690-B835-4785-A771-188C2082B2BC"  target="_blank" rel="noopener"
+    >http://www.microsoft.com/downloads/details.aspx?displaylang=ja&FamilyID=920B9690-B835-4785-A771-188C2082B2BC</a>
+<strong>前提条件</strong>今回beta2 TRをインストールする環境は、すでにbeta2がインストール済みです。
+インストール手順書でいうところの、「既存の Beta2 環境を Beta 2 Technical Refresh にアップグレードする方法」なります。
+<strong>１．ダウンロード</strong>
+以下のURLからWSSとSharePointServerそれぞれダウンロードします。
+Windows SharePoint Services 3.0(WSS)
+<a class="link" href="http://www.microsoft.com/downloads/details.aspx?displaylang=ja&amp;FamilyID=e1e51280-71f0-4d60-b2b9-3c49df916bc2"  target="_blank" rel="noopener"
+    >http://www.microsoft.com/downloads/details.aspx?displaylang=ja&FamilyID=e1e51280-71f0-4d60-b2b9-3c49df916bc2</a>
+SharePoint Server 2007
+<a class="link" href="http://www.microsoft.com/downloads/details.aspx?displaylang=ja&amp;FamilyID=0b6bd175-e700-44b8-ab47-e4459250d16d"  target="_blank" rel="noopener"
+    >http://www.microsoft.com/downloads/details.aspx?displaylang=ja&FamilyID=0b6bd175-e700-44b8-ab47-e4459250d16d</a>
+<strong>２．Windows Workflow Foundationをアンインストール</strong>
+MOSS beta2をインストールする前に入れたWindows Workflow Foundationをプログラムの追加と削除から、アンインストールします。
+<strong>３．.NET Framework 3.0 Release Candidateをインストール</strong>
+以下のサイトから.NET Framework 3.0 Release Candidateをダウンロードしてインストールします。
+<a class="link" href="http://www.microsoft.com/downloads/details.aspx?displaylang=ja&amp;FamilyID=19E21845-F5E3-4387-95FF-66788825C1AF"  target="_blank" rel="noopener"
+    >http://www.microsoft.com/downloads/details.aspx?displaylang=ja&FamilyID=19E21845-F5E3-4387-95FF-66788825C1AF</a>
+インストールはライセンス条項に同意して、インストールボタンをクリックするだけなので、画面キャプチャなどは割愛します。
+インストール完了後に再起動します。
+※インストールの最後に、Windows Communication Foundationのパッチをインストールするよう指示があるので、こちらも念のためインストールしておいたほうが良いでしょう。
+リリースノートを見る限りでは必要ない気もしますが・・・
+<strong>４．SharePointの検索サービスを停止</strong>
+以下の２つのサービスを停止します。
+・Windows SharePoint Services Search
+・Office SharePoint Server Search
+<strong>５．WindowsSharePointServices 3.0 Beta2 TRのインストール</strong>
+<strong>５．１．インストール開始</strong>
+ダウンロードしたファイルを実行します。
+<strong>５．２．ライセンス条項</strong>
+ライセンス条項に同意するをチェックして、[次へ]をクリック。
+<strong>５．３．SharePoint関連サービスを停止に関するメッセージ</strong>
+Beta2 TR へのアップグレードによりInternet Information Services、SharePoint Administration Services、SharePoint Timer Serviceが再起動されるとのメッセージが表示されます。
+[はい]をクリック。
+<strong>５．４．ファイル展開、インストール</strong>
+ファイルが展開されて、そのままインストールが始まります。
+インストールが完了するまでしばらくかかります。
+<strong>５．５．通知</strong>他にもBeta2 TRのインストールをする必要があることをわざわざ教えてくれます。
+[OK]をクリック。
+<strong>５．６．完了</strong>
+インストール完了メッセージが表示され、WSS Beta2TRのインストール完了。
+<strong>６．SharePoint Server 2007 Beta2 TRのインストール</strong>
+<strong>６．１．インストール開始</strong>
+ダウンロードしたファイルを実行します。
+<strong>６．２．ライセンス条項</strong>
+ライセンス条項に同意するをチェックして、[次へ]をクリック。
+<strong>６．３．SharePoint関連サービスを停止に関するメッセージ</strong>Beta2 TR へのアップグレードによりInternet Information Services、SharePoint Administration Services、SharePoint Timer Serviceが再起動されるとのメッセージが表示されます。
+[はい]をクリック。
+<strong>６．４．ファイル展開、インストール</strong>
+ファイルが展開されて、そのままインストールが始まります。
+インストールが完了するまでWSSよりも時間がかかります。
+<strong>６．５．完了</strong>
+インストール完了メッセージが表示され、SharePoint Server 2007 Beta2TRのインストール完了。
+<strong>６．６．アップグレード開始</strong>
+インストールが完了すると自動的にSharePoint 製品とテクノロジ構成ウィザードが起動します。
+指示に従いアップグレードプロセスを開始すると、アップグレードが行われます。
+<strong>６．７．アップグレード完了</strong>
+アップグレードプロセスが完了すると、自動的に管理サイトが起動します。
+これでアップグレード完了です。
+<strong>注意</strong>
+今回、Beta2で作成済みのサイトをBeta2TRにアップグレードする方法を実験しましたが、アップグレード後に発覚した問題が２つあります。
+１．
+上記手順の６．７のあと、自動的に管理サイトが起動しますが、この起動が失敗しました。
+とりあえずもう一度管理サイトへ移動してみると、管理サイトのホームエリアにあるWebパーツのひとつがエラーで表示できなくなっていました。
+コレが原因？
+２．
+Beta2TRから、Webアプリケーションのアプリケーションプールを実行するユーザーに、ローカルシステムとローカルサービスが使用できなくなったようです。
+そのため、Beta2のころにこれらのユーザーで作成したWebアプリケーションがあると、Beta2TRにした途端に動かなくなってしまいます。
+この際に発生したエラーは、「構成データベースに接続できませんでした。」という内容でした。
+アプリケーションプールのユーザーをネットワークサービスとか、ドメインユーザーとかに変更したら動くようになりました。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年9月30日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link disabled"aria-label="Previous page"aria-disabled="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link current" aria-label="Page 1"aria-current="page">
+        1
+    </a><a class="page-link "href="/categories/sharepoint-2007/page/2/"
+                aria-label="Page 2">
+                2
+            </a><a class="page-link "href="/categories/sharepoint-2007/page/3/"aria-label="Page 3">
+        3
+    </a><a class="page-link "href="/categories/sharepoint-2007/page/2/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

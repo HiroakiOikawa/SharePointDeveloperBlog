@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# 検索・タグ・カテゴリページはインデックス対象外
+Disallow: /search/
+Disallow: /tags/
+Disallow: /page/
+
+Sitemap: {{ .Site.BaseURL }}sitemap.xml

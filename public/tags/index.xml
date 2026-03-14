@@ -1,61 +1,675 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Tags on Microsoft 365 Developer</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on Microsoft 365 Developer</description>
-    <generator>Hugo -- 0.157.0</generator>
-    <language>ja</language>
-    <lastBuildDate>Sun, 08 Mar 2026 10:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Azure Functions</title>
-      <link>http://localhost:1313/tags/azure-functions/</link>
-      <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/tags/azure-functions/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Node.js</title>
-      <link>http://localhost:1313/tags/node.js/</link>
-      <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/tags/node.js/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Nvs</title>
-      <link>http://localhost:1313/tags/nvs/</link>
-      <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/tags/nvs/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Office アドイン</title>
-      <link>http://localhost:1313/tags/office-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/</link>
-      <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/tags/office-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SPFx</title>
-      <link>http://localhost:1313/tags/spfx/</link>
-      <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/tags/spfx/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>VSCode</title>
-      <link>http://localhost:1313/tags/vscode/</link>
-      <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/tags/vscode/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>チーム開発</title>
-      <link>http://localhost:1313/tags/%E3%83%81%E3%83%BC%E3%83%A0%E9%96%8B%E7%99%BA/</link>
-      <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/tags/%E3%83%81%E3%83%BC%E3%83%A0%E9%96%8B%E7%99%BA/</guid>
-      <description></description>
-    </item>
-  </channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on SharePoint Developer</title>
+        <link>http://localhost:1313/tags/</link>
+        <description>Recent content in Tags on SharePoint Developer</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <lastBuildDate>Sun, 08 Mar 2026 10:00:00 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Azure Functions</title>
+            <link>http://localhost:1313/tags/azure-functions/</link>
+            <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
+            <guid>http://localhost:1313/tags/azure-functions/</guid>
+            <description></description>
+        </item><item>
+            <title>Node.js</title>
+            <link>http://localhost:1313/tags/node.js/</link>
+            <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
+            <guid>http://localhost:1313/tags/node.js/</guid>
+            <description></description>
+        </item><item>
+            <title>Nvs</title>
+            <link>http://localhost:1313/tags/nvs/</link>
+            <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
+            <guid>http://localhost:1313/tags/nvs/</guid>
+            <description></description>
+        </item><item>
+            <title>Office アドイン</title>
+            <link>http://localhost:1313/tags/office-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/</link>
+            <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
+            <guid>http://localhost:1313/tags/office-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/</guid>
+            <description></description>
+        </item><item>
+            <title>SPFx</title>
+            <link>http://localhost:1313/tags/spfx/</link>
+            <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
+            <guid>http://localhost:1313/tags/spfx/</guid>
+            <description></description>
+        </item><item>
+            <title>VSCode</title>
+            <link>http://localhost:1313/tags/vscode/</link>
+            <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
+            <guid>http://localhost:1313/tags/vscode/</guid>
+            <description></description>
+        </item><item>
+            <title>チーム開発</title>
+            <link>http://localhost:1313/tags/%E3%83%81%E3%83%BC%E3%83%A0%E9%96%8B%E7%99%BA/</link>
+            <pubDate>Sun, 08 Mar 2026 10:00:00 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%81%E3%83%BC%E3%83%A0%E9%96%8B%E7%99%BA/</guid>
+            <description></description>
+        </item><item>
+            <title>M365Dev</title>
+            <link>http://localhost:1313/tags/m365dev/</link>
+            <pubDate>Sat, 21 Jun 2025 15:11:04 +0900</pubDate>
+            <guid>http://localhost:1313/tags/m365dev/</guid>
+            <description></description>
+        </item><item>
+            <title>Microsoft365dev</title>
+            <link>http://localhost:1313/tags/microsoft365dev/</link>
+            <pubDate>Sat, 21 Jun 2025 15:11:04 +0900</pubDate>
+            <guid>http://localhost:1313/tags/microsoft365dev/</guid>
+            <description></description>
+        </item><item>
+            <title>OfficeDev</title>
+            <link>http://localhost:1313/tags/officedev/</link>
+            <pubDate>Sat, 21 Jun 2025 15:11:04 +0900</pubDate>
+            <guid>http://localhost:1313/tags/officedev/</guid>
+            <description></description>
+        </item><item>
+            <title>Outlook</title>
+            <link>http://localhost:1313/tags/outlook/</link>
+            <pubDate>Sat, 21 Jun 2025 15:11:04 +0900</pubDate>
+            <guid>http://localhost:1313/tags/outlook/</guid>
+            <description></description>
+        </item><item>
+            <title>Azure</title>
+            <link>http://localhost:1313/tags/azure/</link>
+            <pubDate>Sat, 12 Apr 2025 12:58:34 +0900</pubDate>
+            <guid>http://localhost:1313/tags/azure/</guid>
+            <description></description>
+        </item><item>
+            <title>Bicep</title>
+            <link>http://localhost:1313/tags/bicep/</link>
+            <pubDate>Sat, 12 Apr 2025 12:58:34 +0900</pubDate>
+            <guid>http://localhost:1313/tags/bicep/</guid>
+            <description></description>
+        </item><item>
+            <title>自動化</title>
+            <link>http://localhost:1313/tags/%E8%87%AA%E5%8B%95%E5%8C%96/</link>
+            <pubDate>Sat, 12 Apr 2025 12:58:34 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E8%87%AA%E5%8B%95%E5%8C%96/</guid>
+            <description></description>
+        </item><item>
+            <title>CalendarView</title>
+            <link>http://localhost:1313/tags/calendarview/</link>
+            <pubDate>Sun, 09 Feb 2025 01:25:39 +0900</pubDate>
+            <guid>http://localhost:1313/tags/calendarview/</guid>
+            <description></description>
+        </item><item>
+            <title>Event</title>
+            <link>http://localhost:1313/tags/event/</link>
+            <pubDate>Sun, 09 Feb 2025 01:25:39 +0900</pubDate>
+            <guid>http://localhost:1313/tags/event/</guid>
+            <description></description>
+        </item><item>
+            <title>GraphApi</title>
+            <link>http://localhost:1313/tags/graphapi/</link>
+            <pubDate>Sun, 09 Feb 2025 01:25:39 +0900</pubDate>
+            <guid>http://localhost:1313/tags/graphapi/</guid>
+            <description></description>
+        </item><item>
+            <title>Graph API</title>
+            <link>http://localhost:1313/tags/graph-api/</link>
+            <pubDate>Sun, 02 Feb 2025 02:02:52 +0900</pubDate>
+            <guid>http://localhost:1313/tags/graph-api/</guid>
+            <description></description>
+        </item><item>
+            <title>TransitiveMembers</title>
+            <link>http://localhost:1313/tags/transitivemembers/</link>
+            <pubDate>Sun, 02 Feb 2025 02:02:52 +0900</pubDate>
+            <guid>http://localhost:1313/tags/transitivemembers/</guid>
+            <description></description>
+        </item><item>
+            <title>Outlook アドイン</title>
+            <link>http://localhost:1313/tags/outlook-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/</link>
+            <pubDate>Sat, 30 Nov 2024 19:17:52 +0900</pubDate>
+            <guid>http://localhost:1313/tags/outlook-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/</guid>
+            <description></description>
+        </item><item>
+            <title>SharePoint</title>
+            <link>http://localhost:1313/tags/sharepoint/</link>
+            <pubDate>Sat, 30 Mar 2024 04:23:46 +0900</pubDate>
+            <guid>http://localhost:1313/tags/sharepoint/</guid>
+            <description></description>
+        </item><item>
+            <title>カスタムスクリプト</title>
+            <link>http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/</link>
+            <pubDate>Fri, 22 Mar 2024 02:13:45 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/</guid>
+            <description></description>
+        </item><item>
+            <title>アドイン</title>
+            <link>http://localhost:1313/tags/%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/</link>
+            <pubDate>Sun, 18 Feb 2024 11:57:50 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/</guid>
+            <description></description>
+        </item><item>
+            <title>マニフェスト‘</title>
+            <link>http://localhost:1313/tags/%E3%83%9E%E3%83%8B%E3%83%95%E3%82%A7%E3%82%B9%E3%83%88/</link>
+            <pubDate>Sun, 18 Feb 2024 11:57:50 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%9E%E3%83%8B%E3%83%95%E3%82%A7%E3%82%B9%E3%83%88/</guid>
+            <description></description>
+        </item><item>
+            <title>Manifest.xml</title>
+            <link>http://localhost:1313/tags/manifest.xml/</link>
+            <pubDate>Mon, 08 Jan 2024 21:14:04 +0900</pubDate>
+            <guid>http://localhost:1313/tags/manifest.xml/</guid>
+            <description></description>
+        </item><item>
+            <title>マニフェスト</title>
+            <link>http://localhost:1313/tags/%E3%83%9E%E3%83%8B%E3%83%95%E3%82%A7%E3%82%B9%E3%83%88/</link>
+            <pubDate>Mon, 08 Jan 2024 21:14:04 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%9E%E3%83%8B%E3%83%95%E3%82%A7%E3%82%B9%E3%83%88/</guid>
+            <description></description>
+        </item><item>
+            <title>Webパーツ</title>
+            <link>http://localhost:1313/tags/web%E3%83%91%E3%83%BC%E3%83%84/</link>
+            <pubDate>Sun, 29 May 2022 03:37:44 +0900</pubDate>
+            <guid>http://localhost:1313/tags/web%E3%83%91%E3%83%BC%E3%83%84/</guid>
+            <description></description>
+        </item><item>
+            <title>#Webparts</title>
+            <link>http://localhost:1313/tags/%23webparts/</link>
+            <pubDate>Sat, 21 May 2022 16:12:29 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%23webparts/</guid>
+            <description></description>
+        </item><item>
+            <title>M365VM</title>
+            <link>http://localhost:1313/tags/m365vm/</link>
+            <pubDate>Sun, 08 May 2022 02:51:07 +0900</pubDate>
+            <guid>http://localhost:1313/tags/m365vm/</guid>
+            <description></description>
+        </item><item>
+            <title>MicrosoftViva</title>
+            <link>http://localhost:1313/tags/microsoftviva/</link>
+            <pubDate>Sun, 08 May 2022 02:51:07 +0900</pubDate>
+            <guid>http://localhost:1313/tags/microsoftviva/</guid>
+            <description></description>
+        </item><item>
+            <title>PnP</title>
+            <link>http://localhost:1313/tags/pnp/</link>
+            <pubDate>Sun, 08 May 2022 01:00:22 +0900</pubDate>
+            <guid>http://localhost:1313/tags/pnp/</guid>
+            <description></description>
+        </item><item>
+            <title>PnPProvisioning</title>
+            <link>http://localhost:1313/tags/pnpprovisioning/</link>
+            <pubDate>Sun, 08 May 2022 01:00:22 +0900</pubDate>
+            <guid>http://localhost:1313/tags/pnpprovisioning/</guid>
+            <description></description>
+        </item><item>
+            <title>ページレイアウト</title>
+            <link>http://localhost:1313/tags/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88/</link>
+            <pubDate>Sun, 08 May 2022 01:00:22 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%9A%E3%83%BC%E3%82%B8%E3%83%AC%E3%82%A4%E3%82%A2%E3%82%A6%E3%83%88/</guid>
+            <description></description>
+        </item><item>
+            <title>サイトテンプレート</title>
+            <link>http://localhost:1313/tags/%E3%82%B5%E3%82%A4%E3%83%88%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</link>
+            <pubDate>Sun, 08 May 2022 01:00:22 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%82%B5%E3%82%A4%E3%83%88%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</guid>
+            <description></description>
+        </item><item>
+            <title>マスターページ</title>
+            <link>http://localhost:1313/tags/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%9A%E3%83%BC%E3%82%B8/</link>
+            <pubDate>Sun, 08 May 2022 01:00:22 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%9A%E3%83%BC%E3%82%B8/</guid>
+            <description></description>
+        </item><item>
+            <title>AppStudio</title>
+            <link>http://localhost:1313/tags/appstudio/</link>
+            <pubDate>Sat, 23 Apr 2022 18:07:37 +0900</pubDate>
+            <guid>http://localhost:1313/tags/appstudio/</guid>
+            <description></description>
+        </item><item>
+            <title>MicrosoftTeams</title>
+            <link>http://localhost:1313/tags/microsoftteams/</link>
+            <pubDate>Sat, 23 Apr 2022 18:07:37 +0900</pubDate>
+            <guid>http://localhost:1313/tags/microsoftteams/</guid>
+            <description></description>
+        </item><item>
+            <title>ポータル</title>
+            <link>http://localhost:1313/tags/%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB/</link>
+            <pubDate>Sat, 23 Apr 2022 18:07:37 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%AB/</guid>
+            <description></description>
+        </item><item>
+            <title>カスタムアプリ</title>
+            <link>http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%A2%E3%83%97%E3%83%AA/</link>
+            <pubDate>Sat, 23 Apr 2022 18:07:37 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%E3%82%A2%E3%83%97%E3%83%AA/</guid>
+            <description></description>
+        </item><item>
+            <title>VivaConnection</title>
+            <link>http://localhost:1313/tags/vivaconnection/</link>
+            <pubDate>Thu, 24 Feb 2022 23:55:45 +0900</pubDate>
+            <guid>http://localhost:1313/tags/vivaconnection/</guid>
+            <description></description>
+        </item><item>
+            <title>Docker</title>
+            <link>http://localhost:1313/tags/docker/</link>
+            <pubDate>Tue, 17 Aug 2021 11:23:34 +0900</pubDate>
+            <guid>http://localhost:1313/tags/docker/</guid>
+            <description></description>
+        </item><item>
+            <title>開発環境</title>
+            <link>http://localhost:1313/tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/</link>
+            <pubDate>Tue, 17 Aug 2021 11:23:34 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/</guid>
+            <description></description>
+        </item><item>
+            <title>サイトスクリプト</title>
+            <link>http://localhost:1313/tags/%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/</link>
+            <pubDate>Sat, 17 Jul 2021 01:53:30 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%82%B5%E3%82%A4%E3%83%88%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%83%88/</guid>
+            <description></description>
+        </item><item>
+            <title>サイトデザイン</title>
+            <link>http://localhost:1313/tags/%E3%82%B5%E3%82%A4%E3%83%88%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/</link>
+            <pubDate>Sat, 17 Jul 2021 01:53:30 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%82%B5%E3%82%A4%E3%83%88%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3/</guid>
+            <description></description>
+        </item><item>
+            <title>Add-SPOSiteDesign</title>
+            <link>http://localhost:1313/tags/add-spositedesign/</link>
+            <pubDate>Tue, 09 Feb 2021 09:03:11 +0900</pubDate>
+            <guid>http://localhost:1313/tags/add-spositedesign/</guid>
+            <description></description>
+        </item><item>
+            <title>Add-SPOSiteScript</title>
+            <link>http://localhost:1313/tags/add-spositescript/</link>
+            <pubDate>Tue, 09 Feb 2021 09:03:11 +0900</pubDate>
+            <guid>http://localhost:1313/tags/add-spositescript/</guid>
+            <description></description>
+        </item><item>
+            <title>テンプレート</title>
+            <link>http://localhost:1313/tags/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</link>
+            <pubDate>Sat, 12 Dec 2020 10:00:12 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%86%E3%83%B3%E3%83%97%E3%83%AC%E3%83%BC%E3%83%88/</guid>
+            <description></description>
+        </item><item>
+            <title>Library</title>
+            <link>http://localhost:1313/tags/library/</link>
+            <pubDate>Mon, 07 Dec 2020 17:12:13 +0900</pubDate>
+            <guid>http://localhost:1313/tags/library/</guid>
+            <description></description>
+        </item><item>
+            <title>ライブラリ</title>
+            <link>http://localhost:1313/tags/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA/</link>
+            <pubDate>Mon, 07 Dec 2020 17:12:13 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA/</guid>
+            <description></description>
+        </item><item>
+            <title>Extensions</title>
+            <link>http://localhost:1313/tags/extensions/</link>
+            <pubDate>Mon, 23 Nov 2020 23:33:12 +0900</pubDate>
+            <guid>http://localhost:1313/tags/extensions/</guid>
+            <description></description>
+        </item><item>
+            <title>Async/Await</title>
+            <link>http://localhost:1313/tags/async/await/</link>
+            <pubDate>Sun, 11 Oct 2020 23:31:53 +0900</pubDate>
+            <guid>http://localhost:1313/tags/async/await/</guid>
+            <description></description>
+        </item><item>
+            <title>REST</title>
+            <link>http://localhost:1313/tags/rest/</link>
+            <pubDate>Sun, 11 Oct 2020 23:31:53 +0900</pubDate>
+            <guid>http://localhost:1313/tags/rest/</guid>
+            <description></description>
+        </item><item>
+            <title>SpHttpClient</title>
+            <link>http://localhost:1313/tags/sphttpclient/</link>
+            <pubDate>Sun, 11 Oct 2020 23:31:53 +0900</pubDate>
+            <guid>http://localhost:1313/tags/sphttpclient/</guid>
+            <description></description>
+        </item><item>
+            <title>非同期</title>
+            <link>http://localhost:1313/tags/%E9%9D%9E%E5%90%8C%E6%9C%9F/</link>
+            <pubDate>Sun, 11 Oct 2020 23:31:53 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E9%9D%9E%E5%90%8C%E6%9C%9F/</guid>
+            <description></description>
+        </item><item>
+            <title>EntityPropertyName</title>
+            <link>http://localhost:1313/tags/entitypropertyname/</link>
+            <pubDate>Sat, 26 Sep 2020 09:58:54 +0900</pubDate>
+            <guid>http://localhost:1313/tags/entitypropertyname/</guid>
+            <description></description>
+        </item><item>
+            <title>InternalName</title>
+            <link>http://localhost:1313/tags/internalname/</link>
+            <pubDate>Sat, 26 Sep 2020 09:58:54 +0900</pubDate>
+            <guid>http://localhost:1313/tags/internalname/</guid>
+            <description></description>
+        </item><item>
+            <title>CommandSet</title>
+            <link>http://localhost:1313/tags/commandset/</link>
+            <pubDate>Sat, 19 Sep 2020 13:08:01 +0900</pubDate>
+            <guid>http://localhost:1313/tags/commandset/</guid>
+            <description></description>
+        </item><item>
+            <title>ListTemplateId</title>
+            <link>http://localhost:1313/tags/listtemplateid/</link>
+            <pubDate>Sat, 19 Sep 2020 13:08:01 +0900</pubDate>
+            <guid>http://localhost:1313/tags/listtemplateid/</guid>
+            <description></description>
+        </item><item>
+            <title>CSOM</title>
+            <link>http://localhost:1313/tags/csom/</link>
+            <pubDate>Sat, 05 Sep 2020 12:42:58 +0900</pubDate>
+            <guid>http://localhost:1313/tags/csom/</guid>
+            <description></description>
+        </item><item>
+            <title>WebService</title>
+            <link>http://localhost:1313/tags/webservice/</link>
+            <pubDate>Sat, 05 Sep 2020 12:42:58 +0900</pubDate>
+            <guid>http://localhost:1313/tags/webservice/</guid>
+            <description></description>
+        </item><item>
+            <title>デプロイ</title>
+            <link>http://localhost:1313/tags/%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4/</link>
+            <pubDate>Sun, 30 Aug 2020 10:20:46 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4/</guid>
+            <description></description>
+        </item><item>
+            <title>アプリカタログ</title>
+            <link>http://localhost:1313/tags/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%AB%E3%82%BF%E3%83%AD%E3%82%B0/</link>
+            <pubDate>Thu, 23 Jul 2020 12:14:12 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%82%A2%E3%83%97%E3%83%AA%E3%82%AB%E3%82%BF%E3%83%AD%E3%82%B0/</guid>
+            <description></description>
+        </item><item>
+            <title>Gulp</title>
+            <link>http://localhost:1313/tags/gulp/</link>
+            <pubDate>Mon, 20 Jul 2020 10:00:40 +0900</pubDate>
+            <guid>http://localhost:1313/tags/gulp/</guid>
+            <description></description>
+        </item><item>
+            <title>AppSource</title>
+            <link>http://localhost:1313/tags/appsource/</link>
+            <pubDate>Sun, 19 Jul 2020 13:50:42 +0900</pubDate>
+            <guid>http://localhost:1313/tags/appsource/</guid>
+            <description></description>
+        </item><item>
+            <title>Teams</title>
+            <link>http://localhost:1313/tags/teams/</link>
+            <pubDate>Sun, 19 Jul 2020 13:50:42 +0900</pubDate>
+            <guid>http://localhost:1313/tags/teams/</guid>
+            <description></description>
+        </item><item>
+            <title>Office365Dev</title>
+            <link>http://localhost:1313/tags/office365dev/</link>
+            <pubDate>Tue, 02 Jun 2020 08:40:42 +0900</pubDate>
+            <guid>http://localhost:1313/tags/office365dev/</guid>
+            <description></description>
+        </item><item>
+            <title>Edge</title>
+            <link>http://localhost:1313/tags/edge/</link>
+            <pubDate>Fri, 15 May 2020 20:46:43 +0900</pubDate>
+            <guid>http://localhost:1313/tags/edge/</guid>
+            <description></description>
+        </item><item>
+            <title>Exchange</title>
+            <link>http://localhost:1313/tags/exchange/</link>
+            <pubDate>Sat, 09 May 2020 18:38:31 +0900</pubDate>
+            <guid>http://localhost:1313/tags/exchange/</guid>
+            <description></description>
+        </item><item>
+            <title>Office365</title>
+            <link>http://localhost:1313/tags/office365/</link>
+            <pubDate>Sat, 09 May 2020 18:38:31 +0900</pubDate>
+            <guid>http://localhost:1313/tags/office365/</guid>
+            <description></description>
+        </item><item>
+            <title>PowerShell</title>
+            <link>http://localhost:1313/tags/powershell/</link>
+            <pubDate>Sat, 09 May 2020 18:38:31 +0900</pubDate>
+            <guid>http://localhost:1313/tags/powershell/</guid>
+            <description></description>
+        </item><item>
+            <title>プロファイル画像</title>
+            <link>http://localhost:1313/tags/%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E7%94%BB%E5%83%8F/</link>
+            <pubDate>Sat, 09 May 2020 18:38:31 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%97%E3%83%AD%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E7%94%BB%E5%83%8F/</guid>
+            <description></description>
+        </item><item>
+            <title>SharePointAdd-Ins</title>
+            <link>http://localhost:1313/tags/sharepointadd-ins/</link>
+            <pubDate>Sun, 03 May 2020 13:06:29 +0900</pubDate>
+            <guid>http://localhost:1313/tags/sharepointadd-ins/</guid>
+            <description></description>
+        </item><item>
+            <title>SharePointアドイン</title>
+            <link>http://localhost:1313/tags/sharepoint%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/</link>
+            <pubDate>Sun, 03 May 2020 13:06:29 +0900</pubDate>
+            <guid>http://localhost:1313/tags/sharepoint%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/</guid>
+            <description></description>
+        </item><item>
+            <title>SharePointアプリ</title>
+            <link>http://localhost:1313/tags/sharepoint%E3%82%A2%E3%83%97%E3%83%AA/</link>
+            <pubDate>Sun, 03 May 2020 13:06:29 +0900</pubDate>
+            <guid>http://localhost:1313/tags/sharepoint%E3%82%A2%E3%83%97%E3%83%AA/</guid>
+            <description></description>
+        </item><item>
+            <title>Subscription</title>
+            <link>http://localhost:1313/tags/subscription/</link>
+            <pubDate>Sat, 29 Feb 2020 10:19:49 +0900</pubDate>
+            <guid>http://localhost:1313/tags/subscription/</guid>
+            <description></description>
+        </item><item>
+            <title>サンプル</title>
+            <link>http://localhost:1313/tags/%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB/</link>
+            <pubDate>Sat, 29 Feb 2020 10:19:49 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB/</guid>
+            <description></description>
+        </item><item>
+            <title>Preallocate</title>
+            <link>http://localhost:1313/tags/preallocate/</link>
+            <pubDate>Sun, 23 Feb 2020 01:37:59 +0900</pubDate>
+            <guid>http://localhost:1313/tags/preallocate/</guid>
+            <description></description>
+        </item><item>
+            <title>フッター</title>
+            <link>http://localhost:1313/tags/%E3%83%95%E3%83%83%E3%82%BF%E3%83%BC/</link>
+            <pubDate>Sun, 23 Feb 2020 01:37:59 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%95%E3%83%83%E3%82%BF%E3%83%BC/</guid>
+            <description></description>
+        </item><item>
+            <title>ヘッダー</title>
+            <link>http://localhost:1313/tags/%E3%83%98%E3%83%83%E3%83%80%E3%83%BC/</link>
+            <pubDate>Sun, 23 Feb 2020 01:37:59 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%98%E3%83%83%E3%83%80%E3%83%BC/</guid>
+            <description></description>
+        </item><item>
+            <title>拡張機能</title>
+            <link>http://localhost:1313/tags/%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD/</link>
+            <pubDate>Sun, 23 Feb 2020 01:37:59 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD/</guid>
+            <description></description>
+        </item><item>
+            <title>SharePoint Framework</title>
+            <link>http://localhost:1313/tags/sharepoint-framework/</link>
+            <pubDate>Sun, 09 Feb 2020 15:03:15 +0900</pubDate>
+            <guid>http://localhost:1313/tags/sharepoint-framework/</guid>
+            <description></description>
+        </item><item>
+            <title>Workbench</title>
+            <link>http://localhost:1313/tags/workbench/</link>
+            <pubDate>Sun, 09 Feb 2020 15:03:15 +0900</pubDate>
+            <guid>http://localhost:1313/tags/workbench/</guid>
+            <description></description>
+        </item><item>
+            <title>Yo Sharepoint</title>
+            <link>http://localhost:1313/tags/yo-sharepoint/</link>
+            <pubDate>Mon, 03 Feb 2020 09:30:02 +0900</pubDate>
+            <guid>http://localhost:1313/tags/yo-sharepoint/</guid>
+            <description></description>
+        </item><item>
+            <title>SPEditor</title>
+            <link>http://localhost:1313/tags/speditor/</link>
+            <pubDate>Sun, 19 Jan 2020 12:56:12 +0900</pubDate>
+            <guid>http://localhost:1313/tags/speditor/</guid>
+            <description></description>
+        </item><item>
+            <title>Modern</title>
+            <link>http://localhost:1313/tags/modern/</link>
+            <pubDate>Wed, 25 Dec 2019 00:53:58 +0900</pubDate>
+            <guid>http://localhost:1313/tags/modern/</guid>
+            <description></description>
+        </item><item>
+            <title>PageLayout</title>
+            <link>http://localhost:1313/tags/pagelayout/</link>
+            <pubDate>Wed, 25 Dec 2019 00:53:58 +0900</pubDate>
+            <guid>http://localhost:1313/tags/pagelayout/</guid>
+            <description></description>
+        </item><item>
+            <title>Modernization</title>
+            <link>http://localhost:1313/tags/modernization/</link>
+            <pubDate>Sun, 15 Dec 2019 16:00:00 +0900</pubDate>
+            <guid>http://localhost:1313/tags/modernization/</guid>
+            <description></description>
+        </item><item>
+            <title>Scanner</title>
+            <link>http://localhost:1313/tags/scanner/</link>
+            <pubDate>Sun, 15 Dec 2019 16:00:00 +0900</pubDate>
+            <guid>http://localhost:1313/tags/scanner/</guid>
+            <description></description>
+        </item><item>
+            <title>SP2010WF</title>
+            <link>http://localhost:1313/tags/sp2010wf/</link>
+            <pubDate>Sun, 15 Dec 2019 16:00:00 +0900</pubDate>
+            <guid>http://localhost:1313/tags/sp2010wf/</guid>
+            <description></description>
+        </item><item>
+            <title>Office 365</title>
+            <link>http://localhost:1313/tags/office-365/</link>
+            <pubDate>Sun, 08 Dec 2019 16:04:01 +0900</pubDate>
+            <guid>http://localhost:1313/tags/office-365/</guid>
+            <description></description>
+        </item><item>
+            <title>構築</title>
+            <link>http://localhost:1313/tags/%E6%A7%8B%E7%AF%89/</link>
+            <pubDate>Sun, 08 Dec 2019 16:04:01 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E6%A7%8B%E7%AF%89/</guid>
+            <description></description>
+        </item><item>
+            <title>MSTeams</title>
+            <link>http://localhost:1313/tags/msteams/</link>
+            <pubDate>Sat, 30 Nov 2019 15:48:56 +0900</pubDate>
+            <guid>http://localhost:1313/tags/msteams/</guid>
+            <description></description>
+        </item><item>
+            <title>1.8</title>
+            <link>http://localhost:1313/tags/1.8/</link>
+            <pubDate>Tue, 19 Mar 2019 04:15:15 +0900</pubDate>
+            <guid>http://localhost:1313/tags/1.8/</guid>
+            <description></description>
+        </item><item>
+            <title>@Microsoft/Sharepoint</title>
+            <link>http://localhost:1313/tags/@microsoft/sharepoint/</link>
+            <pubDate>Mon, 18 Feb 2019 12:56:31 +0900</pubDate>
+            <guid>http://localhost:1313/tags/@microsoft/sharepoint/</guid>
+            <description></description>
+        </item><item>
+            <title>Yo</title>
+            <link>http://localhost:1313/tags/yo/</link>
+            <pubDate>Mon, 18 Feb 2019 12:56:31 +0900</pubDate>
+            <guid>http://localhost:1313/tags/yo/</guid>
+            <description></description>
+        </item><item>
+            <title>SharePointPnPPowerShellOnline</title>
+            <link>http://localhost:1313/tags/sharepointpnppowershellonline/</link>
+            <pubDate>Tue, 12 Feb 2019 08:57:08 +0900</pubDate>
+            <guid>http://localhost:1313/tags/sharepointpnppowershellonline/</guid>
+            <description></description>
+        </item><item>
+            <title>Diagnostics</title>
+            <link>http://localhost:1313/tags/diagnostics/</link>
+            <pubDate>Sat, 02 Feb 2019 10:43:54 +0900</pubDate>
+            <guid>http://localhost:1313/tags/diagnostics/</guid>
+            <description></description>
+        </item><item>
+            <title>ツール</title>
+            <link>http://localhost:1313/tags/%E3%83%84%E3%83%BC%E3%83%AB/</link>
+            <pubDate>Sat, 02 Feb 2019 10:43:54 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%84%E3%83%BC%E3%83%AB/</guid>
+            <description></description>
+        </item><item>
+            <title>診断</title>
+            <link>http://localhost:1313/tags/%E8%A8%BA%E6%96%AD/</link>
+            <pubDate>Sat, 02 Feb 2019 10:43:54 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E8%A8%BA%E6%96%AD/</guid>
+            <description></description>
+        </item><item>
+            <title>Docker Image</title>
+            <link>http://localhost:1313/tags/docker-image/</link>
+            <pubDate>Sat, 02 Feb 2019 08:11:23 +0900</pubDate>
+            <guid>http://localhost:1313/tags/docker-image/</guid>
+            <description></description>
+        </item><item>
+            <title>Application Customizer</title>
+            <link>http://localhost:1313/tags/application-customizer/</link>
+            <pubDate>Sun, 28 Oct 2018 02:52:25 +0900</pubDate>
+            <guid>http://localhost:1313/tags/application-customizer/</guid>
+            <description></description>
+        </item><item>
+            <title>Command Set</title>
+            <link>http://localhost:1313/tags/command-set/</link>
+            <pubDate>Sun, 28 Oct 2018 02:52:25 +0900</pubDate>
+            <guid>http://localhost:1313/tags/command-set/</guid>
+            <description></description>
+        </item><item>
+            <title>Field Customizer</title>
+            <link>http://localhost:1313/tags/field-customizer/</link>
+            <pubDate>Sun, 28 Oct 2018 02:52:25 +0900</pubDate>
+            <guid>http://localhost:1313/tags/field-customizer/</guid>
+            <description></description>
+        </item><item>
+            <title>SharePoint Framework Extension</title>
+            <link>http://localhost:1313/tags/sharepoint-framework-extension/</link>
+            <pubDate>Sun, 28 Oct 2018 02:52:25 +0900</pubDate>
+            <guid>http://localhost:1313/tags/sharepoint-framework-extension/</guid>
+            <description></description>
+        </item><item>
+            <title>SharePoint Framework 拡張機能</title>
+            <link>http://localhost:1313/tags/sharepoint-framework-%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD/</link>
+            <pubDate>Sun, 28 Oct 2018 02:52:25 +0900</pubDate>
+            <guid>http://localhost:1313/tags/sharepoint-framework-%E6%8B%A1%E5%BC%B5%E6%A9%9F%E8%83%BD/</guid>
+            <description></description>
+        </item><item>
+            <title>Kintone</title>
+            <link>http://localhost:1313/tags/kintone/</link>
+            <pubDate>Sun, 16 Sep 2018 18:13:09 +0900</pubDate>
+            <guid>http://localhost:1313/tags/kintone/</guid>
+            <description></description>
+        </item><item>
+            <title>Office Add-Ins</title>
+            <link>http://localhost:1313/tags/office-add-ins/</link>
+            <pubDate>Thu, 14 Dec 2017 22:00:30 +0900</pubDate>
+            <guid>http://localhost:1313/tags/office-add-ins/</guid>
+            <description></description>
+        </item><item>
+            <title>Office Dev</title>
+            <link>http://localhost:1313/tags/office-dev/</link>
+            <pubDate>Thu, 14 Dec 2017 22:00:30 +0900</pubDate>
+            <guid>http://localhost:1313/tags/office-dev/</guid>
+            <description></description>
+        </item><item>
+            <title>Microsoft Flow</title>
+            <link>http://localhost:1313/tags/microsoft-flow/</link>
+            <pubDate>Sun, 23 Oct 2016 13:11:20 +0900</pubDate>
+            <guid>http://localhost:1313/tags/microsoft-flow/</guid>
+            <description></description>
+        </item><item>
+            <title>SharePoint Designer</title>
+            <link>http://localhost:1313/tags/sharepoint-designer/</link>
+            <pubDate>Sun, 23 Oct 2016 13:11:20 +0900</pubDate>
+            <guid>http://localhost:1313/tags/sharepoint-designer/</guid>
+            <description></description>
+        </item><item>
+            <title>ワークフロー</title>
+            <link>http://localhost:1313/tags/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/</link>
+            <pubDate>Sun, 23 Oct 2016 13:11:20 +0900</pubDate>
+            <guid>http://localhost:1313/tags/%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%95%E3%83%AD%E3%83%BC/</guid>
+            <description></description>
+        </item></channel>
 </rss>

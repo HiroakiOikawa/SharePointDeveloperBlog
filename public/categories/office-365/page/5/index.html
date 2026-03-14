@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 5 - Office 365</title>
+
+
+<link rel="canonical" href="http://localhost:1313/categories/office-365/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="Office 365">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/categories/office-365/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="Office 365">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/categories/office-365/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/10031-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">モダンページのページレイアウトの種類と変更方法</h2>
+                        
+                        <p class="article-summary"><h1 id="はじめに">はじめに
+</h1><p>モダンページには複数の種類 (ページレイアウト) があり、それぞれページの特徴が異なります。
+ページレイアウトは、いくつかの方法で切り替えることができるのですが、この記事ではページレイアウトの種類と <a class="link" href="http://sharepoint.orivers.jp/article/10024"  target="_blank" rel="noopener"
+    >PnP PowerShell</a> を使用した切り替え方法をまとめています。
+今後も新しいページレイアウトが追加された際には記事をアップデートしていきたいと思います。</p>
+<h1 id="ページレイアウトの種類">ページレイアウトの種類
+</h1><p>2019年12月時点では、以下の3つのページレイアウトが用意されています。
+なお、今回のサンプルはコミュニティサイトとして作成したサイトをベースにしているので、サイドリンクバーが表示されていません。</p>
+<h2 id="home">Home
+</h2><p>モダンサイトを作成した際に Home.aspx に適用されているページレイアウトです。
+ページヘッダーとページタイトルが表示されない状態になります。
+<a class="link" href="/wp-content/uploads/2019/12/ModernPageLayout-2.png" ><img class="gallery-image" data-flex-basis="345px" data-flex-grow="144" height="703" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/10031-post/ModernPageLayout-2.png" srcset="/posts/10031-post/ModernPageLayout-2_hu_ed1b6695175b46df.png 800w, /posts/10031-post/ModernPageLayout-2.png 1013w" width="1013"></a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年12月25日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/10024-pnp-powershell/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2016">SharePoint 2016</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">モダンサイトのテンプレート展開などを実現する「PnP PowerShell」</h2>
+                        
+                        <p class="article-summary"><h1 id="pnp-powershell-とは">PnP PowerShell とは
+</h1><p>モダンサイトやリストの自動展開や各種設定を SharePoint 管理コンソールよりも簡単に実施できるようにするためのコマンドレットを多数備えた、PowerShell コマンドライブラリです。
+SharePoint Online だけでなく SharePoint オンプレミスに対しても使用することができます。
+詳細は <a class="link" href="https://docs.microsoft.com/ja-jp/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps"  target="_blank" rel="noopener"
+    >docs</a> を参照してください。</p>
+<h1 id="どんなことができるの">どんなことができるの？
+</h1><p>PnP PowerShell を使うことで、例えば次のようなことができるようになります。</p>
+<h2 id="モダンサイトのテンプレート展開">モダンサイトのテンプレート展開
+</h2><p>モダンサイトはテンプレート化することができませんが、PnP PowerShell のプロビジョニングテンプレートを使用することで、予め定めたリストやライブラリを追加したり、ドキュメントを事前にアップロードしてサイトを展開するというようなことができるようになります。
+旧来のサイトテンプレートと全く同じではありませんが、サイトテンプレートよりも細かいことまで含めてできるようになります。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年12月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/10008-spo-sharepoint-modernization-scanner/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint">SharePoint</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SPO のモダン対応を促進する「SharePoint Modernization Scanner」</h2>
+                        
+                        <p class="article-summary"><h1 id="sharepoint-modernization-scanner-とは">SharePoint Modernization Scanner とは
+</h1><p>SharePoint Modernization Scanner は、SharePoint Online サイトのモダン化を進めるために、SharePoint Online サイトをスキャンしてモダンに切り替えられていないサイトを抽出するツールです。
+PnP コミュニティにより維持管理されており、<a class="link" href="https://github.com/SharePoint/sp-dev-modernization"  target="_blank" rel="noopener"
+    >GitHub</a> からダウンロードして無償で使用することができます。
+また、詳細な説明資料はマイクロソフトの <a class="link" href="https://docs.microsoft.com/ja-jp/sharepoint/dev/transform/modernize-scanner?WT.mc_id=M365-MVP-4012897"  target="_blank" rel="noopener"
+    >Docs</a> に掲載されており、Docs に最新モジュールへのリンクも掲載されています。
+SharePoint Modernization Scanner は随時アップデートがされており、ドキュメントもそれに合わせて更新されているので、使用する際には常に Docs を確認して最新の情報を参照するようにしてください。
+このブログでも、ツールの紹介だけを行い詳細な使い方については割愛しています。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年12月15日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9998-docker-sharepoint-framework/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint">SharePoint</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Docker を使った SharePoint Framework 開発環境の構築 その３</h2>
+                        
+                        <p class="article-summary"><h1 id="はじめに">はじめに
+</h1><p>※2020年2月2日更新
+Docker 上に SharePoint Framework の開発環境を構築する手順をまとめました。
+この資料の内容は、<a class="link" href="https://www.slideshare.net/HiroakiOikawa/sharepoint-framework-teams"  target="_blank" rel="noopener"
+    >こちらのスライド</a>からの抜粋となります。
+構築手順をまとめて確認したい方は、スライドをダウンロードしてください。
+なお、環境構築手順は、
+・<a class="link" href="http://sharepoint.orivers.jp/?p=9954"  target="_blank" rel="noopener"
+    >開発環境を構築するためにホストとなる PC で行う手順</a>
+・<a class="link" href="http://sharepoint.orivers.jp/?p=9965"  target="_blank" rel="noopener"
+    >Docker イメージを準備する手順</a>
+・<a class="link" href="http://sharepoint.orivers.jp/?p=9998"  target="_blank" rel="noopener"
+    >Docker 上でプロジェクトごとに行う手順</a>
+の３部構成になっています。
+この記事では、Docker 上でプロジェクトごとに行う手順について記載します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年12月8日</time>
+                            <span>読了時間: 2分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9991-teams/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint">SharePoint</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Teams タブ開発基礎講座</h2>
+                        
+                        <p class="article-summary"><p>先日の Microsoft 365 Developer Bootcamp 2019 Tokyo では、Teams タブの開発を一から学ぶためのハンズオンを行いました。
+その際に使用したスライドとソースコードは、それぞれ以下の場所で公開しています。
+スライド：<a class="link" href="//www.slideshare.net/HiroakiOikawa/sharepoint-framework-teams" >SharePoint Framework Teams タブ開発基礎講座</a></p>
+<p>サンプルコード：<a class="link" href="https://github.com/HiroakiOikawa/spfx-sample/tree/master/TeamsTabSample"  target="_blank" rel="noopener"
+    >GitHub</a>
+ 
+SlideShare では、Teams タブの他にアプリケーションカスタマイザー、フィールドカスタマイザー、コマンドバー開発のための資料も公開していたりするので、SharePoint Framework 開発をはじめる方は参考にしてみてください。
+<a class="link" href="https://www.slideshare.net/HiroakiOikawa/sharepoint-framework-extension[AdSense-B]"  target="_blank" rel="noopener"
+    >https://www.slideshare.net/HiroakiOikawa/sharepoint-framework-extension[AdSense-B]</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年11月30日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9989-sharepoint-framework-v1-9-1/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint">SharePoint</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Framework v1.9.1 の変更点</h2>
+                        
+                        <p class="article-summary"><p>2019年8月14日に SharePoint Framework  v1.9.1 がリリースされました。
+この記事では v1.9.1 の変更点について気になるところだけ抜粋して記載します。
+詳細は以下のリリースノートを確認してください。
+<a class="link" href="https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.9.1-release-notes"  target="_blank" rel="noopener"
+    >SharePoint Framework v1.9 release notes</a></p>
+<h2 id="library-components">Library Components
+</h2><ul>
+<li>SharePoint Framework におけるコードの再利用を実現するための機能で、自作のファンクションなどを共通コードライブラリとして SharePoint 環境に展開するための機能です。</li>
+</ul>
+<p><a class="link" href="https://docs.microsoft.com/ja-jp/sharepoint/dev/spfx/library-component-overview"  target="_blank" rel="noopener"
+    >SharePoint Framework でライブラリコンポーネントタイプを使用する</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年11月30日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9981-sharepoint-framework-v1-8/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint">SharePoint</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Framework v1.8 の変更点</h2>
+                        
+                        <p class="article-summary"><p>2019年3月8日に SharePoint Framework  v1.8 がリリースされました。
+この記事では v1.8 の変更点について気になるところだけ抜粋して記載します。
+詳細は以下のリリースノートを確認してください。
+<a class="link" href="https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8-release-notes"  target="_blank" rel="noopener"
+    >SharePoint Framework v1.8 release notes</a></p>
+<h2 id="teams-タブ">Teams タブ
+</h2><ul>
+<li>v1.7 ではプレビュー版としてリリースされていましたが、v1.8 で正式サポートとなりました。</li>
+<li>「Teams タブ」は SharePoint Framework の Web パーツの開発と同じ開発手法で開発したカスタムアプリケーションを Microsoft Teams に「タブ」として追加できるようにするためのソリューションです。</li>
+</ul>
+<p><a class="link" href="https://docs.microsoft.com/ja-jp/sharepoint/dev/spfx/integrate-with-teams-introduction"  target="_blank" rel="noopener"
+    >SharePoint Framework を使用した Microsoft Teams タグの作成</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年3月19日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9965-docker-sharepoint-framework/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint">SharePoint</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Docker を使った SharePoint Framework 開発環境の構築 その２</h2>
+                        
+                        <p class="article-summary"><h1 id="はじめに">はじめに
+</h1><p>※2019年12月8日更新
+Docker 上に SharePoint Framework の開発環境を構築する手順をまとめました。
+この資料の内容は、<a class="link" href="https://www.slideshare.net/HiroakiOikawa/sharepoint-framework-teams"  target="_blank" rel="noopener"
+    >こちらのスライド</a>からの抜粋となります。
+構築手順をまとめて確認したい方は、スライドをダウンロードしてください。
+なお、環境構築手順は、
+・<a class="link" href="http://sharepoint.orivers.jp/?p=9954"  target="_blank" rel="noopener"
+    >開発環境を構築するためにホストとなる PC で行う手順</a>
+・<a class="link" href="http://sharepoint.orivers.jp/?p=9965"  target="_blank" rel="noopener"
+    >Docker イメージを準備する手順</a>
+・<a class="link" href="http://sharepoint.orivers.jp/?p=9998"  target="_blank" rel="noopener"
+    >Docker 上でプロジェクトごとに行う手順</a>
+の３部構成になっています。
+この記事では、Docker イメージを準備する手順について記載します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年2月18日</time>
+                            <span>読了時間: 2分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9954-docker-sharepoint-framework/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint">SharePoint</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Docker を使った SharePoint Framework 開発環境の構築 その１</h2>
+                        
+                        <p class="article-summary"><h1 id="はじめに">はじめに
+</h1><p>※2019年12月8日更新
+Docker 上に SharePoint Framework の開発環境を構築する手順をまとめました。
+この資料の内容は、<a class="link" href="https://www.slideshare.net/HiroakiOikawa/sharepoint-framework-teams"  target="_blank" rel="noopener"
+    >こちらのスライド</a>からの抜粋となります。
+構築手順をまとめて確認したい方は、スライドをダウンロードしてください。
+なお、環境構築手順は、
+・<a class="link" href="http://sharepoint.orivers.jp/?p=9954"  target="_blank" rel="noopener"
+    >開発環境を構築するためにホストとなる PC で行う手順</a>
+・<a class="link" href="http://sharepoint.orivers.jp/?p=9965"  target="_blank" rel="noopener"
+    >Docker イメージを準備する手順</a>
+・<a class="link" href="http://sharepoint.orivers.jp/?p=9998"  target="_blank" rel="noopener"
+    >Docker 上でプロジェクトごとに行う手順</a>
+の３部構成になっています。
+この記事では、開発環境を構築するためにホストとなる PC で行う手順について記載します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年2月12日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9925-sharepoint-online/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint">SharePoint</a>
+                            
+                            <a href="/categories/%E5%85%A8%E8%88%AC">全般</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Online ページ診断ツール</h2>
+                        
+                        <p class="article-summary"><h1 id="はじめに">はじめに
+</h1><p>マイクロソフト純正の SharePoint Online 用ページ診断ツール「Page Diagnostics for SharePoint」が、google chrome 拡張機能としてリリースされています。
+このツールを使ってどんな診断ができるのか試してみました。</p>
+<h1 id="page-diagnostics-for-sharepoint-の入手とインストール">Page Diagnostics for SharePoint の入手とインストール
+</h1><p>chrome ウェブストアで「SharePoint」で検索すると出てきます。
+<a class="link" href="https://chrome.google.com/webstore/search/sharepoint?hl=ja"  target="_blank" rel="noopener"
+    >https://chrome.google.com/webstore/search/sharepoint?hl=ja</a>
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2019/01/spodig1.png"  target="_blank" rel="noopener"
+    ><img class="gallery-image" data-flex-basis="935px" data-flex-grow="389" height="77" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9925-sharepoint-online/spodig1-300x77.png" width="300"></a>
+[Chromeに追加]ボタンをクリックすると、確認メッセージが表示されるので[拡張機能を追加]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2019/01/spodig2.png"  target="_blank" rel="noopener"
+    ><img class="gallery-image" data-flex-basis="444px" data-flex-grow="185" height="162" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9925-sharepoint-online/spodig2-300x162.png" width="300"></a>
+インストールするとブラウザの右上に拡張機能のボタンが追加されます(下図赤枠部分)
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2019/01/spodig3.png"  target="_blank" rel="noopener"
+    ><img class="gallery-image" data-flex-basis="740px" data-flex-grow="308" height="70" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9925-sharepoint-online/spodig3.png" width="216"></a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年2月2日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/categories/office-365/page/4/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/categories/office-365/">
+        1
+    </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/office-365/page/2/"
+                aria-label="Page 2">
+                2
+            </a><a class="page-link "href="/categories/office-365/page/3/"
+                aria-label="Page 3">
+                3
+            </a><a class="page-link "href="/categories/office-365/page/4/"
+                aria-label="Page 4">
+                4
+            </a><a class="page-link current"aria-current="page"href="/categories/office-365/page/5/"
+                aria-label="Page 5">
+                5
+            </a><a class="page-link "href="/categories/office-365/page/6/"
+                aria-label="Page 6">
+                6
+            </a><a class="page-link "href="/categories/office-365/page/7/"
+                aria-label="Page 7">
+                7
+            </a><a class="page-link "href="/categories/office-365/page/8/"
+                aria-label="Page 8">
+                8
+            </a><a class="page-link "href="/categories/office-365/page/9/"
+                aria-label="Page 9">
+                9
+            </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/office-365/page/10/"aria-label="Page 10">
+        10
+    </a><a class="page-link "href="/categories/office-365/page/6/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

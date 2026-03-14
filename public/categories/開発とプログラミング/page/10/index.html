@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 10 - 開発とプログラミング</title>
+
+
+<link rel="canonical" href="http://localhost:1313/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="開発とプログラミング">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="開発とプログラミング">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4031-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">個人用サイトのリンクとお気に入り、タグのアイコンを消す</h2>
+                        
+                        <p class="article-summary"><p>SharePoint2010のページ右上には、デフォルトで個人用サイトへアクセスするためのリンクと、お気に入り及びタグのアイコンが表示されています。
+お気に入りとタグのアイコン
+<img alt="personal1" class="gallery-image" data-flex-basis="266px" data-flex-grow="111" height="108" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4031-post/personal1.png" width="120">
+個人用サイトを作成＆参照するためのリンク
+<img alt="personal2" class="gallery-image" data-flex-basis="237px" data-flex-grow="98" height="272" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4031-post/personal2.png" width="269">
+これらのリンクとアイコンを削除する方法は以下の通りとなります。
+<strong>１．プロファイルサービスの管理ページへ移動</strong>サーバーの全体管理サイトへアクセスし、[サービスアプリケーションの管理]→[User Profile Service アプリケーション]をクリック。
+[プロファイルサービスの管理]ページを開きます。
+<img alt="personal3" class="gallery-image" data-flex-basis="639px" data-flex-grow="266" height="374" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4031-post/personal3.png" srcset="/posts/4031-post/personal3_hu_66a94d49282ce4e7.png 800w, /posts/4031-post/personal3.png 997w" width="997">
+<strong>２．User Profile Service アプリケーションの権限ページを開く</strong>[プロファイルサービスの管理]ページにて、[ひと]セクションの[ユーザー権限の管理]をクリック。
+[User Profile Service アプリケーションの権限]ページを開きます。
+<strong>３．権限を編集</strong>[User Profile Service アプリケーションの権限]ページ中段のリストボックスから、リンクとアイコンを消したいユーザーを選択します。
+デフォルトでは、ActiveDirectoryで認証されたユーザーすべてを指す「すべての認証されたユーザー」がリストアップされています。
+リストアップされたユーザーを一つ選択し、下段の権限一覧のチェックをオン/オフすることで機能をオン/オフすることができます。
+個人用サイトのリンクを消すには、[個人用サイトの作成]のチェックを外します。
+お気に入りとタグのアイコンを消すには、[ソーシャル機能の使用]のチェックを外します。
+以下のページは、「すべての認証されたユーザー」に対して、権限を外した場合のイメージになります。
+<img alt="personal4" class="gallery-image" data-flex-basis="274px" data-flex-grow="114" height="485" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4031-post/personal4.png" width="555">
+<strong>４．結果</strong>ここまでの操作の結果、個人用サイトのリンクとお気に入り、タグのアイコンが表示されなくなります。
+お気に入りとタグのアイコンが消えています。
+<img alt="personal5" class="gallery-image" data-flex-basis="288px" data-flex-grow="120" height="98" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4031-post/personal5.png" width="118">
+個人用サイトのリンクが消えています。
+<img alt="personal6" class="gallery-image" data-flex-basis="355px" data-flex-grow="148" height="178" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4031-post/personal6.png" width="264">
+一つ注意点です。
+権限を外すことで、個人用サイトのリンクやお気に入り、タグのアイコンが表示されなくなりますが、同時に機能そのものも利用できなくなってしまいます。
+ページ右上からリンクを消したいだけとかであれば、マスターページを編集するなどして、リンクだけ消すようにしてください。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年4月9日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3961-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">ワークフロー実行中の「フォームをレンダリングできません」エラー</h2>
+                        
+                        <p class="article-summary"><p><strong>現象：</strong>
+ワークフローを実行中に下図の通り「フォームをレンダリングできません・・・」というエラーが発生し、アイテムを開くことができない。
+<img alt="troublestateservice" class="gallery-image" data-flex-basis="265px" data-flex-grow="110" height="454" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3961-post/troublestateservice.png" width="503">
+<strong>原因：</strong>
+メッセージの通り、State Serviceが構成されていないことが原因。
+**対処法：**以下のリンクの通り、State Serviceを構成することで、ワークフローが動くようになる。
+[State Service アプリケーションを構成する](<a class="link" href="http://sharepoint.orivers.jp/reference/SitePages/State"  target="_blank" rel="noopener"
+    >http://sharepoint.orivers.jp/reference/SitePages/State</a> Serviceサービスアプリケーションを構成する.aspx)</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年3月7日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3941-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">リボンのカスタマイズ方法</h2>
+                        
+                        <p class="article-summary"><p>リボンのカスタマイズ方法が記載されたサイトを集めました。</p>
+<p><strong>日本語サイト</strong>
+<a class="link" href="http://blogs.msdn.com/tsmatsuz/archive/2009/12/16/sharepoint-custom-ribbon.aspx"  target="_blank" rel="noopener"
+    >カスタムのSharePointリボンの作成方法</a></p>
+<p><strong>英語サイト</strong><a class="link" href="http://www.sharepointnutsandbolts.com/2010/01/customizing-ribbon-part-1-creating-tabs.html"  target="_blank" rel="noopener"
+    >タブ、グループ、コントロールの作り方</a></p>
+<p><a class="link" href="http://www.sharepointnutsandbolts.com/2010/01/adding-ribbon-items-into-existing.html"  target="_blank" rel="noopener"
+    >タブ、グループへのリボンアイテムの追加方法</a></p>
+<p><a class="link" href="http://www.sharepointnutsandbolts.com/2010/02/ribbon-customizations-dropdown-controls.html"  target="_blank" rel="noopener"
+    >ドロップダウンの作り方、クライアントオブジェクトモデルとJavaScript</a></p>
+<p><a class="link" href="http://www.sharepointnutsandbolts.com/2010/02/customize-ribbon-programmatically-from.html"  target="_blank" rel="noopener"
+    >プログラムによるリボンのカスタマイズ方法</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年3月4日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3931-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">最小構成のマスターページサンプル</h2>
+                        
+                        <p class="article-summary"><p>最小構成のマスターページサンプルをダウンロードできます。
+msdn
+<a class="link" href="http://code.msdn.microsoft.com/odcSP14StarterMaster"  target="_blank" rel="noopener"
+    >http://code.msdn.microsoft.com/odcSP14StarterMaster</a>
+codeplex
+<a class="link" href="http://startermasterpages.codeplex.com/"  target="_blank" rel="noopener"
+    >http://startermasterpages.codeplex.com/</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年2月28日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4311-url-spview/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">絶対URLからSPViewを取得する</h2>
+                        
+                        <p class="article-summary"><p>絶対URLからSPViewを取得する方法です。
+SPViewはSPListと同様、http://から始まる絶対URLで取得することができません。
+SPViewはホスト名からの相対URLで取得します。管理パスとかサブサイトとかで階層がどんなに深くなっていても、ホスト名からの相対URLを指定します。
+従って、以下のコードのように何らかのやり方でホスト名までの部分を削除し、その値をSPWebのGetViewFromUrlメソッドに渡します。</p>
+<pre tabindex="0"><code>1: Uri uri = new Uri(&#34;http://test.co.jp/test/Lists/List1/AllItems.aspx&#34;);
+</code></pre><pre tabindex="0"><code>2: SPSite site = new SPSite(uri.AbsoluteUri);
+</code></pre><pre tabindex="0"><code>3: SPWeb web = site.OpenWeb();
+</code></pre><pre tabindex="0"><code>4: string targetUrl = uri.AbsoluteUrl.Replace(string.Format(&#34;{0}{1}&#34;, uri.GetLeftPart(UriPartial.Scheme), uri.Host), &#34;&#34;);
+</code></pre><pre tabindex="0"><code>5: SPView view = web.GetViewFromUrl(targetUrl);
+</code></pre><p>指定の絶対URLでSPViewが取得できない場合、SPExceptionが発生します。
+SPWebやSPListが取得できないときは、FileNotFoundExceptionが発生するのに、SPViewだけはSPExceptionなので、注意が必要です。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年9月23日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4301-url-splistitem/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">絶対URLからSPListItemを取得する</h2>
+                        
+                        <p class="article-summary"><p>絶対URLからSPListItemを取得する方法です。
+SPListItemの取得方法は、対象がファイルまたはフォルダか、リストアイテムかで若干異なります。
+<strong>ファイル、フォルダの取得</strong>
+ファイルまたはフォルダのSPListItemを取得する場合、SPListと同様、ホスト名からの相対URLで取得します。
+以下のコードでは、Documentsドキュメントライブラリの直下のtestフォルダ内のmemo.txtのSPListItemを取得します。</p>
+<pre tabindex="0"><code>1: Uri uri = new Uri(&#34;http://test.co.jp/Documents/test/memo.txt&#34;);
+</code></pre><pre tabindex="0"><code>2: SPSite site = new SPSite(uri.AbsoluteUri);
+</code></pre><pre tabindex="0"><code>3: SPWeb web = site.OpenWeb();
+</code></pre><pre tabindex="0"><code>4: string targetUrl = uri.AbsoluteUrl.Replace(string.Format(&#34;{0}{1}&#34;, uri.GetLeftPart(UriPartial.Scheme), uri.Host), &#34;&#34;);
+</code></pre><pre tabindex="0"><code>5: SPListItem file = web.GetListItem(targetUrl);
+</code></pre><p>次は、Documentsドキュメントライブラリの直下のtestフォルダのSPListItemを取得するコードです。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年9月23日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4291-url-splist/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">絶対URLからSPListを取得する</h2>
+                        
+                        <p class="article-summary"><p>絶対URLからSPListを取得する方法です。
+結論から言うと、SPListはhttp://から始まる絶対URLで取得することができません。
+SPListはホスト名からの相対URLで取得します。管理パスとかサブサイトとかで階層がどんなに深くなっていても、ホスト名からの相対URLを指定します。
+従って、以下のコードのように何らかのやり方でホスト名までの部分を削除し、その値をSPWebのGetListメソッドに渡します。</p>
+<pre tabindex="0"><code>1: Uri uri = new Uri(&#34;http://test.co.jp/test/Lists/List1/DispForm.aspx?ID=1&#34;);
+</code></pre><pre tabindex="0"><code>2: SPSite site = new SPSite(uri.AbsoluteUri);
+</code></pre><pre tabindex="0"><code>3: SPWeb web = site.OpenWeb();
+</code></pre><pre tabindex="0"><code>4: string targetUrl = uri.AbsoluteUrl.Replace(string.Format(&#34;{0}{1}&#34;, uri.GetLeftPart(UriPartial.Scheme), uri.Host), &#34;&#34;);
+</code></pre><pre tabindex="0"><code>5: SPList list = web.GetList(targetUrl);
+</code></pre><p>これで問題なさそうですが、SPWeb.GetListメソッドは一つだけ注意点があります。
+SPWeb.GetListメソッドは、引数として渡されたURLのファイル名の部分まで意味を持ちます。
+例えば、リスト名までは合っていてもファイル名の部分に間違いがあると、SPListを取得することができません。
+以下のコードは、DispForm.aspxがDisp.aspxと間違えているため、SPListは取得できません。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年9月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4281-url-spweb/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">絶対URLからSPWebを取得する</h2>
+                        
+                        <p class="article-summary"><p>絶対URLからSPWebを取得する方法です。
+SPWebを取得するには、まずSPSiteを取得する必要があります。
+SPSiteの取得は、<a class="link" href="http://sharepoint.orivers.jp/reference/SharePoint2007/%e7%b5%b6%e5%af%beURL%e3%81%8b%e3%82%89SPSite%e3%82%92%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b.aspx"  target="_blank" rel="noopener"
+    >別の記事</a>にも書いた通り、SPSiteのコンストラクタの引数に、絶対URLを渡して取得します。
+その後、続けてOpenWebメソッドを引数なしで呼び出すことで、SPWebを取得できます。
+以下のコードでは、testというサブサイトを指定しています。
+このコードの結果は、testサブサイトが取得できます。</p>
+<pre tabindex="0"><code>1: SPSite site = new SPSite(&#34;http://test.co.jp/test/Lists/List1/DispForm.aspx?ID=1&#34;);
+</code></pre><pre tabindex="0"><code>2: SPWeb web = site.OpenWeb();
+</code></pre><p>SPSiteと同様、サイトが特定できれば、後半のURLは存在しないコンテンツを指していても問題ありません。
+以下のコードでは、test2という存在しないサブサイトを指しています。
+このコードの結果は、<a class="link" href="http://test.co.jp/"  target="_blank" rel="noopener"
+    >http://test.co.jp</a>のトップサイトが取得できます。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年9月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4271-url-spsite/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">絶対URLからSPSiteを取得する</h2>
+                        
+                        <p class="article-summary"><p>絶対URLからSPSiteを取得する方法です。
+SPSiteのコンストラクタの引数に、絶対URLを渡すとSPSiteが取得できます。</p>
+<pre tabindex="0"><code>1: SPSite site = new SPSite(http://test.co.jp/test/Lists/List1/DispForm.aspx?ID=1);
+</code></pre><p>管理パスを定義している場合は、SharePointが自動的に管理パスかどうかを判断し、適切なSPSiteを返してくれます。
+例えば、<a class="link" href="http://test.co.jp/"  target="_blank" rel="noopener"
+    >http://test.co.jp</a>直下のサイトコレクションの下位にtest1という管理パスを定義し、そこにサイトコレクションを作成した場合、以下のコードではtest1のサイトコレクションを取得します。</p>
+<pre tabindex="0"><code>1: SPSite site = new SPSite(&#34;http://test.co.jp/test1/Lists/List1/DispForm.aspx?ID=1&#34;);
+</code></pre><p>サイトコレクションが特定できれば、後半のURLは存在しないコンテンツを指していても問題ありません。
+以下のコードでは、test2という存在しないサブサイトを指しています。
+このコードの結果は、<a class="link" href="http://test.co.jp/"  target="_blank" rel="noopener"
+    >http://test.co.jp</a>のサイトコレクションが取得できます。</p>
+<pre tabindex="0"><code>1: SPSite site = new SPSite(&#34;http://test.co.jp/test2/Lists/List1/DispForm.aspx?ID=1&#34;);
+</code></pre><p>指定の絶対URLでSPSiteが取得できない場合、FileNotFoundExceptionが発生します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年9月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4251-sharepoint-api-web-config/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint API で web.config を変更する</h2>
+                        
+                        <p class="article-summary"><p>SharePoint API には、web.configを変更するためのクラスが用意されています。
+このクラスを使うことで、たとえばFeatureのインストール時に自動的にweb.configを変更するということができるようになります。
+web.configの変更には、<a class="link" href="http://msdn.microsoft.com/ja-jp/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx"  target="_blank" rel="noopener"
+    >SPWebConfigModification</a>クラスと<a class="link" href="http://msdn.microsoft.com/ja-jp/library/microsoft.sharepoint.administration.spwebservice.aspx"  target="_blank" rel="noopener"
+    >SPWebService</a>クラスを利用します。
+例として、web.config内のappSettingsに値を追加する処理を書いてみます。
+**１．変更内容をSPWebConfigModificationクラスにセットする。**SPWebConfigModificationクラスは、web.configに加える変更情報を保持するクラスです。
+web.configを変更したい場合には、このクラスに変更内容をセットすることになります。</p>
+<pre tabindex="0"><code>1: SPWebConfigModification appSetting = new SPWebConfigModification();
+</code></pre><pre tabindex="0"><code>2: appSetting.Path = &#34;configuration/appSettings&#34;;
+</code></pre><pre tabindex="0"><code>3: appSetting.Name = &#34;add[@key=&#39;NewKey&#39;]&#34;;
+</code></pre><pre tabindex="0"><code>4: appSetting.Owner = &#34;orivers&#34;;
+</code></pre><pre tabindex="0"><code>5: appSetting.Sequence = 0;
+</code></pre><pre tabindex="0"><code>6: appSetting.Type = SPWebConfigModification.SPWebConfigModificationType.EnsureChildNode;
+</code></pre><pre tabindex="0"><code>7: appSetting.Value = &#34;&lt;add key=&#39;NewKey&#39; value=&#39;NewValue&#39;/&gt;&#34;;
+</code></pre><p> 
+各プロパティの詳細はヘルプを見ていただくとして、ここでは簡単に説明します。
+Pathプロパティに変更対象となるノードを指定し、Valueプロパティに変更内容を指定します。
+Nameプロパティは、この変更を一意に識別するための値です。
+Ownerプロパティも、Nameプロパティと合わせて、変更を一意に識別するために使用します。
+Typeプロパティは、変更内容に合わせたタイプを指定します。
+**２．変更を実行する。**SPWebConfigModificationクラスの作成が完了したら、web.configのアップデートをしたいWebアプリケーションで変更を実行します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年8月28日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/9/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">
+        1
+    </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/6/"
+                aria-label="Page 6">
+                6
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/7/"
+                aria-label="Page 7">
+                7
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/8/"
+                aria-label="Page 8">
+                8
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/9/"
+                aria-label="Page 9">
+                9
+            </a><a class="page-link current"aria-current="page"href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/10/"
+                aria-label="Page 10">
+                10
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/11/"aria-label="Page 11">
+        11
+    </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/11/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

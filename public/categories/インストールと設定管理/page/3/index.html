@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 3 - インストールと設定、管理</title>
+
+
+<link rel="canonical" href="http://localhost:1313/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="インストールと設定、管理">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="インストールと設定、管理">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5191-os-kb/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">サーバーのOSをアップグレードする方法に関するKB</h2>
+                        
+                        <p class="article-summary"><p>SharePoint が入っているサーバーのOSアップグレードは、OS入れ替えとコンテンツDBのデタッチ＆アタッチで行けます、というKB。 <a class="link" href="http://t.co/TSQbzmWEDA"  target="_blank" rel="noopener"
+    >http://t.co/TSQbzmWEDA</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年3月14日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5041-ad-active-directory/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">AD (Active Directory) インポートによるプロファイル同期の構成</h2>
+                        
+                        <p class="article-summary"><p>SharePoint 2010 から、プロファイル同期の仕組みは FIM(Forefront Identity Manager) がベースとなり、その仕組みが非常に複雑になりました。
+それに伴い、プロファイル同期周りのセットアップに関する問題も多く発生しました。
+代表的なところでは、User Profile Synchronization Service が起動できないとか、AD から情報をインポートしたいだけなのに、機能的には双方向のやり取りができてしまうためセキュリティ的に不安とか・・・色々あったと思います。
+ 
+そんな問題に対応するため、SharePoint 2013 では、AD インポートという SharePoint 2007 のプロファイル同期と同じ仕組みが復活しました！
+AD インポートは、その名の通り AD からのインポートしかできませんが、構成は非常に簡単で仕組みも単純化されているため、インポート速度は従来の FIM を使う形式よりも速いとのこと。
+ 
+今回は、そんな AD インポートの手順を調べてみました。
+ 
+<strong>＜構成手順＞</strong>
+全体管理サイトに接続し、[サービスアプリケーションの管理]をクリックします。
+<img alt="image_thumb_5_34ABF045" class="gallery-image" data-flex-basis="297px" data-flex-grow="123" height="181" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_5_34ABF045.png" width="224">
+ 
+[User Profile Service Application]をクリックし、プロファイル サービスの管理ページに遷移します。
+<img alt="image_thumb_6_34ABF045" class="gallery-image" data-flex-basis="350px" data-flex-grow="146" height="338" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_6_34ABF045.png" width="494">
+ 
+[同期設定の構成]をクリックし、同期設定の構成ページに遷移します。
+<img alt="image_thumb_7_34ABF045" class="gallery-image" data-flex-basis="440px" data-flex-grow="183" height="277" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_7_34ABF045.png" width="508">
+ 
+[同期のオプション]にある[SharePoint Active Directory インポートを使用する]を選択し、[OK]をクリックします。
+デフォルトは[SharePoint のプロファイル同期を使用する]になっていて、これが SharePoint 2010 から採用された FIM を使ったプロファイル同期を行うことを指しています。
+<img alt="image_thumb_8_1FBA6DD2" class="gallery-image" data-flex-basis="321px" data-flex-grow="134" height="479" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_8_1FBA6DD2.png" width="642">
+ 
+次に同期元となる AD を指定するため、プロファイルサービスの管理ページに戻り、[同期接続の構成]をクリックします。
+<img alt="image_thumb_10_1FBA6DD2" class="gallery-image" data-flex-basis="440px" data-flex-grow="183" height="277" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_10_1FBA6DD2.png" width="508">
+ 
+同期接続ページにて、[新しい接続の作成]をクリックします。
+<img alt="image_thumb_9_1FBA6DD2" class="gallery-image" data-flex-basis="865px" data-flex-grow="360" height="178" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_9_1FBA6DD2.png" width="642">
+ 
+新しい同期接続の追加ページで、プロファイルインポートを行う AD への接続情報を設定します。
+設定する内容は下図の通りで、AD への接続情報さえ事前におさえておけば、特に問題はないと思います。
+ですが、ここで一点だけ注意事項。
+ページ内のコメントにも書いてありますが、[アカウント名]で指定したアカウントには[完全修飾ドメイン名]で指定した AD に対して、ディレクトリ同期権限が必要です。
+この権限を持たないアカウントを指定していると、インポート時にエラーが発生してしまいます。
+詳細は後述します。
+ 
+[接続設定]を入力した後、ページ下部の[コンテナーの作成]をクリックします。
+<img alt="image_thumb_11_1FBA6DD2" class="gallery-image" data-flex-basis="405px" data-flex-grow="168" height="380" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_11_1FBA6DD2.png" width="642">
+<img alt="image_thumb_12_1FBA6DD2" class="gallery-image" data-flex-basis="658px" data-flex-grow="274" height="234" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_12_1FBA6DD2.png" width="642">
+ 
+[コンテナーの作成]をクリックすると、AD のオブジェクトがツリー形式で表示されます。
+この中から、インポートするオブジェクトを選択します。
+下図では、&ldquo;Users&quot;を選択しているので、&ldquo;Users&quot;に含まれるオブジェクト、今回の場合はすべてのユーザーアカウントがインポート対象となります。
+このインターフェイスは、SharePoint 2007 と一緒なので、2007 経験者であれば簡単に設定できるかと思います。
+インポート対象を指定したら、[OK]をクリックします。
+<img alt="image_thumb_13_1FBA6DD2" class="gallery-image" data-flex-basis="392px" data-flex-grow="163" height="393" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_13_1FBA6DD2.png" width="642">
+ 
+以上で設定は完了です。
+同期接続のページに戻ると、今追加した接続が一覧に表示されています。
+<img alt="image_thumb_14_1FBA6DD2" class="gallery-image" data-flex-basis="518px" data-flex-grow="215" height="239" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_14_1FBA6DD2.png" width="516">
+ 
+最後にきちんとインポート処理が動くかどうか、確認をしてみます。
+プロファイルサービスの管理ページに戻り、[プロファイルの同期の開始]をクリックします。
+<img alt="image_thumb_15_1FBA6DD2" class="gallery-image" data-flex-basis="440px" data-flex-grow="183" height="277" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_15_1FBA6DD2.png" width="508">
+ 
+[完全同期の開始]を選択して[OK]をクリックし、インポート処理を実行します。
+<img alt="image_thumb_16_1FBA6DD2" class="gallery-image" data-flex-basis="747px" data-flex-grow="311" height="206" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_16_1FBA6DD2.png" width="642">
+ 
+きちんと設定ができていれば、プロファイルサービスの管理ページで、プロファイルが増えたことを確認できます。
+下図ではユーザープロファイルの数は6しかないですが、元は1でした。
+また、プロファイルの同期状態というところがアイドルになっていますが、エラーがあった場合は、ここにエラーと表示されます。
+<img alt="image_thumb_17_1FBA6DD2" class="gallery-image" data-flex-basis="250px" data-flex-grow="104" height="334" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_17_1FBA6DD2.png" width="349">
+ 
+<strong>＜ディレクトリ同期権限とは＞</strong>
+前述のとおり、インポート処理に利用するアカウントがディレクトリ同期権限を持っていない場合、上記設定はうまくできていても、インポート処理自体は失敗します。
+エラーは以下の通りで、イベントログに ID 2896 として「クライアントが、ディレクトリ パーティションに対して DirSync LDAP 要求を行いましたが、次のエラーのために拒否されました。」と記録されます。
+エラーメッセージの最後の方に、「&ldquo;Replicating Directory Changes&quot;制御アクセス権」という言葉が出ていますが、これがディレクトリ同期権限のことを指しています。
+<img alt="image_thumb_18_1FBA6DD2" class="gallery-image" data-flex-basis="774px" data-flex-grow="322" height="199" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_18_1FBA6DD2.png" width="642">
+ 
+では、ディレクトリ同期権限をどうやってアカウントに付与するかですが、以下の手順となります。
+ 
+<strong>＜ディレクトリ同期権限の付与手順＞</strong>
+Windows Server の 管理ツールから [Active Directory ユーザーとコンピューター]を起動します。
+起動後、下図の通り権限付与の対象となる AD をツリーから選択し、右クリックメニューから、[制御の委任]をクリックします。
+<img alt="image_thumb_20_1FBA6DD2" class="gallery-image" data-flex-basis="484px" data-flex-grow="201" height="266" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_20_1FBA6DD2.png" width="537">
+ 
+オブジェクト制御の委任ウィザードが起動するので、[次へ]をクリックして作業を開始します。
+<img alt="image_thumb_21_4DA7C08A" class="gallery-image" data-flex-basis="321px" data-flex-grow="134" height="447" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_21_4DA7C08A.png" width="599">
+ 
+権限を付与するユーザーを追加するため、[追加]をクリックします。
+<img alt="image_thumb_22_4DA7C08A" class="gallery-image" data-flex-basis="321px" data-flex-grow="134" height="443" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_22_4DA7C08A.png" width="594">
+ 
+[選択するオブジェクト名を入力してください]欄に、権限を付与するユーザー名を入力し、[名前の確認]をクリックします。
+正しいユーザー名が指定されていると、ユーザー名にアンダーラインが引かれます。
+その後、[OK]をクリックします。
+<img alt="image_thumb_23_4DA7C08A" class="gallery-image" data-flex-basis="460px" data-flex-grow="191" height="291" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_23_4DA7C08A.png" width="558">
+ 
+これでユーザーを選択することができました。
+[次へ]をクリックします。
+<img alt="image_thumb_24_4DA7C08A" class="gallery-image" data-flex-basis="321px" data-flex-grow="134" height="443" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_24_4DA7C08A.png" width="594">
+ 
+[委任するカスタム タスクを作成する]を選択し、[次へ]をクリックします。
+<img alt="image_thumb_25_4DA7C08A" class="gallery-image" data-flex-basis="320px" data-flex-grow="133" height="445" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_25_4DA7C08A.png" width="595">
+ 
+[このフォルダー、このフォルダー内の既存のオブジェクト、およびこのフォルダー内の新しいオブジェクトの作成]を選択し、[次へ]をクリックします。
+<img alt="image_thumb_26_4DA7C08A" class="gallery-image" data-flex-basis="322px" data-flex-grow="134" height="444" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_26_4DA7C08A.png" width="596">
+ 
+[全般]にチェックを入れて、[アクセス許可]のリストから[ディレクトリの変更のレプリケート]を探し、チェックを入れます。
+これが、ディレクトリ同期権限の正体です。
+チェックを入れたら、[次へ]をクリックします。
+<img alt="image_thumb_27_4DA7C08A" class="gallery-image" data-flex-basis="320px" data-flex-grow="133" height="445" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_27_4DA7C08A.png" width="595">
+ 
+これで指定のアカウントに、ディレクトリ同期権限が付与されました。
+[完了]をクリックして、ウィザードを終了します。
+<img alt="image_thumb_28_4DA7C08A" class="gallery-image" data-flex-basis="321px" data-flex-grow="133" height="445" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5041-ad-active-directory/image_thumb_28_4DA7C08A.png" width="596">
+ 
+初めてプロファイル同期を構成するときには、このディレクトリ同期権限の付与を忘れずに行うようにしてください。
+参考URL：
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/jj219646.aspx"  title="http://technet.microsoft.com/ja-jp/library/jj219646.aspx"
+     target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/jj219646.aspx</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2012年11月18日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4971-sharepoint-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2013 のインストール、初期構成手順</h2>
+                        
+                        <p class="article-summary"><p>SharePoint 2013 のインストールから初期構成までの流れを、画面ショット付きでまとめました。
+ 
+TechNet には、日本語で詳細な手順が公開されているので、詳細はそちらで追っていただくとして、ここでは流れをつかんでいただければと思います。
+ 
+なお、今回は SharePoint の最低限の検証環境を構築する際に良く作る構成(SharePoint x 1 + SQL x 1)を例にしています。
+TechNet でいうところの「<a class="link" href="http://technet.microsoft.com/ja-jp/library/cc262243%28v=office.15%29.aspx"  target="_blank" rel="noopener"
+    >SQL Server を使用する単一サーバーに SharePoint 2013 をインストールする</a>」とほぼ同じ内容になっています。
+2010 をインストールした経験のある方であれば、それとほぼ同じなので全く問題ないかと思います。
+ 
+ 
+<strong>前提条件：</strong>
+SQL Server は事前にインストールしておいてください。
+ 
+インストールを開始する前に、以下のドキュメントを確認し、ハードウェア、ソフトウェアが要件を満たしていることを確認してください。
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/cc262485%28v=office.15%29.aspx"  title="http://technet.microsoft.com/ja-jp/library/cc262485(v=office.15).aspx"
+     target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/cc262485(v=office.15).aspx</a>
+ 
+ちなみに私の検証環境は貧弱でして以下の通りとなっています。
+まだバリバリ検証しているわけではないので、今のところこれで足りています。
+＜SharePoint＞
+CPU：2 仮想プロセッサ
+メモリ：8GB
+ 
+＜SQL Server＞
+CPU：2 仮想プロセッサ
+メモリ：4GB
+ 
+ 
+<strong>インストール手順：</strong>
+<strong>１．必須コンポーネントのインストール</strong>
+SharePoint 2013 を動かす上で必要となるコンポーネントを、自動的に Web からダウンロードしつつ、インストールを行います。
+自動的に Web に繋ぎに行くので、Web に繋がる状態で以下の手順を進めてください。
+本番環境など、Web が繋がらない環境でインストールする方法は、また別の機会にご紹介します。
+ 
+インストーラーを起動し、[ソフトウェア必須コンポーネントのインストール]をクリック。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2014/12/image_thumb_3D9E5E32.png"  target="_blank" rel="noopener"
+    ><img alt="image_thumb_3D9E5E32" class="gallery-image" data-flex-basis="319px" data-flex-grow="133" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_3D9E5E32.png" width="639"></a>
+製品準備ツールが起動するので、[次へ]をクリック。
+<img alt="image_thumb_1_3D9E5E32" class="gallery-image" data-flex-basis="323px" data-flex-grow="134" height="475" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_1_3D9E5E32.png" width="640">
+ライセンス条項。
+[使用許諾契約書の条項に同意します]をチェックして、[次へ]をクリック。
+<img alt="image_thumb_2_3D9E5E32" class="gallery-image" data-flex-basis="324px" data-flex-grow="135" height="474" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_2_3D9E5E32.png" width="640">
+必須コンポーネントが順次インストールされるので、終わるまで待ちます。
+<img alt="image_thumb_3_3D9E5E32" class="gallery-image" data-flex-basis="307px" data-flex-grow="127" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_3_3D9E5E32.png" width="614">
+終了しました！
+これで必須コンポーネントのインストールは完了です。
+[完了]をクリックして、元の画面に戻ります。
+<img alt="image_thumb_4_3D9E5E32" class="gallery-image" data-flex-basis="306px" data-flex-grow="127" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_4_3D9E5E32.png" width="612">
+<strong>２．SharePoint 本体のインストール</strong>
+いよいよ、SharePoint本体のインストールです。といっても、ここまでは何も難しいことはありません。
+[SharePoint Server のインストール]をクリックして、SharePoint 本体のインストールを開始します。
+<img alt="image_thumb_5_3D9E5E32" class="gallery-image" data-flex-basis="319px" data-flex-grow="133" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_5_3D9E5E32.png" width="639">
+プロダクトキーを入力して、[続行]をクリック。
+<img alt="image_thumb_6_3D9E5E32" class="gallery-image" data-flex-basis="295px" data-flex-grow="122" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_6_3D9E5E32.png" width="590">
+[「マイクロソフト ソフトウェア ライセンス条項」に同意します]にチェックを入れ、[続行]をクリック。
+<img alt="image_thumb_7_3D9E5E32" class="gallery-image" data-flex-basis="294px" data-flex-grow="122" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_7_3D9E5E32.png" width="589">
+サーバーの種類は[完全]のまま、[今すぐインストール]をクリック。
+<img alt="image_thumb_8_3D9E5E32" class="gallery-image" data-flex-basis="295px" data-flex-grow="122" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_8_3D9E5E32.png" width="590">
+ちなみに、必要に応じて製品の各種ファイルの格納先と、検索インデックスの格納先を指定できます。
+検証環境として作る分には、特に変える必要はないと思います。
+<img alt="image_thumb_9_3D9E5E32" class="gallery-image" data-flex-basis="295px" data-flex-grow="122" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_9_3D9E5E32.png" width="590">
+インストールが始まります。
+あとは勝手に進行しますので、インストールが終わるまでしばし待ちます。。。
+<img alt="image_thumb_10_3D9E5E32" class="gallery-image" data-flex-basis="295px" data-flex-grow="122" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_10_3D9E5E32.png" width="590">
+インストールが完了しました！！
+[SharePoint 製品構成ウィザードを今すぐ実行する]にチェックを入れたまま、[閉じる]をクリックして、製品構成ウィザードの実行に進みます。
+<img alt="image_thumb_11_3D9E5E32" class="gallery-image" data-flex-basis="294px" data-flex-grow="122" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_11_3D9E5E32.png" width="588">
+ 
+<strong>3. 更新プログラムのインストール</strong>
+パブリック更新プログラムと、必要に応じて最新の累積的更新プログラムをインストールしてください。
+パブリック更新プログラムは、すべての環境でインストールすることが推奨されている更新プログラムとなります。
+以下よりダウンロードして、ウィザードの手順に従いインストールしてください。
+<a class="link" href="http://support.microsoft.com/kb/2767999"  title="http://support.microsoft.com/kb/2767999"
+     target="_blank" rel="noopener"
+    >http://support.microsoft.com/kb/2767999</a>
+累積的更新プログラムは、以下のサイトからダウンロード可能です。
+必要に応じてダウンロード、インストールしてください。
+なお、累積的更新プログラムをインストールするためには、上記パブリック更新プログラムを事前にインストールしておく必要があります。
+<a class="link" href="http://technet.microsoft.com/en-us/sharepoint/jj891062"  title="http://technet.microsoft.com/en-us/sharepoint/jj891062"
+     target="_blank" rel="noopener"
+    >http://technet.microsoft.com/en-us/sharepoint/jj891062</a>
+ 
+<strong>4．製品構成ウィザードの実行</strong>
+製品構成ウィザードでは、SharePoint ファームを構成するために、SQL Server との接続設定をして、各種 サービスのインストールやファイル、レジストリ、ローカルアカウントの設定などなど、色々な処理が実行されます。
+ 
+[次へ]をクリックして、製品構成ウィザードを始めます。
+<img alt="image_thumb_12_3D9E5E32" class="gallery-image" data-flex-basis="278px" data-flex-grow="115" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_12_3D9E5E32.png" width="556">
+製品構成ウィザード実行中に、IIS が停止するとのこと。
+検証環境構築中なので特に問題はないかと思います。[はい]をクリック。
+<img alt="image_thumb_13_3D9E5E32" class="gallery-image" data-flex-basis="457px" data-flex-grow="190" height="259" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_13_3D9E5E32.png" width="494">
+新しく環境を構築するので[新しいサーバーファームの作成]を選択し、[次へ]をクリック。
+<img alt="image_thumb_14_3D9E5E32" class="gallery-image" data-flex-basis="279px" data-flex-grow="116" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_14_3D9E5E32.png" width="558">
+SQL Server への接続設定を行います。
+[データベースサーバー]には、SharePoint の設定情報やデータを保存する先となる SQL Server のコンピュータ名を入力します。
+[データベース名]は、デフォルトで&quot;SharePoint_Config&quot;になっており、特に変える必要はないかと思いますが、もし SQL Server に既に別の SharePoint ファームが構築されている場合や、その予定がある場合は、データベース名に環境名がわかるように文字を追加するのが良いかと思います。
+なお、データベースには、SharePoint のファームに関する各種設定情報が保存されます。
+[ユーザー名]には、SharePoint から SQL Server に接続するときに使用する、ドメインアカウントを指定します。
+ここで指定するユーザーがいわゆるシステム管理者のような位置づけになります。
+TechNetにも詳しく書いてあるので、よく読んでアカウントを決めてください。
+[パスワード]には、[ユーザー名]で指定したユーザーのパスワードを入力します。
+すべて入力したら、[次へ]をクリック。
+<img alt="image_thumb_15_3D9E5E32" class="gallery-image" data-flex-basis="279px" data-flex-grow="116" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_15_3D9E5E32.png" width="559">
+ 
+ファームにサーバーを追加する時に必要となるパスフレーズを設定します。
+[パスフレーズ]と[パスフレーズの確認]を入力し、[次へ]をクリック。
+<img alt="image_thumb_16_3D9E5E32" class="gallery-image" data-flex-basis="278px" data-flex-grow="115" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_16_3D9E5E32.png" width="556">
+ 
+SharePoint のファームレベルの管理画面となる、全体管理サイトの設定をします。
+ポート番号と認証プロバイダーを指定して、[次へ]をクリック。
+ちなみに私はいつも、下の画面ショットにあるような設定にしています。
+ポート番号はわかりやすい方が管理がしやすいですし、認証プロバイダーはNTLMがわかりやすいので。
+全体管理サイトは特にネゴシエートでなければならない理由もないのではないかと思いますので・・・
+<img alt="image_thumb_17_3D9E5E32" class="gallery-image" data-flex-basis="278px" data-flex-grow="116" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_17_3D9E5E32.png" width="557">
+確認画面になります。
+これまでに指定した内容が表示されるので、間違いがないか確認して、[次へ]をクリック。
+<img alt="image_thumb_18_3D9E5E32" class="gallery-image" data-flex-basis="278px" data-flex-grow="115" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_18_3D9E5E32.png" width="556">
+ここから構成が始まるので、完了するまでしばし休憩。。。
+<img alt="image_thumb_19_3D9E5E32" class="gallery-image" data-flex-basis="279px" data-flex-grow="116" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_19_3D9E5E32.png" width="558">
+ 
+これで構成完了です。
+この時点でファームは完成し、全体管理サイトが起動している状態になります。
+でも、まだ検証で使うサイトが作られておらず、各種サービスアプリケーションも作られていないため、何もできません。
+ということで、[完了]をクリックすると自動的にブラウザが起動し、次のウィザードが立ち上がります。
+<img alt="image_thumb_20_3D9E5E32" class="gallery-image" data-flex-basis="280px" data-flex-grow="116" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_20_3D9E5E32.png" width="560">
+ 
+<strong>5．ファーム構成ウィザードの実行</strong>
+ここまでで、SharePoint ファームの初期状態が出来上がり、全体管理サイトも起動しました。
+次に、ファーム構成ウィザードを使って各種サービスアプリケーションの構成と初期サイトコレクションを作成します。
+ 
+ブラウザが起動すると、まず品質向上にご協力くださいということで、以下のページが開きます。
+検証環境なので、私はいつも迷わず[参加する]にチェックし、[OK]をクリック。
+<img alt="image_thumb_21_3D9E5E32" class="gallery-image" data-flex-basis="416px" data-flex-grow="173" height="369" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_21_3D9E5E32.png" width="640">
+ファームの構成をウィザードで行うか、手動で行うかを選択するページが表示されます。
+今回はウィザードを使うので、[ウィザードの開始]をクリックします。
+<img alt="image_thumb_22_3D9E5E32" class="gallery-image" data-flex-basis="416px" data-flex-grow="173" height="370" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_22_3D9E5E32.png" width="642">
+このファームで動かすサービスアプリケーションのアカウントを指定します。
+私の場合はいつも事前にアカウントを作っているので、[既存の管理アカウントを使用する]を指定していますが、もちろんここで[新しい管理アカウントを作成する]を指定して、新規作成しても問題ありません。
+サービスは、検証環境で起動させたいサービスのチェックを付けた状態にしておきます。
+検証する内容にもよりますが、色々機能を確認したいということであれば、ひとまずデフォルト設定のままでよいかと思います。
+設定を確認したら、[次へ]をクリック。
+※画面ショットは４つに分かれていますが、これで１つのページです。
+<img alt="image_thumb_23_3D9E5E32" class="gallery-image" data-flex-basis="529px" data-flex-grow="220" height="290" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_23_3D9E5E32.png" width="640">
+<img alt="image_thumb_24_3D9E5E32" class="gallery-image" data-flex-basis="542px" data-flex-grow="226" height="283" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_24_3D9E5E32.png" width="640">
+<img alt="image_thumb_25_28ACDBBF" class="gallery-image" data-flex-basis="546px" data-flex-grow="227" height="281" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_25_28ACDBBF.png" width="640">
+<img alt="image_thumb_26_28ACDBBF" class="gallery-image" data-flex-basis="558px" data-flex-grow="232" height="275" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_26_28ACDBBF.png" width="640">
+ウィザードが処理を開始すると、このような画面になります。
+<img alt="image_thumb_27_28ACDBBF" class="gallery-image" data-flex-basis="560px" data-flex-grow="233" height="209" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_27_28ACDBBF.png" width="488">
+ 
+次に、最初のサイトコレクションを作成します。
+[タイトル]には、サイトコレクションの名前を付けます。ここでつけた名前が、サイトを開いた時にページ左上に表示されます。
+[説明]には、このサイトの簡単な説明を入れます。
+[URL]は、このサイトコレクションのURLを指定するのですが、画面ショットのようにルートサイトコレクションとして作成するか、&quot;/sites/&ldquo;など特定のパスの下になるようにするかを指定します。
+特定のパスの下になるようにした場合は、&quot;/sites/○○○&ldquo;の赤丸部分のURLを指定します。
+[エクスペリエンス バージョンの選択]は、&ldquo;2013&quot;と&quot;2010&quot;が選べるのですが、これにより選べるテンプレートが変わります。
+そして、&ldquo;2010&quot;を選ぶと、見た目も SharePoint 2010 の見た目になります。
+[テンプレート]は、これから作成するサイトの検証内容に合わせて選択してください。
+全部設定を終えたら、[OK]をクリックします。
+<img alt="image_thumb_28_28ACDBBF" class="gallery-image" data-flex-basis="483px" data-flex-grow="201" height="318" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_28_28ACDBBF.png" width="640">
+<img alt="image_thumb_29_28ACDBBF" class="gallery-image" data-flex-basis="670px" data-flex-grow="279" height="229" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_29_28ACDBBF.png" width="640">
+ここまでに設定した内容が表示されるので、確認して問題なければ[完了]をクリックします。
+<img alt="image_thumb_30_28ACDBBF" class="gallery-image" data-flex-basis="427px" data-flex-grow="178" height="359" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_30_28ACDBBF.png" width="640">
+<img alt="image_thumb_31_28ACDBBF" class="gallery-image" data-flex-basis="1137px" data-flex-grow="474" height="135" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4971-sharepoint-2013/image_thumb_31_28ACDBBF.png" width="640">
+これで最初のサイトコレクション構築も完了し、検証環境が完成しました。
+（実際にはこの後、検索設定やユーザープロファイル同期の設定も必要なのですが、また別の機会に）</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2012年11月1日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4941-office365-sso/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Office365 の SSO: 簡易版インストール ガイド</h2>
+                        
+                        <p class="article-summary"><p>Office365 の SSO: 簡易版インストール ガイド
+<a class="link" href="http://t.co/74mZiTul"  target="_blank" rel="noopener"
+    >http://t.co/74mZiTul</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2012年10月23日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4911-ad/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">サイトのユーザー情報を強制的に AD と同期させる方法</h2>
+                        
+                        <p class="article-summary"><p>サイトのユーザー情報を強制的に AD と同期させる方法
+これさえあれば、SharePoint Foundationでも満足できそう。（それはさすがに言い過ぎかw）
+<a class="link" href="http://t.co/uGUwrVgz"  target="_blank" rel="noopener"
+    >http://t.co/uGUwrVgz</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2012年10月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4841-sharpoint-2010-windows-server-2012/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharPoint 2010 は Windows Server 2012 では動かない？</h2>
+                        
+                        <p class="article-summary"><p>これは今だけでしょうか？
+RTMでは動くのかな？
+Windows Server 2012 does not support SharePoint Server 2010 - <a class="link" href="http://t.co/rIRKMARR"  target="_blank" rel="noopener"
+    >http://t.co/rIRKMARR</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2012年8月9日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4731-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">インストール時の必須コンポーネントを事前にダウンロードするスクリプト</h2>
+                        
+                        <p class="article-summary"><p>SharePoint2010のインストールは、大量の必須コンポーネントをSharePoint本体のインストールに先駆けてインストールしないといけないのはご存じのとおり。
+そのために、サーバー機をインターネットにつなぎ、必須コンポーネントのインストールを実行するわけですが、サーバー機を一瞬でもインターネットにつながないといけないというのが、場合によってはNGなことってありますよね。
+そんな時はこのスクリプトを使うといいと思います。
+<a class="link" href="http://blogs.technet.com/b/tothesharepoint/archive/2011/12/19/windows-powershell-script-download-sharepoint-2010-pre-requisites.aspx"  target="_blank" rel="noopener"
+    >http://blogs.technet.com/b/tothesharepoint/archive/2011/12/19/windows-powershell-script-download-sharepoint-2010-pre-requisites.aspx</a>
+必須コンポーネントを全部ダウンロードしてくれるPowerShellなので、別のPCであらかじめダウンロードしておくことができますよ。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2011年12月25日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4091-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">サーバーセキュリティ強化チェックポイント</h2>
+                        
+                        <p class="article-summary"><p>SharePoint Server のファームを構築した後、各サーバーのセキュリティを高めるために、以下のTechNetの記事を参考に対策をするのがよさそうです。
+SharePoint が利用するポート番号やサービスが一通り書いてあるので、社内のネットワーク設定の際にも使える内容かと思います。</p>
+<p>セキュリティ強化を計画する
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/cc262849.aspx"  target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/cc262849.aspx</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2011年3月31日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4081-uls-viewer/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">ULS Viewer</h2>
+                        
+                        <p class="article-summary"><p><strong>概要</strong>
+SharePointの診断ログ用ビューアです。
+ログのレベル（Hight, Middleなど）や任意項目による絞込み、検索、ログのリアルタイム表示などの機能があります。
+テキストファイルのまま見るよりも、ずいぶんと見やすいかと思います。
+<img alt="ulsviewer1" class="gallery-image" data-flex-basis="396px" data-flex-grow="165" height="578" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4081-uls-viewer/ulsviewer1.png" srcset="/posts/4081-uls-viewer/ulsviewer1_hu_ce207e6c3e2bc066.png 800w, /posts/4081-uls-viewer/ulsviewer1.png 956w" width="956">
+<strong>製造元・販売元</strong>マイクロソフト
+<strong>製造・販売年月日</strong>2009/10/09
+<strong>ダウンロード</strong><a class="link" href="http://archive.msdn.microsoft.com/ULSViewer"  target="_blank" rel="noopener"
+    >http://archive.msdn.microsoft.com/ULSViewer</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2011年3月27日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4071-windows-7-sharepoint/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Windows 7 を開発環境として SharePoint をインストールする</h2>
+                        
+                        <p class="article-summary"><p>SharePoint 2010 は開発用途に限って、クライアント OS 上にインストールすることができるようになりました。
+この記事では、Windows 7 を開発環境として、SharePoint Server 2010 をインストールするための手順を記載します。
+手順は msdn ライブラリにも記載されているので、最低限必要なことだけ記載ます。
+詳細な手順を確認したい場合は、msdn ライブラリの以下の記事を参考にしてください。
+<a class="link" href="http://msdn.microsoft.com/ja-jp/library/ee554869%28office.14%29.aspx"  target="_blank" rel="noopener"
+    >http://msdn.microsoft.com/ja-jp/library/ee554869%28office.14%29.aspx</a>
+なお、以下の手順は管理者アカウントで実施してください。
+<strong>１．更新プログラムのインストール</strong>SharePoint Server 2010 のインストールを開始する前に、以下の２つの更新プログラムをインストールします。
+WCF修正プログラム
+<a class="link" href="http://go.microsoft.com/fwlink/?linkid=166231&amp;clcid=0x411"  target="_blank" rel="noopener"
+    >http://go.microsoft.com/fwlink/?linkid=166231&clcid=0x411</a>
+.NET Framework 3.5 SP1のADO.NETデータサービスの更新プログラム
+<a class="link" href="http://go.microsoft.com/fwlink/?linkid=163524&amp;clcid=0x411"  target="_blank" rel="noopener"
+    >http://go.microsoft.com/fwlink/?linkid=163524&clcid=0x411</a>
+<strong>２．セットアップファイルのコピー</strong>SharePoint Server 2010 のセットアップファイルをクライアント PC にコピーします。
+msdn サブスクリプションから ja_sharepoint_server_2010_x64_dvd_518705.iso ファイルをダウンロードした場合は、そのファイルを仮想ドライブソフトで開くか DVD に焼いて開くかして、全ファイルをクライアント PC にコピーします。
+ここでは、C:SharePointFiles フォルダにコピーします。
+<strong>３．setup.configファイルを編集する</strong>C:SharePointFilesFilesSetupSetup.config ファイルをメモ帳などテキストエディタで開きます。
+以下の１行を、Setup.config ファイルの最終行にある </Configuration> の１行上の行に追記します。
+<Setting Id="AllowWindowsClientInstall" Value="True"/>
+<strong>４．追加コンポーネントのインストール</strong>以下のコンポーネントを順にインストールします。
+Microsoft FilterPack 2.0 (SharePoint Server 2010 のインストールフォルダに入ってます)
+C:SharePointFilesPrerequisiteInstallerFilesFilterPackFilterPack.msi
+Microsoft Sync Framework Runtime 1.0
+<a class="link" href="http://go.microsoft.com/fwlink/?linkid=141237&amp;clcid=0x411"  target="_blank" rel="noopener"
+    >http://go.microsoft.com/fwlink/?linkid=141237&clcid=0x411</a>
+SQL Server 2008 Native Client
+<a class="link" href="http://go.microsoft.com/fwlink/?linkid=123718&amp;clcid=0x411"  target="_blank" rel="noopener"
+    >http://go.microsoft.com/fwlink/?linkid=123718&clcid=0x411</a>
+Windows Identity Foundation (Windows6.1-KB974405-x64.msi)
+<a class="link" href="http://www.microsoft.com/downloads/details.aspx?FamilyID=eb9c345f-e830-40b8-a5fe-ae7a864c4d76&amp;displayLang=ja"  target="_blank" rel="noopener"
+    >http://www.microsoft.com/downloads/details.aspx?FamilyID=eb9c345f-e830-40b8-a5fe-ae7a864c4d76&displayLang=ja</a>
+Microsoft Chart Controls for Microsoft .NET Framework 3.5 ソフトウェア更新プログラム
+<a class="link" href="http://go.microsoft.com/fwlink/?linkid=122517&amp;clcid=0x411"  target="_blank" rel="noopener"
+    >http://go.microsoft.com/fwlink/?linkid=122517&clcid=0x411</a>
+Microsoft SQL Server 2008 Analysis Services ADOMD.NET
+<a class="link" href="http://download.microsoft.com/download/A/D/0/AD021EF1-9CBC-4D11-AB51-6A65019D4706/SQLSERVER2008_ASADOMD10.msi"  target="_blank" rel="noopener"
+    >http://download.microsoft.com/download/A/D/0/AD021EF1-9CBC-4D11-AB51-6A65019D4706/SQLSERVER2008_ASADOMD10.msi</a>
+<strong>５．機能の有効化</strong>以下のコマンドをコマンドプロンプトで実行して、Windows 7 の各機能を有効化します。
+なお、以下のコマンドを実行すると、クライアントスペックにもよると思いますが、数分間応答が返ってきません。
+start /w pkgmgr /iu:IIS-WebServerRole;IIS-WebServer;IIS-CommonHttpFeatures;IIS-StaticContent;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-ApplicationDevelopment;IIS-ASPNET;IIS-NetFxExtensibility;IIS-ISAPIExtensions;IIS-ISAPIFilter;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-LoggingLibraries;IIS-RequestMonitor;IIS-HttpTracing;IIS-CustomLogging;IIS-ManagementScriptingTools;IIS-Security;IIS-BasicAuthentication;IIS-WindowsAuthentication;IIS-DigestAuthentication;IIS-RequestFiltering;IIS-Performance;IIS-HttpCompressionStatic;IIS-HttpCompressionDynamic;IIS-WebServerManagementTools;IIS-ManagementConsole;IIS-IIS6ManagementCompatibility;IIS-Metabase;IIS-WMICompatibility;WAS-WindowsActivationService;WAS-ProcessModel;WAS-NetFxEnvironment;WAS-ConfigurationAPI;WCF-HTTP-Activation;WCF-NonHTTP-Activation
+<strong>６．再起動</strong>ここまでの作業が終わったら、クライアント PC を再起動します。
+<strong>７．SharePoint Server 2010 のインストール</strong>クライアント PC にコピーしたセットアップファイルの setup.exe を実行します。
+インストールを開始すると、以下のダイアログが表示されるので、[OK] をクリックしてください。
+<img alt="setuponwin7-1" class="gallery-image" data-flex-basis="476px" data-flex-grow="198" height="250" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4071-windows-7-sharepoint/setuponwin7-1.png" width="496">
+インストールが完了した後、そのまま続けて構成ウィザードを実行します。
+これで、Windows 7 上で SharePoint Server 2010 を実行することができるようになります。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2011年3月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/page/2/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/">
+        1
+    </a><a class="page-link "href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/page/2/"
+                aria-label="Page 2">
+                2
+            </a><a class="page-link current"aria-current="page"href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/page/3/"
+                aria-label="Page 3">
+                3
+            </a><a class="page-link "href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/page/4/"
+                aria-label="Page 4">
+                4
+            </a><a class="page-link "href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/page/5/"aria-label="Page 5">
+        5
+    </a><a class="page-link "href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/page/4/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

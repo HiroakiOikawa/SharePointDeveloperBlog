@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 14 - Posts</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="Posts">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/posts/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="Posts">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/posts/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5371-sharepoint-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2013 ワークフロー開発入門の資料を公開しました</h2>
+                        
+                        <p class="article-summary"><p>先日の Japan SharePoint Group in 大阪で説明させていただいた「SharePoint 2013 ワークフロー開発入門」の資料を公開しました。
+SharePoint ワークフロー開発入門
+<a class="link" href="http://www.slideshare.net/HiroakiOikawa/jpsps20130803oikawa"  title="http://www.slideshare.net/HiroakiOikawa/jpsps20130803oikawa"
+     target="_blank" rel="noopener"
+    >http://www.slideshare.net/HiroakiOikawa/jpsps20130803oikawa</a>
+セッションではデモを使った説明をしていたのですが、スライドにその内容は含まれていません。
+デモでやった内容は、別の記事として書いていきたいと思います。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年8月21日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5341-japan-sharepoint-group-in/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AA%E3%81%A9">勉強会・イベントなど</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Japan SharePoint Group 勉強会 in 大阪 に登壇させていただきます</h2>
+                        
+                        <p class="article-summary"><p>直前のご連絡となり申し訳ございませんが、8月4日(土)に大阪で開催される Japan SharePoint Group 勉強会に登壇させていただくこととなりました。
+今回は SharePoint ワークフローの開発について、その触りの部分だけですが、ご紹介させていただこうかと思っております。
+（といいつつ、コンテンツの方は・・・・・がんばらねば。）
+今回は第10回記念ということで、海外からも講師を招くとのこと。
+関西方面の方だけでなく、日本全国、さらには今回に限っては海外の SharePointer ともお話ができる良い機会です。
+ふるってご参加くださいー。
+Japan SharePoint Group 勉強会
+<a class="link" href="http://jpsps.com/event/20130803/"  title="http://jpsps.com/event/20130803/"
+     target="_blank" rel="noopener"
+    >http://jpsps.com/event/20130803/</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年7月29日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5331-sharepoint-office/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 用アプリおよび Office 用アプリの開発環境を構築する</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>SharePoint 2013 の SharePoint 用アプリ (apps for SharePoint) および Office 2013 の Office 用アプリ (apps for Office) を開発するための環境を構築します。
+開発環境としては、Napa というブラウザ上で動作する簡易開発環境も存在するのですが、今回は Visual Studio を使った開発環境を対象とします。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年6月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5321-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">個人用サイトの初回アクセス時に表示されるダイアログを表示されないようにする</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>個人用サイトに初めてアクセスした時、「SharePoint を有効にご利用ください」というメッセージが書かれたダイアログが表示されます。
+<img alt="image_thumb_384A25D6" class="gallery-image" data-flex-basis="401px" data-flex-grow="167" height="384" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5321-post/image_thumb_384A25D6.png" width="642">
+このダイアログ、以前ご紹介した<a class="link" href="http://sharepoint.orivers.jp/Home/Article/162"  target="_blank" rel="noopener"
+    >個人用サイトをあらかじめ作っておく方法</a>で個人用サイトを作った場合でも、ユーザーが初めて個人用サイトにアクセスする場合には表示されてしまいます。
+せっかく事前に個人用サイトを作って、個人用サイト作成時のユーザーへの負担や混乱を軽減しても、ここでダイアログが出てきてしまっては余り意味がありませんよね。
+（OKかいいえを押すだけなんだから・・・と思っても、全く知らないユーザーにとってはドキドキですからね）
+今回はこのダイアログを表示させなくする方法をご紹介します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年6月10日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5311-gazoo-com/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">GAZOO.com が無事リリースされたようです</h2>
+                        
+                        <p class="article-summary"><p>５月初旬ころでしたかね、突如発表された GAZOO リニューアルの話。
+SharePoint と Azureで作られているということで、その手の世界の方々は興味津々だったはず。
+見れば確かに SharePoint。
+トップページ、検索結果ページ、ブログページ・・・
+見れば見るほど SharePoint なわけですが、よくぞここまで仕上げた！ という感じの素敵なサイトです。
+今後 SharePoint で作られたこういった外向けサイトが増えてくると面白いですね。</p>
+<p><a class="link" href="http://gazoo.com/Pages/index.aspx"  target="_blank" rel="noopener"
+    >GAZOO.com</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年5月30日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5301-sharepoint-8-18/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AA%E3%81%A9">勉強会・イベントなど</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint アプリコンテストの期限が8月18日に延長！</h2>
+                        
+                        <p class="article-summary"><p>いつの間にか SharePoint アプリコンテストの応募期限が 8月18日(日) に延長になっていました。
+もともと期間が短かったので、2か月もゆとりができた感じです。
+これで参加者が増えて、ますますハイレベルな戦いになりますねっ。
+<a class="link" href="http://sharepoint.jp.net/_layouts/15/start.aspx#/SitePages/%E5%BF%9C%E5%8B%9F%E8%A6%81%E7%B6%B1.aspx"  target="_blank" rel="noopener"
+    >SharePoint アプリコンテスト</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年5月30日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5291-rest/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">REST サービスでサイト、リスト、アイテムを取得する</h2>
+                        
+                        <p class="article-summary"><h2 id="はじめに">はじめに
+</h2><p>今回は REST サービスを使ってサイト、リスト、アイテムのプロパティを取得する方法を説明します。
+ここで説明する内容はブラウザと SharePoint があればすぐに試せるので、実際に動かしながら読んでみてください。
+なお、REST サービスから返ってくる XML の読み方は<a class="link" href="http://sharepoint.orivers.jp/article/5121"  target="_blank" rel="noopener"
+    >前回</a>説明していますので、そちらを参照してください。</p>
+<h2 id="サイトのプロパティを取得する">サイトのプロパティを取得する
+</h2><p>まずは REST を使って任意のサイトのプロパティを取得する方法です。</p>
+<pre tabindex="0"><code>http://site url/\_api/web
+</code></pre><p>※「site url」には、プロパティを取得したいサイトの URL を入れてください。
+ 
+例：adslearn サイトのプロパティを取得する。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年5月23日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5281-skydrive-pro/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E5%85%A8%E8%88%AC">全般</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SkyDrive Pro の制限事項</h2>
+                        
+                        <p class="article-summary"><p>SkyDrive Pro を使い始めると、便利すぎて色々なライブラリと同期をしてしまいます。
+しかし、同期できるドキュメント数には制限があるので、注意が必要です。
+制限事項は以下の通り。
+・SkyDrive Pro 全体で同期できるドキュメント数は、ファイルおよびフォルダを含む <strong>20,000 件</strong>まで
+・1ドキュメントライブラリあたりの同期できるドキュメント数は、ファイルおよびフォルダを含む <strong>5,000 件</strong>まで
+・すべてのライブラリでダウンロードできるファイルサイズの合計は、<strong>2 GB</strong> まで
+<a class="link" href="http://office.microsoft.com/en-us/support/sync-a-library-to-your-computer-HA102832401.aspx?CTT=5&amp;origin=HA102822076"  target="_blank" rel="noopener"
+    >ソースはこちら。</a>
+Groove 時代も同じような制限事項だったと思います。
+やはり中身は Groove なんですね。
+ご利用は計画的に。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年5月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5271-skydrive-pro/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SkyDrive Pro クライアントがリリースされました</h2>
+                        
+                        <p class="article-summary"><p>SkyDrive Pro のクライアントアプリケーションがリリースされたようです。
+<a class="link" href="http://blogs.office.com/b/sharepoint/archive/2013/05/21/skydrive-pro-client-for-windows-now-available.aspx"  target="_blank" rel="noopener"
+    >SkyDrive Pro client for Windows now available</a>
+ちょっと分かりづらいですが、Office 2013 をインストールしていない環境で SkyDrive Pro のオフライン機能を利用する場合にインストールするものとなります。
+既に Office 2013 がインストールされている環境の場合、Office 2013 と一緒に SkyDrive Pro がインストールされているため、今回リリーされたクライアントアプリをインストールする必要はないようです。
+SkyDrive Pro のオフライン機能により、SharePoint 内のドキュメントをオフラインでも利用できるようになります。
+非常に便利な機能なので、まだ試していない方は是非試してみてください。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年5月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5261-skydrive-pro-exe-groove/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E5%85%A8%E8%88%AC">全般</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SkyDrive Pro の exe 名は懐かしき Groove</h2>
+                        
+                        <p class="article-summary"><p>既出ネタかもしれませんが・・・
+Office 2013 で SkyDrive Pro として生まれ変わった Groove ですが、その名残りをこんなところで発見しました。
+<img alt="image_thumb_1_47F58595" class="gallery-image" data-flex-basis="303px" data-flex-grow="126" height="592" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5261-skydrive-pro-exe-groove/image_thumb_1_47F58595.png" width="748"></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年5月18日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/posts/page/13/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/posts/">
+        1
+    </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/posts/page/10/"
+                aria-label="Page 10">
+                10
+            </a><a class="page-link "href="/posts/page/11/"
+                aria-label="Page 11">
+                11
+            </a><a class="page-link "href="/posts/page/12/"
+                aria-label="Page 12">
+                12
+            </a><a class="page-link "href="/posts/page/13/"
+                aria-label="Page 13">
+                13
+            </a><a class="page-link current"aria-current="page"href="/posts/page/14/"
+                aria-label="Page 14">
+                14
+            </a><a class="page-link "href="/posts/page/15/"
+                aria-label="Page 15">
+                15
+            </a><a class="page-link "href="/posts/page/16/"
+                aria-label="Page 16">
+                16
+            </a><a class="page-link "href="/posts/page/17/"
+                aria-label="Page 17">
+                17
+            </a><a class="page-link "href="/posts/page/18/"
+                aria-label="Page 18">
+                18
+            </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/posts/page/28/"aria-label="Page 28">
+        28
+    </a><a class="page-link "href="/posts/page/15/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

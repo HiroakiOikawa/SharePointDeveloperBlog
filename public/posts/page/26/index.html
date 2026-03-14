@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 26 - Posts</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="Posts">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/posts/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="Posts">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/posts/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4291-url-splist/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">絶対URLからSPListを取得する</h2>
+                        
+                        <p class="article-summary"><p>絶対URLからSPListを取得する方法です。
+結論から言うと、SPListはhttp://から始まる絶対URLで取得することができません。
+SPListはホスト名からの相対URLで取得します。管理パスとかサブサイトとかで階層がどんなに深くなっていても、ホスト名からの相対URLを指定します。
+従って、以下のコードのように何らかのやり方でホスト名までの部分を削除し、その値をSPWebのGetListメソッドに渡します。</p>
+<pre tabindex="0"><code>1: Uri uri = new Uri(&#34;http://test.co.jp/test/Lists/List1/DispForm.aspx?ID=1&#34;);
+</code></pre><pre tabindex="0"><code>2: SPSite site = new SPSite(uri.AbsoluteUri);
+</code></pre><pre tabindex="0"><code>3: SPWeb web = site.OpenWeb();
+</code></pre><pre tabindex="0"><code>4: string targetUrl = uri.AbsoluteUrl.Replace(string.Format(&#34;{0}{1}&#34;, uri.GetLeftPart(UriPartial.Scheme), uri.Host), &#34;&#34;);
+</code></pre><pre tabindex="0"><code>5: SPList list = web.GetList(targetUrl);
+</code></pre><p>これで問題なさそうですが、SPWeb.GetListメソッドは一つだけ注意点があります。
+SPWeb.GetListメソッドは、引数として渡されたURLのファイル名の部分まで意味を持ちます。
+例えば、リスト名までは合っていてもファイル名の部分に間違いがあると、SPListを取得することができません。
+以下のコードは、DispForm.aspxがDisp.aspxと間違えているため、SPListは取得できません。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年9月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4281-url-spweb/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">絶対URLからSPWebを取得する</h2>
+                        
+                        <p class="article-summary"><p>絶対URLからSPWebを取得する方法です。
+SPWebを取得するには、まずSPSiteを取得する必要があります。
+SPSiteの取得は、<a class="link" href="http://sharepoint.orivers.jp/reference/SharePoint2007/%e7%b5%b6%e5%af%beURL%e3%81%8b%e3%82%89SPSite%e3%82%92%e5%8f%96%e5%be%97%e3%81%99%e3%82%8b.aspx"  target="_blank" rel="noopener"
+    >別の記事</a>にも書いた通り、SPSiteのコンストラクタの引数に、絶対URLを渡して取得します。
+その後、続けてOpenWebメソッドを引数なしで呼び出すことで、SPWebを取得できます。
+以下のコードでは、testというサブサイトを指定しています。
+このコードの結果は、testサブサイトが取得できます。</p>
+<pre tabindex="0"><code>1: SPSite site = new SPSite(&#34;http://test.co.jp/test/Lists/List1/DispForm.aspx?ID=1&#34;);
+</code></pre><pre tabindex="0"><code>2: SPWeb web = site.OpenWeb();
+</code></pre><p>SPSiteと同様、サイトが特定できれば、後半のURLは存在しないコンテンツを指していても問題ありません。
+以下のコードでは、test2という存在しないサブサイトを指しています。
+このコードの結果は、<a class="link" href="http://test.co.jp/"  target="_blank" rel="noopener"
+    >http://test.co.jp</a>のトップサイトが取得できます。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年9月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4271-url-spsite/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">絶対URLからSPSiteを取得する</h2>
+                        
+                        <p class="article-summary"><p>絶対URLからSPSiteを取得する方法です。
+SPSiteのコンストラクタの引数に、絶対URLを渡すとSPSiteが取得できます。</p>
+<pre tabindex="0"><code>1: SPSite site = new SPSite(http://test.co.jp/test/Lists/List1/DispForm.aspx?ID=1);
+</code></pre><p>管理パスを定義している場合は、SharePointが自動的に管理パスかどうかを判断し、適切なSPSiteを返してくれます。
+例えば、<a class="link" href="http://test.co.jp/"  target="_blank" rel="noopener"
+    >http://test.co.jp</a>直下のサイトコレクションの下位にtest1という管理パスを定義し、そこにサイトコレクションを作成した場合、以下のコードではtest1のサイトコレクションを取得します。</p>
+<pre tabindex="0"><code>1: SPSite site = new SPSite(&#34;http://test.co.jp/test1/Lists/List1/DispForm.aspx?ID=1&#34;);
+</code></pre><p>サイトコレクションが特定できれば、後半のURLは存在しないコンテンツを指していても問題ありません。
+以下のコードでは、test2という存在しないサブサイトを指しています。
+このコードの結果は、<a class="link" href="http://test.co.jp/"  target="_blank" rel="noopener"
+    >http://test.co.jp</a>のサイトコレクションが取得できます。</p>
+<pre tabindex="0"><code>1: SPSite site = new SPSite(&#34;http://test.co.jp/test2/Lists/List1/DispForm.aspx?ID=1&#34;);
+</code></pre><p>指定の絶対URLでSPSiteが取得できない場合、FileNotFoundExceptionが発生します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年9月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4261-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">修正モジュールのインストール手順</h2>
+                        
+                        <p class="article-summary"><p>修正モジュールのインストール手順に関するドキュメントです。
+手順だけではなく、本家TechCenterにある修正モジュール一覧と同じような情報も載っています。
+Windows SharePoint Services 3.0 用のソフトウェア更新プログラムを展開する
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/cc288269.aspx"  target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/cc288269.aspx</a>
+Office SharePoint Server 2007 のソフトウェア更新プログラムを展開する
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/cc263467.aspx"  target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/cc263467.aspx</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年9月11日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4431-tech-ed-2009-bof/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AA%E3%81%A9">勉強会・イベントなど</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Tech Ed 2009 BoFのまとめ資料公開</h2>
+                        
+                        <p class="article-summary"><p>Tech Ed 2009 で、北端さん、山崎さんとご一緒させていただいたBoFのディスカッション結果をまとめた資料が、山崎さんが代表を務めるオフィスアイ社のサイトで公開されました。
+<a class="link" href="http://www.office-i-corp.jp/events/teched09_bof.htm"  target="_blank" rel="noopener"
+    >http://www.office-i-corp.jp/events/teched09_bof.htm</a>
+もうすでにご覧になっている方が多いかと思いますが、私からもご紹介させていただきました。
+山崎さんの所感も含め、SharePointを企画・運用されている方々は、ぜひご一読ください。
+最後になりましたが、お忙しい中、BoFに足を運んでくださった参加者の皆様、ご参加いただきありがとうございました。
+今後も、みなさんでSharePointを活用し、盛り上げていきましょう！​</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年9月4日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4421-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B">お知らせ</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">旧サイトのコンテンツを徐々に移行します</h2>
+                        
+                        <p class="article-summary"><p>旧サイトのコンテンツですが、そのまま前のサイトに置いておいてもいいのですが検索機能が使えないので、新サイトに順次移行しようと思っています。
+旧サイトには約100件の投稿があるのですが、使えそうなものだけを選んで新サイトのリファレンスに移します。
+ただし、数が多いので気が向いたときにゆっくり移行していくつもりです。
+旧サイトは、コンテンツ移行後もこれまでにいただいた貴重なコメントと共に、今後も残しておきたいと思います。​</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年9月1日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4401-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B">お知らせ</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">コメント登録を受け付けるようにしました</h2>
+                        
+                        <p class="article-summary"><p>まだコメントスパム対策は完成していないのですが、貴重なご意見をいただく機会が全くないのももったいないので、思い切ってコメント登録を受け付けるようにしました。
+みなさま、色々とご意見ください。
+よろしくお願いします。​</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年8月31日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4411-tech-ed-2009/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AA%E3%81%A9">勉強会・イベントなど</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Tech Ed 2009 無事終了</h2>
+                        
+                        <p class="article-summary"><p>Tech Ed、今年も無事に終わりました！！
+今回は、前回のBoFとは全く違う形で進めさせていただきましたが、ご参加くださった方々はいかがでしたか？
+私は、普段色々な方々とSharePointについてお話しさせていただいておりますが、今回のBoFではこれまで聞いたことがないような興味深いお話が聞けて、とても参考になりました。
+私だけでなく、お越しいただいた方々全員が何かしら得るものがあったのではないかと思いますし、そうであることを願います。
+山崎さんがおっしゃっておりましたが、今回のディスカッション内容がまとまったら共有させていただきますね。
+Tech Ed の場だけでなく、色々な形で今後もみなさんと交流を深めていくことができたらいいなぁと思います。
+また機会があれば、楽しくディスカッションしましょう！！</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年8月31日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4251-sharepoint-api-web-config/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint API で web.config を変更する</h2>
+                        
+                        <p class="article-summary"><p>SharePoint API には、web.configを変更するためのクラスが用意されています。
+このクラスを使うことで、たとえばFeatureのインストール時に自動的にweb.configを変更するということができるようになります。
+web.configの変更には、<a class="link" href="http://msdn.microsoft.com/ja-jp/library/microsoft.sharepoint.administration.spwebconfigmodification.aspx"  target="_blank" rel="noopener"
+    >SPWebConfigModification</a>クラスと<a class="link" href="http://msdn.microsoft.com/ja-jp/library/microsoft.sharepoint.administration.spwebservice.aspx"  target="_blank" rel="noopener"
+    >SPWebService</a>クラスを利用します。
+例として、web.config内のappSettingsに値を追加する処理を書いてみます。
+**１．変更内容をSPWebConfigModificationクラスにセットする。**SPWebConfigModificationクラスは、web.configに加える変更情報を保持するクラスです。
+web.configを変更したい場合には、このクラスに変更内容をセットすることになります。</p>
+<pre tabindex="0"><code>1: SPWebConfigModification appSetting = new SPWebConfigModification();
+</code></pre><pre tabindex="0"><code>2: appSetting.Path = &#34;configuration/appSettings&#34;;
+</code></pre><pre tabindex="0"><code>3: appSetting.Name = &#34;add[@key=&#39;NewKey&#39;]&#34;;
+</code></pre><pre tabindex="0"><code>4: appSetting.Owner = &#34;orivers&#34;;
+</code></pre><pre tabindex="0"><code>5: appSetting.Sequence = 0;
+</code></pre><pre tabindex="0"><code>6: appSetting.Type = SPWebConfigModification.SPWebConfigModificationType.EnsureChildNode;
+</code></pre><pre tabindex="0"><code>7: appSetting.Value = &#34;&lt;add key=&#39;NewKey&#39; value=&#39;NewValue&#39;/&gt;&#34;;
+</code></pre><p> 
+各プロパティの詳細はヘルプを見ていただくとして、ここでは簡単に説明します。
+Pathプロパティに変更対象となるノードを指定し、Valueプロパティに変更内容を指定します。
+Nameプロパティは、この変更を一意に識別するための値です。
+Ownerプロパティも、Nameプロパティと合わせて、変更を一意に識別するために使用します。
+Typeプロパティは、変更内容に合わせたタイプを指定します。
+**２．変更を実行する。**SPWebConfigModificationクラスの作成が完了したら、web.configのアップデートをしたいWebアプリケーションで変更を実行します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年8月28日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4391-msdn-subscription-windows-7/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">msdn subscription にて Windows 7 配信開始！</h2>
+                        
+                        <p class="article-summary"><p>ついにWindows7のRTM版がmsdn subscriptionでダウンロードできるようになりました。
+Windows7は、SharePointを動作させることができるとのことなので、Windows7のインストールが完了したら、真っ先に試してみようと思います。​</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年8月13日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/posts/page/25/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/posts/">
+        1
+    </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/posts/page/22/"
+                aria-label="Page 22">
+                22
+            </a><a class="page-link "href="/posts/page/23/"
+                aria-label="Page 23">
+                23
+            </a><a class="page-link "href="/posts/page/24/"
+                aria-label="Page 24">
+                24
+            </a><a class="page-link "href="/posts/page/25/"
+                aria-label="Page 25">
+                25
+            </a><a class="page-link current"aria-current="page"href="/posts/page/26/"
+                aria-label="Page 26">
+                26
+            </a><a class="page-link "href="/posts/page/27/"
+                aria-label="Page 27">
+                27
+            </a><a class="page-link "href="/posts/page/28/"aria-label="Page 28">
+        28
+    </a><a class="page-link "href="/posts/page/27/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

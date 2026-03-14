@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="いよいよ本シリーズも最後になりました。 前回 までで WordPress をインストールする準備が整ったので、今回は WordPress をインストールして初期設定を行い、WordPress が利用できる状態まで持って行きたいと思います。…">
+<title>Azure 仮想マシンに LAMP 環境を構築し WordPress を立ち上げる -その４-</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/9711-azure-lamp-wordpress/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="Azure 仮想マシンに LAMP 環境を構築し WordPress を立ち上げる -その４-">
+<meta property='og:description' content="いよいよ本シリーズも最後になりました。 前回 までで WordPress をインストールする準備が整ったので、今回は WordPress をインストールして初期設定を行い、WordPress が利用できる状態まで持って行きたいと思います。…">
+<meta property='og:url' content='http://localhost:1313/posts/9711-azure-lamp-wordpress/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2015-06-08T08:00:15&#43;09:00'/><meta property='article:modified_time' content='2015-06-08T08:00:15&#43;09:00'/>
+<meta name="twitter:title" content="Azure 仮想マシンに LAMP 環境を構築し WordPress を立ち上げる -その４-">
+<meta name="twitter:description" content="いよいよ本シリーズも最後になりました。 前回 までで WordPress をインストールする準備が整ったので、今回は WordPress をインストールして初期設定を行い、WordPress が利用できる状態まで持って行きたいと思います。…">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "\"Azure 仮想マシンに LAMP 環境を構築し WordPress を立ち上げる -その４-\"",
+  "description": "\"いよいよ本シリーズも最後になりました。 前回 までで WordPress をインストールする準備が整ったので、今回は WordPress をインストールして初期設定を行い、WordPress が利用できる状態まで持って行きたいと思います。…\"",
+  "url": "\"http://localhost:1313/posts/9711-azure-lamp-wordpress/\"",
+  "datePublished": "\"2015-06-08T08:00:15+09:00\"",
+  "dateModified": "\"2015-06-08T08:00:15+09:00\"",
+  
+  "author": {
+    "@type": "Person",
+    "name": "\"SharePoint Developer\""
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "\"SharePoint Developer\"",
+    "url": "\"http://localhost:1313/\""
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "\"http://localhost:1313/posts/9711-azure-lamp-wordpress/\""
+  }
+  
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li><a href="#wordpress-用データベースの作成">WordPress 用データベースの作成</a></li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <div class="widget--recent-posts widget">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+    </div>
+    <h2 class="widget-title section-title">新着記事</h2>
+    <div class="widget-body">
+        <ol class="recent-posts-list"><li>
+                <a href="/posts/m365dev-nodeversion/">SPFx、Office Web アドイン開発でありがちな Node.js のバージョンが環境ごとに異なる場合の開発環境の工夫（チーム開発前提）</a>
+                <span class="recent-posts-date">2026年3月8日</span>
+            </li><li>
+                <a href="/posts/10761-outlook/">新しいOutlookのイベントチャームのアイコン名</a>
+                <span class="recent-posts-date">2025年6月21日</span>
+            </li><li>
+                <a href="/posts/10754-azure-bicep/">Azure環境を自動的に構築するBicepが超便利！</a>
+                <span class="recent-posts-date">2025年4月12日</span>
+            </li><li>
+                <a href="/posts/10745-graph-api/">Graph API で定期予定の一連の予定を取得する</a>
+                <span class="recent-posts-date">2025年2月9日</span>
+            </li><li>
+                <a href="/posts/10725-graph-api-transitivemembers/">Graph API の transitiveMembers の制限を調べてみた</a>
+                <span class="recent-posts-date">2025年2月2日</span>
+            </li></ol>
+    </div>
+</div>
+            
+        
+            
+                <div class="widget--adsense-sidebar widget">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/azure/" style="background-color: hsl(64, 60%, 84%); color: hsl(64, 60%, 15%);">
+                Azure
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/9711-azure-lamp-wordpress/">Azure 仮想マシンに LAMP 環境を構築し WordPress を立ち上げる -その４-</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            いよいよ本シリーズも最後になりました。 前回 までで WordPress をインストールする準備が整ったので、今回は WordPress をインストールして初期設定を行い、WordPress が利用できる状態まで持って行きたいと思います。…
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2015-06-08T08:00:15&#43;09:00'>2015年6月8日</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        読了時間: 2分
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目次</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li><a href="#wordpress-用データベースの作成">WordPress 用データベースの作成</a></li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <p>いよいよ本シリーズも最後になりました。
+<a class="link" href="http://sharepoint.orivers.jp/article/9679"  target="_blank" rel="noopener"
+    >前回</a>までで WordPress をインストールする準備が整ったので、今回は WordPress をインストールして初期設定を行い、WordPress が利用できる状態まで持って行きたいと思います。</p>
+<h2 id="wordpress-用データベースの作成">WordPress 用データベースの作成
+</h2><p>WordPress のインストールを行うため、まずはデータベースを作成します。</p>
+<ol>
+<li>MySQL にログインする
+TeraTarm でサーバーに接続して以下のコマンドを実行し、パスワードを入力して MySQL に接続します。</li>
+</ol>
+<pre tabindex="0"><code>mysql -u root -p
+</code></pre><p>すると下記のようなメッセージが表示されます。</p>
+<pre tabindex="0"><code>Welcome to the MySQL monitor. Commands end with ; or \g.
+Your MySQL connection id is 42
+Server version: 5.5.40-0ubuntu1 (Ubuntu)
+Copyright (c) 2000, 2014, Oracle and/or its affiliates. All rights reserved.
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective owners.
+Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.
+</code></pre><ol start="2">
+<li>WordPress 用データベースを作成する
+以下のコマンドを TeraTarm から実行し、WordPress 用データベースを作成します。</li>
+</ol>
+<pre tabindex="0"><code>CREATE DATABASE wordpress;
+GRANT ALL PRIVILEGES ON wordpress.\* TO &#34;username&#34;@&#34;localhost&#34;
+-&gt; IDENTIFIED BY &#34;password&#34;;
+FLUSH PRIVILEGES;
+exit
+</code></pre><p>username と password の部分は任意の値に置き換えてください。
+3. unzip をインストールする
+WordPress のインストールファイルが zip ファイルなので、事前に unzip をインストールしておきます。
+以下のコマンドを TeraTarm から実行し、unzip をインストールします。</p>
+<pre tabindex="0"><code>sudo apt-get install unzip
+</code></pre><ol start="4">
+<li>WordPress を取得し仮想マシンに送信、解凍する
+ローカルの PC にて <a class="link" href="http://ja.wordpress.org"  target="_blank" rel="noopener"
+    >http://ja.wordpress.org</a> をブラウザで開き、WordPress の zip ファイルをダウンロードします。
+その後、TeraTarm のメニューから[ファイル]→[SSH SCP]をクリックし、表示されたダイアログにて、[From]に WordPress の zip ファイルを指定し、[Send]ボタンをクリックして、ファイルをアップロードします。
+最後にアップロードしたファイルを以下のコマンドで解凍します。</li>
+</ol>
+<pre tabindex="0"><code>unzip wordpress-4.1-ja.zip
+sudo cp -r wordpress /var/www/
+</code></pre><ol start="5">
+<li>Apache のドキュメントルートを変更する
+Azure 上の自サイトのドメイン(<a class="link" href="http://xxx.cloudapp.net"  target="_blank" rel="noopener"
+    >http://xxx.cloudapp.net</a>)にアクセスしたら WordPress で作成したサイトが表示されるようになるよう、Apache のドキュメントルートの設定をします。
+TeraTarm にて以下のコマンドを実行し、既定の設定ファイル (000-default.conf) をコピーして、新しい設定ファイル (blog.copnf) を作成します。</li>
+</ol>
+<pre tabindex="0"><code>sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/blog.conf
+</code></pre><p>新しく作成した設定ファイルを vi で挿入モードで開き、 のタグの間に、 <a class="link" href="http://xxx.cloudapp.net"  target="_blank" rel="noopener"
+    >http://xxx.cloudapp.net</a> にアクセスされたら WordPress が開くように以下の設定を追記します。
+また、ログファイルの出力先も wordpress ディレクトリ内にまとめます。</p>
+<pre tabindex="0"><code>ServerAdmin serveradminname
+DocumentRoot /var/www/wordpress
+ServerName xxx.cloudapp.net
+&lt;Directory &#34;/var/www/wordpress&#34;&gt;
+AllowOverride All
+&lt;Directory &#34;/var/www/wordpress&#34; /&gt;
+ErrorLog /var/www/wordpress/logs/error.log
+CustomLog /var/www/wordpress/logs/access.log combined
+</code></pre><p>serveradminname は任意の値に、ServerName は Azure 上のドメイン名に変更してください。
+blog.conf への設定の追記が終わったら、TeraTarm にて以下のコマンドを実行し、blog.conf を通常使う設定ファイルとして指定します。</p>
+<pre tabindex="0"><code>sudo a2ensite
+</code></pre><p>すると、以下のメッセージが表示されるので、blog と入力してください。</p>
+<pre tabindex="0"><code>Your choices are: 000-default blog default-ssl
+Which site(s) do you want to enable (wildcards ok)?
+blog
+Site blog already enabled
+</code></pre><p>最後に Apache の再起動をして、ユーザーに WordPress への閲覧権限を付与します。</p>
+<pre tabindex="0"><code>sudo service apache2 restart
+sudo chown -R www-data:www-data /var/www/wordpress/\*
+</code></pre><p>ここまでの設定がうまく行っていれば、以下の URL を Web ブラウザにて表示することができるはずです。
+<a class="link" href="http://xxx.cloudapp.net/license.txt"  target="_blank" rel="noopener"
+    >http://xxx.cloudapp.net/license.txt</a>
+※xxx の部分は、任意の URL に合わせて変更してください。
+6. WordPress のインストールウィザード
+これがいよいよ最後の手順です。
+ここからは Web ブラウザのみでの作業となります。
+Web ブラウザにて以下のサイトを開きます。
+<a class="link" href="http://xxx.cloudapp.net/wp-admin/install.php"  target="_blank" rel="noopener"
+    >http://xxx.cloudapp.net/wp-admin/install.php</a>
+[さあ、始めましょう!]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/06/wordpressinst1.png"  target="_blank" rel="noopener"
+    ><img alt="wordpressinst1" class="gallery-image" data-flex-basis="309px" data-flex-grow="128" height="233" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9711-azure-lamp-wordpress/wordpressinst1-300x233.png" width="300"></a>
+データベース名、ユーザー名、パスワード、データベースのホスト名は、手順２で SQL 文に指定した値と同じものを指定してください。
+テーブル接頭辞は「wp_」で特に問題ないかと思います。
+すべて入力したら、[送信]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/06/wordpressinst2.png"  target="_blank" rel="noopener"
+    ><img alt="wordpressinst2" class="gallery-image" data-flex-basis="292px" data-flex-grow="121" height="246" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9711-azure-lamp-wordpress/wordpressinst2-300x246.png" width="300"></a>
+「wp-config.php ファイルの書きこむことができません。」というエラーが出力された場合は、仮想マシン上の /var/www/wordpress/wp-config.php ファイルを開き、ダイアログに表示されているテキストを貼り付けてから、[インストール実行]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/06/wordpressinst3.png"  target="_blank" rel="noopener"
+    ><img alt="wordpressinst3" class="gallery-image" data-flex-basis="318px" data-flex-grow="132" height="226" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9711-azure-lamp-wordpress/wordpressinst3-300x226.png" width="300"></a>
+必要事項を一通り入力し、[WordPress をインストール]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/06/wordpressinst4.png"  target="_blank" rel="noopener"
+    ><img alt="wordpressinst4" class="gallery-image" data-flex-basis="192px" data-flex-grow="80" height="300" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9711-azure-lamp-wordpress/wordpressinst4-240x300.png" width="240"></a>
+インストールが完了すると、以下の画面が表示されます。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/06/wordpressinst5.png"  target="_blank" rel="noopener"
+    ><img alt="wordpressinst5" class="gallery-image" data-flex-basis="380px" data-flex-grow="158" height="189" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9711-azure-lamp-wordpress/wordpressinst5-300x189.png" width="300"></a>
+これで、一通りのセットアップが完了し、WordPress が使えるようになりました。
+こうして頑張って作成した WordPress は、Azure Web Site の標準テンプレートに含まれる WordPress テンプレートと違い、データベースが ClearDB サービスを使用しないので、Azure の課金体系の中にデータベースの料金も含まれる形になりますし、Azure Web Site よりもパフォーマンスが良くなった気がします。
+Linux 不慣れな私でもいろいろ調べながらセットアップができたので、みなさんもぜひお試しください。
+<strong>関連記事：</strong>
+<a class="link" href="http://sharepoint.orivers.jp/article/9572"  target="_blank" rel="noopener"
+    >Azure 仮想マシンに LAMP 環境を構築し WordPress を立ち上げる -その１-</a>
+<a class="link" href="http://sharepoint.orivers.jp/article/9623"  target="_blank" rel="noopener"
+    >Azure 仮想マシンに LAMP 環境を構築し WordPress を立ち上げる -その２-</a>
+<a class="link" href="http://sharepoint.orivers.jp/article/9679"  target="_blank" rel="noopener"
+    >Azure 仮想マシンに LAMP 環境を構築し WordPress を立ち上げる -その３-</a>
+<a class="link" href="http://sharepoint.orivers.jp/article/9711"  target="_blank" rel="noopener"
+    >Azure 仮想マシンに LAMP 環境を構築し WordPress を立ち上げる -その４-</a></p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 SharePoint Developer
+    </section>
+    
+    <section class="powerby">
+        
+            SharePoint Developer <br/>
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

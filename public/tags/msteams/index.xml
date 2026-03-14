@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>MSTeams on SharePoint Developer</title>
+        <link>http://localhost:1313/tags/msteams/</link>
+        <description>Recent content in MSTeams on SharePoint Developer</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <lastBuildDate>Sat, 30 Nov 2019 15:48:56 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/msteams/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Teams タブ開発基礎講座</title>
+            <link>http://localhost:1313/posts/9991-teams/</link>
+            <pubDate>Sat, 30 Nov 2019 15:48:56 +0900</pubDate>
+            <guid>http://localhost:1313/posts/9991-teams/</guid>
+            <description>&lt;p&gt;先日の Microsoft 365 Developer Bootcamp 2019 Tokyo では、Teams タブの開発を一から学ぶためのハンズオンを行いました。&#xA;その際に使用したスライドとソースコードは、それぞれ以下の場所で公開しています。&#xA;スライド：&lt;a class=&#34;link&#34; href=&#34;//www.slideshare.net/HiroakiOikawa/sharepoint-framework-teams&#34; &gt;SharePoint Framework Teams タブ開発基礎講座&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;サンプルコード：&lt;a class=&#34;link&#34; href=&#34;https://github.com/HiroakiOikawa/spfx-sample/tree/master/TeamsTabSample&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;GitHub&lt;/a&gt;&#xA; &#xA;SlideShare では、Teams タブの他にアプリケーションカスタマイザー、フィールドカスタマイザー、コマンドバー開発のための資料も公開していたりするので、SharePoint Framework 開発をはじめる方は参考にしてみてください。&#xA;&lt;a class=&#34;link&#34; href=&#34;https://www.slideshare.net/HiroakiOikawa/sharepoint-framework-extension[AdSense-B]&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;https://www.slideshare.net/HiroakiOikawa/sharepoint-framework-extension[AdSense-B]&lt;/a&gt;&lt;/p&gt;&#xA;</description>
+        </item></channel>
+</rss>

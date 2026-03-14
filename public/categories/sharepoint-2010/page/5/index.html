@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 5 - SharePoint 2010</title>
+
+
+<link rel="canonical" href="http://localhost:1313/categories/sharepoint-2010/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="SharePoint 2010">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/categories/sharepoint-2010/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="SharePoint 2010">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/categories/sharepoint-2010/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4541-sharepoint-2010-rtm/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2010 RTM ダウンロード開始！ と思ったら・・・</h2>
+                        
+                        <p class="article-summary"><p>「本日ついにSharePoint 2010をはじめとする2010製品のRTMが、msdnからダウンロードできるようになりました。」
+という投稿をしようと今朝から待っていたのですが、RTMしたという発表だけでダウンロードはいまだできない状況ですね。
+<a class="link" href="http://blogs.msdn.com/sharepoint/archive/2010/04/16/sharepoint-2010-reaches-rtm.aspx"  target="_blank" rel="noopener"
+    >http://blogs.msdn.com/sharepoint/archive/2010/04/16/sharepoint-2010-reaches-rtm.aspx</a>
+SharePoint Team Blogによると、SA付きのVolume Licenseのユーザーは4/27に、SAなしのユーザーは5/1に提供開始のようです。
+でも日本語版は上記スケジュールとは異なるようですね。
+日本語版はいつになったら提供されるのかなぁ。早くダウンロードしたい。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年4月17日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4031-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">個人用サイトのリンクとお気に入り、タグのアイコンを消す</h2>
+                        
+                        <p class="article-summary"><p>SharePoint2010のページ右上には、デフォルトで個人用サイトへアクセスするためのリンクと、お気に入り及びタグのアイコンが表示されています。
+お気に入りとタグのアイコン
+<img alt="personal1" class="gallery-image" data-flex-basis="266px" data-flex-grow="111" height="108" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4031-post/personal1.png" width="120">
+個人用サイトを作成＆参照するためのリンク
+<img alt="personal2" class="gallery-image" data-flex-basis="237px" data-flex-grow="98" height="272" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4031-post/personal2.png" width="269">
+これらのリンクとアイコンを削除する方法は以下の通りとなります。
+<strong>１．プロファイルサービスの管理ページへ移動</strong>サーバーの全体管理サイトへアクセスし、[サービスアプリケーションの管理]→[User Profile Service アプリケーション]をクリック。
+[プロファイルサービスの管理]ページを開きます。
+<img alt="personal3" class="gallery-image" data-flex-basis="639px" data-flex-grow="266" height="374" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4031-post/personal3.png" srcset="/posts/4031-post/personal3_hu_66a94d49282ce4e7.png 800w, /posts/4031-post/personal3.png 997w" width="997">
+<strong>２．User Profile Service アプリケーションの権限ページを開く</strong>[プロファイルサービスの管理]ページにて、[ひと]セクションの[ユーザー権限の管理]をクリック。
+[User Profile Service アプリケーションの権限]ページを開きます。
+<strong>３．権限を編集</strong>[User Profile Service アプリケーションの権限]ページ中段のリストボックスから、リンクとアイコンを消したいユーザーを選択します。
+デフォルトでは、ActiveDirectoryで認証されたユーザーすべてを指す「すべての認証されたユーザー」がリストアップされています。
+リストアップされたユーザーを一つ選択し、下段の権限一覧のチェックをオン/オフすることで機能をオン/オフすることができます。
+個人用サイトのリンクを消すには、[個人用サイトの作成]のチェックを外します。
+お気に入りとタグのアイコンを消すには、[ソーシャル機能の使用]のチェックを外します。
+以下のページは、「すべての認証されたユーザー」に対して、権限を外した場合のイメージになります。
+<img alt="personal4" class="gallery-image" data-flex-basis="274px" data-flex-grow="114" height="485" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4031-post/personal4.png" width="555">
+<strong>４．結果</strong>ここまでの操作の結果、個人用サイトのリンクとお気に入り、タグのアイコンが表示されなくなります。
+お気に入りとタグのアイコンが消えています。
+<img alt="personal5" class="gallery-image" data-flex-basis="288px" data-flex-grow="120" height="98" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4031-post/personal5.png" width="118">
+個人用サイトのリンクが消えています。
+<img alt="personal6" class="gallery-image" data-flex-basis="355px" data-flex-grow="148" height="178" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/4031-post/personal6.png" width="264">
+一つ注意点です。
+権限を外すことで、個人用サイトのリンクやお気に入り、タグのアイコンが表示されなくなりますが、同時に機能そのものも利用できなくなってしまいます。
+ページ右上からリンクを消したいだけとかであれば、マスターページを編集するなどして、リンクだけ消すようにしてください。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年4月9日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4021-db/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">指定のコンテンツDBに属するサイトコレクションを一覧表示する</h2>
+                        
+                        <p class="article-summary"><p>PowerShellを使って、指定のコンテンツDBに属するサイトコレクションの一覧を取得する方法です。</p>
+<pre tabindex="0"><code>1: #サイトコレクションの一覧を表示したいコンテンツDBのIDを取得
+</code></pre><pre tabindex="0"><code>2: #赤太字が対象コンテンツDBのID
+</code></pre><pre tabindex="0"><code>3: PS C:UsersAdministrator.SP2010RCENT&gt; get-spcontentdatabase
+</code></pre><pre tabindex="0"><code>4:  
+</code></pre><pre tabindex="0"><code>5: Id : 5e26bcb9-680d-4292-bb45-07474e848348
+</code></pre><pre tabindex="0"><code>6: Name : WSS\_Content
+</code></pre><pre tabindex="0"><code>7: WebApplication : SPWebApplication Name=SharePoint - 80
+</code></pre><pre tabindex="0"><code>8: Server : sp2010rcent
+</code></pre><pre tabindex="0"><code>9: CurrentSiteCount : 2
+</code></pre><pre tabindex="0"><code>10:  
+</code></pre><pre tabindex="0"><code>11: Id : 1879f902-66a2-4147-92ef-6d61d05cf77d
+</code></pre><pre tabindex="0"><code>12: Name : WSS\_Content\_Docs
+</code></pre><pre tabindex="0"><code>13: WebApplication : SPWebApplication Name=SharePoint - 80
+</code></pre><pre tabindex="0"><code>14: Server : sp2010rcent
+</code></pre><pre tabindex="0"><code>15: CurrentSiteCount : 1
+</code></pre><pre tabindex="0"><code>16:  
+</code></pre><pre tabindex="0"><code>17: Id : 1ead42e7-856c-4b68-b75e-675c387130f5
+</code></pre><pre tabindex="0"><code>18: Name : WSS\_Content\_Workspaces
+</code></pre><pre tabindex="0"><code>19: WebApplication : SPWebApplication Name=SharePoint - 80
+</code></pre><pre tabindex="0"><code>20: Server : sp2010rcent
+</code></pre><pre tabindex="0"><code>21: CurrentSiteCount : 1
+</code></pre><pre tabindex="0"><code>22:  
+</code></pre><pre tabindex="0"><code>23: Id : 1fb9798e-c5bd-485d-8ff3-87d95a84c5cf
+</code></pre><pre tabindex="0"><code>24: Name : WSS\_Content\_Media
+</code></pre><pre tabindex="0"><code>25: WebApplication : SPWebApplication Name=SharePoint - 80
+</code></pre><pre tabindex="0"><code>26: Server : sp2010rcent
+</code></pre><pre tabindex="0"><code>27: CurrentSiteCount : 1
+</code></pre><pre tabindex="0"><code>28:  
+</code></pre><pre tabindex="0"><code>29: #先ほど取得したIDをパラメータに指定
+</code></pre><pre tabindex="0"><code>30: #サイトコレクションの一覧を取得する
+</code></pre><pre tabindex="0"><code>31: PS C:UsersAdministrator.SP2010RCENT&gt; get-spsite -contentdatabase 5e26bcb9-680d-4292-bb45-07474e848348
+</code></pre><pre tabindex="0"><code>32:  
+</code></pre><pre tabindex="0"><code>33: Url
+</code></pre><pre tabindex="0"><code>34: ---
+</code></pre><pre tabindex="0"><code>35: http://sp2010rcent
+</code></pre><pre tabindex="0"><code>36: http://sp2010rcent/my
+</code></pre></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年3月14日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4011-url-db/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">指定のURL以下のサイトコレクションが属するコンテンツDBを取得する</h2>
+                        
+                        <p class="article-summary"><p>PowerShellを使って、指定のURL以下のサイトコレクションが属するコンテンツDBを取得する方法です。</p>
+<pre tabindex="0"><code>1: #最初のパラメータにURLを指定。
+</code></pre><pre tabindex="0"><code>2: #ワイルドカード指定可能。
+</code></pre><pre tabindex="0"><code>3: PS C:UsersAdministrator.SP2010RCENT&gt; get-spsite http://sp2010rcent/\* | select url, contentdatabase | format-list
+</code></pre><pre tabindex="0"><code>4:  
+</code></pre><pre tabindex="0"><code>5: Url : http://sp2010rcent
+</code></pre><pre tabindex="0"><code>6: ContentDatabase : SPContentDatabase Name=WSS\_Content
+</code></pre><pre tabindex="0"><code>7:  
+</code></pre><pre tabindex="0"><code>8: Url : http://sp2010rcent/my
+</code></pre><pre tabindex="0"><code>9: ContentDatabase : SPContentDatabase Name=WSS\_Content
+</code></pre><pre tabindex="0"><code>10:  
+</code></pre><pre tabindex="0"><code>11: Url : http://sp2010rcent/docs
+</code></pre><pre tabindex="0"><code>12: ContentDatabase : SPContentDatabase Name=WSS\_Content\_Docs
+</code></pre><pre tabindex="0"><code>13:  
+</code></pre><pre tabindex="0"><code>14: Url : http://sp2010rcent/media
+</code></pre><pre tabindex="0"><code>15: ContentDatabase : SPContentDatabase Name=WSS\_Content\_Workspaces
+</code></pre><pre tabindex="0"><code>16:  
+</code></pre><pre tabindex="0"><code>17: Url : http://sp2010rcent/workspaces
+</code></pre><pre tabindex="0"><code>18: ContentDatabase : SPContentDatabase Name=WSS\_Content\_Media
+</code></pre></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年3月14日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4001-db/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">サイトコレクションを指定のコンテンツDBに移動する</h2>
+                        
+                        <p class="article-summary"><p>PowerShellを使って、サイトコレクションを別のコンテンツDBに移動する方法です。</p>
+<pre tabindex="0"><code>1: #移動したいサイトコレクションを第一パラメータに指定。
+</code></pre><pre tabindex="0"><code>2: #移動先のコンテンツDB名をDestinationDatabaseに指定。
+</code></pre><pre tabindex="0"><code>3: PS C:UsersAdministrator.SP2010RCENT&gt; move-spsite http://sp2010rcent/media -destinationdatabase WSS\_Content\_Media
+</code></pre><pre tabindex="0"><code>4:
+</code></pre><pre tabindex="0"><code>5: 確認
+</code></pre><pre tabindex="0"><code>6: この操作を実行しますか?
+</code></pre><pre tabindex="0"><code>7: 対象 &#34;http://sp2010rcent/media&#34; に対して操作 &#34;Move-SPSite&#34; を実行しています。
+</code></pre><pre tabindex="0"><code>8: [Y] はい(Y) [A] すべて続行(A) [N] いいえ(N) [L] すべて無視(L) [S] 中断(S)
+</code></pre><pre tabindex="0"><code>9: [?] ヘルプ(既定値は &#34;Y&#34;): y
+</code></pre><pre tabindex="0"><code>10:
+</code></pre><pre tabindex="0"><code>11: 警告: この変更を有効にするには IIS を再起動する必要があります。IISを再起動するには、コマンド プロンプトウィンドウを開き「iisreset」と入力します。
+</code></pre><pre tabindex="0"><code>12:
+</code></pre><pre tabindex="0"><code>13: #指示に従いIISRESET実施
+</code></pre><pre tabindex="0"><code>14: PS C:UsersAdministrator.SP2010RCENT&gt; iisreset
+</code></pre><pre tabindex="0"><code>15: 停止中...
+</code></pre><pre tabindex="0"><code>16: インターネット サービスは正常に停止されました
+</code></pre><pre tabindex="0"><code>17: 開始中...
+</code></pre><pre tabindex="0"><code>18: インターネット サービスは正常に再開されました
+</code></pre><p>移動の前後で<a class="link" href="/article/4021" >サイトコレクションとコンテンツDBの一覧を出力</a>すると、移動できたかどうかがわかります。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年3月14日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3991-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">サービスアプリケーション一覧</h2>
+                        
+                        <p class="article-summary"><p>エディション別のサービスアプリケーションの一覧です。
+○がついている部分が、そのエディションにインストールされているサービスアプリケーションになります。</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>サービスアプリケーション</td>
+          <td>Foundation</td>
+          <td>Standard</td>
+          <td>Enterprise</td>
+      </tr>
+      <tr>
+          <td>Access Database Service</td>
+          <td></td>
+          <td></td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Application Registry Service</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Business Data Connectivity Service</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Claims to Windows Token Service</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Document Conversions Launcher Service</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Document Conversions Load Balancer Service</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Excel Calculation Services</td>
+          <td></td>
+          <td></td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Lotus Notes Connector</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Managed Metadata Web Service</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Microsoft SharePoint Foundation Incoming E-Mail</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Microsoft SharePoint Foundation Sandboxed Code Service</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Microsoft SharePoint Foundation Subscription Settings Service</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Microsoft SharePoint Foundation Web Application</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Microsoft SharePoint Foundation Workflow Timer Service</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>PerformancePoint Service</td>
+          <td></td>
+          <td></td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Search Query and Site Settings Service</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Secure Store Service</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>SharePoint Foundation Search</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>SharePoint Server Search</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>User Profile Service</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>User Profile Synchronization Service</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Visio Graphics Service</td>
+          <td></td>
+          <td></td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Web Analytics Data Processing Service</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Web Analytics Web Service</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>Word Automation Services</td>
+          <td></td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+      <tr>
+          <td>サーバーの全体管理</td>
+          <td>○</td>
+          <td>○</td>
+          <td>○</td>
+      </tr>
+  </tbody>
+</table></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年3月14日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3981-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">サービスアプリケーションプロキシとサービスアプリケーションを削除する</h2>
+                        
+                        <p class="article-summary"><p>サービスアプリケーションプロキシとサービスアプリケーションを削除するPowerSellスクリプトです。</p>
+<p>例として、State Serviceサービスアプリケーションプロキシとサービスアプリケーションを削除します。</p>
+<pre tabindex="0"><code>1: #削除対象サービスアプリケーションプロキシのIDを取得する
+</code></pre><pre tabindex="0"><code>2: #赤太字の部分が削除対象サービスアプリケーションプロキシのID
+</code></pre><pre tabindex="0"><code>3: PS C:UsersAdministrator&gt; get-spserviceapplicationproxy
+</code></pre><pre tabindex="0"><code>4:  
+</code></pre><pre tabindex="0"><code>5: TypeName : State Service プロキシ
+</code></pre><pre tabindex="0"><code>6: ApplicationName :
+</code></pre><pre tabindex="0"><code>7: ApplicationId :
+</code></pre><pre tabindex="0"><code>8: CanIssueNewSession : False
+</code></pre><pre tabindex="0"><code>9: ManageLink :
+</code></pre><pre tabindex="0"><code>10: PropertiesLink :
+</code></pre><pre tabindex="0"><code>11: CanUpgrade : True
+</code></pre><pre tabindex="0"><code>12: IsBackwardsCompatible : True
+</code></pre><pre tabindex="0"><code>13: NeedsUpgradeIncludeChildren : False
+</code></pre><pre tabindex="0"><code>14: NeedsUpgrade : False
+</code></pre><pre tabindex="0"><code>15: UpgradeContext : Microsoft.SharePoint.Upgrade.SPUpgradeContext
+</code></pre><pre tabindex="0"><code>16: Name : State Service
+</code></pre><pre tabindex="0"><code>17: DisplayName : State Service
+</code></pre><pre tabindex="0"><code>18: Id : 11b6dfde-205b-4caa-be7f-d0bf1ccc06a2
+</code></pre><pre tabindex="0"><code>19: Status : Online
+</code></pre><pre tabindex="0"><code>20: Parent : StateServiceProxy
+</code></pre><pre tabindex="0"><code>21: Version : 4305
+</code></pre><pre tabindex="0"><code>22: Properties : {}
+</code></pre><pre tabindex="0"><code>23: Farm : SPFarm Name=SharePoint\_Config
+</code></pre><pre tabindex="0"><code>24: UpgradedPersistedProperties : {}
+</code></pre><pre tabindex="0"><code>25:  
+</code></pre><pre tabindex="0"><code>26: #サービスアプリケーションプロキシを削除する
+</code></pre><pre tabindex="0"><code>27: #先ほど取得したIDをidentityパラメータに渡す
+</code></pre><pre tabindex="0"><code>28: PS C:UsersAdministrator&gt; remove-spserviceapplicationproxy -identity 11b6dfde-05b-4caa-be7f-d0bf1ccc06a2
+</code></pre><pre tabindex="0"><code>29:  
+</code></pre><pre tabindex="0"><code>30: 確認
+</code></pre><pre tabindex="0"><code>31: この操作を実行しますか?
+</code></pre><pre tabindex="0"><code>32: 対象 &#34;StateServiceApplicationProxy Name=State Service&#34; に対して操作&#34;Remove-SPServiceApplicationProxy&#34;を実行しています。
+</code></pre><pre tabindex="0"><code>33: [Y] はい(Y) [A] すべて続行(A) [N] いいえ(N) [L] すべて無視(L) [S] 中断(S)
+</code></pre><pre tabindex="0"><code>34: [?] ヘルプ(既定値は &#34;Y&#34;): y
+</code></pre><pre tabindex="0"><code>35:  
+</code></pre><pre tabindex="0"><code>36: #削除対象サービスアプリケーションのIDを取得する
+</code></pre><pre tabindex="0"><code>37: #赤太字の部分が削除対象サービスアプリケーションのID
+</code></pre><pre tabindex="0"><code>38: PS C:UsersAdministrator&gt; get-spserviceapplication
+</code></pre><pre tabindex="0"><code>39:  
+</code></pre><pre tabindex="0"><code>40: DisplayName TypeName Id
+</code></pre><pre tabindex="0"><code>41: ----------- -------- --
+</code></pre><pre tabindex="0"><code>42: State Service State Service 96e7030a-eac3-4d62-ae1d-dce878295b30
+</code></pre><pre tabindex="0"><code>43: Security Token Se... Security Token Se... e0895169-e449-4aec-92fb-8ac63cba3428
+</code></pre><pre tabindex="0"><code>44: Application Disco... Application Disco... 38c33d18-2ec1-4c57-8ff7-934067a794e7
+</code></pre><pre tabindex="0"><code>45: Word Automation S... Word Automation S... 482775e8-4084-4dd7-ada7-3278aedfa478
+</code></pre><pre tabindex="0"><code>46:  
+</code></pre><pre tabindex="0"><code>47: #サービスアプリケーションを削除する
+</code></pre><pre tabindex="0"><code>48: #先ほど取得したIDをidentityパラメータに渡す
+</code></pre><pre tabindex="0"><code>49: PS C:UsersAdministrator&gt; remove-spserviceapplication -identity 96e7030a-eac3-d62-ae1d-dce878295b30
+</code></pre><pre tabindex="0"><code>50:  
+</code></pre><pre tabindex="0"><code>51: 確認
+</code></pre><pre tabindex="0"><code>52: この操作を実行しますか?
+</code></pre><pre tabindex="0"><code>53: 対象 &#34;StateServiceApplication Name=State Service&#34; に対して操作&#34;Remove-SPServiceApplication&#34; を実行しています。
+</code></pre><pre tabindex="0"><code>54: [Y] はい(Y) [A] すべて続行(A) [N] いいえ(N) [L] すべて無視(L) [S] 中断(S)
+</code></pre><pre tabindex="0"><code>55: [?] ヘルプ(既定値は &#34;Y&#34;): y
+</code></pre></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年3月14日</time>
+                            <span>読了時間: 2分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3971-state-service/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">State Service サービスアプリケーションを削除する</h2>
+                        
+                        <p class="article-summary"><p>PowerShellでState Serviceサービスアプリケーションを削除する方法です。
+<strong>１．State ServiceのDBを削除</strong>以下のコマンドでState ServiceのDBを削除します。</p>
+<pre tabindex="0"><code>1: #削除するState ServiceのIDを取得する
+</code></pre><pre tabindex="0"><code>2: #赤太字が削除対象のID
+</code></pre><pre tabindex="0"><code>3: PS C:UsersAdministrator&gt; get-spstateservicedatabase
+</code></pre><pre tabindex="0"><code>4:  
+</code></pre><pre tabindex="0"><code>5: Name Id Type
+</code></pre><pre tabindex="0"><code>6: ---- -- ----
+</code></pre><pre tabindex="0"><code>7: StateService\_09592f64... 1c3fed71-f364-481c-9112-9b2125d4d09f Microsoft.Offi...
+</code></pre><pre tabindex="0"><code>8:  
+</code></pre><pre tabindex="0"><code>9: #先ほど取得したIDをidentityパラメータに渡す
+</code></pre><pre tabindex="0"><code>10: PS C:UsersAdministrator&gt; remove-spstateservicedatabase -identity 1c3fed71-f364-481c-9112-9b2125d4d09f
+</code></pre><pre tabindex="0"><code>11:  
+</code></pre><pre tabindex="0"><code>12: 確認
+</code></pre><pre tabindex="0"><code>13: この操作を実行しますか?
+</code></pre><pre tabindex="0"><code>14: 対象 &#34;StateService\_09592f64711045459aa10119421ef10d&#34; に対して操作&#34;Remove-SPStateServiceDatabase&#34; を実行しています。
+</code></pre><pre tabindex="0"><code>15: [Y] はい(Y) [A] すべて続行(A) [N] いいえ(N) [L] すべて無視(L) [S] 中断(S) [?] ヘルプ(既定値は &#34;Y&#34;):y
+</code></pre><p><strong>２．State Serviceサービスアプリケーションを削除</strong>
+以下のリンク先の手順でState Serviceを削除します。
+<a class="link" href="http://sharepoint.orivers.jp/reference/SitePages/%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%83%97%e3%83%ad%e3%82%ad%e3%82%b7%e3%81%a8%e3%82%b5%e3%83%bc%e3%83%93%e3%82%b9%e3%82%a2%e3%83%97%e3%83%aa%e3%82%b1%e3%83%bc%e3%82%b7%e3%83%a7%e3%83%b3%e3%82%92%e5%89%8a%e9%99%a4%e3%81%99%e3%82%8b.aspx"  target="_blank" rel="noopener"
+    >http://sharepoint.orivers.jp/reference/SitePages/%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%97%E3%83%AD%E3%82%AD%E3%82%B7%E3%81%A8%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E5%89%8A%E9%99%A4%E3%81%99%E3%82%8B.aspx</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年3月14日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4501-sharepoint-2010-office-2010-2010-5-12/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2010 と Office 2010 のラウンチは2010年5月12日に決定！</h2>
+                        
+                        <p class="article-summary"><p>ついにSharePoint 2010 と Office 2010 のラウンチ日が発表されました。
+どちらも2010年5月12日になるようです。
+RTMは4月とのことなので、msdnサブスクリプションなどでは4月中に入手できるということですね！
+<a class="link" href="http://blogs.msdn.com/sharepoint/archive/2010/03/05/sharepoint-2010-office-2010-launch.aspx"  target="_blank" rel="noopener"
+    >http://blogs.msdn.com/sharepoint/archive/2010/03/05/sharepoint-2010-office-2010-launch.aspx</a>
+日本のラウンチイベントはいつになるのかなー。
+でも、RC版で気になる不具合がいくつかあるんだよなー。
+RTMまでにちゃんと改修されますように・・・​</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年3月7日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3961-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">ワークフロー実行中の「フォームをレンダリングできません」エラー</h2>
+                        
+                        <p class="article-summary"><p><strong>現象：</strong>
+ワークフローを実行中に下図の通り「フォームをレンダリングできません・・・」というエラーが発生し、アイテムを開くことができない。
+<img alt="troublestateservice" class="gallery-image" data-flex-basis="265px" data-flex-grow="110" height="454" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3961-post/troublestateservice.png" width="503">
+<strong>原因：</strong>
+メッセージの通り、State Serviceが構成されていないことが原因。
+**対処法：**以下のリンクの通り、State Serviceを構成することで、ワークフローが動くようになる。
+[State Service アプリケーションを構成する](<a class="link" href="http://sharepoint.orivers.jp/reference/SitePages/State"  target="_blank" rel="noopener"
+    >http://sharepoint.orivers.jp/reference/SitePages/State</a> Serviceサービスアプリケーションを構成する.aspx)</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年3月7日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/categories/sharepoint-2010/page/4/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/categories/sharepoint-2010/">
+        1
+    </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/sharepoint-2010/page/2/"
+                aria-label="Page 2">
+                2
+            </a><a class="page-link "href="/categories/sharepoint-2010/page/3/"
+                aria-label="Page 3">
+                3
+            </a><a class="page-link "href="/categories/sharepoint-2010/page/4/"
+                aria-label="Page 4">
+                4
+            </a><a class="page-link current"aria-current="page"href="/categories/sharepoint-2010/page/5/"
+                aria-label="Page 5">
+                5
+            </a><a class="page-link "href="/categories/sharepoint-2010/page/6/"aria-label="Page 6">
+        6
+    </a><a class="page-link "href="/categories/sharepoint-2010/page/6/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

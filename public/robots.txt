@@ -1,3 +1,9 @@
 User-agent: *
-Disallow:
+Allow: /
+
+# 検索・タグ・カテゴリページはインデックス対象外
+Disallow: /search/
+Disallow: /tags/
+Disallow: /page/
+
 Sitemap: http://localhost:1313/sitemap.xml

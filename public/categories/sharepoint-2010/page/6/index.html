@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 6 - SharePoint 2010</title>
+
+
+<link rel="canonical" href="http://localhost:1313/categories/sharepoint-2010/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="SharePoint 2010">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/categories/sharepoint-2010/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="SharePoint 2010">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/categories/sharepoint-2010/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3951-state-service/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">State Serviceサービスアプリケーションを構成する</h2>
+                        
+                        <p class="article-summary"><p>State Serviceサービスアプリケーション（以降、State Service）は、他のサービスアプリケーションのように全体管理サイトから手動で追加することができません。
+State Serviceを追加する場合は全体管理サイトのファーム構成ウィザードかPower Shellで構成する必要があります。
+<strong>ファーム構成ウィザードでState Serviceを追加する</strong>
+<strong>１．ファーム構成ウィザード開始</strong>サーバーの全体管理サイトからファーム構成ウィザードをクリックし、ウィザードを実行します。
+<strong>２．State Serviceを選択しウィザード実行</strong>
+ファーム構成ウィザードのサービスセクションにて、下図の通りState Serviceにチェックをつけて[次へ]ボタンをクリック。
+サイトコレクション作成のページはスキップしても進めても構いません。
+<img alt="stateservicesetup" class="gallery-image" data-flex-basis="285px" data-flex-grow="119" height="534" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3951-state-service/stateservicesetup.png" width="636"></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年3月7日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3941-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">リボンのカスタマイズ方法</h2>
+                        
+                        <p class="article-summary"><p>リボンのカスタマイズ方法が記載されたサイトを集めました。</p>
+<p><strong>日本語サイト</strong>
+<a class="link" href="http://blogs.msdn.com/tsmatsuz/archive/2009/12/16/sharepoint-custom-ribbon.aspx"  target="_blank" rel="noopener"
+    >カスタムのSharePointリボンの作成方法</a></p>
+<p><strong>英語サイト</strong><a class="link" href="http://www.sharepointnutsandbolts.com/2010/01/customizing-ribbon-part-1-creating-tabs.html"  target="_blank" rel="noopener"
+    >タブ、グループ、コントロールの作り方</a></p>
+<p><a class="link" href="http://www.sharepointnutsandbolts.com/2010/01/adding-ribbon-items-into-existing.html"  target="_blank" rel="noopener"
+    >タブ、グループへのリボンアイテムの追加方法</a></p>
+<p><a class="link" href="http://www.sharepointnutsandbolts.com/2010/02/ribbon-customizations-dropdown-controls.html"  target="_blank" rel="noopener"
+    >ドロップダウンの作り方、クライアントオブジェクトモデルとJavaScript</a></p>
+<p><a class="link" href="http://www.sharepointnutsandbolts.com/2010/02/customize-ribbon-programmatically-from.html"  target="_blank" rel="noopener"
+    >プログラムによるリボンのカスタマイズ方法</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年3月4日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3931-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">最小構成のマスターページサンプル</h2>
+                        
+                        <p class="article-summary"><p>最小構成のマスターページサンプルをダウンロードできます。
+msdn
+<a class="link" href="http://code.msdn.microsoft.com/odcSP14StarterMaster"  target="_blank" rel="noopener"
+    >http://code.msdn.microsoft.com/odcSP14StarterMaster</a>
+codeplex
+<a class="link" href="http://startermasterpages.codeplex.com/"  target="_blank" rel="noopener"
+    >http://startermasterpages.codeplex.com/</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年2月28日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3921-sharepoint-portal-server-2003-sharepoint-server-2010/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Portal Server 2003 から SharePoint Server 2010 へのアップグレード</h2>
+                        
+                        <p class="article-summary"><p>SharePoint Portal Server 2003(SPS2003) から SharePoint Server 2010 へのアップグレード方法について、TechNetに記載がありました。</p>
+<p><a class="link" href="http://technet.microsoft.com/ja-jp/library/ee947141%28office.14%29.aspx"  target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/ee947141(office.14).aspx</a></p>
+<p>以下、TechNetから一部引用</p>
+<p><strong>1.アップグレードの準備</strong></p>
+<p>a.元のファームに対してアップグレード前のスキャンツールを実行し、また、すべてのカスタマイズ内容をリストアップして、アップグレード作業に備えます。</p>
+<p>b.Office SharePoint Server 2007 を実行する小規模の一時的なファームを、x86環境として作成します。</p>
+<p>c.完全な SharePoint Server 2010 ファームをセットアップし、構成内容と正常動作を確認します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年2月28日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4491-sharepoint-server-2010-rc/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Server 2010 RC版 一部にリリース</h2>
+                        
+                        <p class="article-summary"><p>ほんと久々の更新です。
+ブログぐらい、少なくとも週１で更新したいところですが、これまで本業に追われ更新ができてませんでした。
+いくらか軌道に乗ってきたので、ぼちぼち再開しようかなと。。。
+もう何週間か経ってますが、SharePoint Server Release Candidate版が、マイクロソフトの早期導入プログラムに参加している企業やMVP向けにリリースされました。
+幸いMVPを続けている私は、RC版を入手することができました。
+今はRC版を使って、機能の確認をしているところです。（といっても、まだインストール中ですけど）
+ブログだけでなく、機能の確認結果などをリファレンスのほうにも載せていきたいと、心は思ってます。
+が、頭と体がついてくるかどうか・・・​</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2010年2月24日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3911-health-analyzer/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E5%85%A8%E8%88%AC">全般</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Health Analyzerによる問題点の監視</h2>
+                        
+                        <p class="article-summary"><p>SharePoint Server 2010 beta2 には、Health AnalyzerというSharePointの設定などでおきている問題点を検出・修正する機能が付いています。
+Health Analyzerにより検出される問題点は、beta2時点では58項目あります。（下図は１ページ目だけを表示しています）
+<a class="link" href="http://orivers-blog.azurewebsites.net/article/3911/healthreport-4"  target="_blank" rel="noopener"
+    ><img alt="healthreport-4" class="gallery-image" data-flex-basis="360px" data-flex-grow="150" height="200" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3911-health-analyzer/healthreport-4-300x200.png" width="300"></a>
+各項目ごとに、検出を行うかどうか、自動修復を行うかどうかなどを設定することができます。
+<a class="link" href="http://orivers-blog.azurewebsites.net/article/3911/healthreport-5"  target="_blank" rel="noopener"
+    ><img alt="healthreport-5" class="gallery-image" data-flex-basis="338px" data-flex-grow="140" height="213" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3911-health-analyzer/healthreport-5-300x213.png" width="300"></a>
+問題が見つかると、全体管理サイトを表示したときに、下図のように赤い帯が表示されます。
+<a class="link" href="http://orivers-blog.azurewebsites.net/article/3911/healthreport-1"  target="_blank" rel="noopener"
+    ><img alt="healthreport-1" class="gallery-image" data-flex-basis="404px" data-flex-grow="168" height="178" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3911-health-analyzer/healthreport-1-300x178.png" width="300"></a>
+帯にあるリンクをクリックすると、検出された問題の一覧ページに遷移します。
+<a class="link" href="http://orivers-blog.azurewebsites.net/article/3911/healthreport-2"  target="_blank" rel="noopener"
+    ><img alt="healthreport-2" class="gallery-image" data-flex-basis="486px" data-flex-grow="202" height="148" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3911-health-analyzer/healthreport-2-300x148.png" width="300"></a>
+問題点のひとつをクリックすると、その問題を解決する方法などが表示されます。
+<a class="link" href="http://orivers-blog.azurewebsites.net/article/3911/healthreport-3"  target="_blank" rel="noopener"
+    ><img alt="healthreport-3" class="gallery-image" data-flex-basis="537px" data-flex-grow="223" height="134" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3911-health-analyzer/healthreport-3-300x134.png" width="300"></a>
+この機能により、SharePointの状態確認が容易になり、運用がしやすくなるかと思います。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年11月25日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3901-single-server/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Single Server 構成での、構成ウィザードの実行とトップページ作成</h2>
+                        
+                        <p class="article-summary"><p>SharePoint Server 2010 beta2 をSingle Server 構成でインストールした後に起動する構成ウィザードの実行から、トップページ作成までの手順です。
+<strong>１．構成ウィザード起動</strong>
+インストールが完了すると、構成ウィザードが起動します。
+インストール完了後、構成ウィザードが起動しない場合は、スタートボタンから、[すべてのプログラム]-[Microsoft SharePoint Products]-[SharePoint 2010 製品構成ウィザード]を起動してください。
+すると、以下の画面が表示されます。
+<img alt="configwzd-1" class="gallery-image" data-flex-basis="281px" data-flex-grow="117" height="530" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3901-single-server/configwzd-1.png" width="621">
+[次へ]をクリックします。
+<strong>２．サービス停止</strong>
+構成ウィザードを実行するにあたり、関連するサービスが停止されます。
+[はい]をクリックして先に進めます。
+<img alt="configwzd-2" class="gallery-image" data-flex-basis="577px" data-flex-grow="240" height="202" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3901-single-server/configwzd-2.png" width="486">
+<strong>３．構成開始</strong>
+ウィザードというからには、色々入力をしながら進めていくのかと思いきや、ここからは全自動です。
+<img alt="configwzd-3" class="gallery-image" data-flex-basis="281px" data-flex-grow="117" height="530" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3901-single-server/configwzd-3.png" width="621">
+<strong>４．構成完了</strong>
+しばらく待つと、構成完了となります。
+<img alt="configwzd-4" class="gallery-image" data-flex-basis="281px" data-flex-grow="117" height="530" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3901-single-server/configwzd-4.png" width="621">
+簡単に構成できました。
+[完了]をクリックして、トップページの作成へ進みます。
+もし、構成ウィザードの途中でエラーが出ると、構成失敗の画面が表示されます。
+そんな場合は、ログを見たりBingったりしてエラーを解決しましょう。
+ちなみに私は途中でエラーが出て、構成失敗しました。
+この記事の最後に、そのときの解決策を書いておきました。
+<strong>５．トップページテンプレート選択</strong>
+ここでトップページのサイトテンプレートを選択します。
+サイトテンプレートとは、サイトの役割に応じたコンテンツが最初から組み込まれているサイトの雛形のようなものです。
+今回は、[エンタープライズ]タブの中にある、[Wiki]を選択してみました。
+<img alt="configwzd-5" class="gallery-image" data-flex-basis="345px" data-flex-grow="144" height="634" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3901-single-server/configwzd-5.png" srcset="/posts/3901-single-server/configwzd-5_hu_17816ce382463ec.png 800w, /posts/3901-single-server/configwzd-5.png 914w" width="914">
+サイトテンプレートを選んだら、[OK]をクリックします。
+すると、以下の処理中画面が表示され、トップサイトが作成されます。
+<img alt="configwzd-6" class="gallery-image" data-flex-basis="478px" data-flex-grow="199" height="447" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3901-single-server/configwzd-6.png" srcset="/posts/3901-single-server/configwzd-6_hu_89d5c5f91ca399fe.png 800w, /posts/3901-single-server/configwzd-6.png 891w" width="891">
+<strong>６．権限設定</strong>
+トップサイトの作成が終わると、次に権限設定のページに移ります。
+ここでは初期状態のまま[OK]をクリックします。
+<img alt="configwzd-7" class="gallery-image" data-flex-basis="471px" data-flex-grow="196" height="464" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3901-single-server/configwzd-7.png" srcset="/posts/3901-single-server/configwzd-7_hu_b5299813ff324635.png 800w, /posts/3901-single-server/configwzd-7.png 912w" width="912">
+<strong>７．出来上がり</strong>
+トップサイトが出来上がりました。
+<img alt="configwzd-8" class="gallery-image" data-flex-basis="563px" data-flex-grow="234" height="389" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3901-single-server/configwzd-8.png" srcset="/posts/3901-single-server/configwzd-8_hu_543ddb975834c289.png 800w, /posts/3901-single-server/configwzd-8.png 914w" width="914">
+<strong>構成ウィザード実行時のエラーについて</strong>
+私の環境では、構成ウィザードを実行している途中で以下のエラーが発生、構成ウィザードが中断してしまいました。
+サンプルデータを作成できませんでした。
+例外の追加情報：認識されない属性&rsquo;allowInsecureTransport&rsquo;です。この属性は、大文字小文字を区別します。
+<img alt="configwzderr-1" class="gallery-image" data-flex-basis="281px" data-flex-grow="117" height="530" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3901-single-server/configwzderr-1.png" width="621">
+このエラーが出た場合、以下のフォーラムの情報が参考になります。
+<a class="link" href="http://social.msdn.microsoft.com/Forums/en-US/sharepoint2010general/thread/041ddc78-8d18-4753-b7be-8d8113e26e62"  target="_blank" rel="noopener"
+    >http://social.msdn.microsoft.com/Forums/en-US/sharepoint2010general/thread/041ddc78-8d18-4753-b7be-8d8113e26e62</a>
+私はこのフォーラムに書いてあった、以下のファイルをインストールしたら上記のエラーが出なくなりました。
+<a class="link" href="http://connect.microsoft.com/VisualStudio/Downloads/DownloadDetails.aspx?DownloadID=23806"  target="_blank" rel="noopener"
+    >http://connect.microsoft.com/VisualStudio/Downloads/DownloadDetails.aspx?DownloadID=23806</a>
+実はこの辺の情報は、TechNetに記載されているようですね。
+インストール前にじっくり読んでからはじめれば、はまることはないようですね。
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/cc262485%28office.14%29.aspx"  target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/cc262485(office.14).aspx</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年11月21日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/3891-single-server-with-built-in-database/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Single Server 構成(with built-in database)のインストール手順</h2>
+                        
+                        <p class="article-summary"><p>SharePoint Server 2010 beta2をSingle Server構成でインストールする手順です。
+<strong>Single Server構成とは</strong>
+Single Server構成とは、1台のサーバーにSharePoint ServerもDatabaseもすべてインストールして稼動させる構成になります。
+この構成は拡張性がないため、本番環境での使用はお勧めできません。
+開発環境や検証環境に限って使用することをお勧めします。
+Single Server構成に関することは、msdnオンラインの以下のドキュメントに載っています。
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/cc263202%28office.14%29.aspx"  target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/cc263202(office.14).aspx</a>
+<strong>インストール手順</strong>
+<strong>０．準備</strong>
+インストールを始める前に、以下のドキュメントを見ておいてください。
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/cc262485%28office.14%29.aspx"  target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/cc262485(office.14).aspx</a>
+これを読んで、必要なことをあらかじめやっておかないとインストールではまります。
+特にメモ欄に書いてあることは要注意です。
+山崎さんのブログにその辺のことがまとめて書いてありますので、ご一読を。
+<a class="link" href="http://shanqiai.weblogs.jp/sharepoint_technical_note/2009/11/sharepoint-server-2010-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%A6%82%E8%A6%81.html"  target="_blank" rel="noopener"
+    >http://shanqiai.weblogs.jp/sharepoint_technical_note/2009/11/sharepoint-server-2010-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%A6%82%E8%A6%81.html</a>
+<strong>１．インストールファイル実行</strong>
+msdn subscriptionのサイトからダウンロードしたファイル[ja_sharepoint_server_2010_beta_x64_x16-19252]を実行します。
+すると、ファイルが展開されてスプラッシュウィンドウが表示されます。
+<img alt="sps2010inst-1" class="gallery-image" data-flex-basis="632px" data-flex-grow="263" height="192" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3891-single-server-with-built-in-database/sps2010inst-16.png" width="506">
+<img alt="sps2010inst-2" class="gallery-image" data-flex-basis="396px" data-flex-grow="165" height="288" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/3891-single-server-with-built-in-database/sps2010inst-22.png" width="476"></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年11月20日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4471-sharepoint-server-2010-office-2010-beta2/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Server 2010 など、Office 2010シリーズのBeta2版、ダウンロード開始</h2>
+                        
+                        <p class="article-summary"><p>いろいろなところで話題になっていますが、ついにSharePoint Server 2010 のBeta2版のダウンロード提供が始まりました。
+今回は、msdn subscriptionに加入している方々だけが対象になっています。
+ということで、SharePoint Server 2010 系のダウンロードサイトのURLをリンク集に追加しました。
+早速ダウンロードして試してみたいと思います！​</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年11月19日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4461-sharepoint-server-2010/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Server 2010 発表！</h2>
+                        
+                        <p class="article-summary"><p>ついにSharePoint Server 2010に関する情報が公になりました！
+すでに<a class="link" href="http://itpro.nikkeibp.co.jp/article/NEWS/20091020/339116/"  target="_blank" rel="noopener"
+    >ITPro</a>などのIT系ニュースサイトで記事が出ていたり、SharePoint Conference 2009のために現地している<a class="link" href="http://shanqiai.weblogs.jp/sharepoint_technical_note/2009/10/sharepoint-conf.html"  target="_blank" rel="noopener"
+    >山崎愛さんが非常にわかりやすい詳細なレポート</a>を掲載しているので、ご存知の方がほとんどでしょう。
+私は非公開のベータテストで若干触っていたのですが、まだ1%の機能も調べられていないような状況です。
+ようやく公になるということでこれから多くの情報がでてくると思うと、非常に楽しみですね。
+思えば私が初めてSharePoint Server 2007を触ったのはTR1というバージョンの時でした。
+この時は公式なドキュメントが全くなく、すべて手さぐりで機能検証などをしていました。
+製品リリース後もドキュメントの整備が進まず、しばらくは英語のドキュメントがちょっとだけあるというような非常につらい状況だったことは、皆さんの記憶にも新しいことかと思います。
+はたして、SharePoint Server 2010のドキュメント整備状況はどうなんでしょう。
+とある情報によると、今回は気合を入れて準備をしているとか。。。
+ぜひぜひ期待してその時を待ちましょう。
+しかし、製品のリリースサイクルというものは非常に早いなぁとつくづく思います。
+SharePointの導入コンサルなどをしていると、今からSharePoint Server 2007の導入を検討される企業さんや、導入が終わりある程度運用をして今後どうやってSharePoint Server 2007を活用していこうかと検討をしている企業さんがほとんどなんですよね。
+このような状況で「はい、次の製品来ましたー」といっても、なかなか前向きな反応をするのは難しいですよね。SharePointに限った話ではないですが。
+こういう現実もしっかりと理解した上でうまく情報提供していきたいなと思います。
+さて、SharePoint Server 2010の話に戻しますが・・・
+今時点で私が特に気にかけている新機能は、Business Connectivity ServicesとExternal Listです。
+これらの機能により、バックエンドにある基幹システムのデータベースやWebサービスからデータを取得し、あたかもSharePointのリストのようにサイト上にデータを表示したり、ビューを作ったり、権限を設定したり、データの更新ができたりするようです。
+これにより、SharePoint Serverをあらゆるシステムの入力インターフェースとして活用するという、これまでなかったような使い方もできるようになるのではと思っています。
+もちろんそのためには、アイテム登録ページに強力なバリデーションチェック機能が必要になりますが・・・
+ちなみに、SharePoint Team Blogに<a class="link" href="http://blogs.msdn.com/sharepoint/archive/2009/10/19/sharepoint-2010.aspx"  target="_blank" rel="noopener"
+    >新機能の説明</a>がでてますね。
+非常に膨大な量の新機能です、全機能の細部まで把握するのは不可能に近いかも。
+とにかく新機能がてんこ盛りのSharePoint Server 2010ですが、11月にパブリックベータが公開されるということなので、興味ある方は是非ダウンロードして色々試してみてください。
+私も試したことはブログに公開するようにしますんで、情報交換していきましょう。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2009年10月21日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/categories/sharepoint-2010/page/5/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/categories/sharepoint-2010/">
+        1
+    </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/sharepoint-2010/page/2/"
+                aria-label="Page 2">
+                2
+            </a><a class="page-link "href="/categories/sharepoint-2010/page/3/"
+                aria-label="Page 3">
+                3
+            </a><a class="page-link "href="/categories/sharepoint-2010/page/4/"
+                aria-label="Page 4">
+                4
+            </a><a class="page-link "href="/categories/sharepoint-2010/page/5/"
+                aria-label="Page 5">
+                5
+            </a><a class="page-link current"aria-label="Page 6"aria-current="page">
+        6
+    </a><a class="page-link disabled"aria-label="Next page"aria-disabled="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

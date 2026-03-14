@@ -1,0 +1,129 @@
+baseURL = "https://sharepoint.orivers.jp/"  # ← Azure SWA の URL に変更
+languageCode = "ja"
+title = "SharePoint Developer"
+theme = "hugo-theme-stack"
+defaultContentLanguage = "ja"
+enableRobotsTXT = true
+summaryLength = 20
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML"]
+
+[permalinks]
+  posts = "/posts/:contentbasename/"
+
+[services]
+  [services.googleAnalytics]
+    ID = "G-BDGCB768NW"  # ← Google Analytics の測定 ID に変更
+
+[pagination]
+  pagerSize = 10
+
+[params]
+  mainSections = ["posts"]
+  featuredImageField = "image"
+  rssFullContent = true
+  favicon = "/favicon.svg"
+
+  [params.footer]
+    since = 2025
+    customText = "SharePoint Developer"
+
+  [params.dateFormat]
+    published = "2006年1月2日"
+    lastUpdated = "2006年1月2日 15:04"
+
+  [params.sidebar]
+    subtitle = "SPFx, Office/TeamsアドインなどM365開発情報を発信"
+    position = "right"  # "left" または "right"
+    avatar = "img/avatar.png"
+
+[menu]
+  [[menu.social]]
+    identifier = "github"
+    name = "GitHub"
+    url = "https://github.com/HiroakiOikawa"  # ← GitHub ID に変更
+    [menu.social.params]
+      icon = "brand-github"
+
+  [[menu.social]]
+    identifier = "twitter"
+    name = "Twitter/X"
+    url = "https://twitter.com/HiroakiOikawa"  # ← Twitter/X ID に変更
+    [menu.social.params]
+      icon = "brand-twitter"
+
+  [params.article]
+    math = false
+    toc = true
+    readingTime = true
+    license.enabled = false
+
+  [params.comments]
+    enabled = false
+
+  [[params.widgets.homepage]]
+    type = "search"
+
+  [[params.widgets.homepage]]
+    type = "categories"
+    params = { limit = 10 }
+
+  [[params.widgets.homepage]]
+    type = "tag-cloud"
+    params = { limit = 10 }
+
+  [[params.widgets.homepage]]
+    type = "recent-posts"
+
+  [[params.widgets.homepage]]
+    type = "useful-links"
+
+  [[params.widgets.homepage]]
+    type = "adsense-sidebar"
+
+  [[params.widgets.page]]
+    type = "toc"
+
+  [[params.widgets.page]]
+    type = "recent-posts"
+
+  [[params.widgets.page]]
+    type = "adsense-sidebar"
+
+  [params.colorScheme]
+    toggle = true
+    default = "auto"  # auto / dark / light
+
+  [params.imageProcessing.cover]
+    enabled = true
+
+  [params.imageProcessing.content]
+    enabled = true
+
+
+  # -------------------------------------------
+  # Google AdSense
+  # -------------------------------------------
+  [params.adsense]
+    enabled       = true
+    clientId      = "ca-pub-0222647894387929"  # ← Publisher ID に変更
+    listAdSlot    = "XXXXXXXXXX"                # ← 記事一覧用スロット ID に変更
+    sidebarAdSlot = "XXXXXXXXXX"               # ← サイドバー用スロット ID に変更
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+  [markup.highlight]
+    noClasses = false
+    lineNos = true
+    lineNumbersInTable = true

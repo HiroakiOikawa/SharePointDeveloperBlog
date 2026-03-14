@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>SharePoint Framework Extension on SharePoint Developer</title>
+        <link>http://localhost:1313/tags/sharepoint-framework-extension/</link>
+        <description>Recent content in SharePoint Framework Extension on SharePoint Developer</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <lastBuildDate>Sun, 28 Oct 2018 02:52:25 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/sharepoint-framework-extension/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>SharePoint Framework Extension (拡張機能) 基礎講座</title>
+            <link>http://localhost:1313/posts/9898-sharepoint-framework-extension/</link>
+            <pubDate>Sun, 28 Oct 2018 02:52:25 +0900</pubDate>
+            <guid>http://localhost:1313/posts/9898-sharepoint-framework-extension/</guid>
+            <description>&lt;p&gt;SharePoint Framework Extension (拡張機能) の開発をこれからはじめる方向けに、以下の手順をまとめました。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;開発環境の構築&lt;/li&gt;&#xA;&lt;li&gt;Application Customizer の開発&lt;/li&gt;&#xA;&lt;li&gt;Field Customizer の開発&lt;/li&gt;&#xA;&lt;li&gt;Command Set の開発&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt; &#xA;この資料は 2018 年 10 月 27 日に開催した、Global Office 365 Developer Bootcamp でハンズオン用の資料として作成したものになりますが、実際にハンズオンをしてみると環境により色々な問題が起きて、開発環境の構築をするだけでも一苦労という感じでした。&#xA;開発環境構築時のポイントについては別途まとめたいと思いますが、開発環境の構築さえできてしまえば、それぞれの開発については資料を見て進められるかと思います。&#xA; &#xA;SharePoint Framework の開発は、これまでの SharePoint 開発と全く異なる環境、言語での開発となるため、新しく覚えないといけないことが多く最初のハードルがとにかく高い印象がありますが、そのハードルを越えるために本資料が少しでもお役に立てれば幸いです。&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;//www.slideshare.net/HiroakiOikawa/sharepoint-framework-extension&#34;  title=&#34;SharePoint Framework Extension 基礎講座&#34;&#xD;&#xA;    &gt;SharePoint Framework Extension 基礎講座&lt;/a&gt;&lt;/strong&gt;  from &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.slideshare.net/HiroakiOikawa&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;Hiroaki Oikawa&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;[AdSense-B]&lt;/p&gt;&#xA;</description>
+        </item></channel>
+</rss>

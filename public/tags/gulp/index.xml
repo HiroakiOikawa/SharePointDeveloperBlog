@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Gulp on SharePoint Developer</title>
+        <link>http://localhost:1313/tags/gulp/</link>
+        <description>Recent content in Gulp on SharePoint Developer</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <lastBuildDate>Mon, 20 Jul 2020 10:00:40 +0900</lastBuildDate><atom:link href="http://localhost:1313/tags/gulp/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>gulp serve でエラーが出た時の対応</title>
+            <link>http://localhost:1313/posts/10295-gulp-serve/</link>
+            <pubDate>Mon, 20 Jul 2020 10:00:40 +0900</pubDate>
+            <guid>http://localhost:1313/posts/10295-gulp-serve/</guid>
+            <description>&lt;p&gt;最終更新日：2020/07/26&lt;/p&gt;&#xA;&lt;h1 id=&#34;はじめに&#34;&gt;はじめに&#xD;&#xA;&lt;/h1&gt;&lt;p&gt;SharePoint Framework 開発中、gulp serve でエラーが発生することがありますが、実際に発生したエラーと対処法をこの記事にまとめていきたいと思います。&lt;/p&gt;&#xA;&lt;h1 id=&#34;エラーケース&#34;&gt;エラーケース&#xD;&#xA;&lt;/h1&gt;&lt;h2 id=&#34;ケース１dist-フォルダの権限エラー&#34;&gt;ケース１：dist フォルダの権限エラー&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;**■エラーメッセージ（下線箇所は状況により異なります）**Error - Unknown&#xA;EPERM: operation not permitted, chmod &amp;lsquo;/usr/app/spfx/dist/&lt;em&gt;link-list-web-part-web-part.js&lt;/em&gt;&amp;rsquo;&#xA;&lt;strong&gt;■対処法&lt;/strong&gt;/usr/app/spfx/dist フォルダにあるファイルへのアクセスができないために発生しているものと思われます。&#xA;プロジェクト作業フォルダ内の dist フォルダを削除して再度 gulp serve を実施してください。&lt;/p&gt;&#xA;&lt;h2 id=&#34;ケース２lib-フォルダの権限エラー&#34;&gt;ケース２：lib フォルダの権限エラー&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;**■エラーメッセージ（下線箇所は状況により異なります）**Error - &amp;lsquo;copy-static-assets&amp;rsquo; sub task errored after 90 ms&#xA;EPERM: operation not permitted, chmod &amp;lsquo;/usr/app/spfx/lib/&lt;em&gt;webparts/linkListWebPart/LinkListWebPartWebPart.manifest.json&lt;/em&gt;&amp;rsquo;&#xA;&lt;strong&gt;■対処法&lt;/strong&gt;/usr/app/spfx/lib フォルダにあるファイルへのアクセスができないために発生しているものと思われます。&#xA;プロジェクト作業フォルダ内の lib フォルダを削除して再度 gulp serve を実施してください。&lt;/p&gt;&#xA;&lt;h2 id=&#34;ケース３strings-クラスのプロパティが見つからないエラー&#34;&gt;ケース３：Strings クラスのプロパティが見つからないエラー&#xD;&#xA;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;■エラーメッセージ（下線箇所は状況により異なります）&lt;/strong&gt;[tsc] src/webparts/&lt;em&gt;linkListWebPart/LinkListWebPartWebPart.ts(59,34)&lt;/em&gt;: error TS2339: Property &amp;lsquo;&lt;em&gt;SourceSiteUrl&lt;/em&gt;&amp;rsquo; does not exist on type &amp;lsquo;&lt;em&gt;ILinkListWebPartWebPartStrings&lt;/em&gt;&amp;rsquo;.&#xA;&lt;strong&gt;■対処法&lt;/strong&gt;Strings クラスは、src/webparts/&lt;em&gt;linkListWebPart&lt;/em&gt;/loc フォルダ内の mystrings.d.ts から自動生成されるクラスです。&#xA;従って、mystrings.d.ts 内に該当のプロパティが定義されていないと上記のようなエラーになるのですが、プロパティを定義していて VSCode 上では文法エラーが出ていないにも関わらず、gulp serve をすると上記のエラーが発生することがあります。&#xA;その場合は、mystrings.d.ts からのクラス生成が正しく行われていない可能性があるので、mystrings.d.ts を一度適当に変更して gulp build を行った後、改めて正しい状態に戻してから、gulp build か gulp serve をしてください。&#xA;[AdSense-B]&lt;/p&gt;&#xA;</description>
+        </item></channel>
+</rss>

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 8 - 開発とプログラミング</title>
+
+
+<link rel="canonical" href="http://localhost:1313/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="開発とプログラミング">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="開発とプログラミング">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5321-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">個人用サイトの初回アクセス時に表示されるダイアログを表示されないようにする</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>個人用サイトに初めてアクセスした時、「SharePoint を有効にご利用ください」というメッセージが書かれたダイアログが表示されます。
+<img alt="image_thumb_384A25D6" class="gallery-image" data-flex-basis="401px" data-flex-grow="167" height="384" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5321-post/image_thumb_384A25D6.png" width="642">
+このダイアログ、以前ご紹介した<a class="link" href="http://sharepoint.orivers.jp/Home/Article/162"  target="_blank" rel="noopener"
+    >個人用サイトをあらかじめ作っておく方法</a>で個人用サイトを作った場合でも、ユーザーが初めて個人用サイトにアクセスする場合には表示されてしまいます。
+せっかく事前に個人用サイトを作って、個人用サイト作成時のユーザーへの負担や混乱を軽減しても、ここでダイアログが出てきてしまっては余り意味がありませんよね。
+（OKかいいえを押すだけなんだから・・・と思っても、全く知らないユーザーにとってはドキドキですからね）
+今回はこのダイアログを表示させなくする方法をご紹介します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年6月10日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5291-rest/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">REST サービスでサイト、リスト、アイテムを取得する</h2>
+                        
+                        <p class="article-summary"><h2 id="はじめに">はじめに
+</h2><p>今回は REST サービスを使ってサイト、リスト、アイテムのプロパティを取得する方法を説明します。
+ここで説明する内容はブラウザと SharePoint があればすぐに試せるので、実際に動かしながら読んでみてください。
+なお、REST サービスから返ってくる XML の読み方は<a class="link" href="http://sharepoint.orivers.jp/article/5121"  target="_blank" rel="noopener"
+    >前回</a>説明していますので、そちらを参照してください。</p>
+<h2 id="サイトのプロパティを取得する">サイトのプロパティを取得する
+</h2><p>まずは REST を使って任意のサイトのプロパティを取得する方法です。</p>
+<pre tabindex="0"><code>http://site url/\_api/web
+</code></pre><p>※「site url」には、プロパティを取得したいサイトの URL を入れてください。
+ 
+例：adslearn サイトのプロパティを取得する。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年5月23日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5211-sharepoint-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2013で個人用サイトをあらかじめ作っておく方法</h2>
+                        
+                        <p class="article-summary"><p>SharePoint 2013で個人用サイトをあらかじめ作っておく場合は、UserProfile.CreatePersonalSiteメソッドを使用する。 <a class="link" href="http://t.co/5nSRYdRWjC"  target="_blank" rel="noopener"
+    >http://t.co/5nSRYdRWjC</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年4月3日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5181-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">ドキュメントライブラリにファイルをアップロードする</h2>
+                        
+                        <p class="article-summary"><p>C# を使ってドキュメントライブラリにファイルをアップロードするには、WebClient クラスを使うのが手軽です。</p>
+<pre tabindex="0"><code>using (WebClient client = new WebClient())
+{
+client.UseDefaultCredentials = true;
+client.UploadFile(url, &#34;PUT&#34;, filename);
+}
+</code></pre><p>3 行目は Windows にログインしているユーザーの情報を使って SharePoint にログインすることを示しています。
+4 行目は url で指定されたドキュメントライブラリに、filename で指定されたファイルを PUT でアップロードすることを示しています。
+PUT でのアップロードになるので、サーバー側は WebDAV アクセスを受信できるようにしておく必要があります。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年3月10日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5171-caml-5/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">CAML クエリーで今日や今日から 5 日前の日を指定する</h2>
+                        
+                        <p class="article-summary"><p>CAML クエリーで、「締切日が今日以前」や「締切日が今日より 5 日前」という条件を指定する場合、今日という変数は Today タグで指定します。
+また、Today タグの OffsetDays 属性で 5 日前とか 3 日後といった +- の日付を指定します。
+例：締切日が今日以前</p>
+<pre tabindex="0"><code>1: &lt;Query&gt;
+</code></pre><pre tabindex="0"><code>2: &lt;Where&gt;
+</code></pre><pre tabindex="0"><code>3: &lt;Leq&gt;
+</code></pre><pre tabindex="0"><code>4: &lt;FieldRef Name=&#34;DueDate&#34; /&gt;
+</code></pre><pre tabindex="0"><code>5: &lt;Value Type=&#34;DateTime&#34;&gt;
+</code></pre><pre tabindex="0"><code>6: &lt;Today /&gt;
+</code></pre><pre tabindex="0"><code>7: &lt;/Value&gt;
+</code></pre><pre tabindex="0"><code>8: &lt;/Leq&gt;
+</code></pre><pre tabindex="0"><code>9: &lt;/Where&gt;
+</code></pre><pre tabindex="0"><code>10: &lt;/Query&gt;
+</code></pre><p> 
+例：締切日が今日より5日前</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年3月10日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5141-sharepoint-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2013でリモートイベントレシーバを作成する方法。</h2>
+                        
+                        <p class="article-summary"><p>SharePoint 2013でリモートイベントレシーバを作成する方法。
+通常のイベントレシーバと作り方が全然違うんですね。<a class="link" href="http://t.co/PzCDOYDj"  target="_blank" rel="noopener"
+    >http://t.co/PzCDOYDj</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年2月13日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5131-office-sharepoint-ux/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Office用アプリと SharePoint UXのガイドライン</h2>
+                        
+                        <p class="article-summary"><p>Office用アプリと SharePoint UXのガイドライン
+<a class="link" href="http://t.co/VPPBbSRP"  target="_blank" rel="noopener"
+    >http://t.co/VPPBbSRP</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年2月13日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5121-rest-xml/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">REST サービスから返ってくる XML の読み方</h2>
+                        
+                        <p class="article-summary"><p>※この投稿は <a class="link" href="http://atnd.org/events/33924"  target="_blank" rel="noopener"
+    >Office 365 Advent Calendar 2012</a> に参加しています。</p>
+<h3 id="はじめに">はじめに
+</h3><p>前回は REST サービスの概要について書いたので、今回から少し具体的な話をします。
+今回は、REST サービスを呼び出した際に返ってくる XML の読み方を説明します。
+呼び出し方ではなく、呼び出した後に返ってくる XML の読み方の説明をいきなりするわけですが、これがわからなければ REST を使いこなすことができないので、先に説明をさせていただきます。
+ 
+といいつつも、まずは呼び出しをしなければ結果を得ることもできないので、今回は特定サイトに含まれるすべてのリストとライブラリの一覧を取得する REST の結果を題材にしたいと思います。
+ 
+特定サイトに含まれるすべてのリストとライブラリの一覧を取得するには、以下の URL を呼び出します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2012年12月20日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5091-rest/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">REST サービス 事始め</h2>
+                        
+                        <p class="article-summary"><p>※この投稿は <a class="link" href="http://atnd.org/events/33924"  target="_blank" rel="noopener"
+    >Office 365 Advent Calendar 2012</a> に参加しています。</p>
+<h3 id="はじめに">はじめに
+</h3><p>SharePoint 2013 では、プログラミングインターフェイスの一つとして REST サービスという API を使うことができます。
+REST サービスはマイクロソフト独自の企画というわけではなく、<a class="link" href="http://www.odata.org/"  target="_blank" rel="noopener"
+    >Open Data Protocol</a>(OData) という業界団体が決めた標準規約に基づいています。
+そのため、OData に対応するアプリケーションがあれば、マイクロソフト製品やマイクロソフトのサードパーティ製品ではなくても、SharePoint 2013 からのデータ取得や登録、削除といった一連の処理を実行することができるわけですが、この処理を行う仕組みが Representational State Transfer (REST) Web サービスとして、SharePoint 2013 に実装されています。
+もちろん、REST サービスは 次期 Office 365 でも実装されており、今後の主力 API として位置づけられています。
+ 
+実は REST サービスは SharePoint 2010 や今の Office 365 にも実装されているため利用可能ではあるのですが、記述方法が違っていたり、まだまだ機能としては十分ではない部分があります。
+2013 になってついに本格的に使われる時が来たという感じですね。
+ということで、この記事では、2013 版の REST サービスについて紹介をします。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2012年12月10日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5051-build-2012-sharepoint-office/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Build 2012 SharePoint &amp; Office 関連セッション</h2>
+                        
+                        <p class="article-summary"><p>10月末に US で行われた Build 2012 という開発者向けイベントのセッションビデオが Channel 9 で公開されています。</p>
+<p>そのうち、SharePoint と Office に関するセッションだけをフィルタしました。</p>
+<p>といっても、サイトにあるフィルタ機能を使っただけですが。</p>
+<p><a class="link" href="http://channel9.msdn.com/events/build/2012?sort=sequential&amp;direction=desc&amp;term=&amp;t=office&amp;t=sharepoint"  title="http://channel9.msdn.com/events/build/2012?sort=sequential&amp;direction=desc&amp;term=&amp;t=office&amp;t=sharepoint"
+     target="_blank" rel="noopener"
+    >http://channel9.msdn.com/events/build/2012?sort=sequential&amp;direction=desc&amp;term=&amp;t=office&amp;t=sharepoint</a></p>
+<p>以下、ビデオへの直リンクになります。</p>
+<ul>
+<li><a class="link" href="http://channel9.msdn.com/Events/Build/2012/2-008"  target="_blank" rel="noopener"
+    >What&rsquo;s New for Developers in Office 2013 and SharePoint 2013</a></li>
+<li><a class="link" href="http://channel9.msdn.com/Events/Build/2012/3-020"  target="_blank" rel="noopener"
+    >Building apps for Office and SharePoint 2013 using the web technologies you know and love, Part 1</a></li>
+<li><a class="link" href="http://channel9.msdn.com/Events/Build/2012/3-021"  target="_blank" rel="noopener"
+    >Building apps for Office and SharePoint 2013 using the web technologies you know and love, Part 2</a></li>
+<li><a class="link" href="http://channel9.msdn.com/Events/Build/2012/3-019"  target="_blank" rel="noopener"
+    >Apps for Office and SharePoint development using the all new browser-based &ldquo;Napa&rdquo; and Visual Studio 2012</a></li>
+<li><a class="link" href="http://channel9.msdn.com/Events/Build/2012/3-022"  target="_blank" rel="noopener"
+    >Building end-to-end apps for SharePoint with Windows Azure and Windows 8</a></li>
+<li><a class="link" href="http://channel9.msdn.com/Events/Build/2012/3-023"  target="_blank" rel="noopener"
+    >Developing an app for SharePoint autohosted in Windows Azure Web Sites with an autoprovisioned in Azure SQL Database</a></li>
+<li><a class="link" href="http://channel9.msdn.com/Events/Build/2012/3-024"  target="_blank" rel="noopener"
+    >Developing for Windows Azure Web Sites and SharePoint Online</a></li>
+</ul></p>
+                        
+                        <footer class="article-time">
+                            <time>2012年11月18日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/7/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/">
+        1
+    </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/4/"
+                aria-label="Page 4">
+                4
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/5/"
+                aria-label="Page 5">
+                5
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/6/"
+                aria-label="Page 6">
+                6
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/7/"
+                aria-label="Page 7">
+                7
+            </a><a class="page-link current"aria-current="page"href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/8/"
+                aria-label="Page 8">
+                8
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/9/"
+                aria-label="Page 9">
+                9
+            </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/10/"
+                aria-label="Page 10">
+                10
+            </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/11/"aria-label="Page 11">
+        11
+    </a><a class="page-link "href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/page/9/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

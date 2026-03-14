@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="2019年3月8日に SharePoint Framework v1.8 がリリースされました。 この記事では v1.8 の変更点について気になるところだけ抜粋して記載します。 詳細は以下のリリースノートを確認してください。 SharePo…">
+<title>SharePoint Framework v1.8 の変更点</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/2019/9981-sharepoint-framework-v1-8/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="SharePoint Framework v1.8 の変更点">
+<meta property='og:description' content="2019年3月8日に SharePoint Framework v1.8 がリリースされました。 この記事では v1.8 の変更点について気になるところだけ抜粋して記載します。 詳細は以下のリリースノートを確認してください。 SharePo…">
+<meta property='og:url' content='http://localhost:1313/posts/2019/9981-sharepoint-framework-v1-8/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='1.8' /><meta property='article:tag' content='SharePoint' /><meta property='article:tag' content='SharePoint Framework' /><meta property='article:tag' content='SPFx' /><meta property='article:published_time' content='2019-03-19T04:15:15&#43;09:00'/><meta property='article:modified_time' content='2019-03-19T04:15:15&#43;09:00'/>
+<meta name="twitter:title" content="SharePoint Framework v1.8 の変更点">
+<meta name="twitter:description" content="2019年3月8日に SharePoint Framework v1.8 がリリースされました。 この記事では v1.8 の変更点について気になるところだけ抜粋して記載します。 詳細は以下のリリースノートを確認してください。 SharePo…">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "\"SharePoint Framework v1.8 の変更点\"",
+  "description": "\"2019年3月8日に SharePoint Framework v1.8 がリリースされました。 この記事では v1.8 の変更点について気になるところだけ抜粋して記載します。 詳細は以下のリリースノートを確認してください。 SharePo…\"",
+  "url": "\"http://localhost:1313/posts/2019/9981-sharepoint-framework-v1-8/\"",
+  "datePublished": "\"2019-03-19T04:15:15+09:00\"",
+  "dateModified": "\"2019-03-19T04:15:15+09:00\"",
+  
+  "author": {
+    "@type": "Person",
+    "name": "\"Your Name\""
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "\"SharePoint Developer\"",
+    "url": "\"http://localhost:1313/\""
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "\"http://localhost:1313/posts/2019/9981-sharepoint-framework-v1-8/\""
+  }
+  ,
+  "keywords": "[\"1.8\",\"SharePoint\",\"SharePoint Framework\",\"SPFx\"]"
+  
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SharePoint / Microsoft 365 / Power Platform の開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/your-github-id'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/your-twitter-id'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>ブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li><a href="#teams-タブ">Teams タブ</a></li>
+    <li><a href="#app-ページ">App ページ</a></li>
+    <li><a href="#分離された-web-パーツ-domain-isolated-web-parts">分離された Web パーツ (Domain isolated web parts)</a></li>
+    <li><a href="#その他">その他</a></li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <div class="widget--recent-posts widget">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+    </div>
+    <h2 class="widget-title section-title">新着記事</h2>
+    <div class="widget-body">
+        <ol class="recent-posts-list"><li>
+                <a href="/posts/m365dev-nodeversion/">SPFx、Office Web アドイン開発でありがちな Node.js のバージョンが環境ごとに異なる場合の開発環境の工夫（チーム開発前提）</a>
+                <span class="recent-posts-date">2026年3月8日</span>
+            </li><li>
+                <a href="/posts/2025/10761-outlook/">新しいOutlookのイベントチャームのアイコン名</a>
+                <span class="recent-posts-date">2025年6月21日</span>
+            </li><li>
+                <a href="/posts/2025/10754-azure-bicep/">Azure環境を自動的に構築するBicepが超便利！</a>
+                <span class="recent-posts-date">2025年4月12日</span>
+            </li><li>
+                <a href="/posts/2025/10745-graph-api/">Graph API で定期予定の一連の予定を取得する</a>
+                <span class="recent-posts-date">2025年2月9日</span>
+            </li><li>
+                <a href="/posts/2025/10725-graph-api-transitivemembers/">Graph API の transitiveMembers の制限を調べてみた</a>
+                <span class="recent-posts-date">2025年2月2日</span>
+            </li></ol>
+    </div>
+</div>
+            
+        
+            
+                <div class="widget--adsense-sidebar widget">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/office-365/" style="background-color: hsl(21, 60%, 84%); color: hsl(21, 60%, 15%);">
+                Office 365
+            </a>
+        
+            
+            
+            
+            <a href="/categories/sharepoint/" style="background-color: hsl(86, 60%, 84%); color: hsl(86, 60%, 15%);">
+                SharePoint
+            </a>
+        
+            
+            
+            
+            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/" style="background-color: hsl(206, 60%, 84%); color: hsl(206, 60%, 15%);">
+                開発とプログラミング
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/2019/9981-sharepoint-framework-v1-8/">SharePoint Framework v1.8 の変更点</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            2019年3月8日に SharePoint Framework v1.8 がリリースされました。 この記事では v1.8 の変更点について気になるところだけ抜粋して記載します。 詳細は以下のリリースノートを確認してください。 SharePo…
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2019-03-19T04:15:15&#43;09:00'>2019年3月19日</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        読了時間: 1分
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目次</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li><a href="#teams-タブ">Teams タブ</a></li>
+    <li><a href="#app-ページ">App ページ</a></li>
+    <li><a href="#分離された-web-パーツ-domain-isolated-web-parts">分離された Web パーツ (Domain isolated web parts)</a></li>
+    <li><a href="#その他">その他</a></li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <p>2019年3月8日に SharePoint Framework  v1.8 がリリースされました。
+この記事では v1.8 の変更点について気になるところだけ抜粋して記載します。
+詳細は以下のリリースノートを確認してください。
+<a class="link" href="https://github.com/SharePoint/sp-dev-docs/wiki/SharePoint-Framework-v1.8-release-notes"  target="_blank" rel="noopener"
+    >SharePoint Framework v1.8 release notes</a></p>
+<h2 id="teams-タブ">Teams タブ
+</h2><ul>
+<li>v1.7 ではプレビュー版としてリリースされていましたが、v1.8 で正式サポートとなりました。</li>
+<li>「Teams タブ」は SharePoint Framework の Web パーツの開発と同じ開発手法で開発したカスタムアプリケーションを Microsoft Teams に「タブ」として追加できるようにするためのソリューションです。</li>
+</ul>
+<p><a class="link" href="https://docs.microsoft.com/ja-jp/sharepoint/dev/spfx/integrate-with-teams-introduction"  target="_blank" rel="noopener"
+    >SharePoint Framework を使用した Microsoft Teams タグの作成</a></p>
+<h2 id="app-ページ">App ページ
+</h2><ul>
+<li>v1.7 では Single Part App Page と呼ばれていた機能が、App Pages としてリリースされました。</li>
+<li>App ページは、単一の Web パーツだけが配置された、ユーザーがページのレイアウトやコンテンツの変更ができないページを作成するためのソリューションです。</li>
+</ul>
+<p><a class="link" href="https://docs.microsoft.com/ja-jp/sharepoint/dev/spfx/web-parts/single-part-app-pages"  target="_blank" rel="noopener"
+    >SharePoint Online での Single Part App Pages の使用</a></p>
+<h2 id="分離された-web-パーツ-domain-isolated-web-parts">分離された Web パーツ (Domain isolated web parts)
+</h2><ul>
+<li>v1.7 ではプレビュー版としてリリースされていましたが、v1.8 で正式サポートとなりました。</li>
+<li>通常の Web パーツは、Webパーツが配置されたページのコンテキストで動作しますが、分離された Web パーツは iFrame として作成されるため、別のコンテキストとして動作させることができます。
+これにより、Web パーツで使用する API に対して Azure AD でアクセス許可を設定する際に、特定の分離された Web パーツに対してだけ、アクセスを許可するというような指定ができるようになります。</li>
+</ul>
+<p><a class="link" href="https://docs.microsoft.com/ja-jp/sharepoint/dev/spfx/web-parts/isolated-web-parts"  target="_blank" rel="noopener"
+    >分離された Web パーツ</a></p>
+<h2 id="その他">その他
+</h2><ul>
+<li>古いバージョンの Fabric CSS をロードしないようにした</li>
+<li>Web パーツの背景色について、テーマの背景色を使用するようにするプロパティを追加した</li>
+<li>Web パーツのプロパティペインのコードを sp-webpart-base から sp-property-pane に移動した</li>
+</ul>
+<p> 
+[AdSense-B]</p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/1.8/">1.8</a>
+        
+            <a href="/tags/sharepoint/">SharePoint</a>
+        
+            <a href="/tags/sharepoint-framework/">SharePoint Framework</a>
+        
+            <a href="/tags/spfx/">SPFx</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside>
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="subsection-list">
+        <div class="article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/2019/9965-docker-sharepoint-framework/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker を使った SharePoint Framework 開発環境の構築 その２</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/posts/2019/9954-docker-sharepoint-framework/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker を使った SharePoint Framework 開発環境の構築 その１</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/posts/2019/9945-sharepoint-framework-v1-7/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SharePoint Framework v1.7 の変更点</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/posts/2019/9914-sharepoint-framework-v1-7-0-v1-7-1-docker-image/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SharePoint Framework v1.7.0, v1.7.1 Docker image 使用時の注意点</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/posts/2019/9902-docker-sharepoint-framework/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker で SharePoint Framework 開発環境を構築する際の注意事項</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 SharePoint Developer
+    </section>
+    
+    <section class="powerby">
+        
+            SharePoint Developer Blog <br/>
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.b6cba74c66971621e3d63b383da290b07bdfa1de7fc236c60e3aede2e3133a80.js" defer></script>
+
+
+    </body>
+</html>

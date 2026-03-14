@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 2 - SharePoint 2013</title>
+
+
+<link rel="canonical" href="http://localhost:1313/categories/sharepoint-2013/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="SharePoint 2013">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/categories/sharepoint-2013/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="SharePoint 2013">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/categories/sharepoint-2013/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5631-sharepoint-app-asp-net-mvc-js/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint app を ASP.NET MVC で作った際にプロジェクトに含まれている JS ファイルについて</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>Visual Studio 2013 では、SharePoint app (apps for SharePoint のこと) を作成する際に、
+・ASP.NET Web Forms Application (初代 ASP.NET の頃から存在するイベントドリブンなフレームワーク)
+・ASP.NET MVC Web Application (Model-View-Controller パターンなフレームワーク)
+のどちらかを最初に選択してプロジェクトを作ります。
+<img alt="image_3_40136282" class="gallery-image" data-flex-basis="332px" data-flex-grow="138" height="464" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5631-sharepoint-app-asp-net-mvc-js/image_3_40136282.png" width="642">
+※上図の通り、デフォルトは ASP.NET MVC Web Application となっています。
+ASP.NET MVC Web Application 形式でプロジェクトを作成すると、モバイルデバイス向け開発に便利ないくつかの JavaScript ファイルが最初からプロジェクトに含まれているのですが、これらの JS ファイルについては Project_Readme.html 等を読んでも特に説明がなく、SharePoint app 開発用の msdn の記事をあさってもなかなか情報が見つかりません。
+ということで、プロジェクトに最初から含まれている JS ファイルは何のために使うものなのか調べてみました。
+ASP.NET MVC Web Application での開発をバリバリやっていらっしゃる方や、モバイルデバイス向けの開発をされている方にとっては「そんなことも知らないの！？」ということかもしれませんが、古い人間な私には分からなかったので、一応ここにまとめておきます。。。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2014年5月3日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5601-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">パスフレーズを変更する</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>パスフレーズとは、ファームを新規構築する際に構成ウィザードの流れの中で設定する値で、ここで設定した値を、以降ファームにサーバーを追加する際に入力することになります。
+一気に全サーバーをファームに追加する場合は、パスフレーズを忘れることなどないと思うので問題ないのですが、しばらく間をあけてからサーバーを追加する時などは、場合によってはパスフレーズを忘れてしまった、ということもあるかと思います。
+そんな時に備え、パスフレーズを初期化する方法をご紹介します。</p>
+<h3 id="パスフレーズ変更スクリプト">パスフレーズ変更スクリプト
+</h3><p>パスフレーズの変更は、以下の PowerShell で行います。
+(青字が入力する部分になります。)</p>
+<pre tabindex="0"><code>1: $pass = ConvertTo-SecureString -String &#34;xxxx&#34; -asPlainText -Force
+</code></pre><pre tabindex="0"><code>2: Set-SPPassPhrase -PassPhrase $pass -Confirm
+</code></pre><pre tabindex="0"><code>3:  
+</code></pre><pre tabindex="0"><code>4: コマンド パイプライン位置 1 のコマンドレット Set-SPPassPhrase
+</code></pre><pre tabindex="0"><code>5: 次のパラメーターに値を指定してください:
+</code></pre><pre tabindex="0"><code>6: ConfirmPassPhrase: \*\*\*\*
+</code></pre><pre tabindex="0"><code>7:  
+</code></pre><pre tabindex="0"><code>8: 確認
+</code></pre><pre tabindex="0"><code>9: この操作を実行しますか?
+</code></pre><pre tabindex="0"><code>10: 対象 &#34;SPPassPhrase&#34; に対して操作 &#34;Set-SPPassPhrase&#34; を実行しています。
+</code></pre><pre tabindex="0"><code>11: [Y] はい(Y) [A] すべて続行(A) [N] いいえ(N) [L] すべて無視(L) [S] 中断(S)
+</code></pre><pre tabindex="0"><code>12: [?] ヘルプ(既定値は &#34;Y&#34;): y
+</code></pre><p>1 行目の “xxxx” には新たに設定したいパスフレーズを指定します。
+パスフレーズのセキュリティ要件(文字の長さ、種類)を満たした文字を指定する必要があります。
+6 行目の “****” には、1行目で指定したパスフレーズを確認のためもう一度入力します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2014年1月30日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5591-sharepoint/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint ソリューションの開発環境を構築する</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>SharePoint 2013 のソリューションを開発するための環境を構築する方法を説明します。
+なお、SharePoint 用アプリや Office 用アプリの開発環境構築については、以下の記事をご参照ください。
+<a class="link" href="http://sharepoint.orivers.jp/Article/174"  target="_blank" rel="noopener"
+    >SharePoint 用アプリおよび Office 用アプリの開発環境を構築する</a>
+SharePoint ソリューションの開発環境は、SharePoint と Visual Studio を同居させる必要がありますので、全開発環境に SharePoint をインストールすることとなります。
+そのため、全開発環境にサーバー OS も必要になり、非常にコストがかかることとなります。
+従って、開発期間が短いのであれば、<a class="link" href="http://technet.microsoft.com/ja-jp/bb291020.aspx"  target="_blank" rel="noopener"
+    >評価版</a>で環境をそろえるということも検討されるとよいかと思います。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年12月29日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5571-knowledgelake/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">ドキュメントソリューション　KnowledgeLake</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>これまで製品紹介やレビューといったことをこのブログでやってきたことはなかったのですが、これを機にそういうことも少ししてみようかと思っています。
+ということで、第一弾は既に各所で紹介記事が書かれていますが、PFU社のドキュメントソリューションである<a class="link" href="http://www.pfu.fujitsu.com/sharepoint/"  target="_blank" rel="noopener"
+    >KnowledgeLake</a>です。</p>
+<h3 id="ドキュメントソリューションとは">ドキュメントソリューションとは？
+</h3><p>SharePointの利用方法は数々ありますが、その代表格はドキュメント管理ではないでしょうか。
+SharePointには、ドキュメントに対して会社で取り決めたタグを付与する管理メタデータ機能や、承認ワークフロー、情報管理ポリシーといったライフサイクル管理系の機能、そして検索機能などなど、ドキュメント管理に関する機能は数多く実装されており、SharePointユーザーは少なからずこれらの機能を使っているかと思います。
+このようなドキュメント管理機能を業務と結び付けて、業務効率化を実現する文書活用系のソリューションが、ドキュメントソリューションとなります。</p>
+<h3 id="knowledgelakeの特徴">KnowledgeLakeの特徴
+</h3><p>今回紹介するKnowledgeLakeという製品は、上記のようなSharePointが持つドキュメント管理機能を強化する、ソフトウェアと対応スキャナが一体となったソリューションで、端的にいうとスキャナから取り込んだ文書を簡単にSharePointに登録することができ、登録したドキュメントを効率的に検索、利活用することができるようになります。</p>
+<h3 id="製品ごとの説明">製品ごとの説明
+</h3><p>KnowledgeLakeは4つのソフトウェアと対応するスキャナで構成されており、基本的には全ソフトウェアを組み合わせて使うものですが、個別に導入・利用することも可能です。
+以下が、4つのソフトウェアとなります。(ロゴ、説明文は製品紹介資料から抜粋）</p>
+<table>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>image_thumb_18539358</td>
+          <td>SharePointのライブラリ機能を“業務システム”に拡張する機能をSharePointに追加します。 スキャナ登録機能、高度で柔軟な検索機能、専用ビューワで、SharePointの登録、検索、閲覧機能を大幅に強化します。 その他の主な機能：注釈・メモ、データベース連携によるタグ付け（インデックス化）等</td>
+      </tr>
+      <tr>
+          <td>image_thumb_1_18539358</td>
+          <td>他システム（既存の基幹システム や 業務アプリケーション）の画面上の項目をキーにして、ワンクリックで SharePoint から文書を取得します。 その際に、他システム側のカスタマイズは不要です。他システム上のキーワードを元にした登録も可能です。 ※Unifyを使用するには、Imaging もしくは Connect が必要です。 既存システムとの連携可否を事前に確認する必要があります。</td>
+      </tr>
+      <tr>
+          <td>image_6_18539358</td>
+          <td>業務用イメージスキャナ「fiシリーズ」と連携し、紙文書のスキャン、インデックス作成およびSharePointのライブラリへ文書を登録します。 OCR・バーコード認識など入力業務を効率化します。既に電子化済みのデータの一括登録も可能です。</td>
+      </tr>
+      <tr>
+          <td>image_thumb_3_18539358</td>
+          <td>Microsoft Officeライクなインタフェースで、SharePointのライブラリへの登録、検索、閲覧を簡単に利用できる、クライアントアプリケーションです。 スキャナ登録に加えて、Officeアドインを使えば、Officeアプリケーション（Word, Excel, PowerPoint, Outlook）から直接SharePointのライブラリへ登録することも可能です。</td>
+      </tr>
+  </tbody>
+</table>
+<p>この中から私が注目＆おすすめしたいのは、KnowledgeLake Capture for SharePoint です。
+Capture は、紙文書を一括でSharePointに登録するための機能を備えた製品です。
+業務効率化のためのドキュメント管理を検討する場合、必ず問題になるのが紙文書の取り扱いです。
+紙文書を完全にゼロにできれば良いのですが、一気に紙文書ゼロを実現することは現実的には難しいと思います。
+そうすると、どうしても紙文書の管理をどうするかという話になるわけですが、そんな時にこのCaptureが非常に有効かと思います。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年11月25日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5561-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">ファームで使用しているデータベースを一覧表示する</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>開発環境や検証環境として、SharePointファームをたくさん立てていると、いつの間にかデータベースがたくさんできてしまい、いざデータベースを整理しようと思った時にどのデータベースを消してよいのかが判別できなくなることがあると思います（私だけ！？）
+SQL Server Management Studioのオブジェクトエクスプローラを見ると、データベースが多すぎてどうしたらよいものかと・・・
+<img alt="image_3_42B37651" class="gallery-image" data-flex-basis="142px" data-flex-grow="59" height="240" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5561-post/image_3_42B37651.png" width="142">
+※画像はあえて小さくして載せてます。
+そんな時にファームで利用しているデータベースの一覧が見れるととても便利なわけですが、PowerShell で手軽に実現できてしまいます。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年11月9日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5551-sharepoint-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2013の各サービスアプリケーションの推奨実行場所</h2>
+                        
+                        <p class="article-summary"><p>SharePoint 2013の各サービスアプリケーションの推奨実行場所
+サービスアプリケーション毎に、お勧めの実行サーバーがまとめられています。
+<a class="link" href="http://t.co/VA3n0cYaLH"  target="_blank" rel="noopener"
+    >http://t.co/VA3n0cYaLH</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年11月2日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5541-office-web-apps-server-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Office Web Apps Server 2013 の構成 (テスト、社内利用環境編)</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>Office Web Apps Server 2013 のインストールが完了した後に行う、構成手順についてまとめました。
+この記事では、テスト環境や社内利用を目的とした構成を対象としており、シングルサーバー構成、HTTP を利用した通信となります。
+なお、本記事は以下のtechnetサイトを参考にしています。
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/jj219455.aspx"  title="http://technet.microsoft.com/ja-jp/library/jj219455.aspx"
+     target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/jj219455.aspx</a></p>
+<h3 id="１office-web-apps-server-2013-のファーム構築">１．Office Web Apps Server 2013 のファーム構築
+</h3><p>まずは Office Web Apps Server 2013 のファームを構築します。
+Office Web Apps Server 2013 をインストールしたサーバーにて以下のコマンドを、PowerShell で実行します。
+New-OfficeWebAppsFarm –InternalURL “<em>http://servername</em>” -AllowHttp -EditingEnabled
+InternalURL には、Office Web Apps Server 2013 をインストールしたサーバーの URL を指定します。
+この記事では “http://srv402” を指定して進めます。
+AllowHttp は、HTTP 通信を許可することを、EditingEnabled は Office Web Apps 上でのドキュメントの編集を許可することを指定しています。
+なお、コマンドを実行しても何も反応がない場合、一度 Enter キーを押してみてください。
+すると以下のメッセージが表示されるかと思います。
+（本来は何もしなくてもメッセージが表示されるようですが、２回中１回は表示されなかったので・・・）
+EditingEnabled を TRUE に設定します。この操作は、この Office Web Apps サーバー のユーザーに、Office Web Apps を使った編集を許可するライセンスがある場合にのみ行ってください。
+この操作を続行しますか?
+[Y] はい(Y)  [N] いいえ(N)  [S] 中断(S)  [?] ヘルプ (既定値は &ldquo;Y&rdquo;):
+上記メッセージで “Y” を入力すると構成が進み、しばらくすると構成した Office Web Apps Server 環境のパラメータが出力されます。
+<img alt="image_3_3CDE5D77" class="gallery-image" data-flex-basis="288px" data-flex-grow="120" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5541-office-web-apps-server-2013/image_3_3CDE5D77.png" width="576"></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年10月28日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5531-office-web-apps-server-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Office Web Apps Server 2013 のインストール</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>Windows Server 2012 に Office Web Apps Server 2013 をインストールする手順をまとめました。
+インストール後は、SharePoint 2013 と接続するための構成が必要ですが、長くなるので別記事にします。
+なお、本記事は以下のtechnetサイトを参考にしています。
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/jj219455.aspx"  title="http://technet.microsoft.com/ja-jp/library/jj219455.aspx"
+     target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/jj219455.aspx</a></p>
+<h3 id="０office-web-apps-server-2013-の環境要件">０．Office Web Apps Server 2013 の環境要件
+</h3><p>Office Web Apps Server 2013 を導入し利用するためには、様々な環境要件を満たす必要があります。
+主なところでは、以下のような要件があります。
+・OS は Windows Server 2008 SP1 か Windows Server 2012。
+・ポート 80,443,809を利用する役割「Web サーバー(IIS)」はインストールしない。またF/Wが空いている。
+詳細は以下の technet サイトをご確認ください。
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/jj219435.aspx"  title="http://technet.microsoft.com/ja-jp/library/jj219435.aspx"
+     target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/jj219435.aspx</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年10月28日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5521-web/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E5%85%A8%E8%88%AC">全般</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Webパーツページの作成方法</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>サイトをチームサイトテンプレートで作成すると、サイトのトップページはWikiライクな”サイトのページ”というライブラリ上のページとして作成されます。
+こうして作られるページは、ページ上の好きなところにWebパーツを配置したり、画像や文字を挿入することができ、大変便利です。
+ところが、Webパーツを綺麗に並べたいとか、Webパーツ接続をやりたいとなると、Wikiライクなページでは実現できない、あるいは非常に手間がかかってしまいます。
+そんな時は、Webパーツページを利用します。
+Webパーツページを利用すれば、Webパーツを綺麗に並べたり、Webパーツ接続をすることができます。</p>
+<h3 id="webパーツページの作成方法">Webパーツページの作成方法
+</h3><p>Webパーツページは手軽に作成できるのですが、ちょっと見つけ辛いところから作成しなければなりません。
+ちなみに、ページの右上のギアマークの中の[ページの追加]の場合は、Webパーツページではなく、Wikiページが作成されます。
+ギアマークをクリックした時のメニュー。
+<img alt="image_thumb_4ACA45D0" class="gallery-image" data-flex-basis="221px" data-flex-grow="92" height="315" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5521-web/image_thumb_4ACA45D0.png" width="291">
+Webパーツページの作成は、以下の操作で行います。
+<strong>１．サイトコンテンツページに移動する</strong>
+まずはサイトコンテンツページに移動します。
+<strong>２．”サイトのページ”をクリックする</strong>
+サイトコンテンツページにある”サイトのページ”をクリックし、サイトのページライブラリのビューページに移動します。
+<img alt="image_thumb_2_4ACA45D0" class="gallery-image" data-flex-basis="541px" data-flex-grow="225" height="114" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5521-web/image_thumb_2_4ACA45D0.png" width="257">
+<strong>３．リボンから新しいドキュメントをクリックする</strong>
+リボンの[ファイル]→[新しいドキュメント]→[Web パーツ ページ]をクリックします。
+<img alt="image_thumb_3_4ACA45D0" class="gallery-image" data-flex-basis="255px" data-flex-grow="106" height="249" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5521-web/image_thumb_3_4ACA45D0.png" width="265">
+<strong>４．新しい Web パーツ ページを作成する</strong>
+[新しい Web パーツ ページ]というページが表示されます。
+ここで作成するWebパーツページの名前、テンプレート、保存場所を指定し、Webパーツページを作成します。
+<img alt="image_thumb_4_4ACA45D0" class="gallery-image" data-flex-basis="334px" data-flex-grow="139" height="460" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5521-web/image_thumb_4_4ACA45D0.png" width="642">
+これでWebパーツページが作成されますので、あとはページを開いてWebパーツの配置などを行ってください。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年10月2日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5501-sharepoint-conference-2014/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AA%E3%81%A9">勉強会・イベントなど</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Conference 2014のアジェンダが公開されました。</h2>
+                        
+                        <p class="article-summary"><p>SharePoint Conference 2014のアジェンダが公開されました。
+が、セッション内容についてはまだ出てきませんね。</p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年9月25日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/categories/sharepoint-2013/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/categories/sharepoint-2013/">
+        1
+    </a><a class="page-link current"aria-current="page"href="/categories/sharepoint-2013/page/2/"
+                aria-label="Page 2">
+                2
+            </a><a class="page-link "href="/categories/sharepoint-2013/page/3/"
+                aria-label="Page 3">
+                3
+            </a><a class="page-link "href="/categories/sharepoint-2013/page/4/"
+                aria-label="Page 4">
+                4
+            </a><a class="page-link "href="/categories/sharepoint-2013/page/5/"
+                aria-label="Page 5">
+                5
+            </a><a class="page-link "href="/categories/sharepoint-2013/page/6/"
+                aria-label="Page 6">
+                6
+            </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/sharepoint-2013/page/7/"aria-label="Page 7">
+        7
+    </a><a class="page-link "href="/categories/sharepoint-2013/page/3/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

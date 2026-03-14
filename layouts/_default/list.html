@@ -1,0 +1,59 @@
+{{ define "main" }}
+    {{ $paginator := .Paginator }}
+
+    <div class="article-list--tile">
+        {{ range $index, $page := $paginator.Pages }}
+
+            {{/* --- 5記事ごと (index 5, 10, 15...) に広告を挿入 --- */}}
+            {{ if and (gt $index 0) (eq (mod $index 5) 0) }}
+                <div class="article-list--item adsense-wrapper">
+                    {{ partial "adsense-in-list.html" . }}
+                </div>
+            {{ end }}
+
+            {{/* --- 記事カード --- */}}
+            {{ $image := partial "helper/image" (dict "Image" $page.Params.image "Resources" $page.Resources "Context" $page) }}
+            <article class="{{ if $image }}has-image{{ end }}">
+                <a href="{{ $page.RelPermalink }}">
+                    {{ if $image }}
+                    <div class="article-image">
+                        {{ partial "helper/thumbnail-image" (dict
+                            "Resource" $image.Resource
+                            "Width" 250
+                            "Height" 150
+                            "Resize" $page.Site.Params.ImageProcessing.Thumbnail.Enabled
+                            "Attributes" (dict
+                                "src" $image.Permalink
+                                "alt" (printf "Featured image of post %s" $page.Title)
+                                "loading" "lazy"
+                                "width" $image.Width
+                                "height" $image.Height
+                            )
+                        ) }}
+                    </div>
+                    {{ end }}
+                    <div class="article-details">
+                        {{ with $page.Params.categories }}
+                        <div class="article-category">
+                            {{ range . }}
+                            <a href="{{ (printf "/categories/%s" . | urlize) | relURL }}">{{ . }}</a>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+                        <h2 class="article-title">{{ $page.Title }}</h2>
+                        {{ with $page.Summary }}
+                        <p class="article-summary">{{ . }}</p>
+                        {{ end }}
+                        <footer class="article-time">
+                            <time>{{ $page.Date.Format "2006年1月2日" }}</time>
+                            <span>{{ i18n "readingTime" $page.ReadingTime | default (printf "読了時間: %d分" $page.ReadingTime) }}</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        {{ end }}
+    </div>
+
+    {{ partial "pagination.html" . }}
+{{ end }}

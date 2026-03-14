@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="はじめに Office Web Apps Server 2013 のインストールが完了した後に行う、構成手順についてまとめました。 この記事では、テスト環境や社内利用を目的とした構成を対象としており、シングルサーバー構成、HTTP を利用し…">
+<title>Office Web Apps Server 2013 の構成 (テスト、社内利用環境編)</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/2013/5541-office-web-apps-server-2013/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="Office Web Apps Server 2013 の構成 (テスト、社内利用環境編)">
+<meta property='og:description' content="はじめに Office Web Apps Server 2013 のインストールが完了した後に行う、構成手順についてまとめました。 この記事では、テスト環境や社内利用を目的とした構成を対象としており、シングルサーバー構成、HTTP を利用し…">
+<meta property='og:url' content='http://localhost:1313/posts/2013/5541-office-web-apps-server-2013/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2013-10-28T11:14:20&#43;09:00'/><meta property='article:modified_time' content='2013-10-28T11:14:20&#43;09:00'/>
+<meta name="twitter:title" content="Office Web Apps Server 2013 の構成 (テスト、社内利用環境編)">
+<meta name="twitter:description" content="はじめに Office Web Apps Server 2013 のインストールが完了した後に行う、構成手順についてまとめました。 この記事では、テスト環境や社内利用を目的とした構成を対象としており、シングルサーバー構成、HTTP を利用し…">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "\"Office Web Apps Server 2013 の構成 (テスト、社内利用環境編)\"",
+  "description": "\"はじめに Office Web Apps Server 2013 のインストールが完了した後に行う、構成手順についてまとめました。 この記事では、テスト環境や社内利用を目的とした構成を対象としており、シングルサーバー構成、HTTP を利用し…\"",
+  "url": "\"http://localhost:1313/posts/2013/5541-office-web-apps-server-2013/\"",
+  "datePublished": "\"2013-10-28T11:14:20+09:00\"",
+  "dateModified": "\"2013-10-28T11:14:20+09:00\"",
+  
+  "author": {
+    "@type": "Person",
+    "name": "\"Your Name\""
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "\"SharePoint Developer\"",
+    "url": "\"http://localhost:1313/\""
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "\"http://localhost:1313/posts/2013/5541-office-web-apps-server-2013/\""
+  }
+  
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SharePoint / Microsoft 365 / Power Platform の開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/your-github-id'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/your-twitter-id'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>ブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#はじめに">はじめに</a></li>
+        <li><a href="#１office-web-apps-server-2013-のファーム構築">１．Office Web Apps Server 2013 のファーム構築</a></li>
+        <li><a href="#２構成の確認">２．構成の確認</a></li>
+        <li><a href="#３sharepoint-の構成">３．SharePoint の構成</a></li>
+        <li><a href="#４動作確認">４．動作確認</a></li>
+      </ul>
+    </li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <div class="widget--recent-posts widget">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+    </div>
+    <h2 class="widget-title section-title">新着記事</h2>
+    <div class="widget-body">
+        <ol class="recent-posts-list"><li>
+                <a href="/posts/m365dev-nodeversion/">SPFx、Office Web アドイン開発でありがちな Node.js のバージョンが環境ごとに異なる場合の開発環境の工夫（チーム開発前提）</a>
+                <span class="recent-posts-date">2026年3月8日</span>
+            </li><li>
+                <a href="/posts/2025/10761-outlook/">新しいOutlookのイベントチャームのアイコン名</a>
+                <span class="recent-posts-date">2025年6月21日</span>
+            </li><li>
+                <a href="/posts/2025/10754-azure-bicep/">Azure環境を自動的に構築するBicepが超便利！</a>
+                <span class="recent-posts-date">2025年4月12日</span>
+            </li><li>
+                <a href="/posts/2025/10745-graph-api/">Graph API で定期予定の一連の予定を取得する</a>
+                <span class="recent-posts-date">2025年2月9日</span>
+            </li><li>
+                <a href="/posts/2025/10725-graph-api-transitivemembers/">Graph API の transitiveMembers の制限を調べてみた</a>
+                <span class="recent-posts-date">2025年2月2日</span>
+            </li></ol>
+    </div>
+</div>
+            
+        
+            
+                <div class="widget--adsense-sidebar widget">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/sharepoint-2013/" style="background-color: hsl(80, 60%, 84%); color: hsl(80, 60%, 15%);">
+                SharePoint 2013
+            </a>
+        
+            
+            
+            
+            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/" style="background-color: hsl(99, 60%, 84%); color: hsl(99, 60%, 15%);">
+                インストールと設定、管理
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/2013/5541-office-web-apps-server-2013/">Office Web Apps Server 2013 の構成 (テスト、社内利用環境編)</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            はじめに Office Web Apps Server 2013 のインストールが完了した後に行う、構成手順についてまとめました。 この記事では、テスト環境や社内利用を目的とした構成を対象としており、シングルサーバー構成、HTTP を利用し…
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2013-10-28T11:14:20&#43;09:00'>2013年10月28日</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        読了時間: 1分
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目次</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#はじめに">はじめに</a></li>
+        <li><a href="#１office-web-apps-server-2013-のファーム構築">１．Office Web Apps Server 2013 のファーム構築</a></li>
+        <li><a href="#２構成の確認">２．構成の確認</a></li>
+        <li><a href="#３sharepoint-の構成">３．SharePoint の構成</a></li>
+        <li><a href="#４動作確認">４．動作確認</a></li>
+      </ul>
+    </li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <h3 id="はじめに">はじめに
+</h3><p>Office Web Apps Server 2013 のインストールが完了した後に行う、構成手順についてまとめました。
+この記事では、テスト環境や社内利用を目的とした構成を対象としており、シングルサーバー構成、HTTP を利用した通信となります。
+なお、本記事は以下のtechnetサイトを参考にしています。
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/jj219455.aspx"  title="http://technet.microsoft.com/ja-jp/library/jj219455.aspx"
+     target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/jj219455.aspx</a></p>
+<h3 id="１office-web-apps-server-2013-のファーム構築">１．Office Web Apps Server 2013 のファーム構築
+</h3><p>まずは Office Web Apps Server 2013 のファームを構築します。
+Office Web Apps Server 2013 をインストールしたサーバーにて以下のコマンドを、PowerShell で実行します。
+New-OfficeWebAppsFarm –InternalURL “<em>http://servername</em>” -AllowHttp -EditingEnabled
+InternalURL には、Office Web Apps Server 2013 をインストールしたサーバーの URL を指定します。
+この記事では “http://srv402” を指定して進めます。
+AllowHttp は、HTTP 通信を許可することを、EditingEnabled は Office Web Apps 上でのドキュメントの編集を許可することを指定しています。
+なお、コマンドを実行しても何も反応がない場合、一度 Enter キーを押してみてください。
+すると以下のメッセージが表示されるかと思います。
+（本来は何もしなくてもメッセージが表示されるようですが、２回中１回は表示されなかったので・・・）
+EditingEnabled を TRUE に設定します。この操作は、この Office Web Apps サーバー のユーザーに、Office Web Apps を使った編集を許可するライセンスがある場合にのみ行ってください。
+この操作を続行しますか?
+[Y] はい(Y)  [N] いいえ(N)  [S] 中断(S)  [?] ヘルプ (既定値は &ldquo;Y&rdquo;):
+上記メッセージで “Y” を入力すると構成が進み、しばらくすると構成した Office Web Apps Server 環境のパラメータが出力されます。
+<img alt="image_3_3CDE5D77" class="gallery-image" data-flex-basis="288px" data-flex-grow="120" height="480" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2013/5541-office-web-apps-server-2013/image_3_3CDE5D77.png" width="576"></p>
+<h3 id="２構成の確認">２．構成の確認
+</h3><p>ファームの構成が正常に完了したことを確認するために、ブラウザから 以下の URL を開きます。
+<em>InternalURL</em>/hosting/discovery
+今回は、InternalURL が http://srv402 なので、ブラウザに指定するURLは、http://srv402/hosting/discovery となります。
+http://srv402/hosting/discovery を開くと、以下のような結果が返ってきます。
+この結果が返ってくれば、構成完了となります。
+<img alt="image_9_3CDE5D77" class="gallery-image" data-flex-basis="679px" data-flex-grow="283" height="226" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2013/5541-office-web-apps-server-2013/image_9_3CDE5D77.png" width="640"></p>
+<h3 id="３sharepoint-の構成">３．SharePoint の構成
+</h3><p>Office Web Apps Server 2013 に接続する SharePoint Server 2013 にログインし、SharePoint 2013 管理シェルを管理者モードで起動し、以下のコマンドを実行します。
+New-SPWOPIBinding –ServerName <em>ServerName</em> –AllowHTTP
+ServerNameには、Office Web Apps Server 2013 のサーバー名を指定します。
+今回は、srv402 が接続先となるのでコマンドは、
+New-SPWOPIBinding –ServerName srv402 –AllowHTTP
+となります。
+コマンドを実行すると、プロンプト上に以下のような設定結果が対応する拡張子の分だけ表示されます。
+<img alt="image_12_3CDE5D77" class="gallery-image" data-flex-basis="616px" data-flex-grow="256" height="181" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2013/5541-office-web-apps-server-2013/image_12_3CDE5D77.png" width="465">
+次に、SharePoint 2013 と Office Web Apps Server 2013 の間の通信に HTTP を利用するよう、SharePoint 2013 の設定を変更します。
+以下のコマンドを、SharePoint 2013 管理シェルで実行します。
+Set-SPWOPIZone –zone “internal-http”
+$config = (Get-SPSecurityTokenServiceConfig)
+$config.AllowOAuthOverHttp = $true
+$config.Update()
+以上で設定完了です。</p>
+<h3 id="４動作確認">４．動作確認
+</h3><p>全ての設定が完了したので、SharePoint にファイルをアップして動作確認してみます。
+なお、動作確認はシステムアカウント以外のユーザーで行ってください。
+システムアカウントでは、プレビューが表示されないようなので。
+<img alt="image_15_3CDE5D77" class="gallery-image" data-flex-basis="375px" data-flex-grow="156" height="409" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2013/5541-office-web-apps-server-2013/image_15_3CDE5D77.png" width="640">
+無事表示できました！</p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 SharePoint Developer
+    </section>
+    
+    <section class="powerby">
+        
+            SharePoint Developer Blog <br/>
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.b6cba74c66971621e3d63b383da290b07bdfa1de7fc236c60e3aede2e3133a80.js" defer></script>
+
+
+    </body>
+</html>

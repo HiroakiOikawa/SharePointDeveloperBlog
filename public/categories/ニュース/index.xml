@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>ニュース on SharePoint Developer</title>
+        <link>http://localhost:1313/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9/</link>
+        <description>Recent content in ニュース on SharePoint Developer</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <lastBuildDate>Thu, 08 Oct 2015 11:16:59 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Microsoft MVP プログラムの大幅アップデート</title>
+            <link>http://localhost:1313/posts/9770-microsoft-mvp/</link>
+            <pubDate>Thu, 08 Oct 2015 11:16:59 +0900</pubDate>
+            <guid>http://localhost:1313/posts/9770-microsoft-mvp/</guid>
+            <description>&lt;p&gt;このたび、MVP プログラムが大幅にアップデートされました！&#xA;MVP プログラムサイトにアップデート内容が記載されています。&#xA;&lt;a class=&#34;link&#34; href=&#34;https://mvp.microsoft.com/en-us/pages/mvp-award-update&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;https://mvp.microsoft.com/en-us/pages/mvp-award-update&lt;/a&gt;&#xA;何がどうなったかというと、これまで製品カットだったカテゴリが、製品ではなくソリューションというか製品よりももう一段上の括りでカテゴライズされることになりました。&#xA;私が受賞した「SharePoint Server」は、新プログラムでは「Office Servers and Services」というカテゴリに変わり、SharePoint だけでなくOffice 365 や Exchange と同じカテゴリになります。&#xA;今回の新プログラム、注目すべきは開発系かなと勝手に思ってます。&#xA;というのも、カテゴリとして「Office Development」というのが追加されたんですね。&#xA;Office Development は、Office365 API、Office アドイン、SharePoint アドインの開発に関するカテゴリで、私が最近愛用している AngularJS なんかもこのカテゴリに入っていたりします。&#xA;AngularJS のような JavaScript フレームワークは、Office 開発では必須の技術になってきますからね。&#xA;さらにさらに、新プログラムでは複数カテゴリの受賞というのが可能になりました！&#xA;という訳で、私としては「Office Servers and Services」カテゴリについては SharePoint を中心に活動を続け、開発者として「Office Development」カテゴリでも活躍できるようになりたいなと思う今日この頃。&#xA;MVP アワードの新カテゴリは、これからマイクロソフトが何にフォーカスしていくかという部分を表したものになっているので、MVP を目指す方もそうでない方も、一度このカテゴリを確認いただいて、これからの動きを考えてみるのも良いのではないかと思います。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint Server 2016 Preview がリリースされました</title>
+            <link>http://localhost:1313/posts/9745-sharepoint-server-2016-preview/</link>
+            <pubDate>Tue, 25 Aug 2015 02:19:52 +0900</pubDate>
+            <guid>http://localhost:1313/posts/9745-sharepoint-server-2016-preview/</guid>
+            <description>&lt;p&gt;久しぶりの更新になってしまいました。。。&#xA;ついに、SharePoint Server 2016 のプレビュー版がリリースされました。&#xA;現在、ダウンロードセンターからダウンロード可能な状態になっています。&#xA;最初から日本語の言語パックも用意されているようなので、これは検証しないわけにはいかないですね！&#xA;&lt;a class=&#34;link&#34; href=&#34;http://www.microsoft.com/en-us/download/details.aspx?id=48712&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;ダウンロードセンター&lt;/a&gt;&#xA;SharePoint Server 2016 の新機能については、以下の公式ブログで少しだけ紹介されています。&#xA;&lt;a class=&#34;link&#34; href=&#34;https://blogs.office.com/2015/08/24/announcing-availability-of-sharepoint-server-2016-it-preview-and-cloud-hybrid-search/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;Announcing availability of SharePoint Server 2016 IT Preview and cloud hybrid search&lt;/a&gt;&#xA;上記ブログによると、&#xA;・タッチへの最適化&#xA;・アプリケーションランチャー&#xA;・大きなファイル(10GB)のサポート&#xA;などが紹介されています。&#xA;また、SharePoint Server 2016 Previewの紹介ビデオも公開されているようです。&#xA;&lt;a class=&#34;link&#34; href=&#34;https://youtu.be/rV6PVzGs51I&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;https://youtu.be/rV6PVzGs51I&lt;/a&gt;&#xA;英語ですが11分程度の短いビデオで、いくつかの新機能が紹介されています。&#xA;さらに詳しく知りたいぞという方は、TechNetをご確認ください。&#xA;&lt;a class=&#34;link&#34; href=&#34;https://technet.microsoft.com/en-us/library/cc303422%28v=office.16%29.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;SharePoint Server 2016 Preview&lt;/a&gt;&#xA;さー、明日からSharePoint 2016をはじめてみましょう！&#xA;#私はまだまだ手を付けられそうにないのですが・・・&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>GAZOO.com が無事リリースされたようです</title>
+            <link>http://localhost:1313/posts/5311-gazoo-com/</link>
+            <pubDate>Thu, 30 May 2013 22:59:42 +0900</pubDate>
+            <guid>http://localhost:1313/posts/5311-gazoo-com/</guid>
+            <description>&lt;p&gt;５月初旬ころでしたかね、突如発表された GAZOO リニューアルの話。&#xA;SharePoint と Azureで作られているということで、その手の世界の方々は興味津々だったはず。&#xA;見れば確かに SharePoint。&#xA;トップページ、検索結果ページ、ブログページ・・・&#xA;見れば見るほど SharePoint なわけですが、よくぞここまで仕上げた！ という感じの素敵なサイトです。&#xA;今後 SharePoint で作られたこういった外向けサイトが増えてくると面白いですね。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://gazoo.com/Pages/index.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;GAZOO.com&lt;/a&gt;&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SkyDrive Pro クライアントがリリースされました</title>
+            <link>http://localhost:1313/posts/5271-skydrive-pro/</link>
+            <pubDate>Wed, 22 May 2013 03:56:13 +0900</pubDate>
+            <guid>http://localhost:1313/posts/5271-skydrive-pro/</guid>
+            <description>&lt;p&gt;SkyDrive Pro のクライアントアプリケーションがリリースされたようです。&#xA;&lt;a class=&#34;link&#34; href=&#34;http://blogs.office.com/b/sharepoint/archive/2013/05/21/skydrive-pro-client-for-windows-now-available.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;SkyDrive Pro client for Windows now available&lt;/a&gt;&#xA;ちょっと分かりづらいですが、Office 2013 をインストールしていない環境で SkyDrive Pro のオフライン機能を利用する場合にインストールするものとなります。&#xA;既に Office 2013 がインストールされている環境の場合、Office 2013 と一緒に SkyDrive Pro がインストールされているため、今回リリーされたクライアントアプリをインストールする必要はないようです。&#xA;SkyDrive Pro のオフライン機能により、SharePoint 内のドキュメントをオフラインでも利用できるようになります。&#xA;非常に便利な機能なので、まだ試していない方は是非試してみてください。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.microsoft.com/ja-jp/download/details.aspx?id=39050&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;ダウンロードはこちら。&lt;/a&gt;&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint Newsfeed appの機能紹介。</title>
+            <link>http://localhost:1313/posts/5161-sharepoint-newsfeed-app/</link>
+            <pubDate>Thu, 07 Mar 2013 20:27:32 +0900</pubDate>
+            <guid>http://localhost:1313/posts/5161-sharepoint-newsfeed-app/</guid>
+            <description>&lt;p&gt;SharePoint Newsfeed appの機能紹介。&#xA;SNS機能に特化しており、つぶやき、コメント、ダイレクトメッセージ、フォロー、いいね、写真投稿ができる。&#xA;android版は未リリース。もうandroidは卒業かな。 &lt;a class=&#34;link&#34; href=&#34;http://t.co/iCEB0S87jj&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://t.co/iCEB0S87jj&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;twetter より&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint 2013のモバイルアプリであるNewsfeed app、SkyDrive Pro app、Office Hubの紹介。</title>
+            <link>http://localhost:1313/posts/5151-sharepoint-2013-newsfeed-app-skydrive-pro-app-office-hub/</link>
+            <pubDate>Thu, 07 Mar 2013 20:26:06 +0900</pubDate>
+            <guid>http://localhost:1313/posts/5151-sharepoint-2013-newsfeed-app-skydrive-pro-app-office-hub/</guid>
+            <description>&lt;p&gt;SharePoint 2013のモバイルアプリであるNewsfeed app、SkyDrive Pro app、Office Hubの紹介。&#xA;Out and about:New SharePoint mobile offerings &lt;a class=&#34;link&#34; href=&#34;http://t.co/xJcbWG6d9Q&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://t.co/xJcbWG6d9Q&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;twetter より&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>Office365 ユーザーは2013年3月からyammerを無料で利用可能に。</title>
+            <link>http://localhost:1313/posts/5081-office365-2013-3-yammer/</link>
+            <pubDate>Thu, 06 Dec 2012 07:57:17 +0900</pubDate>
+            <guid>http://localhost:1313/posts/5081-office365-2013-3-yammer/</guid>
+            <description>&lt;p&gt;Office365 ユーザーは2013年3月からyammerを無料で利用可能に。&#xA;マイクロソフト、ヤマーの有償版ライセンスを値下げ、Office 365などとの連携も強化（ニュース） - &lt;a class=&#34;link&#34; href=&#34;http://t.co/v8DTodnP&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://t.co/v8DTodnP&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;twetter より&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>MCP試験「70-480: Programming in HTML5 with JavaScript and CSS3」無料受験キャンペーン</title>
+            <link>http://localhost:1313/posts/5061-mcp-70-480-programming-in-html5-with-javascript-and-css3/</link>
+            <pubDate>Wed, 28 Nov 2012 21:15:07 +0900</pubDate>
+            <guid>http://localhost:1313/posts/5061-mcp-70-480-programming-in-html5-with-javascript-and-css3/</guid>
+            <description>&lt;p&gt;MCSD 資格取得に必須の MCP 試験「70-480: Programming in HTML5 with JavaScript and CSS3」が、今なら無料で受けられます！&lt;/p&gt;&#xA;&lt;p&gt;※ただし、試験は (現状) 英語での受験となります。&lt;/p&gt;&#xA;&lt;p&gt;試験のご予約時、試験情報入力ページに無料受験できるバウチャーコード『&lt;strong&gt;HTMLJMP&lt;/strong&gt;』をご入力ください。&lt;/p&gt;&#xA;&lt;p&gt;プロモーションコードの入力がない状態でお申込みいただいた場合は、無料が適用となりませんのでご注意ください。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.microsoft.com/ja-jp/learning/certification/mcsd/free-camp.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://www.microsoft.com/ja-jp/learning/certification/mcsd/free-camp.aspx&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;というお知らせが届きました。&lt;/p&gt;&#xA;&lt;p&gt;2013年3月31日までの期間限定キャンペーンとのこと。&lt;/p&gt;&#xA;&lt;p&gt;ご興味ある方、受験して感想を教えてください！&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>Office365 2012 年 10 月の新機能: ディレクトリ同期におけるフィルタリング、他社製 ID ソリューション連携、パスワード有効期限と通知ポリシーを管理者が変更可能</title>
+            <link>http://localhost:1313/posts/5031-office365-2012-10-id/</link>
+            <pubDate>Fri, 09 Nov 2012 09:40:35 +0900</pubDate>
+            <guid>http://localhost:1313/posts/5031-office365-2012-10-id/</guid>
+            <description>&lt;p&gt;Office365 2012 年 10 月の新機能: ディレクトリ同期におけるフィルタリング、他社製 ID ソリューション連携、パスワード有効期限と通知ポリシーを管理者が変更可能&lt;/p&gt;&#xA;&lt;p&gt;なにげに嬉しい機能追加ですね。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://t.co/HEkRJxfq&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://t.co/HEkRJxfq&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;twetter より&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>Office365 SharePoint Online にて、標準でのPDF表示とmp4のストリーミングをサポート</title>
+            <link>http://localhost:1313/posts/4981-office365-sharepoint-online-pdf-mp4/</link>
+            <pubDate>Sat, 03 Nov 2012 01:26:34 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4981-office365-sharepoint-online-pdf-mp4/</guid>
+            <description>&lt;p&gt;Office365 SharePoint Online にて、標準でのPDF表示とmp4のストリーミングをサポート&#xA;こうやって追加されていく機能はオンプレの方にはどうやってリリースしていくんでしょうね？&#xA;&lt;a class=&#34;link&#34; href=&#34;http://t.co/xFq4AriR&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://t.co/xFq4AriR&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;twetter より&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint Server 2013 日本語版ついに公開！</title>
+            <link>http://localhost:1313/posts/4811-sharepoint-server-2013/</link>
+            <pubDate>Fri, 26 Oct 2012 02:01:00 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4811-sharepoint-server-2013/</guid>
+            <description>&lt;p&gt;立て続けにごめんなさい。&lt;/p&gt;&#xA;&lt;p&gt;SharePoint Server 2013 も、今まさに日本語版が公開されました。&lt;/p&gt;&#xA;&lt;p&gt;今夜中に 2013 シリーズが出そろうかもしれないですね。&lt;/p&gt;&#xA;&lt;p&gt;明日から検証の日々・・・&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>Office 2013 日本語版公開！</title>
+            <link>http://localhost:1313/posts/4801-office-2013/</link>
+            <pubDate>Fri, 26 Oct 2012 01:54:26 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4801-office-2013/</guid>
+            <description>&lt;p&gt;先ほど英語版しかないと・・・書いていたのですが、今 msdn を見ると日本語版が公開されていました！&lt;/p&gt;&#xA;&lt;p&gt;さっそくダウンロードしよう！&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint Server 2013 など、2013シリーズが msdn subscription で公開！</title>
+            <link>http://localhost:1313/posts/4791-sharepoint-server-2013-2013-msdn-subscription/</link>
+            <pubDate>Fri, 26 Oct 2012 01:24:52 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4791-sharepoint-server-2013-2013-msdn-subscription/</guid>
+            <description>&lt;p&gt;巷が Windows 8 の発売イベントで盛り上がるより一足早く、msdn subscription で SharePoint Server 2013, Office 2013, Office Web Apps 2013, Project 2013, Visio 2013, Exchange Server 2013, Lync Server 2013 が公開されました！&lt;/p&gt;&#xA;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://msdn.microsoft.com/ja-jp/subscriptions/downloads/&#34;  title=&#34;http://msdn.microsoft.com/ja-jp/subscriptions/downloads/&#34;&#xD;&#xA;     target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://msdn.microsoft.com/ja-jp/subscriptions/downloads/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;ただ・・・残念なことにまだ英語版だけです。&lt;/p&gt;&#xA;&lt;p&gt;間もなく日本語版も公開されるかと思いますので、マメにチェックしておこうかと思います。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint 2010 SP1 リリース</title>
+            <link>http://localhost:1313/posts/4711-sharepoint-2010-sp1/</link>
+            <pubDate>Thu, 30 Jun 2011 11:06:45 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4711-sharepoint-2010-sp1/</guid>
+            <description>&lt;p&gt;​ちまたでは Office365 リリースの話でもちきりですが、同日、SharePoint 2010 の SP1 も​リリースされました。&#xA;SP1 ではサイトのごみ箱といった新しい機能が追加されていたり、タイマーサービスのメモリリーク、ADとの同期に関する問題など重要な修正も含まれています。&#xA;&lt;a class=&#34;link&#34; href=&#34;http://sharepoint.microsoft.com/blog/Pages/BlogPost.aspx?pID=984&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://sharepoint.microsoft.com/blog/Pages/BlogPost.aspx?pID=984&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;上記のドキュメントには、インストール時の注意点も載っているので、一読してからインストールするようにした方が良いかと。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint 2010 SP1 6月末リリース</title>
+            <link>http://localhost:1313/posts/4701-sharepoint-2010-sp1-6/</link>
+            <pubDate>Thu, 19 May 2011 11:05:02 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4701-sharepoint-2010-sp1-6/</guid>
+            <description>&lt;p&gt;SharePoint 2010 SP1 が6月末にリリースされるようです。&#xA;&lt;a class=&#34;link&#34; href=&#34;http://sharepoint.microsoft.com/blog/Pages/BlogPost.aspx?pID=973&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://sharepoint.microsoft.com/blog/Pages/BlogPost.aspx?pID=973&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;いくつかの重要な修正の他に、サイトコレクションとサイトの復元機能（サイトのごみ箱機能）など、いくつかの追加機能が含まれるようです。​&#xA;私が知る限り、SP1をあてないと辛い部分があるので、できるだけあてる方向で検討した方が良いかと思います。&lt;/p&gt;&#xA;&lt;p&gt;はやめはやめにプランして、さくっと適用しましょう。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>Office 365 ベータプログラムが始まりました</title>
+            <link>http://localhost:1313/posts/4671-office-365/</link>
+            <pubDate>Tue, 19 Apr 2011 11:01:12 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4671-office-365/</guid>
+            <description>&lt;p&gt;遂に、Office 365 のベータプログラムが始まりました。&#xA;以下のサイトからベータプログラムに申し込むことができます。&#xA;&lt;a class=&#34;link&#34; href=&#34;http://www.microsoft.com/ja-jp/office365/small-business/beta.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://www.microsoft.com/ja-jp/office365/small-business/beta.aspx&lt;/a&gt;​&lt;/p&gt;&#xA;&lt;p&gt;ベータプログラムは、Office 365 の本サービス開始前に Office 365 で何ができるのかをいち早く体験するためのプログラムで、利用料は無償になっています。&#xA;また、ベータプログラムに登録しておくと、本サービス開始時には試用版アカウントとして、30日間利用できるとのこと。&lt;/p&gt;&#xA;&lt;p&gt;ちなみに、さっそくアカウント登録をしてみましたが・・・&#xA;すでに定員に達しているのか、空きができたら連絡しますとのメッセージが・・・&lt;/p&gt;&#xA;&lt;p&gt;しばらく待つとしますか。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>フリーダウンロード可能な管理タグのサンプル「Enterprise Taxonomy」</title>
+            <link>http://localhost:1313/posts/4641-enterprise-taxonomy/</link>
+            <pubDate>Sat, 19 Mar 2011 10:59:39 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4641-enterprise-taxonomy/</guid>
+            <description>&lt;p&gt;ECM Team blog で、SharePoint 2010 の Managed Metadata Service 用の管理タグのサンプル「Enterprise Taxonomy」のダウンロードサイトが紹介されています。&#xA;管理タグ機能が使えるようになったはいいけど、どんなタグを定義したらいいのかわからない、一般的にはどんなタグを使用するの？といった時に、このフリーダウンロード可能な Enterprise Taxonomy が役に立つのではないでしょうか。&#xA;ダウンロードするのにメールアドレスの登録が必要だったりするので、どんなものかわからないままダウンロードしたくないという方もいらっしゃるかもしれませんので、近々ダウンロードしてその内容を紹介したいと思います。&#xA;ECM Team blog : Taxonomy–The Challenge of Starting from Scratch&#xA;&lt;a class=&#34;link&#34; href=&#34;http://blogs.msdn.com/b/ecm/archive/2011/03/06/taxonomy-the-challenge-of-starting-from-scratch.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://blogs.msdn.com/b/ecm/archive/2011/03/06/taxonomy-the-challenge-of-starting-from-scratch.aspx&lt;/a&gt;&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint Designer 2010 32bit版ダウンロード開始</title>
+            <link>http://localhost:1313/posts/4561-sharepoint-designer-2010-32bit/</link>
+            <pubDate>Tue, 27 Apr 2010 10:53:41 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4561-sharepoint-designer-2010-32bit/</guid>
+            <description>&lt;p&gt;マイクロソフトダウンロードセンターから、SharePoint Designer 2010 の32bit版がダウンロードできるようになりました。&#xA;2007と同様、2010もライセンスフリーです。&#xA;英語版は64bit版がすでにダウンロード可能になっていますが、日本語版はまだなようです。&#xA;とはいえ間もなくダウンロード可能になるでしょう。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint 2010 RTM が msdn からダウンロードできるようになりました。</title>
+            <link>http://localhost:1313/posts/4551-sharepoint-2010-rtm-msdn/</link>
+            <pubDate>Fri, 23 Apr 2010 10:52:49 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4551-sharepoint-2010-rtm-msdn/</guid>
+            <description>&lt;p&gt;RTMが発表されてから１週間。&#xA;遂に SharePoint 2010 と Office 2010 の RTM が msdn にお目見えしました。&#xA;さっそくダウンロード＆インストールして、RCの時に気になっていた障害が直っているか確認したいと思います。​&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint 2010 RTM ダウンロード開始！ と思ったら・・・</title>
+            <link>http://localhost:1313/posts/4541-sharepoint-2010-rtm/</link>
+            <pubDate>Sat, 17 Apr 2010 10:51:07 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4541-sharepoint-2010-rtm/</guid>
+            <description>&lt;p&gt;「本日ついにSharePoint 2010をはじめとする2010製品のRTMが、msdnからダウンロードできるようになりました。」&#xA;という投稿をしようと今朝から待っていたのですが、RTMしたという発表だけでダウンロードはいまだできない状況ですね。&#xA;&lt;a class=&#34;link&#34; href=&#34;http://blogs.msdn.com/sharepoint/archive/2010/04/16/sharepoint-2010-reaches-rtm.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://blogs.msdn.com/sharepoint/archive/2010/04/16/sharepoint-2010-reaches-rtm.aspx&lt;/a&gt;&#xA;SharePoint Team Blogによると、SA付きのVolume Licenseのユーザーは4/27に、SAなしのユーザーは5/1に提供開始のようです。&#xA;でも日本語版は上記スケジュールとは異なるようですね。&#xA;日本語版はいつになったら提供されるのかなぁ。早くダウンロードしたい。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint 2010 と Office 2010 のラウンチは2010年5月12日に決定！</title>
+            <link>http://localhost:1313/posts/4501-sharepoint-2010-office-2010-2010-5-12/</link>
+            <pubDate>Sun, 07 Mar 2010 10:47:15 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4501-sharepoint-2010-office-2010-2010-5-12/</guid>
+            <description>&lt;p&gt;ついにSharePoint 2010 と Office 2010 のラウンチ日が発表されました。&#xA;どちらも2010年5月12日になるようです。&#xA;RTMは4月とのことなので、msdnサブスクリプションなどでは4月中に入手できるということですね！&#xA;&lt;a class=&#34;link&#34; href=&#34;http://blogs.msdn.com/sharepoint/archive/2010/03/05/sharepoint-2010-office-2010-launch.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://blogs.msdn.com/sharepoint/archive/2010/03/05/sharepoint-2010-office-2010-launch.aspx&lt;/a&gt;&#xA;日本のラウンチイベントはいつになるのかなー。&#xA;でも、RC版で気になる不具合がいくつかあるんだよなー。&#xA;RTMまでにちゃんと改修されますように・・・​&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint Server 2010 RC版 一部にリリース</title>
+            <link>http://localhost:1313/posts/4491-sharepoint-server-2010-rc/</link>
+            <pubDate>Wed, 24 Feb 2010 10:45:41 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4491-sharepoint-server-2010-rc/</guid>
+            <description>&lt;p&gt;ほんと久々の更新です。&#xA;ブログぐらい、少なくとも週１で更新したいところですが、これまで本業に追われ更新ができてませんでした。&#xA;いくらか軌道に乗ってきたので、ぼちぼち再開しようかなと。。。&#xA;もう何週間か経ってますが、SharePoint Server Release Candidate版が、マイクロソフトの早期導入プログラムに参加している企業やMVP向けにリリースされました。&#xA;幸いMVPを続けている私は、RC版を入手することができました。&#xA;今はRC版を使って、機能の確認をしているところです。（といっても、まだインストール中ですけど）&#xA;ブログだけでなく、機能の確認結果などをリファレンスのほうにも載せていきたいと、心は思ってます。&#xA;が、頭と体がついてくるかどうか・・・​&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint Server 2010 など、Office 2010シリーズのBeta2版、ダウンロード開始</title>
+            <link>http://localhost:1313/posts/4471-sharepoint-server-2010-office-2010-beta2/</link>
+            <pubDate>Thu, 19 Nov 2009 10:43:29 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4471-sharepoint-server-2010-office-2010-beta2/</guid>
+            <description>&lt;p&gt;いろいろなところで話題になっていますが、ついにSharePoint Server 2010 のBeta2版のダウンロード提供が始まりました。&#xA;今回は、msdn subscriptionに加入している方々だけが対象になっています。&#xA;ということで、SharePoint Server 2010 系のダウンロードサイトのURLをリンク集に追加しました。&#xA;早速ダウンロードして試してみたいと思います！​&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint Server 2010 発表！</title>
+            <link>http://localhost:1313/posts/4461-sharepoint-server-2010/</link>
+            <pubDate>Wed, 21 Oct 2009 10:42:34 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4461-sharepoint-server-2010/</guid>
+            <description>&lt;p&gt;ついにSharePoint Server 2010に関する情報が公になりました！&#xA;すでに&lt;a class=&#34;link&#34; href=&#34;http://itpro.nikkeibp.co.jp/article/NEWS/20091020/339116/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;ITPro&lt;/a&gt;などのIT系ニュースサイトで記事が出ていたり、SharePoint Conference 2009のために現地している&lt;a class=&#34;link&#34; href=&#34;http://shanqiai.weblogs.jp/sharepoint_technical_note/2009/10/sharepoint-conf.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;山崎愛さんが非常にわかりやすい詳細なレポート&lt;/a&gt;を掲載しているので、ご存知の方がほとんどでしょう。&#xA;私は非公開のベータテストで若干触っていたのですが、まだ1%の機能も調べられていないような状況です。&#xA;ようやく公になるということでこれから多くの情報がでてくると思うと、非常に楽しみですね。&#xA;思えば私が初めてSharePoint Server 2007を触ったのはTR1というバージョンの時でした。&#xA;この時は公式なドキュメントが全くなく、すべて手さぐりで機能検証などをしていました。&#xA;製品リリース後もドキュメントの整備が進まず、しばらくは英語のドキュメントがちょっとだけあるというような非常につらい状況だったことは、皆さんの記憶にも新しいことかと思います。&#xA;はたして、SharePoint Server 2010のドキュメント整備状況はどうなんでしょう。&#xA;とある情報によると、今回は気合を入れて準備をしているとか。。。&#xA;ぜひぜひ期待してその時を待ちましょう。&#xA;しかし、製品のリリースサイクルというものは非常に早いなぁとつくづく思います。&#xA;SharePointの導入コンサルなどをしていると、今からSharePoint Server 2007の導入を検討される企業さんや、導入が終わりある程度運用をして今後どうやってSharePoint Server 2007を活用していこうかと検討をしている企業さんがほとんどなんですよね。&#xA;このような状況で「はい、次の製品来ましたー」といっても、なかなか前向きな反応をするのは難しいですよね。SharePointに限った話ではないですが。&#xA;こういう現実もしっかりと理解した上でうまく情報提供していきたいなと思います。&#xA;さて、SharePoint Server 2010の話に戻しますが・・・&#xA;今時点で私が特に気にかけている新機能は、Business Connectivity ServicesとExternal Listです。&#xA;これらの機能により、バックエンドにある基幹システムのデータベースやWebサービスからデータを取得し、あたかもSharePointのリストのようにサイト上にデータを表示したり、ビューを作ったり、権限を設定したり、データの更新ができたりするようです。&#xA;これにより、SharePoint Serverをあらゆるシステムの入力インターフェースとして活用するという、これまでなかったような使い方もできるようになるのではと思っています。&#xA;もちろんそのためには、アイテム登録ページに強力なバリデーションチェック機能が必要になりますが・・・&#xA;ちなみに、SharePoint Team Blogに&lt;a class=&#34;link&#34; href=&#34;http://blogs.msdn.com/sharepoint/archive/2009/10/19/sharepoint-2010.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;新機能の説明&lt;/a&gt;がでてますね。&#xA;非常に膨大な量の新機能です、全機能の細部まで把握するのは不可能に近いかも。&#xA;とにかく新機能がてんこ盛りのSharePoint Server 2010ですが、11月にパブリックベータが公開されるということなので、興味ある方は是非ダウンロードして色々試してみてください。&#xA;私も試したことはブログに公開するようにしますんで、情報交換していきましょう。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint Server 上でサイボウズが動く日</title>
+            <link>http://localhost:1313/posts/4441-sharepoint-server/</link>
+            <pubDate>Mon, 28 Sep 2009 10:40:25 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4441-sharepoint-server/</guid>
+            <description>&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://itpro.nikkeibp.co.jp/article/NEWS/20090928/337911/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;Microsoftとサイボウズがグループウェア開発で業務提携！&lt;/a&gt;&#xA;ちょっと驚きました。&#xA;これまでは競合製品という認識でいましたが、ついにサイボウズがSharePoint Server上で動く日が来るようです。&#xA;これでますますSharePointの充実感が増すわけですね。&#xA;その分ユーザーさんのニーズも増えるので、導入を支援する立場としては覚えることがさらに増えるわけですが。&#xA;ますます頑張らねば。​&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>msdn subscription にて Windows 7 配信開始！</title>
+            <link>http://localhost:1313/posts/4391-msdn-subscription-windows-7/</link>
+            <pubDate>Thu, 13 Aug 2009 10:36:27 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4391-msdn-subscription-windows-7/</guid>
+            <description>&lt;p&gt;ついにWindows7のRTM版がmsdn subscriptionでダウンロードできるようになりました。&#xA;Windows7は、SharePointを動作させることができるとのことなので、Windows7のインストールが完了したら、真っ先に試してみようと思います。​&lt;/p&gt;&#xA;</description>
+        </item></channel>
+</rss>

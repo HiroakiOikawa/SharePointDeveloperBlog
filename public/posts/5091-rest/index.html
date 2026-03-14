@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="※この投稿は Office 365 Advent Calendar 2012 に参加しています。 はじめに SharePoint 2013 では、プログラミングインターフェイスの一つとして REST サービスという API を使うことができ…">
+<title>REST サービス 事始め</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/5091-rest/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="REST サービス 事始め">
+<meta property='og:description' content="※この投稿は Office 365 Advent Calendar 2012 に参加しています。 はじめに SharePoint 2013 では、プログラミングインターフェイスの一つとして REST サービスという API を使うことができ…">
+<meta property='og:url' content='http://localhost:1313/posts/5091-rest/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2012-12-10T01:50:30&#43;09:00'/><meta property='article:modified_time' content='2012-12-10T01:50:30&#43;09:00'/>
+<meta name="twitter:title" content="REST サービス 事始め">
+<meta name="twitter:description" content="※この投稿は Office 365 Advent Calendar 2012 に参加しています。 はじめに SharePoint 2013 では、プログラミングインターフェイスの一つとして REST サービスという API を使うことができ…">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "\"REST サービス 事始め\"",
+  "description": "\"※この投稿は Office 365 Advent Calendar 2012 に参加しています。 はじめに SharePoint 2013 では、プログラミングインターフェイスの一つとして REST サービスという API を使うことができ…\"",
+  "url": "\"http://localhost:1313/posts/5091-rest/\"",
+  "datePublished": "\"2012-12-10T01:50:30+09:00\"",
+  "dateModified": "\"2012-12-10T01:50:30+09:00\"",
+  
+  "author": {
+    "@type": "Person",
+    "name": "\"SharePoint Developer\""
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "\"SharePoint Developer\"",
+    "url": "\"http://localhost:1313/\""
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "\"http://localhost:1313/posts/5091-rest/\""
+  }
+  
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#はじめに">はじめに</a></li>
+        <li><a href="#rest-サービスに対応したクライアントアプリケーション">REST サービスに対応したクライアントアプリケーション</a></li>
+        <li><a href="#rest-サービスに対応したプログラミング言語">REST サービスに対応したプログラミング言語</a></li>
+        <li><a href="#まとめ">まとめ</a></li>
+      </ul>
+    </li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <div class="widget--recent-posts widget">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+    </div>
+    <h2 class="widget-title section-title">新着記事</h2>
+    <div class="widget-body">
+        <ol class="recent-posts-list"><li>
+                <a href="/posts/m365dev-nodeversion/">SPFx、Office Web アドイン開発でありがちな Node.js のバージョンが環境ごとに異なる場合の開発環境の工夫（チーム開発前提）</a>
+                <span class="recent-posts-date">2026年3月8日</span>
+            </li><li>
+                <a href="/posts/10761-outlook/">新しいOutlookのイベントチャームのアイコン名</a>
+                <span class="recent-posts-date">2025年6月21日</span>
+            </li><li>
+                <a href="/posts/10754-azure-bicep/">Azure環境を自動的に構築するBicepが超便利！</a>
+                <span class="recent-posts-date">2025年4月12日</span>
+            </li><li>
+                <a href="/posts/10745-graph-api/">Graph API で定期予定の一連の予定を取得する</a>
+                <span class="recent-posts-date">2025年2月9日</span>
+            </li><li>
+                <a href="/posts/10725-graph-api-transitivemembers/">Graph API の transitiveMembers の制限を調べてみた</a>
+                <span class="recent-posts-date">2025年2月2日</span>
+            </li></ol>
+    </div>
+</div>
+            
+        
+            
+                <div class="widget--adsense-sidebar widget">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/office-365/" style="background-color: hsl(21, 60%, 84%); color: hsl(21, 60%, 15%);">
+                Office 365
+            </a>
+        
+            
+            
+            
+            <a href="/categories/sharepoint-2013/" style="background-color: hsl(80, 60%, 84%); color: hsl(80, 60%, 15%);">
+                SharePoint 2013
+            </a>
+        
+            
+            
+            
+            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/" style="background-color: hsl(206, 60%, 84%); color: hsl(206, 60%, 15%);">
+                開発とプログラミング
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/5091-rest/">REST サービス 事始め</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            ※この投稿は Office 365 Advent Calendar 2012 に参加しています。 はじめに SharePoint 2013 では、プログラミングインターフェイスの一つとして REST サービスという API を使うことができ…
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2012-12-10T01:50:30&#43;09:00'>2012年12月10日</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        読了時間: 1分
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目次</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#はじめに">はじめに</a></li>
+        <li><a href="#rest-サービスに対応したクライアントアプリケーション">REST サービスに対応したクライアントアプリケーション</a></li>
+        <li><a href="#rest-サービスに対応したプログラミング言語">REST サービスに対応したプログラミング言語</a></li>
+        <li><a href="#まとめ">まとめ</a></li>
+      </ul>
+    </li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <p>※この投稿は <a class="link" href="http://atnd.org/events/33924"  target="_blank" rel="noopener"
+    >Office 365 Advent Calendar 2012</a> に参加しています。</p>
+<h3 id="はじめに">はじめに
+</h3><p>SharePoint 2013 では、プログラミングインターフェイスの一つとして REST サービスという API を使うことができます。
+REST サービスはマイクロソフト独自の企画というわけではなく、<a class="link" href="http://www.odata.org/"  target="_blank" rel="noopener"
+    >Open Data Protocol</a>(OData) という業界団体が決めた標準規約に基づいています。
+そのため、OData に対応するアプリケーションがあれば、マイクロソフト製品やマイクロソフトのサードパーティ製品ではなくても、SharePoint 2013 からのデータ取得や登録、削除といった一連の処理を実行することができるわけですが、この処理を行う仕組みが Representational State Transfer (REST) Web サービスとして、SharePoint 2013 に実装されています。
+もちろん、REST サービスは 次期 Office 365 でも実装されており、今後の主力 API として位置づけられています。
+ 
+実は REST サービスは SharePoint 2010 や今の Office 365 にも実装されているため利用可能ではあるのですが、記述方法が違っていたり、まだまだ機能としては十分ではない部分があります。
+2013 になってついに本格的に使われる時が来たという感じですね。
+ということで、この記事では、2013 版の REST サービスについて紹介をします。</p>
+<h3 id="rest-サービスに対応したクライアントアプリケーション">REST サービスに対応したクライアントアプリケーション
+</h3><p>REST サービスは SharePoint の Web サービスとして実装されています。
+Web サービスなので、HTTP あるいは HTTPS を使用して呼び出すことができます。
+つまり、HTTP、HTTPS を使うことができるクライアントアプリケーションであれば、どんなアプリケーションでも REST サービスを呼び出すことができるわけですが、REST サービスからのレスポンスをクライアントアプリケーションが解釈できるかどうかがポイントになります。
+例えば、IE を使って REST サービスを呼び出すと、下図のようなレスポンスが返ってきます。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2012/12/REST-1.png"  target="_blank" rel="noopener"
+    ><img alt="REST-1" class="gallery-image" data-flex-basis="352px" data-flex-grow="146" height="576" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5091-rest/REST-1.png" srcset="/posts/5091-rest/REST-1_hu_c6d4bdbce540e01e.png 800w, /posts/5091-rest/REST-1.png 846w" width="846"></a>
+ 
+ご覧の通り、レスポンスの中身は文字列なので生身の人間でも解釈は可能ですが、少々気合が必要なので、対応するクライアントアプリケーションを用意するのがよいでしょう。
+ 
+REST サービスのレスポンスを解釈できる代表的なアプリケーションは、皆さんおなじみの Excel です。
+Excel の「外部データの取り込み」機能を使って REST サービスにつないでデータを取得してくることができます。
+Excel 上は REST サービスではなく、下図の通り、そのプロトコルである「OData データ フィード」として書いてありますので、そこから接続の設定をします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2012/12/REST-2.png"  target="_blank" rel="noopener"
+    ><img alt="REST-2" class="gallery-image" data-flex-basis="300px" data-flex-grow="125" height="473" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5091-rest/REST-2.png" width="592"></a>
+ 
+接続設定を終えると、SharePoint からデータをダウンロードし、Excel 上にテーブルが作られて、SharePoint からのレスポンスを表として出力してくれます。
+下図の通り、これであれば気合を入れなくても内容を確認することができるかと思います。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2012/12/REST-3.png"  target="_blank" rel="noopener"
+    ><img alt="REST-3" class="gallery-image" data-flex-basis="1244px" data-flex-grow="518" height="193" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5091-rest/REST-3.png" srcset="/posts/5091-rest/REST-3_hu_e53a0d7677b823f1.png 800w, /posts/5091-rest/REST-3.png 1001w" width="1001"></a>
+ 
+※ Excel を使った REST サービスの呼び出し方については、今後の REST シリーズの記事中で紹介したいと思います。</p>
+<h3 id="rest-サービスに対応したプログラミング言語">REST サービスに対応したプログラミング言語
+</h3><p>REST サービスは当然のことながら各種プログラミング言語から呼び出すこともできます。
+クライアントアプリケーションの時と考え方は同じで、HTTP、HTTPS を使うことができて、レスポンスを解釈できるかどうかがポイントとなります。
+最近の開発言語であれば、HTTP、HTTPS を使うということは大概問題ないかと思いますので、ここでもやはりレスポンスの解釈が重要になってきます。
+ 
+先ほどの画面キャプチャの通り、レスポンスは Atom 形式か JSON 形式の文字列になっています。
+これらの形式の文字列を解釈可能な言語というと、代表格は何といっても JavaScript + jQuery です。
+JavaScript は REST サービスを呼び出す仕組みも、JSON を解釈する仕組みもライブラリ (jQuery) として提供されており、簡単に利用することができます。
+その他、.net 系としては、WCF Data Services を利用する方法があります。
+※ REST サービスをプログラミング言語から呼び出す方法についても、今後の REST シリーズの記事中で紹介したいと思います。
+ 
+参考： technetより
+<a class="link" href="http://msdn.microsoft.com/ja-jp/library/sharepoint/fp142385.aspx"  target="_blank" rel="noopener"
+    >SharePoint 2013 REST サービスを使用したプログラミング</a></p>
+<h3 id="まとめ">まとめ
+</h3><p>このように、REST サービスは様々なクライアント、言語で利用可能な仕組みです。
+これまで JavaScript を使って SharePoint のクライアント オブジェクト モデルを駆使したり、Web サービスを呼び出したり、時にはサーバーサイドにモジュールを置くなどして対応していた、あるいはそこまでやり切れずあきらめていた処理が、REST サービスを使うことでより手軽に実現できるようになりましたので、ぜひ活用してみてください。
+ 
+なお、今回は REST サービスの説明のみだったので、次回以降の記事でより具体的な話を書いていきたいと思います。</p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 SharePoint Developer
+    </section>
+    
+    <section class="powerby">
+        
+            SharePoint Developer <br/>
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

@@ -1,0 +1,19 @@
+{{- $posts := (where site.RegularPages "Section" "posts") | first 5 -}}
+{{- if $posts -}}
+<div class="widget--recent-posts widget">
+    <div class="widget-icon">
+        {{ partial "helper/icon" "date" }}
+    </div>
+    <h2 class="widget-title section-title">{{ T "recentPosts" | default "新着記事" }}</h2>
+    <div class="widget-body">
+        <ol class="recent-posts-list">
+            {{- range $posts -}}
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <span class="recent-posts-date">{{ .Date.Format "2006年1月2日" }}</span>
+            </li>
+            {{- end -}}
+        </ol>
+    </div>
+</div>
+{{- end -}}

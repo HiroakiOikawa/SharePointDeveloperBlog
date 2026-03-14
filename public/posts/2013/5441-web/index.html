@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="はじめに サイトコレクションのコピー、簡単そうで実は非常に手間のかかる作業です。 AvePoint さんの製品 コンテンツマネージャー を使えば簡単にできてしまいますが、ここでは手動で異なる Web アプリケーションにサイトコレクションをコ…">
+<title>サイトコレクションを異なる Web アプリケーションにコピーする</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/2013/5441-web/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="サイトコレクションを異なる Web アプリケーションにコピーする">
+<meta property='og:description' content="はじめに サイトコレクションのコピー、簡単そうで実は非常に手間のかかる作業です。 AvePoint さんの製品 コンテンツマネージャー を使えば簡単にできてしまいますが、ここでは手動で異なる Web アプリケーションにサイトコレクションをコ…">
+<meta property='og:url' content='http://localhost:1313/posts/2013/5441-web/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2013-09-01T02:47:27&#43;09:00'/><meta property='article:modified_time' content='2013-09-01T02:47:27&#43;09:00'/>
+<meta name="twitter:title" content="サイトコレクションを異なる Web アプリケーションにコピーする">
+<meta name="twitter:description" content="はじめに サイトコレクションのコピー、簡単そうで実は非常に手間のかかる作業です。 AvePoint さんの製品 コンテンツマネージャー を使えば簡単にできてしまいますが、ここでは手動で異なる Web アプリケーションにサイトコレクションをコ…">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "\"サイトコレクションを異なる Web アプリケーションにコピーする\"",
+  "description": "\"はじめに サイトコレクションのコピー、簡単そうで実は非常に手間のかかる作業です。 AvePoint さんの製品 コンテンツマネージャー を使えば簡単にできてしまいますが、ここでは手動で異なる Web アプリケーションにサイトコレクションをコ…\"",
+  "url": "\"http://localhost:1313/posts/2013/5441-web/\"",
+  "datePublished": "\"2013-09-01T02:47:27+09:00\"",
+  "dateModified": "\"2013-09-01T02:47:27+09:00\"",
+  
+  "author": {
+    "@type": "Person",
+    "name": "\"Your Name\""
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "\"SharePoint Developer\"",
+    "url": "\"http://localhost:1313/\""
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "\"http://localhost:1313/posts/2013/5441-web/\""
+  }
+  
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SharePoint / Microsoft 365 / Power Platform の開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/your-github-id'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/your-twitter-id'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>ブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#はじめに">はじめに</a></li>
+        <li><a href="#copy-spsite-の問題">Copy-SPSite の問題</a></li>
+        <li><a href="#概要">概要</a></li>
+        <li><a href="#実施手順">実施手順</a>
+          <ul>
+            <li><a href="#１サイトコレクションコピー用のコンテンツデータベース作成">１．サイトコレクションコピー用のコンテンツデータベース作成</a></li>
+            <li><a href="#２作成したコピー用コンテンツデータベースにコピー対象となるサイトコレクションをコピー">２．作成したコピー用コンテンツデータベースにコピー対象となるサイトコレクションをコピー</a></li>
+            <li><a href="#３コピー用コンテンツデータベースをコピー元-web-アプリケーションから切り離す">３．コピー用コンテンツデータベースをコピー元 Web アプリケーションから切り離す</a></li>
+            <li><a href="#４コピー用コンテンツデータベースをコピー先-web-アプリケーションに接続">４．コピー用コンテンツデータベースをコピー先 Web アプリケーションに接続</a></li>
+            <li><a href="#５コピー用コンテンツデータベースからコピー先-web-アプリケーションの既存コンテンツデータベースにコピー元サイトコレクションをコピー">５．コピー用コンテンツデータベースからコピー先 Web アプリケーションの既存コンテンツデータベースにコピー元サイトコレクションをコピー</a></li>
+            <li><a href="#６コピー先-web-アプリケーションからコピー用コンテンツデータベースを削除">６．コピー先 Web アプリケーションからコピー用コンテンツデータベースを削除</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <div class="widget--recent-posts widget">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+    </div>
+    <h2 class="widget-title section-title">新着記事</h2>
+    <div class="widget-body">
+        <ol class="recent-posts-list"><li>
+                <a href="/posts/m365dev-nodeversion/">SPFx、Office Web アドイン開発でありがちな Node.js のバージョンが環境ごとに異なる場合の開発環境の工夫（チーム開発前提）</a>
+                <span class="recent-posts-date">2026年3月8日</span>
+            </li><li>
+                <a href="/posts/2025/10761-outlook/">新しいOutlookのイベントチャームのアイコン名</a>
+                <span class="recent-posts-date">2025年6月21日</span>
+            </li><li>
+                <a href="/posts/2025/10754-azure-bicep/">Azure環境を自動的に構築するBicepが超便利！</a>
+                <span class="recent-posts-date">2025年4月12日</span>
+            </li><li>
+                <a href="/posts/2025/10745-graph-api/">Graph API で定期予定の一連の予定を取得する</a>
+                <span class="recent-posts-date">2025年2月9日</span>
+            </li><li>
+                <a href="/posts/2025/10725-graph-api-transitivemembers/">Graph API の transitiveMembers の制限を調べてみた</a>
+                <span class="recent-posts-date">2025年2月2日</span>
+            </li></ol>
+    </div>
+</div>
+            
+        
+            
+                <div class="widget--adsense-sidebar widget">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/sharepoint-2013/" style="background-color: hsl(80, 60%, 84%); color: hsl(80, 60%, 15%);">
+                SharePoint 2013
+            </a>
+        
+            
+            
+            
+            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/" style="background-color: hsl(99, 60%, 84%); color: hsl(99, 60%, 15%);">
+                インストールと設定、管理
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/2013/5441-web/">サイトコレクションを異なる Web アプリケーションにコピーする</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            はじめに サイトコレクションのコピー、簡単そうで実は非常に手間のかかる作業です。 AvePoint さんの製品 コンテンツマネージャー を使えば簡単にできてしまいますが、ここでは手動で異なる Web アプリケーションにサイトコレクションをコ…
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2013-09-01T02:47:27&#43;09:00'>2013年9月1日</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        読了時間: 3分
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目次</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#はじめに">はじめに</a></li>
+        <li><a href="#copy-spsite-の問題">Copy-SPSite の問題</a></li>
+        <li><a href="#概要">概要</a></li>
+        <li><a href="#実施手順">実施手順</a>
+          <ul>
+            <li><a href="#１サイトコレクションコピー用のコンテンツデータベース作成">１．サイトコレクションコピー用のコンテンツデータベース作成</a></li>
+            <li><a href="#２作成したコピー用コンテンツデータベースにコピー対象となるサイトコレクションをコピー">２．作成したコピー用コンテンツデータベースにコピー対象となるサイトコレクションをコピー</a></li>
+            <li><a href="#３コピー用コンテンツデータベースをコピー元-web-アプリケーションから切り離す">３．コピー用コンテンツデータベースをコピー元 Web アプリケーションから切り離す</a></li>
+            <li><a href="#４コピー用コンテンツデータベースをコピー先-web-アプリケーションに接続">４．コピー用コンテンツデータベースをコピー先 Web アプリケーションに接続</a></li>
+            <li><a href="#５コピー用コンテンツデータベースからコピー先-web-アプリケーションの既存コンテンツデータベースにコピー元サイトコレクションをコピー">５．コピー用コンテンツデータベースからコピー先 Web アプリケーションの既存コンテンツデータベースにコピー元サイトコレクションをコピー</a></li>
+            <li><a href="#６コピー先-web-アプリケーションからコピー用コンテンツデータベースを削除">６．コピー先 Web アプリケーションからコピー用コンテンツデータベースを削除</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <h3 id="はじめに">はじめに
+</h3><p>サイトコレクションのコピー、簡単そうで実は非常に手間のかかる作業です。
+AvePoint さんの製品 <a class="link" href="http://www.avepoint.co.jp/sharepoint-content-management-docave/"  target="_blank" rel="noopener"
+    >コンテンツマネージャー</a> を使えば簡単にできてしまいますが、ここでは手動で異なる Web アプリケーションにサイトコレクションをコピーする方法をご紹介します。
+(2013年9月13日追記)
+本記事は2013年9月1日に公開しましたが、マイクロソフトのサポートサービスさんにテクニカルサポートを依頼し、詳細な確認をしていただいたところ、この手順ではコピーはできるものの問題があることが分かりました。
+詳細はこの後書きますが、基本的にはこの手順でのコピーは行わないでください。</p>
+<h3 id="copy-spsite-の問題">Copy-SPSite の問題
+</h3><p>Copy-SPSite は、Backup/Restore と同様、SharePoint が内部的に持っている各種 GUID を書き換えることなく、コピーを行います。
+そのため、一つのサイトコレクションのコピーを、同一コンテンツ DB に Copy-SPSite を使って複数個コピーすると、GUID が重複してしまい、SharePoint として不整合なデータの状態になってしまうことが分かりました。
+これにより、エクスポートでエラーが起きたり、ゴミ箱のアイテムを削除するのにエラーが起きたりと、一部動作に問題がでます。
+従って、せっかくの Copy-SPSite ですが、これを使ってサイトコレクションを量産していくということには使えないということになります。
+調査の結果、SharePoint 標準機能を使ってサイトコレクションのコピーを完ぺきに実現する方法はない、という結論に至りました。
+残念。。。
+もちろん、Copy-SPSite を使って、毎回異なるコンテンツ DB にコピーする分には問題なく使えますので、そのような用途でのみ Copy-SPSite を使うようにしてください。</p>
+<h3 id="概要">概要
+</h3><p>今回は http://sp2013dev/sites/test というサイトを、http://sp2013dev:12930/sites/test にコピーする手順を題材にします。
+これから説明する手順は、すべて PowerShell で行う必要があるのですが、実行するコマンドが多いので先に全体の流れを説明します。
+コピーの全体の流れは以下の通りとなります。
+１．サイトコレクションコピー用のコンテンツデータベース作成
+２．作成したコピー用コンテンツデータベースにコピー対象となるサイトコレクションをコピー
+３．コピー用コンテンツデータベースをコピー元 Web アプリケーションから切り離す
+４．コピー用コンテンツデータベースをコピー先 Web アプリケーションに接続
+５．コピー用コンテンツデータベースからコピー先 Web アプリケーションの既存コンテンツデータベースにコピー元サイトコレクションをコピー
+６．コピー先 Web アプリケーションからコピー用コンテンツデータベースを削除</p>
+<h3 id="実施手順">実施手順
+</h3><p>それでは１ステップずつ説明します。
+まずは、PowerShell を利用するため、SharePoint がインストールされたサーバーにログインして「SharePoint 2013 管理シェル」を起動してください。</p>
+<h4 id="１サイトコレクションコピー用のコンテンツデータベース作成">１．サイトコレクションコピー用のコンテンツデータベース作成
+</h4><p>まず、現在のサイトコレクションの状態を確認するため <a class="link" href="http://technet.microsoft.com/ja-jp/library/ff607950.aspx"  target="_blank" rel="noopener"
+    >Get-SPSite</a> コマンドを実行します。
+「| select url, id」を付けることで、URL と ID だけを表示するようにしています。</p>
+<pre tabindex="0"><code>1: PS C:&gt; Get-SPSite | select url,id
+</code></pre><pre tabindex="0"><code>2:
+</code></pre><pre tabindex="0"><code>3: Url ID
+</code></pre><pre tabindex="0"><code>4: --- --
+</code></pre><pre tabindex="0"><code>5: http://sp2013dev:12930 a4dc6b0e-6013-4e70-9357-610cae9e1f34
+</code></pre><pre tabindex="0"><code>6: http://sp2013dev/sites/test 14eee793-4466-4ac8-b297-8823a7ccec71
+</code></pre><p>続いて、コピー用のコンテンツデータベースを作成するため、<a class="link" href="http://technet.microsoft.com/ja-jp/library/ff607572.aspx"  target="_blank" rel="noopener"
+    >New-SPContentDatabase</a> コマンドを実行します。
+ここでは、Web アプリケーション http://sp2013dev にコンテンツデータベース WSS_Content_Move を作成します。
+コマンドは 2 行になっていますが、実際には 1 行で書いてください。</p>
+<pre tabindex="0"><code>1: New-SPContentDatabase -Name WSS\_Content\_Move
+</code></pre><pre tabindex="0"><code>2: -WebApplication http://sp2013dev
+</code></pre><pre tabindex="0"><code>3:
+</code></pre><pre tabindex="0"><code>4: Id : a2c84a3e-f55b-41f1-934e-8e5c4b29f46b
+</code></pre><pre tabindex="0"><code>5: Name : WSS\_Content\_Move
+</code></pre><pre tabindex="0"><code>6: WebApplication : SPWebApplication Name=SharePoint - 80
+</code></pre><pre tabindex="0"><code>7: Server : SP2013DEVSharePoint
+</code></pre><pre tabindex="0"><code>8: CurrentSiteCount : 0
+</code></pre><h4 id="２作成したコピー用コンテンツデータベースにコピー対象となるサイトコレクションをコピー">２．作成したコピー用コンテンツデータベースにコピー対象となるサイトコレクションをコピー
+</h4><p>サイトコレクション http://sp2013dev/sites/test をコピー用コンテンツデータベースに別名でコピーするため、<a class="link" href="http://technet.microsoft.com/ja-jp/library/fp161280.aspx"  target="_blank" rel="noopener"
+    >Copy-SPSite</a> コマンドを実行します。
+コマンドは 3 行になっていますが、実際は 1 行で書いてください。</p>
+<pre tabindex="0"><code>1: PS C:&gt; Copy-SPSite -Identity http://sp2013dev/sites/test
+</code></pre><pre tabindex="0"><code>2: -TargetUrl http://sp2013dev/sites/test\_copy
+</code></pre><pre tabindex="0"><code>3: -DestinationDatabase WSS\_Content\_Move
+</code></pre><p>ここで再び Get-SPSite で状態を確認してみます。</p>
+<pre tabindex="0"><code>1: PS C:&gt; Get-SPSite | select url,id
+</code></pre><pre tabindex="0"><code>2:
+</code></pre><pre tabindex="0"><code>3: Url ID
+</code></pre><pre tabindex="0"><code>4: --- --
+</code></pre><pre tabindex="0"><code>5: http://sp2013dev:12930 a4dc6b0e-6013-4e70-9357-610cae9e1f34
+</code></pre><pre tabindex="0"><code>6: http://sp2013dev/sites/test 14eee793-4466-4ac8-b297-8823a7ccec71
+</code></pre><pre tabindex="0"><code>7: http://sp2013dev/sites/test\_copy 31d5ea5e-1fa7-42f5-a56e-039e656f8fdd
+</code></pre><p>7 行目のサイトコレクションが、6 行目のサイトコレクションからコピーされたサイトコレクションになります。</p>
+<h4 id="３コピー用コンテンツデータベースをコピー元-web-アプリケーションから切り離す">３．コピー用コンテンツデータベースをコピー元 Web アプリケーションから切り離す
+</h4><p>コピー用コンテンツデータベースをコピー元 Web アプリケーションから切り離し、コピー先に移動できるようにするため、<a class="link" href="http://technet.microsoft.com/ja-jp/library/ff607764.aspx"  target="_blank" rel="noopener"
+    >Dismount-SPContentDatabase</a> コマンドを実行します。</p>
+<pre tabindex="0"><code>1: PS C:&gt; Dismount-SPContentDatabase -Identity WSS\_Content\_Move
+</code></pre><pre tabindex="0"><code>2:
+</code></pre><pre tabindex="0"><code>3: 確認
+</code></pre><pre tabindex="0"><code>4: この操作を実行しますか?
+</code></pre><pre tabindex="0"><code>5: 対象 &#34;WSS\_Content\_Move&#34; に対して操作 &#34;Dismount-SPContentDatabase&#34;
+</code></pre><pre tabindex="0"><code>6: を実行しています。
+</code></pre><pre tabindex="0"><code>7: [Y] はい(Y) [A] すべて続行(A) [N] いいえ(N) [L] すべて無視(L) [S] 中断(S)
+</code></pre><pre tabindex="0"><code>8: [?] ヘルプ(既定値は &#34;Y&#34;): Y
+</code></pre><h4 id="４コピー用コンテンツデータベースをコピー先-web-アプリケーションに接続">４．コピー用コンテンツデータベースをコピー先 Web アプリケーションに接続
+</h4><p>コピー先 Web アプリケーションにコピー用コンテンツデータベースを接続するため、<a class="link" href="http://technet.microsoft.com/ja-jp/library/ff607581.aspx"  target="_blank" rel="noopener"
+    >Mount-SPContentDatabase</a> コマンドを実行します。</p>
+<pre tabindex="0"><code>1: PS C:&gt; Mount-SPContentDatabase -Name WSS\_Content\_Move
+</code></pre><pre tabindex="0"><code>2: -WebApplication http://sp2013dev:12930
+</code></pre><pre tabindex="0"><code>3:
+</code></pre><pre tabindex="0"><code>4: Id : a2c84a3e-f55b-41f1-934e-8e5c4b29f46b
+</code></pre><pre tabindex="0"><code>5: Name : WSS\_Content\_Move
+</code></pre><pre tabindex="0"><code>6: WebApplication : SPWebApplication Name=SharePoint - 12930
+</code></pre><pre tabindex="0"><code>7: Server : SP2013DEVSharePoint
+</code></pre><pre tabindex="0"><code>8: CurrentSiteCount : 1
+</code></pre><p>ここで再び Get-SPSite コマンドを実行して、サイトコレクションがコピーできていることを確認します。</p>
+<pre tabindex="0"><code>1: PS C:&gt; Get-SPSite | select url,id
+</code></pre><pre tabindex="0"><code>2:
+</code></pre><pre tabindex="0"><code>3: Url ID
+</code></pre><pre tabindex="0"><code>4: --- --
+</code></pre><pre tabindex="0"><code>5: http://sp2013dev:12930 a4dc6b0e-6013-4e70-9357-610cae9e1f34
+</code></pre><pre tabindex="0"><code>6: http://sp2013dev:12930/sites/test\_copy 31d5ea5e-1fa7-42f5-a56e-039e656f8fdd
+</code></pre><pre tabindex="0"><code>7: http://sp2013dev/sites/test 14eee793-4466-4ac8-b297-8823a7ccec71
+</code></pre><p>6 行目のサイトコレクション test_copy が、Web アプリケーション sp2013dev:12930 に含まれていることが確認できます。
+ただし、この状態ではまだコピー用コンテンツデータベースに属している状態なので、次のステップで、sp2013dev:12930 の既存のコンテンツデータベースにサイトコレクションを移動します。</p>
+<h4 id="５コピー用コンテンツデータベースからコピー先-web-アプリケーションの既存コンテンツデータベースにコピー元サイトコレクションをコピー">５．コピー用コンテンツデータベースからコピー先 Web アプリケーションの既存コンテンツデータベースにコピー元サイトコレクションをコピー
+</h4><p>コピー先 Web アプリケーション http://sp2013dev:12930 の既存のコンテンツデータベース WSS_Content_ebed969934304a32a00c5118674fb677 にサイトコレクションをコピーするため、Copy-SPSite コマンドを実行します。
+コマンドは 3 行になっていますが、実際は 1 行で書いてください。</p>
+<pre tabindex="0"><code>1: PS C:&gt; Copy-SPSite -Identity http://sp2013dev:12930/sites/test\_copy
+</code></pre><pre tabindex="0"><code>2: -TargetUrl http://sp2013dev:12930/sites/test
+</code></pre><pre tabindex="0"><code>3: -DestinationDatabase WSS\_Content\_ebed969934304a32a00c5118674fb677
+</code></pre><p> 
+では、Get-SPSite コマンドできちんとコピーされたか確認します。</p>
+<pre tabindex="0"><code>1: PS C:&gt; Get-SPSite | select url,id
+</code></pre><pre tabindex="0"><code>2:
+</code></pre><pre tabindex="0"><code>3: Url ID
+</code></pre><pre tabindex="0"><code>4: --- --
+</code></pre><pre tabindex="0"><code>5: http://sp2013dev:12930 a4dc6b0e-6013-4e70-9357-610cae9e1f34
+</code></pre><pre tabindex="0"><code>6: http://sp2013dev:12930/sites/test d2aa70b4-9948-4ff7-b60e-801f1ac5d452
+</code></pre><pre tabindex="0"><code>7: http://sp2013dev:12930/sites/test\_copy 31d5ea5e-1fa7-42f5-a56e-039e656f8fdd
+</code></pre><pre tabindex="0"><code>8: http://sp2013dev/sites/test 14eee793-4466-4ac8-b297-8823a7ccec71
+</code></pre><p>6 行目のサイトコレクションが、8 行目のサイトコレクションのコピーとなります。
+ここで、ブラウザから実際にサイトコレクションにアクセスして、コピーされているかどうか確認してください。
+問題なければ、次のステップで 7 行目のサイトコレクションを消します。</p>
+<h4 id="６コピー先-web-アプリケーションからコピー用コンテンツデータベースを削除">６．コピー先 Web アプリケーションからコピー用コンテンツデータベースを削除
+</h4><p>最後にコピー用使ったコンテンツデータベースとサイトコレクションを削除します。
+コンテンツデータベースを消すことで、サイトコレクションも消すことができるので、<a class="link" href="http://technet.microsoft.com/ja-jp/library/ff607920.aspx"  target="_blank" rel="noopener"
+    >Remove-SPContentDatabase</a> コマンドを実行しコンテンツデータベースを削除します。</p>
+<pre tabindex="0"><code>1: PS C:&gt; Remove-SPContentDatabase -Identity WSS\_Content\_Move
+</code></pre><pre tabindex="0"><code>2:
+</code></pre><pre tabindex="0"><code>3: 確認
+</code></pre><pre tabindex="0"><code>4: この操作を実行しますか?
+</code></pre><pre tabindex="0"><code>5: 対象 &#34;WSS\_Content\_Move&#34; に対して操作 &#34;Remove-SPContentDatabase&#34;
+</code></pre><pre tabindex="0"><code>6: を実行しています。
+</code></pre><pre tabindex="0"><code>7: [Y] はい(Y) [A] すべて続行(A) [N] いいえ(N) [L] すべて無視(L) [S] 中断(S)
+</code></pre><pre tabindex="0"><code>8: [?] ヘルプ(既定値は &#34;Y&#34;): Y
+</code></pre><pre tabindex="0"><code>9:
+</code></pre><pre tabindex="0"><code>10: 確認
+</code></pre><pre tabindex="0"><code>11: &#39;WSS\_Content\_Move&#39; を削除すると、SQL
+</code></pre><pre tabindex="0"><code>12: データベースおよびデータベース内に格納されているすべての内容が完全に削除されま
+</code></pre><pre tabindex="0"><code>13: す。SQL データベースを削除しない場合は、Dismount-SPContentDatabase
+</code></pre><pre tabindex="0"><code>14: を使用してください。
+</code></pre><pre tabindex="0"><code>15: [Y] はい(Y) [A] すべて続行(A) [N] いいえ(N) [L] すべて無視(L) [S] 中断(S)
+</code></pre><pre tabindex="0"><code>16: [?] ヘルプ(既定値は &#34;Y&#34;): Y
+</code></pre><p>これでコピーが完了しました。
+最後に Get-SPSite コマンドで状態を確認します。</p>
+<pre tabindex="0"><code>1: PS C:&gt; Get-SPSite | select url,id
+</code></pre><pre tabindex="0"><code>2:
+</code></pre><pre tabindex="0"><code>3: Url ID
+</code></pre><pre tabindex="0"><code>4: --- --
+</code></pre><pre tabindex="0"><code>5: http://sp2013dev:12930 a4dc6b0e-6013-4e70-9357-610cae9e1f34
+</code></pre><pre tabindex="0"><code>6: http://sp2013dev:12930/sites/test d2aa70b4-9948-4ff7-b60e-801f1ac5d452
+</code></pre><pre tabindex="0"><code>7: http://sp2013dev/sites/test 14eee793-4466-4ac8-b297-8823a7ccec71
+</code></pre><p>はい、ゴミも消えて、きちんとコピーされた状態になりました。
+上記の通り、非常に手順が多いです。
+間違えてもやり直しはききますが、不安な方は市販ツールを使うようにするのが良いと思います。</p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 SharePoint Developer
+    </section>
+    
+    <section class="powerby">
+        
+            SharePoint Developer Blog <br/>
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.b6cba74c66971621e3d63b383da290b07bdfa1de7fc236c60e3aede2e3133a80.js" defer></script>
+
+
+    </body>
+</html>

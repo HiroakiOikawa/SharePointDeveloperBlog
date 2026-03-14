@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 28 - Posts</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="Posts">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/posts/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="Posts">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/posts/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4191-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">共有サービスに依存する機能</h2>
+                        
+                        <p class="article-summary"><p>SharePoint Server 2007の共有サービスのことは、まだ全然調べていないので、仕組みとか機能とか良く分かりませんが、サイトテンプレートの調査をしていて共有サービスを作った時に分かったことがひとつ。
+以下の機能はSharePoint Server 2007をセットアップしていないと使えない。
+・ビジネスデータカタログ
+・Office SharePoint Server Search
+・Excel Services
+・ユーザープロファイルアプリケーション
+・セッション状態</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2006年10月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4181-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">標準のサイトテンプレート</h2>
+                        
+                        <p class="article-summary"><p>SharePoint Server 2007は、最初から多数のサイトテンプレートが用意されています。
+これらのテンプレートを上手に活用できれば、サイト構築の手間をかなり軽減できそうです。
+と、いうことで、どのような標準サイトテンプレートがあるのか調べてみました。
+<strong>＜グループ作業のテンプレート＞</strong>
+<strong>チームサイト</strong>
+情報を簡単に管理、作成、共有するチーム用サイトです。ドキュメント ライブラリや、お知らせ、予定表、タスク、ディスカッションを管理するリストが用意されています。
+<strong>空のサイト</strong>
+必要に応じてカスタマイズできる空のサイトです。
+<strong>ドキュメントワークスペース</strong>
+ドキュメント上で共同作業を行うためのサイトです。主要なドキュメントとそれに関連するファイルの保管にはドキュメント ライブラリが、必要な作業アイテムの割り当てにはタスク リストが、そして、ドキュメントに関連するリソースにはリンク リストが用意されています。
+<strong>Wiki サイト</strong>
+コミュニティでアイデアの交換と共有ができるサイトです。簡単にページを編集して情報を記録し、キーワードで相互にリンク付けできる Web ページが用意されています。
+<strong>ブログ</strong>
+アイデア、見解、専門知識などを投稿し、閲覧者がコメントを入力できる個人またはチーム用のサイトです。
+**＜会議＞**<strong>一般的な会議ワークスペース</strong>
+会議を計画および開催し、会議の結果を記録するサイトです。議題、出席者、およびドキュメントを管理するためのリストが用意されています。
+<strong>空の会議ワークスペース</strong>
+必要に応じてカスタマイズできる空の会議サイトです。
+<strong>意思決定の会議ワークスペース</strong>
+進捗管理または意思決定を行う会議用のサイトです。タスクの作成、ドキュメントの保管、および決定事項の記録に使用するリストが用意されています。
+<strong>イベントの会議ワークスペース</strong>
+行事のためのプランニング用サイトです。出席者の管理、説明の記載、イベントの写真の保管に使用するリストが用意されています。
+<strong>複数ページの会議ワークスペース</strong>
+会議を計画および開催し、会議の結果を記録するサイトです。議題と出席者を管理するためのリスト、および必要に応じてカスタマイズできる 2 つの空白ページが用意されています。 
+**＜エンタープライズ＞**<strong>ドキュメント センター</strong>
+企業のドキュメントを一元管理するためのサイトです。
+<strong>レコード センター</strong>
+このテンプレートを使用して、レコード管理用のサイトを作成します。レコードの管理者は、受信ファイルを特定の場所に保存されるようにルーティング テーブルを構成できます。このサイトでは、レコードがリポジトリに追加されると変更できなくなります。
+<strong>個人用設定サイト</strong>
+個人用のビュー、データ、およびこのサイト コレクションから個人用サイト内へのナビゲーションを提供するサイトです。サイトには、個人用の設定に固有の Web パーツや、個人用サイト向けに最適化されたナビゲーションが用意されています。
+<strong>サイト ディレクトリ</strong>
+組織の重要なサイトを一覧にし、分類するサイトです。このサイトには、カテゴリ別サイト、トップ サイト、サイト マップが表示されるさまざまなビューが組み込まれています。
+<strong>レポート センター</strong>
+測定基準、目標、ビジネス インテリジェンス情報などを伝える Web ページ、ダッシュボード、および主要業績評価指標を作成、管理、および提供するためのサイトです。
+<strong>タブ付き検索センター</strong>
+検索機能を提供するサイトです。ウェルカム ページには、検索ボックスと 2 つのタブが表示されます。タブは、一般的な検索用と人の情報の検索用です。他の検索範囲や検索結果の種類を表示するようにタブを追加したりカスタマイズすることもできます。
+<strong>検索センター</strong>
+検索機能を提供するサイトです。このサイトには、検索結果と高度な検索のページが備わっています。
+**＜発行＞**<strong>発行サイト</strong>
+Web サイトを展開したり、Web ページを迅速に発行するための空のサイトです。投稿者はページの下書きバージョンで作業を行って、このバージョンを発行し、閲覧者に表示されるようにすることができます。このサイトには、Web 発行リソースの保存用に、ドキュメント ライブラリと画像ライブラリが用意されています。
+<strong>ワークフロー付き発行サイト</strong>
+承認ワークフローを使用し、スケジュールに従って Web ページを発行するためのサイトです。サイトには、Web 発行リソースの保存用に、ドキュメント ライブラリと画像ライブラリが用意されています。既定では、このサイトの下位に作成できるのは、このテンプレートを使用したサイトのみです。
+<strong>ニュース サイト</strong>
+ニュース記事とニュース記事へのリンクを発行するサイトです。サイトには、サンプルのニュース ページと、古いニュース アイテムを保存するアーカイブが組み込まれています。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2006年10月21日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4171-web/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Web サイトの作成</h2>
+                        
+                        <p class="article-summary"><p>いよいよWebサイトを作りたいと思います。</p>
+<p>SharePoint Server 2007では、Webサイトのことをサイトと呼んでいます。
+サイトを作る前に、Webアプリケーションを作る必要があります。
+SharePoint Server 2007ではWebアプリケーションがサイトを束ねるひとつの括りになっていて、ひとつのWebアプリケーションの中に複数のサイトを立てることで、これらのサイトを一括で管理することができるようになっています。</p>
+<p>Webアプリケーションとサイトの関係は、そのままURLにも反映されていて、たとえばWebアプリケーションを「app」という名前で作成し、このWebアプリケーションに所属するサイトを「site1」、「site2」という名前で作成すると、それぞれのサイトのURLは以下のようになります。
+http://app/site1、http://app/site2
+と、いうことで、サイトを作るためにはまずWebアプリケーションを作る必要があります。</p>
+<p>では、以下にWebアプリケーションを作る手順を書きます。
+なお、今回は、http://labserver/ というURLでサイトを作ります。ポートは80を使用します。
+http://labserver/site1 のように、ルートの下にサイトを作るのではなく、今回のようにルートにサイトを作ることもできます。</p>
+<p>**１．サーバーの全体管理ページを表示します。**<strong>２．サーバーのサービスページへ移動します。</strong>
+[サーバー構成の管理]タブの[トポロジおよびサービス]セクションの[サーバーのサービス]をクリックしてください。
+<strong>３．Windows SharePoint Services Web Applicationサービスを起動。</strong>
+[以下の表のサービスを起動]と書いてあるリストの中から、「Windows SharePoint Services Web Application」と書いてあるサービスを見つけ、[開始]リンクをクリック。
+しばらくするとサービスが開始します。
+**４．アプリケーション構成の管理ページへ移動します。**<strong>５．Webアプリケーションの作成または拡張ページを表示します。</strong>
+サーバーの全体管理ページにアクセスし、[アプリケーションの構成]タブの[SharePoint Web アプリケーション構成の管理]セクションにある、[Web アプリケーションの作成または拡張]をクリックします。
+**６．[新しい Web アプリケーションの作成]をクリックします。**<strong>７．新しいWebアプリケーションを作成します。</strong>
+色々と設定項目がありますが、以下の設定を除いてすべてデフォルトで行きます。
+アプリケーションプールセクションの[ユーザー名]と[パスワード]には、構成データベースに接続可能なユーザーを指定してください。
+今回はadministratorを指定します。
+入力が完了したら、[OK]ボタンをクリックします。
+すると、処理中ページに遷移します。
+<strong>８．Webアプリケーション作成完了。</strong>
+処理が完了してこのページが表示されたら、Webアプリケーションの完成です。
+続いてトップレベルサイトを作成します。
+文中にある[サイト コレクションの作成]というリンクをクリックしてください。
+<strong>９．トップレベルサイト作成。</strong>
+サイトコレクションの作成ページの各設定項目を入力します。
+[タイトル]と[説明]は自由に入力してください。
+ここで入力した文字は、サイトの左上のところに表示されます。
+[テンプレート]は自由に選択してください。
+[サイトコレクションの管理者]は、存在するユーザーの名前を入力してください。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2006年10月21日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4161-sharepoint-portal-server-2003-sharepoint-server-2007-beta2-betatr/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Portal Server 2003 から SharePoint Server 2007(beta2, betaTR) へのアップグレード方法</h2>
+                        
+                        <p class="article-summary"><p>SPS2003からMOSS2007へのアップグレードには、以下の４つの方法というかアプローチがあります。
+<strong>１．インプレースアップグレード</strong>単一サーバ構成のSPS2003の、構成DB及びコンテンツDBを一括でアップグレードする。
+<strong>２．段階的アップグレード</strong>新バージョンと旧バージョンを共存させて、サイトコレクション単位でアップグレードする。
+<strong>３．共有サービスの段階的アップグレード</strong>共有サービスが実行されているファームで、ポータル単位でアップグレードする。
+<strong>４．データベースの移行</strong>データベースを手動で移行する。
+以前、MOSS2007 beta2で、SPS2003からMOSS2007 beta2へのインプレースアップグレードを実験しました。
+その際には<a class="link" href="http://download.microsoft.com/download/9/2/e/92e2b363-5059-4353-9fb5-fab0a0e56274/MOSSUpgrade.doc"  target="_blank" rel="noopener"
+    >このドキュメント</a>を参考にしました。
+結果的にアップグレードは失敗しました。
+先ほどのドキュメントの「インプレースアップグレードの実行-SharePoint製品とテクノロジーの構成ウィザードを実行する」の8.(40ページ 21行目)で、エラーが発生してこれ以上進めなくなってしまいました。
+beta2 TR で再度アップグレードの実験をしようとしたのですが、beta2 TRはbeta2の差分になっているため、beta2を入れてからTRを入れる必要があり、実際にSPS2003からアップグレードする場合とは、ずいぶんと状況が違ってしまっています。
+そのため、beta2 TRにおいても、SPS2003からのアップグレードをテストすることができないです。
+SPS2003からのアップグレードの実験は、製品版出荷まで待つしかなさそうです。。。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2006年10月10日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4151-sharepoint-server-2007/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Server 2007 の最初の構成</h2>
+                        
+                        <p class="article-summary"><p>SharePoint Server 2007のインストールが済んだので、次にSharePoint Serverの構成をします。
+ちなみに、SharePoint Serverをインストールするときに、スタンドアローン構成でインストールをすると、これから説明する設定もぜーんぶ自動でやってくれるみたいです。
+ただ、何度もいうようにＤＢはデスクトップエンジン(Express Edition)になりますが。
+<strong>１．製品とテクノロジ構成ウィザードを起動します。</strong>[スタート]－[すべてのプログラム]－[Microsoft Office Server]－[SharePoint 製品とテクノロジ構成ウィザード]をクリックしてください。
+ウィザードが起動したら[次へ]をクリック。
+**２．IIS、SharePoint Administration Service、SharePoint Timer Serviceが開始またはリセットする必要がある場合があるというメッセージが表示されるので[はい]をクリック。
+３．これが最初のサーバーファームになるので、[いいえ、新しいサーバーファームを作成します]を選択して[次へ]をクリック。**ちなみに、サーバーファームとは、複数のSharePoint Serverをひとつの固まりとして扱うための仕組みです。
+たとえば、サーバーファーム内に１台しかサーバーが存在しない場合、この１台のサーバーでSharePoint Serverのサービスをすべて実行する必要があるのですが、
+サーバーファーム内に複数のサーバーが存在する場合は、サーバーＡではExcelサービスと検索サービス、サーバーBで残りのサービスを実行させるというように、負荷を分散することができます。
+ちなみに、実験環境では１台のサーバーでサーバーファームを構成するため、すべてのサービスがこのサーバーにセットアップされます。
+ちょっと重いです・・・
+**４．構成データベースの位置を指定します。**データベースサーバーはサーバーファーム内のすべてのサーバーがアクセスできる場所を指定します。
+今回はこれが最初のサーバーでしかも１台のサーバーにすべてセットアップするので、データベースサーバーにはこのサーバーのコンピュータ名を入れます。
+データベース名は適当に。
+ユーザー名は、サーバーファーム内のサーバーが所属するドメインのユーザーを指定します。
+今回はサーバーが１台なのでローカルのAdministratorにします。
+ユーザー名は「ドメインユーザー」の形式で入力する必要があるので、「コンピュータ名Administrator」となります。
+全部入力したら[次へ]をクリック。
+ここでデータベースサーバーにアクセスできなかった場合には、「データベースサーバーに接続できないか、または、データベース名が存在しません&hellip;」といったエラーが出ます。
+もう一度設定を見直すなどして、エラーを解消しないと次へ進めません。
+**５．SharePointサーバー全体管理Webアプリケーションを構成します。**SharePointサーバー全体管理Webアプリケーションは、サーバーファーム全体の管理と各SharePointサーバーの管理をするためのサイトです。
+このサイトにアクセスするためのポート番号を指定する場合は、[ポート番号を指定する]にチェックをいれて隣のテキストボックスにポート番号を入力します。
+特にこだわりがなければチェックしなくてよいかと思います。
+ファイアウォール越しに管理サイトにアクセスするようなニーズがある場合は、明示的に指定したほうが良いと思います。
+セキュリティ設定の構成は、Kerberosを使いたいという要望がなければNTLMでよいでしょう。
+全部指定したら[次へ]をクリック。
+**６．構成設定を確認します。**特に問題なければ[次へ]をクリック。
+[詳細設定]ボタンは、SharePointサーバーをActiveDirectoryに参加させている場合に有効になるらしいです。
+今回はADに参加していないので実際のところどうなるかはわかりません。
+**７．SharePointの構成が始まります。
+８．構成完了。**構成成功というメッセージは少々スリリングな気がしますが。。。
+[完了]をクリック。
+**９．サーバーの全体管理のサイトが開きます。**前のバージョンに比べてずいぶんとイメージが変わりました。
+サイトを触ってみるとわかるのですが、操作感も見た目も非常にわかりやすくすっきりしていて、前バージョンよりもかなり洗練された感じがします。
+これで構成は完了です。
+この後は、最初のWebアプリケーションを作成します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2006年9月6日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4141-web/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">新しいWebアプリケーション作成時に、エラー「無効な文字$が含まれています。」が出る</h2>
+                        
+                        <p class="article-summary"><p>SharePoint Server 2007(MOSS)で新しいWebアプリケーションを作成する際に、無効な文字$が含まれているというエラーが発生した場合の対処方法です。
+<strong>事象：</strong>
+MOSSのサーバーの全体管理サイトで、[アプリケーション構成]-[Webアプリケーションの作成または拡張]-[新しいWebアプリケーションの作成]をクリックして、新しいWebアプリケーションを作成しようとすると、「ReportServer$xxxには無効な文字 $ が含まれています。」というエラーが出て、Webアプリケーションを作成することができない。
+<strong>原因：</strong>
+この問題は、以下の条件がそろった場合に発生します。
+・MOSSと同じマシン上にSQL Server Reporting Service(SRSS)がインストールされている。
+・SRSSが、SQL Server 2005の名前付きインスタンスに対して既定の設定でインストールされている。</p>
+<p>SQL Serverの名前付きインスタンスに対して既定の設定でSRSSをインストールすると、IISアプリケーションプールに、
+「ReportingService$<em>インスタンス名</em>」という名前のアプリケーションプールが自動的に登録されます。
+このアプリケーションプール名に含まれる$が原因となり、エラーが発生します。
+<strong>対処：</strong>
+SRSSのWebサイト(既定ではReports$<em>インスタンス名</em>とReports$<em>インスタンス名</em>の2つ)のアプリケーションプールを、名前に$を含まないものに変更してください。
+変更後、$を含むアプリケーションプールをすべて削除してください。
+$以外にもMOSSが取り扱うことができない文字が多数あるそうです。
+使用する文字の種類には要注意です！</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2006年9月5日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/4131-sharepoint-server-2007-2/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Server 2007 ベータ2 のインストール手順</h2>
+                        
+                        <p class="article-summary"><p>※この記事はSharePoint Server 2007 ベータ２を対象としているため、製品版とは異なる場合があります。</p>
+<p>MOSSベータ２をVirtualPC環境にインストールしてみました。
+そのときの手順です。</p>
+<p>なお、今回は1台のサーバーにすべてインストール場合の手順です。
+また、企業で使うことを想定しているので、DBはデスクトップエンジンではなくSQLServer2005にします。
+<strong>インストール先のマシンのソフトウェア構成</strong>
+・OSはWindows Server 2003 R2
+・「サーバーの役割管理」でアプリケーションサーバとして構成済み
+・SQL Server 2005
+・.NET Framework 2.0 Runtimeおよび日本語ランゲージパック
+→SQL Server 2005をインストールすると一緒に入ります。
+・Windows Workflow Foundation ベータ2
+<strong>インストール手順</strong>
+**1. MOSS2007のCDをドライブにセット。**インストーラが起動します。
+自動的にインストーラが起動しない場合は、setup.cmdを実行。
+<strong>2.プロダクトキーを入力します。</strong>
+プロダクトキーは、ベータ2のケースに書いてあります。 
+<strong>3.ライセンス条項に同意します。</strong>
+<strong>4.インストールの種類を選択します。</strong>
+今回はDBにSQLServer2005を使用したいので、「詳細設定」を選択。 
+<strong>5.サーバーの種類を選択します。</strong>
+DBはすでにSQLServer2005がインストール済みで、1台のサーバーにすべて
+インストールしたいので、「完全」を選択。 
+<strong>6.ファイルの場所を指定します。</strong>
+まぁ、適当に・・・ 
+<strong>7.フィードバックを選択します。</strong>
+なるべくMSに協力しましょう。せっかくベータ版を使うわけですし。
+なので、「はい」を選択。 
+<strong>8.「今すぐインストール」をクリック。</strong>
+インストールが始まります。 
+<strong>9.インストールが完了したら</strong>
+「SharePoint 製品とテクノロジ構成ウィザードを今すぐ実行する」の
+チェックを付けるか、外すかして、閉じるをクリック。 
+これでインストール完了です！
+インストール作業はとっても簡単です。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2006年8月27日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/posts/page/27/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/posts/">
+        1
+    </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/posts/page/24/"
+                aria-label="Page 24">
+                24
+            </a><a class="page-link "href="/posts/page/25/"
+                aria-label="Page 25">
+                25
+            </a><a class="page-link "href="/posts/page/26/"
+                aria-label="Page 26">
+                26
+            </a><a class="page-link "href="/posts/page/27/"
+                aria-label="Page 27">
+                27
+            </a><a class="page-link current"aria-label="Page 28"aria-current="page">
+        28
+    </a><a class="page-link disabled"aria-label="Next page"aria-disabled="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

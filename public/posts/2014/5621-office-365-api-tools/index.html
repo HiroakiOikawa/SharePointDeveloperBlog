@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="はじめに SharePoint Conference 2014 で発表された Office 365 API。 この Office 365 API を Visual Studio 2013 からより手軽に利用できるようにするためのツールとして…">
+<title>Office 365 API Tools を使ってみた</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/2014/5621-office-365-api-tools/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="Office 365 API Tools を使ってみた">
+<meta property='og:description' content="はじめに SharePoint Conference 2014 で発表された Office 365 API。 この Office 365 API を Visual Studio 2013 からより手軽に利用できるようにするためのツールとして…">
+<meta property='og:url' content='http://localhost:1313/posts/2014/5621-office-365-api-tools/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:published_time' content='2014-03-14T02:39:12&#43;09:00'/><meta property='article:modified_time' content='2014-03-14T02:39:12&#43;09:00'/>
+<meta name="twitter:title" content="Office 365 API Tools を使ってみた">
+<meta name="twitter:description" content="はじめに SharePoint Conference 2014 で発表された Office 365 API。 この Office 365 API を Visual Studio 2013 からより手軽に利用できるようにするためのツールとして…">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "\"Office 365 API Tools を使ってみた\"",
+  "description": "\"はじめに SharePoint Conference 2014 で発表された Office 365 API。 この Office 365 API を Visual Studio 2013 からより手軽に利用できるようにするためのツールとして…\"",
+  "url": "\"http://localhost:1313/posts/2014/5621-office-365-api-tools/\"",
+  "datePublished": "\"2014-03-14T02:39:12+09:00\"",
+  "dateModified": "\"2014-03-14T02:39:12+09:00\"",
+  
+  "author": {
+    "@type": "Person",
+    "name": "\"Your Name\""
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "\"SharePoint Developer\"",
+    "url": "\"http://localhost:1313/\""
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "\"http://localhost:1313/posts/2014/5621-office-365-api-tools/\""
+  }
+  
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SharePoint / Microsoft 365 / Power Platform の開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/your-github-id'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/your-twitter-id'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>ブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#はじめに">はじめに</a></li>
+        <li><a href="#セットアップ">セットアップ</a></li>
+        <li><a href="#プロジェクトの作成">プロジェクトの作成</a></li>
+        <li><a href="#office-365-api-tools-の利用">Office 365 API Tools の利用</a></li>
+        <li><a href="#サンプルコードの実行">サンプルコードの実行</a></li>
+      </ul>
+    </li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <div class="widget--recent-posts widget">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+    </div>
+    <h2 class="widget-title section-title">新着記事</h2>
+    <div class="widget-body">
+        <ol class="recent-posts-list"><li>
+                <a href="/posts/m365dev-nodeversion/">SPFx、Office Web アドイン開発でありがちな Node.js のバージョンが環境ごとに異なる場合の開発環境の工夫（チーム開発前提）</a>
+                <span class="recent-posts-date">2026年3月8日</span>
+            </li><li>
+                <a href="/posts/2025/10761-outlook/">新しいOutlookのイベントチャームのアイコン名</a>
+                <span class="recent-posts-date">2025年6月21日</span>
+            </li><li>
+                <a href="/posts/2025/10754-azure-bicep/">Azure環境を自動的に構築するBicepが超便利！</a>
+                <span class="recent-posts-date">2025年4月12日</span>
+            </li><li>
+                <a href="/posts/2025/10745-graph-api/">Graph API で定期予定の一連の予定を取得する</a>
+                <span class="recent-posts-date">2025年2月9日</span>
+            </li><li>
+                <a href="/posts/2025/10725-graph-api-transitivemembers/">Graph API の transitiveMembers の制限を調べてみた</a>
+                <span class="recent-posts-date">2025年2月2日</span>
+            </li></ol>
+    </div>
+</div>
+            
+        
+            
+                <div class="widget--adsense-sidebar widget">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/office-365/" style="background-color: hsl(21, 60%, 84%); color: hsl(21, 60%, 15%);">
+                Office 365
+            </a>
+        
+            
+            
+            
+            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/" style="background-color: hsl(206, 60%, 84%); color: hsl(206, 60%, 15%);">
+                開発とプログラミング
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/2014/5621-office-365-api-tools/">Office 365 API Tools を使ってみた</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            はじめに SharePoint Conference 2014 で発表された Office 365 API。 この Office 365 API を Visual Studio 2013 からより手軽に利用できるようにするためのツールとして…
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2014-03-14T02:39:12&#43;09:00'>2014年3月14日</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        読了時間: 2分
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目次</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#はじめに">はじめに</a></li>
+        <li><a href="#セットアップ">セットアップ</a></li>
+        <li><a href="#プロジェクトの作成">プロジェクトの作成</a></li>
+        <li><a href="#office-365-api-tools-の利用">Office 365 API Tools の利用</a></li>
+        <li><a href="#サンプルコードの実行">サンプルコードの実行</a></li>
+      </ul>
+    </li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <h3 id="はじめに">はじめに
+</h3><p>SharePoint Conference 2014 で発表された Office 365 API。
+この Office 365 API を Visual Studio 2013 からより手軽に利用できるようにするためのツールとして先日リリースされた、<a class="link" href="http://blogs.msdn.com/b/officeapps/archive/2014/03/12/announcing-office-365-api-tools-for-visual-studio-preview.aspx"  target="_blank" rel="noopener"
+    >Office 365 API Tools</a> を早速使ってみましたので、使用方法など残しておきたいと思います。</p>
+<h3 id="セットアップ">セットアップ
+</h3><p>まずは、Office 365 API Tools をダウンロード、インストールします。
+１．Visual Studio 2013 を起動する。
+２．メニューから [ツール] – [拡張機能と更新プログラム] をクリックする。
+３．左メニューの [オンライン] をクリックし、検索ボックスに “Office 365” と入力し検索を実行する。
+４．検索結果の中から “Office 365 API Tools – Preview” を探し、[ダウンロード] をクリックする。
+ダウンロードサイズは 1.5MB くらい。
+<img alt="image_5_7CC27DC0" class="gallery-image" data-flex-basis="388px" data-flex-grow="162" height="395" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_5_7CC27DC0.png" width="640">
+５．[インストール] をクリックする。
+<img alt="image_8_7CC27DC0" class="gallery-image" data-flex-basis="286px" data-flex-grow="119" height="369" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_8_7CC27DC0.png" width="441">
+６．インストール完了後、Visual Studio 2013 を再起動する。</p>
+<h3 id="プロジェクトの作成">プロジェクトの作成
+</h3><p>Office 365 API Tools のセットアップが完了したら、次にプロジェクトを作成します。
+なお、今回は SharePoint 用アプリでプロジェクトを作成してみたいと思います。
+１．SharePoint 用アプリプロジェクトを作成する。
+プロジェクト名は、”Office365APITools” としました。
+<img alt="image_11_7CC27DC0" class="gallery-image" data-flex-basis="388px" data-flex-grow="162" height="395" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_11_7CC27DC0.png" width="640">
+２．デバッグで使用する Office 365 の SharePoint サイトを指定。ホスト方法は手軽に実験するために [自動ホスト] を選択し、[次へ] をクリックする。
+<img alt="image_14_7CC27DC0" class="gallery-image" data-flex-basis="337px" data-flex-grow="140" height="455" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_14_7CC27DC0.png" width="640">
+３．プロジェクトのタイプは、大好きな [ASP.NET MVC Web アプリケーション] を選択。もちろん、Web フォームでも問題ないと思います。
+<img alt="image_17_7CC27DC0" class="gallery-image" data-flex-basis="338px" data-flex-grow="140" height="454" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_17_7CC27DC0.png" width="640">
+以上で、プロジェクト作成完了です。</p>
+<h3 id="office-365-api-tools-の利用">Office 365 API Tools の利用
+</h3><p>いよいよ、Office 365 API Tools を利用します。
+今回は、SharePoint の API を利用したいので、SharePoint への接続を行います。
+１．ソリューションエクスプローラにて、Web アプリケーションのプロジェクトを右クリックする。
+２．右クリックメニューの [追加] – [接続済みサービス] をクリックする。
+<img alt="image_20_7CC27DC0" class="gallery-image" data-flex-basis="353px" data-flex-grow="147" height="435" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_20_7CC27DC0.png" width="640">
+３．サービスマネージャーダイアログの [Sign in] をクリックする。
+<img alt="image_23_7CC27DC0" class="gallery-image" data-flex-basis="349px" data-flex-grow="145" height="439" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_23_7CC27DC0.png" width="640">
+４．認証情報を入力し、SharePoint サイトに接続する。
+<img alt="image_28_7CC27DC0" class="gallery-image" data-flex-basis="322px" data-flex-grow="134" height="433" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_28_7CC27DC0.png" width="581">
+５．認証完了後、サービスマネージャーダイアログで、”SharePoint” を選択し、[OK] をクリックする。
+<img alt="image_24_366CFE91" class="gallery-image" data-flex-basis="349px" data-flex-grow="145" height="439" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_24_366CFE91.png" width="640">
+６．以下のダイアログが表示されるので、[OK] をクリックする。
+<img alt="image_34_7CC27DC0" class="gallery-image" data-flex-basis="612px" data-flex-grow="255" height="183" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_34_7CC27DC0.png" width="467">
+７．今回開発している SharePoint 用アプリに与える権限を指定し、[OK] をクリックする。
+”MyFiles” では、おそらく自分が作成、更新したファイルに与える権限を指定するものと思います。
+”AllSites” は、サイトコレクションに対する権限を指定するものと思います。
+最後の “Make this app available to” では、どのテナントでアプリを利用できるようにするか、ということを指定するものと思います。
+すみません、この辺り、色々なパターンを試したわけではないので、詳細は不明です。
+今回は、”MyFiles” は ”Edit or delete user’s files (preview)” を、”AllSites” は、 “Read items in all site collections (preview)” を、”Make this app available to” は、”My tenant only” を選択しました。
+<img alt="image_37_7CC27DC0" class="gallery-image" data-flex-basis="375px" data-flex-grow="156" height="409" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_37_7CC27DC0.png" width="640">
+以上で、Office 365 API Tools の設定が完了です。
+上記画面で [OK] ボタンをクリックすると、Webアプリケーションのプロジェクトに、Office 365 へアクセスするためのヘルパーコードやサンプルコードが追加されます。</p>
+<h3 id="サンプルコードの実行">サンプルコードの実行
+</h3><p>ここからは、Office 365 API Tools の設定をすると自動的に追加されるサンプルコードを実行する手順を記載します。
+ちなみに、サンプルコードが何をするものかというと、Office 365 にログインしたユーザーの OneDrive for Business に接続し、”全員と共有” フォルダに格納されたファイルの一覧を表示する、というサンプルになっています。
+１．サンプルコードを修正する。
+ということで、早速実行をしたいわけですが、そのままサンプルコードをデバッグ実行しようとすると正しく動作しません。
+サンプルコードが日本語環境に対応していないため、日本語版の SharePoint に接続する場合は、サンプルコードを修正する必要があります。
+修正個所は、Web アプリケーションプロジェクトの Controllers フォルダ内の、SharePointSampleController.cs になります。
+下図で示す 50 行目のフォルダ名が英語表記となっており、このままではフォルダが見つからないというエラーになってしまいます。
+<img alt="image_40_7CC27DC0" class="gallery-image" data-flex-basis="422px" data-flex-grow="175" height="348" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_40_7CC27DC0.png" width="612">
+ということで、以下の通り 50 行目の “Shared%20with%20Everyone” を、”全員と共有” に変更します。
+”全員と共有” というのが、“Shared%20with%20Everyone” に当たる日本語環境でのフォルダ名になります。
+<img alt="image_43_7CC27DC0" class="gallery-image" data-flex-basis="434px" data-flex-grow="180" height="346" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_43_7CC27DC0.png" width="626">
+これで準備が整いました。
+最後にデバッグ実行をします。
+２．[F5] キーを押して、デバッグ実行を開始。
+３．SharePoint 用アプリを信頼するか聞かれるので、迷わず [信頼する] をクリックする。
+<img alt="image_46_7CC27DC0" class="gallery-image" data-flex-basis="531px" data-flex-grow="221" height="254" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_46_7CC27DC0.png" width="562">
+４．サンプルアプリのページに移動する。
+Office 365 の認証後、以下の初期ページが表示されます。
+<img alt="image_49_7CC27DC0" class="gallery-image" data-flex-basis="320px" data-flex-grow="133" height="479" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_49_7CC27DC0.png" width="640">
+このページが表示された後、ブラウザの URL 欄を、”https://<em>ホスト名:ポート番号</em>/SharePointSample/” に変更します。
+すると、以下のサンプルページが表示され、接続したユーザーの OneDrive の “全員と共有” フォルダの中身が表示されます。
+<img alt="image_52_7CC27DC0" class="gallery-image" data-flex-basis="595px" data-flex-grow="248" height="258" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_52_7CC27DC0.png" width="640">
+ちなみに、OneDrive の中は以下のようになっています。
+<img alt="image_55_7CC27DC0" class="gallery-image" data-flex-basis="390px" data-flex-grow="162" height="282" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2014/5621-office-365-api-tools/image_55_7CC27DC0.png" width="459">
+OneDrive に格納されたファイルが、SharePoint 用アプリの画面上に表示されていることが確認できるかと思います。
+サンプルコードの中身の確認は、別記事でまとめたいと思います。</p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 SharePoint Developer
+    </section>
+    
+    <section class="powerby">
+        
+            SharePoint Developer Blog <br/>
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.b6cba74c66971621e3d63b383da290b07bdfa1de7fc236c60e3aede2e3133a80.js" defer></script>
+
+
+    </body>
+</html>

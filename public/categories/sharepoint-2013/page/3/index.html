@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 3 - SharePoint 2013</title>
+
+
+<link rel="canonical" href="http://localhost:1313/categories/sharepoint-2013/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="SharePoint 2013">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/categories/sharepoint-2013/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="SharePoint 2013">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/categories/sharepoint-2013/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5491-sharepoint-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E5%85%A8%E8%88%AC">全般</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2013のサイト列が管理プロパティとして自動登録される仕組み</h2>
+                        
+                        <p class="article-summary"><p>SharePoint 2013のサイト列が管理プロパティとして自動登録される仕組みについて。
+<a class="link" href="http://t.co/JUPBkGhpGr"  target="_blank" rel="noopener"
+    >http://t.co/JUPBkGhpGr</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年9月25日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5481-sharepoint-conference-2014/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AA%E3%81%A9">勉強会・イベントなど</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Conference 2014のレジストレーションが始まりました。</h2>
+                        
+                        <p class="article-summary"><p>3月にラスベガスで開催される SharePoint Conference 2014のレジストレーションが始まったみたいです。一般の参加費用は$1,995。その他、ホテル代や渡航費がいるのかな。<a class="link" href="http://t.co/PzyFAM0ooC"  target="_blank" rel="noopener"
+    >http://t.co/PzyFAM0ooC</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年9月19日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5471-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">アプリの追加ページに表示される標準のリストやライブラリを非表示にする</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>アプリの追加ページ(自分のアプリページ)に表示される標準のリストやライブラリを非表示にして、ユーザーが自由にリストを追加できないようにする方法を説明します。
+良く聞く話ですが、サイトコレクションの管理は各ユーザーに任せたいが、会社が許可していないリストやライブラリは追加できないようにしたい、というニーズがある場合に使えるかと思います。</p>
+<h3 id="特定のリストを非表示にする手順">特定のリストを非表示にする手順
+</h3><p>では、今回はアンケートリストを非表示にしたいと思います。
+リストやライブラリは、Webパーツと違ってどこかのライブラリで表示制御されているわけではなく、リスト定義ファイルで表示/非表示等の設定を持ち、フィーチャーとしてSharePointに登録されています。
+アプリの追加ページで特定のリストを非表示にするには、このリスト定義ファイルを変更する必要があります。
+以下、手順になります。
+<strong>１．対象となるリスト定義ファイルを探す</strong>
+まずは非表示にするリストのリスト定義ファイルがどこにあるのか探す必要があります。
+リスト定義ファイルは、以下のフォルダに入っています。
+<em>C:Program FilesCommon Filesmicrosoft sharedWeb Server Extensions15TEMPLATEFEATURES</em>
+※実際のフォルダはSharePointのインストール場所により異なります。
+上記のフォルダの中には無数のサブフォルダがありその中にリスト定義ファイルが含まれています。
+目的のリスト定義ファイルを見つけるには、以下のやり方が早そうです。
+アプリの追加ページを開き、非表示にしたいリスト、ライブラリのアイコンで右クリックし、コンテキストメニューからプロパティを選択。
+ダイアログにあるアドレスの「/_layouts」以降の部分をコピーしておきます。
+<img alt="image_thumb_1_3BC40BD8" class="gallery-image" data-flex-basis="285px" data-flex-grow="118" height="482" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5471-post/image_thumb_1_3BC40BD8.png" width="573">
+次に、コピーしたURLの”ltsurvey.png”の”l”を”i”に変えて”itsurvey.png”としてFEATURESフォルダを検索してください。
+ここでは、Visual Studio 2012から検索してみました。
+<img alt="image_thumb_3BC40BD8" class="gallery-image" data-flex-basis="155px" data-flex-grow="64" height="527" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5471-post/image_thumb_3BC40BD8.png" width="341">
+すると、「FEATURESSurveysListListTemplatesSurveys.xml」がヒットします。
+このxmlファイルが、アンケートリストのリスト定義ファイルになります。
+<strong>２．リスト定義ファイルでHidden属性を指定する</strong>
+前述の通り、リストはリスト定義ファイルで定義され、SharePointに登録されています。
+従って、リスト定義ファイルの内容を書き替えることで、リストの表示/非表示を切り替えることができます。
+表示/非表示の切り替えは、Hidden属性を指定することで行います。
+アンケートリストのリスト定義ファイルにHidden属性を追加し、非表示になるようにします。
+変更前：</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年9月15日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5461-web/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">ページに追加できる Web パーツを制限する</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>ページの編集権限を持つユーザーは、ページに対して自由に Web パーツを追加することができます。
+追加できる Web パーツには SharePoint に最初から組み込まれている標準的な Web パーツの他、市販の Web パーツや、自社の独自の Web パーツなど、色々なものがあります。
+自由に Web パーツの追加ができることは良いことではあるのですが、場合によってはある程度規制をかけて使い方を統制したいとか、不具合が直るまで新たに配置させたくないなど、自由に追加されては困るということもあるかと思います。
+そのような場合には、以下の手順で追加可能な Web パーツを制御することができます。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年9月8日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5451-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">プロファイル同期の構成</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>AD (Active Directory)などのディレクトリサービスからユーザープロファイル情報を SharePoint に取り込み個人用サイトにユーザーのプロフィールを表示するためには、プロファイル同期の構成を済ませておく必要があります。
+そんな大事な役割を担うプロファイル同期の構成を完了させるには、多くの作業が必要になります。
+この記事では、そんなプロファイル同期の構成手順の最初の作業である、User Profile Synchronization Service の構成手順をご紹介します。</p>
+<h3 id="構成手順">構成手順
+</h3><p><strong>１．User Profile Service を起動する</strong>
+プロファイル同期を構成する前に、User Profile Service を起動しておく必要があります。
+User Profile Service はファーム構成ウィザードを実行することで構成、起動されるので、事前にファーム構成ウィザードを完了しておくことをお勧めします。
+ 
+<strong>２．ファームアカウントに「ディレクトリの変更のレプリケート」権限を付与する</strong>
+プロファイル同期は、User Profile Synchronization Service というサービスによって行われるのですが、この User Profile Synchronization Service の実行ユーザーがデフォルトではファームアカウント(製品の構成ウィザードの途中で設定するデータベースアクセスアカウント)となっており、このファームアカウントに「ディレクトリの変更のレプリケート」という特殊な権限を付与する必要があります。
+ファームアカウントに「ディレクトリの変更のレプリケート」権限を付与する方法は、以下の記事で紹介しています。
+下記記事の後半に「ディレクトリ同期権限の付与手順」というセクションがあるので、ご参照ください。
+<a class="link" href="http://sharepoint.orivers.jp/Article/144"  target="_blank" rel="noopener"
+    >AD (Active Directory) インポートによるプロファイル同期の構成</a>
+ちなみに、上記記事ではプロファイル同期を AD インポートという User Profile Synchronization Service を使わない方法で実現するための手順を紹介しています。
+AD インポートでも問題ない場合は、上記記事を構成の参考にしてください。
+なお、AD インポートの説明は、以下の technet の記事にありますので、併せてご参照ください。
+<a class="link" href="http://technet.microsoft.com/ja-jp/library/jj219646.aspx"  title="http://technet.microsoft.com/ja-jp/library/jj219646.aspx"
+     target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/library/jj219646.aspx</a>
+<strong>３．ファームアカウントをローカル Administrators グループに含める</strong>
+この手順については technet に記載はないのですが、私がいくつかの環境で試した限りでは、ファームアカウントを User Profile Synchronization Service を起動するサーバーのローカル Administrators グループに含めなければ、User Profile Synchronization Service が起動できませんでした。
+従って、念のため含めていただくのが良いかと思います。
+<strong>４．User Profile Synchronization Service を起動する</strong>
+以上で、前準備が整ったので、いよいよ User Profile Synchronization Service を起動します。
+全体管理サイトにアクセスし、[サーバーのサービスの管理]をクリックします。
+<img alt="clip_image001_thumb_666CA776" class="gallery-image" data-flex-basis="574px" data-flex-grow="239" height="268" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5451-post/clip_image001_thumb_666CA776.png" width="642">
+[User Profile Synchronization Service]を探し、[開始]と書いているリンクをクリックします。
+<img alt="clip_image0017_thumb_666CA776" class="gallery-image" data-flex-basis="288px" data-flex-grow="120" height="482" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5451-post/clip_image0017_thumb_666CA776.png" width="580">
+ファームアカウントのパスワードを入力し、[OK]をクリックします。
+<img alt="image_thumb_8_666CA776" class="gallery-image" data-flex-basis="527px" data-flex-grow="219" height="292" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5451-post/image_thumb_8_666CA776.png" width="642">
+サーバーのサービスのページに戻ると、User Profile Synchronization Service の状態が「開始処理中」になっているのが確認できるかと思います。
+<img alt="image_thumb_9_666CA776" class="gallery-image" data-flex-basis="6270px" data-flex-grow="2612" height="31" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5451-post/image_thumb_9_666CA776.png" srcset="/posts/5451-post/image_thumb_9_666CA776_hu_2acf4885506d4bad.png 800w, /posts/5451-post/image_thumb_9_666CA776.png 810w" width="810">
+User Profile Synchronization Service の起動には長いと 10 分くらいかかるので、ブラウザの更新ボタンをたまに押しながら、状態が「開始済み」になるまでしばらく待ってください。
+無事「開始済み」になれば起動完了です。
+これで AD に接続する準備ができました。
+AD に接続してユーザーのプロファイル情報を取得してくるためには、もうひと手間必要です。
+そちらについては、また別の記事で説明したいと思います。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年9月8日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5441-web/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">サイトコレクションを異なる Web アプリケーションにコピーする</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>サイトコレクションのコピー、簡単そうで実は非常に手間のかかる作業です。
+AvePoint さんの製品 <a class="link" href="http://www.avepoint.co.jp/sharepoint-content-management-docave/"  target="_blank" rel="noopener"
+    >コンテンツマネージャー</a> を使えば簡単にできてしまいますが、ここでは手動で異なる Web アプリケーションにサイトコレクションをコピーする方法をご紹介します。
+(2013年9月13日追記)
+本記事は2013年9月1日に公開しましたが、マイクロソフトのサポートサービスさんにテクニカルサポートを依頼し、詳細な確認をしていただいたところ、この手順ではコピーはできるものの問題があることが分かりました。
+詳細はこの後書きますが、基本的にはこの手順でのコピーは行わないでください。</p>
+<h3 id="copy-spsite-の問題">Copy-SPSite の問題
+</h3><p>Copy-SPSite は、Backup/Restore と同様、SharePoint が内部的に持っている各種 GUID を書き換えることなく、コピーを行います。
+そのため、一つのサイトコレクションのコピーを、同一コンテンツ DB に Copy-SPSite を使って複数個コピーすると、GUID が重複してしまい、SharePoint として不整合なデータの状態になってしまうことが分かりました。
+これにより、エクスポートでエラーが起きたり、ゴミ箱のアイテムを削除するのにエラーが起きたりと、一部動作に問題がでます。
+従って、せっかくの Copy-SPSite ですが、これを使ってサイトコレクションを量産していくということには使えないということになります。
+調査の結果、SharePoint 標準機能を使ってサイトコレクションのコピーを完ぺきに実現する方法はない、という結論に至りました。
+残念。。。
+もちろん、Copy-SPSite を使って、毎回異なるコンテンツ DB にコピーする分には問題なく使えますので、そのような用途でのみ Copy-SPSite を使うようにしてください。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年9月1日</time>
+                            <span>読了時間: 3分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5431-restore-spsite-directorynotfoundexception/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Restore-SPSite で DirectoryNotFoundException</h2>
+                        
+                        <p class="article-summary"><p>Restore-SPSite でサイトコレクションのリストアを行おうとした際に、以下のエラーが発生しリストアに失敗しました。
+restore-spsite : <nativehr>0x80070003</nativehr><nativestack></nativestack>
+発生場所 行:1 文字:1</p>
+<ul>
+<li>restore-spsite -identity http://sp2013dev/sites/restore -path c:backupsite.bak</li>
+<li>
+<pre tabindex="0"><code></code></pre></li>
+</ul>
+<p>    + CategoryInfo          : InvalidData: (Microsoft.Share&hellip;dletRestoreSite:
+   SPCmdletRestoreSite) [Restore-SPSite]、DirectoryNotFoundException
+    + FullyQualifiedErrorId : Microsoft.SharePoint.PowerShell.SPCmdletRestoreSite</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年8月31日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5411-sharepoint-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2013 の更新プログラム一覧</h2>
+                        
+                        <p class="article-summary"><p>SharePoint 2013 の更新プログラムの一覧が、以下のサイトに掲載されています。
+Updates for SharePoint 2013
+<a class="link" href="http://technet.microsoft.com/en-us/sharepoint/jj891062"  title="http://technet.microsoft.com/en-us/sharepoint/jj891062"
+     target="_blank" rel="noopener"
+    >http://technet.microsoft.com/en-us/sharepoint/jj891062</a>
+日本語サイトは以下になりますが、かなり古いので上記英語サイトを参照することをお勧めします。
+SharePoint 2013 の更新プログラム
+<a class="link" href="http://technet.microsoft.com/ja-jp/sharepoint/jj891062"  title="http://technet.microsoft.com/ja-jp/sharepoint/jj891062"
+     target="_blank" rel="noopener"
+    >http://technet.microsoft.com/ja-jp/sharepoint/jj891062</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年8月31日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5351-sharepoint/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint の発行ページ用リッチテキストエディタに独自のスタイルを追加する方法。</h2>
+                        
+                        <p class="article-summary"><p>SharePoint の発行ページ用リッチテキストエディタに独自のスタイルを追加する方法。
+<a class="link" href="http://t.co/In2dZvO6TY"  target="_blank" rel="noopener"
+    >http://t.co/In2dZvO6TY</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年8月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5361-sharepoint-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2013 の場合の独自スタイルの追加方法。</h2>
+                        
+                        <p class="article-summary"><p>SharePoint 2013 の場合の独自スタイルの追加方法。
+<a class="link" href="http://t.co/wO5YDmWvsI"  target="_blank" rel="noopener"
+    >http://t.co/wO5YDmWvsI</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年8月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/categories/sharepoint-2013/page/2/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/categories/sharepoint-2013/">
+        1
+    </a><a class="page-link "href="/categories/sharepoint-2013/page/2/"
+                aria-label="Page 2">
+                2
+            </a><a class="page-link current"aria-current="page"href="/categories/sharepoint-2013/page/3/"
+                aria-label="Page 3">
+                3
+            </a><a class="page-link "href="/categories/sharepoint-2013/page/4/"
+                aria-label="Page 4">
+                4
+            </a><a class="page-link "href="/categories/sharepoint-2013/page/5/"
+                aria-label="Page 5">
+                5
+            </a><a class="page-link "href="/categories/sharepoint-2013/page/6/"
+                aria-label="Page 6">
+                6
+            </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/sharepoint-2013/page/7/"aria-label="Page 7">
+        7
+    </a><a class="page-link "href="/categories/sharepoint-2013/page/4/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

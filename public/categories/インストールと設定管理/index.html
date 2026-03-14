@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>インストールと設定、管理</title>
+
+
+<link rel="canonical" href="http://localhost:1313/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="インストールと設定、管理">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="インストールと設定、管理">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/10585-pnp-provisioning-spo/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint">SharePoint</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">PnP Provisioning でクラシックサイトのマスターページとページレイアウトを SPO に展開する方法</h2>
+                        
+                        <p class="article-summary"><h1 id="はじめに">はじめに
+</h1><p><a class="link" href="https://docs.microsoft.com/ja-jp/sharepoint/dev/solution-guidance/introducing-the-pnp-provisioning-engine?WT.mc_id=M365-MVP-4012897"  target="_blank" rel="noopener"
+    >PnP Provisioning</a> を使って、クラシックサイトのマスターページとページレイアウトを SharePoint Online サイトに展開する方法を調査しました。
+想像していたのとは違う形になってしまったので、展開方法を残しておきたいと思います。
+なお、PnP Provisioning は日々進化しているオープンソースのライブラリのため、ここでの検証結果が未来永劫有効なものではないということをご了承ください。
+2022年5月6日時点のコードで検証しています。</p>
+<h1 id="普通にテンプレート化してもダメ">普通にテンプレート化してもダメ
+</h1><p><a class="link" href="https://pnp.github.io/powershell/cmdlets/Get-PnPProvisioningTemplate.html"  target="_blank" rel="noopener"
+    >Get-PnPSiteTemplate</a> コマンドレットで PnP サイトテンプレートを作成すればマスターページもページレイアウトもテンプレートに含まれるだろうと思っていたのですが、それだけではうまく行きませんでした。
+試したことは、Get-PnPSiteTemplate コマンドレットで .pnp 形式のファイルを出力させ、これを <a class="link" href="https://pnp.github.io/powershell/cmdlets/Invoke-PnPSiteTemplate.html"  target="_blank" rel="noopener"
+    >Invoke-PnPSiteTemplate</a> コマンドレットで展開する方法です。
+.pnp 形式のテンプレートは無事作成することができ、.pnp ファイルの拡張子を .zip に変更し解凍することでマスターページファイル(.master)が含まれていることも確認したのですが、この方法では .pnp ファイルにページレイアウトが含まれませんでした。
+試しに Invoke-PnPSiteTemplate コマンドレットを実行するも、マスターページファイルは展開されるもののマスターページとしては認識されず・・・
+そしてもちろんページレイアウトも展開されませんでした。
+色々オプションを付けてもうまく行かなかったため、この方法は諦めました。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2022年5月8日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/10024-pnp-powershell/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2016">SharePoint 2016</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">モダンサイトのテンプレート展開などを実現する「PnP PowerShell」</h2>
+                        
+                        <p class="article-summary"><h1 id="pnp-powershell-とは">PnP PowerShell とは
+</h1><p>モダンサイトやリストの自動展開や各種設定を SharePoint 管理コンソールよりも簡単に実施できるようにするためのコマンドレットを多数備えた、PowerShell コマンドライブラリです。
+SharePoint Online だけでなく SharePoint オンプレミスに対しても使用することができます。
+詳細は <a class="link" href="https://docs.microsoft.com/ja-jp/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps"  target="_blank" rel="noopener"
+    >docs</a> を参照してください。</p>
+<h1 id="どんなことができるの">どんなことができるの？
+</h1><p>PnP PowerShell を使うことで、例えば次のようなことができるようになります。</p>
+<h2 id="モダンサイトのテンプレート展開">モダンサイトのテンプレート展開
+</h2><p>モダンサイトはテンプレート化することができませんが、PnP PowerShell のプロビジョニングテンプレートを使用することで、予め定めたリストやライブラリを追加したり、ドキュメントを事前にアップロードしてサイトを展開するというようなことができるようになります。
+旧来のサイトテンプレートと全く同じではありませんが、サイトテンプレートよりも細かいことまで含めてできるようになります。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年12月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/10008-spo-sharepoint-modernization-scanner/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint">SharePoint</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SPO のモダン対応を促進する「SharePoint Modernization Scanner」</h2>
+                        
+                        <p class="article-summary"><h1 id="sharepoint-modernization-scanner-とは">SharePoint Modernization Scanner とは
+</h1><p>SharePoint Modernization Scanner は、SharePoint Online サイトのモダン化を進めるために、SharePoint Online サイトをスキャンしてモダンに切り替えられていないサイトを抽出するツールです。
+PnP コミュニティにより維持管理されており、<a class="link" href="https://github.com/SharePoint/sp-dev-modernization"  target="_blank" rel="noopener"
+    >GitHub</a> からダウンロードして無償で使用することができます。
+また、詳細な説明資料はマイクロソフトの <a class="link" href="https://docs.microsoft.com/ja-jp/sharepoint/dev/transform/modernize-scanner?WT.mc_id=M365-MVP-4012897"  target="_blank" rel="noopener"
+    >Docs</a> に掲載されており、Docs に最新モジュールへのリンクも掲載されています。
+SharePoint Modernization Scanner は随時アップデートがされており、ドキュメントもそれに合わせて更新されているので、使用する際には常に Docs を確認して最新の情報を参照するようにしてください。
+このブログでも、ツールの紹介だけを行い詳細な使い方については割愛しています。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2019年12月15日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9829-onedrive/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">OneDrive 同期クライアントによる同期を制限する</h2>
+                        
+                        <p class="article-summary"><p>OneDrive 同期クライアントを使っている場合、OneDrive for Business 上のデータの情報漏洩対策として、会社 PC では同期を許可するけど、自宅 PC は同期を許可させたくないという話はよくあることかと思います。
+SharePoint 管理コンソールから「Set-SPOTenantSyncClientRestriction」を実行すると、上記のような制限をかけることができるようになります。
+また、「Get-SPOTenantSyncClientRestriction」で現在の状態を確認することができます。</p>
+<pre tabindex="0"><code># テナントに接続 (URL は SharePoint 管理センターの URL です
+PS&gt; Connect-SPOService https://[テナント名]-admin.sharepoint.com
+# 現在のOneDrive同期設定を確認
+PS&gt; Get-SPOTenantSyncClientRestriction
+TenantRestrictionEnabled : False
+AllowedDomainList : {}
+BlockMacSync : False
+ExcludedFileExtensions : {}
+OptOutOfGrooveBlock : False
+OptOutOfGrooveSoftBlock : False
+DisableReportProblemDialog : False
+# 同期を許可するドメインのドメインGUIDを取得する
+PS&gt; $domains = (Get-ADForest).Domains; foreach($d in $domains) {Get-ADDomain -Identity $d | Select ObjectGuid}
+ObjectGuid
+----------
+99999999-9999-9999-9999-999999999999
+# OneDrive 同期制限をかけ、上記ドメインのみ同期を許可する
+PS&gt; Set-SPOTenantSyncClientRestriction -Enable -DomainGuids &#34;99999999-9999-9999-9999-999999999999&#34;
+TenantRestrictionEnabled : True
+AllowedDomainList : {99999999-9999-9999-9999-999999999999}
+BlockMacSync : False
+ExcludedFileExtensions : {}
+OptOutOfGrooveBlock : False
+OptOutOfGrooveSoftBlock : False
+DisableReportProblemDialog : False
+</code></pre><p>制限がかかった状態の OneDrive for Business に OneDrive 同期クライアントで同期をしようとすると、使用中の PC が同期が許可されたドメインに属する PC でない場合に、以下のエラーが表示されます。
+<img alt="Set-SPOTenantSyncClientRestriction" class="gallery-image" data-flex-basis="375px" data-flex-grow="156" height="226" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9829-onedrive/Set-SPOTenantSyncClientRestriction.png" width="354">
+なお、エラーが出ていても同期ができないだけで、過去に同期されたファイルはローカルに残り続けます。
+制限を解除する場合は「Remove-SPOTenantSyncClientRestriction」を実行します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2017年3月26日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9645-office-365/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Office 365 に独自のドメインを追加する方法</h2>
+                        
+                        <p class="article-summary"><p>Office 365 のテナントに独自のドメインを追加するという作業を行なったので、その際の流れを残しておきたいと思います。
+ちなみにここで紹介する流れは 2015 年 2 月 1 日時点の Office 365 が対象です。
+今後は流れが変わる可能性がありますのでご了承ください。
+また、利用しているドメイン管理業者は <a class="link" href="http://value-domain.com/"  target="_blank" rel="noopener"
+    >Value Domain</a> になります。
+<strong>1. Office 365 管理センターよりドメイン追加を開始</strong>
+Office 365 管理センターにアクセスし、メニューから[ドメイン]をクリック。
+その後、右ペインの[ドメインの追加]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-1.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-1" class="gallery-image" data-flex-basis="358px" data-flex-grow="149" height="201" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-1-300x201.png" width="300"></a>
+<strong>2. ドメインと DNS の説明</strong>
+ドメイン名の登録をするわけですから、DNS のことをきちんと理解しておきなさいということですね。
+[始めましょう]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-2.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-2" class="gallery-image" data-flex-basis="360px" data-flex-grow="150" height="200" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-2-300x200.png" width="300"></a>
+<strong>3. ドメインの指定</strong>
+追加するドメインをテキストボックスに入力し[次へ]をクリックします。
+ちなみに私は以前から使っている orivers.jp を指定しました。
+ドメインを持っていない場合は事前にドメインをゲットしてください。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-3.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-3" class="gallery-image" data-flex-basis="358px" data-flex-grow="149" height="201" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-3-300x201.png" width="300"></a>
+<strong>4. DNS に TXT レコードを追加</strong>
+前の手順で指定したドメインを所有していることを確認するため、DNS に TXT レコードを追加します。
+画面に TXT 名、TXT 値、TTL が表示されるので、これをご自身が利用している DNS に登録します。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-4.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-4" class="gallery-image" data-flex-basis="311px" data-flex-grow="129" height="231" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-4-300x231.png" width="300"></a>
+Value Domain の場合は、DNS の管理画面にて以下のように記述します。
+入力ミスを防ぐため画面からコピペします。
+txt @ MS=ms36472078
+DNS の登録が済んだら、Office 365 の画面に戻り、[レコードを追加しました]をクリックします。
+DNS の登録が無事済んでいたら、次のステップに進むことができます。
+[次へ]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-7.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-7" class="gallery-image" data-flex-basis="406px" data-flex-grow="169" height="177" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-7-300x177.png" width="300"></a>
+DNS の登録が失敗している場合や、登録結果がまだ反映されていない場合は、以下のようなエラーが出ます。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-6.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-6" class="gallery-image" data-flex-basis="757px" data-flex-grow="315" height="95" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-6-300x95.png" width="300"></a>
+ちなみに私の場合は、DNS の登録から 30 分くらいして、ようやく次のステップに行けるようになりました。
+<strong>5. 既存ユーザーのドメイン更新</strong>
+現在のドメイン「xxx.onmicrosoft.com」に登録されているユーザーを新しいドメインに移行します。
+移行したいユーザーをチェックして、[選択したユーザーの更新]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-8.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-8" class="gallery-image" data-flex-basis="313px" data-flex-grow="130" height="230" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-8-300x230.png" width="300"></a>
+無事更新が完了しました。
+[次へ]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-9.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-9" class="gallery-image" data-flex-basis="431px" data-flex-grow="179" height="167" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-9-300x167.png" width="300"></a>
+ここで一度サインアウトします。
+[サインアウト]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-10.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-10" class="gallery-image" data-flex-basis="791px" data-flex-grow="329" height="91" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-10-300x91.png" width="300"></a>
+<strong>6. 新規ユーザーを追加する</strong>
+新しいドメインに追加するユーザーをここで登録します。
+登録が完了したら[これらのユーザーの追加]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-11.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-11" class="gallery-image" data-flex-basis="406px" data-flex-grow="169" height="177" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-11-300x177.png" width="300"></a>
+無事登録が完了しました。
+[次へ]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-12.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-12" class="gallery-image" data-flex-basis="428px" data-flex-grow="178" height="168" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-12-300x168.png" width="300"></a>
+<strong>7.  DNS レコードの更新を開始</strong>
+いよいよ Office 365 に新しいドメインを追加するための DNS の設定をします。
+[次へ]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-13.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-13" class="gallery-image" data-flex-basis="421px" data-flex-grow="175" height="171" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-13-300x171.png" width="300"></a>
+<strong>8. サブドメイン「www」の使用状況確認</strong>
+SharePoint サイト用のサブドメインを作成するためかと思いますが、「www」サブドメインの使用状況の確認が入ります。
+今回は「www」サブドメインは何もせずに残しておきたいので[はい、www.orivers.jp に Web サイトがあります]を選択します。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-14.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-14" class="gallery-image" data-flex-basis="458px" data-flex-grow="191" height="157" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-14-300x157.png" width="300"></a>
+すると、この Web サイトを使い続けるかと聞かれるので、[はい、現在の Web ホストでこの Web サイトを使い続けます]を選択し、[次へ]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-15.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-15" class="gallery-image" data-flex-basis="409px" data-flex-grow="170" height="176" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-15-300x176.png" width="300"></a>
+<strong>9. 使用するサービスの選択</strong>
+新しいドメインで使用するサービスを選択します。
+今回はメールだけ使いたいので、[電子メール、予定表、および連絡先用の Outlook]にチェックをして、[次へ]をクリックします。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-16.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-16" class="gallery-image" data-flex-basis="458px" data-flex-grow="191" height="157" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-16-300x157.png" width="300"></a>
+<strong>10. DNS レコードの追加</strong>
+MX レコード、CNAME レコード、TXT レコードが表示されます。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-17.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-17" class="gallery-image" data-flex-basis="402px" data-flex-grow="167" height="179" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-17-300x179.png" width="300"></a>
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-18.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-18" class="gallery-image" data-flex-basis="800px" data-flex-grow="333" height="90" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-18-300x90.png" width="300"></a>
+これらのレコードを先ほどと同様 DNS に登録します。
+入力ミスを防ぐため画面からコピペします。
+なお、前の手順で追加した TXT レコードはこのタイミングで削除します。
+Value Domain の場合は、DNS 管理画面で以下のように記述します。
+mx orivers-jp.mail.protection.outlook.com. 0
+cname autodiscover autodiscover.outlook.com.
+cname msoid clientconfig.microsoftonline-p.net.
+txt @ v=spf1 include:spf.protection.outlook.com -all
+※cnameの最後は必ず「.」で。
+DNS にレコードを追加した後、Office 365 の画面に戻り、[レコードを追加しました]をクリックしますが、 先ほどと同様、DNS 更新のタイムラグがあるので、先ほどと同じくらいの時間待ちましょう。
+DNS の更新がまだ済んでいない場合は、以下のようなエラーが表示されます。
+「何を修正しますか？」って、ちょっと日本語変ですねｗ
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-20.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-20" class="gallery-image" data-flex-basis="461px" data-flex-grow="192" height="156" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-20-300x156.png" width="300"></a>
+この不思議な日本語をクリックすると、以下のようにエラーの対応方法が表示されます。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-21.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-21" class="gallery-image" data-flex-basis="791px" data-flex-grow="329" height="91" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-21-300x91.png" width="300"></a>
+<strong>11. 設定完了！</strong>
+前の画面でしばらく待ってから[レコードを追加しました]をクリックし、以下の画面が表示されれば設定完了です。
+<a class="link" href="http://sharepoint.orivers.jp/wp-content/uploads/2015/02/o365domain-22.png"  target="_blank" rel="noopener"
+    ><img alt="o365domain-22" class="gallery-image" data-flex-basis="423px" data-flex-grow="176" height="170" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/9645-office-365/o365domain-22-300x170.png" width="300"></a>
+設定そのものは難しくないのですが、DNS の登録方法がドメイン管理業者により異なるので、そこがはまりどころですね。
+あとタイトルが大きすぎｗ</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2015年2月2日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5671-sharepoint-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2013 の検索結果チューニングに関するまとめ</h2>
+                        
+                        <p class="article-summary"><p>2014年9月6日に Japan SharePoint Group でお話しさせていただいた時の資料をスライドシェアにアップしております。
+<a class="link" href="http://www.slideshare.net/HiroakiOikawa/sharepoint-2013-38769081"  title="http://www.slideshare.net/HiroakiOikawa/sharepoint-2013-38769081"
+     target="_blank" rel="noopener"
+    >http://www.slideshare.net/HiroakiOikawa/sharepoint-2013-38769081</a>
+SharePoint Server 2013 および、SharePoint Online で検索結果の並び順がいまいちだなーと思っている方、スライドとスライドに記載のリンク先のページを見て、チューニングを行ってみてください。
+勉強会ではデモがうまくいかない部分があったり、時間全然足りなくて急いじゃったりしたので、ブログでフォローアップしていければと思っております。。。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2014年9月7日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5641-sharepoint-sysprep/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2007">SharePoint 2007</a>
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint が導入済みのサーバーは、sysprep 非対応</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>複数の開発者に SharePoint の開発環境を提供するために、SharePoint や Visual Studio を導入した環境をマスターイメージとして作成し、この環境を複製して各開発者に提供するということは、チーム開発を行う上では良くある話かと思います。
+また、開発環境に限らず、SharePoint の動作検証環境を丸っと複製したいというニーズもあると思います。
+このようなニーズを満たすための方法としてよくあるのは、仮想環境を丸ごとコピーして複製するとか、マスターとなるイメージを作成してそこから環境を構築するとかという手段が思いつきます。
+ただ、そのまま仮想環境を丸ごとコピーすると、コンピュータ名や SID が被ってしまったりするため、複製された各環境がネットワーク的に分断された状態を作らなければ、何かと問題が起きてしまいます。
+そのような状況になるのを防ぐため、環境を丸ごとコピーするような場合には、sysprep を使えばいいと考えるかと思います。
+sysprep を使うことでコピーされた環境を初めて立ち上げる際にコンピュータ名などを設定しなおすことができるようになりますので。
+※sysprep についての情報は<a class="link" href="http://www.atmarkit.co.jp/ait/articles/1307/12/news062.html"  target="_blank" rel="noopener"
+    >こちら</a>
+この手法を SharePoint が入った環境で行うとどうなるか・・・・ということを調べてみました。
+結果は目に見えてはいたのですが、一応。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2014年7月13日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5601-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">パスフレーズを変更する</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>パスフレーズとは、ファームを新規構築する際に構成ウィザードの流れの中で設定する値で、ここで設定した値を、以降ファームにサーバーを追加する際に入力することになります。
+一気に全サーバーをファームに追加する場合は、パスフレーズを忘れることなどないと思うので問題ないのですが、しばらく間をあけてからサーバーを追加する時などは、場合によってはパスフレーズを忘れてしまった、ということもあるかと思います。
+そんな時に備え、パスフレーズを初期化する方法をご紹介します。</p>
+<h3 id="パスフレーズ変更スクリプト">パスフレーズ変更スクリプト
+</h3><p>パスフレーズの変更は、以下の PowerShell で行います。
+(青字が入力する部分になります。)</p>
+<pre tabindex="0"><code>1: $pass = ConvertTo-SecureString -String &#34;xxxx&#34; -asPlainText -Force
+</code></pre><pre tabindex="0"><code>2: Set-SPPassPhrase -PassPhrase $pass -Confirm
+</code></pre><pre tabindex="0"><code>3:  
+</code></pre><pre tabindex="0"><code>4: コマンド パイプライン位置 1 のコマンドレット Set-SPPassPhrase
+</code></pre><pre tabindex="0"><code>5: 次のパラメーターに値を指定してください:
+</code></pre><pre tabindex="0"><code>6: ConfirmPassPhrase: \*\*\*\*
+</code></pre><pre tabindex="0"><code>7:  
+</code></pre><pre tabindex="0"><code>8: 確認
+</code></pre><pre tabindex="0"><code>9: この操作を実行しますか?
+</code></pre><pre tabindex="0"><code>10: 対象 &#34;SPPassPhrase&#34; に対して操作 &#34;Set-SPPassPhrase&#34; を実行しています。
+</code></pre><pre tabindex="0"><code>11: [Y] はい(Y) [A] すべて続行(A) [N] いいえ(N) [L] すべて無視(L) [S] 中断(S)
+</code></pre><pre tabindex="0"><code>12: [?] ヘルプ(既定値は &#34;Y&#34;): y
+</code></pre><p>1 行目の “xxxx” には新たに設定したいパスフレーズを指定します。
+パスフレーズのセキュリティ要件(文字の長さ、種類)を満たした文字を指定する必要があります。
+6 行目の “****” には、1行目で指定したパスフレーズを確認のためもう一度入力します。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2014年1月30日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5561-post/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2010">SharePoint 2010</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">ファームで使用しているデータベースを一覧表示する</h2>
+                        
+                        <p class="article-summary"><h3 id="はじめに">はじめに
+</h3><p>開発環境や検証環境として、SharePointファームをたくさん立てていると、いつの間にかデータベースがたくさんできてしまい、いざデータベースを整理しようと思った時にどのデータベースを消してよいのかが判別できなくなることがあると思います（私だけ！？）
+SQL Server Management Studioのオブジェクトエクスプローラを見ると、データベースが多すぎてどうしたらよいものかと・・・
+<img alt="image_3_42B37651" class="gallery-image" data-flex-basis="142px" data-flex-grow="59" height="240" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/5561-post/image_3_42B37651.png" width="142">
+※画像はあえて小さくして載せてます。
+そんな時にファームで利用しているデータベースの一覧が見れるととても便利なわけですが、PowerShell で手軽に実現できてしまいます。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年11月9日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/5551-sharepoint-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86">インストールと設定、管理</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2013の各サービスアプリケーションの推奨実行場所</h2>
+                        
+                        <p class="article-summary"><p>SharePoint 2013の各サービスアプリケーションの推奨実行場所
+サービスアプリケーション毎に、お勧めの実行サーバーがまとめられています。
+<a class="link" href="http://t.co/VA3n0cYaLH"  target="_blank" rel="noopener"
+    >http://t.co/VA3n0cYaLH</a></p>
+<p>twetter より</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2013年11月2日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link disabled"aria-label="Previous page"aria-disabled="true">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link current" aria-label="Page 1"aria-current="page">
+        1
+    </a><a class="page-link "href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/page/2/"
+                aria-label="Page 2">
+                2
+            </a><a class="page-link "href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/page/3/"
+                aria-label="Page 3">
+                3
+            </a><a class="page-link "href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/page/4/"
+                aria-label="Page 4">
+                4
+            </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/page/5/"aria-label="Page 5">
+        5
+    </a><a class="page-link "href="/categories/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%81%A8%E8%A8%AD%E5%AE%9A%E7%AE%A1%E7%90%86/page/2/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

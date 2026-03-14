@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SharePoint Framework で Web パーツプロジェクトを作成する際に指定するテンプレート「Minimal」「No framework」の違いを調査しました。">
+<title>Web パーツプロジェクト生成時の「Minimal」と「No framework」の違い</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/2022/10601-web-minimal-no-framework/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="Web パーツプロジェクト生成時の「Minimal」と「No framework」の違い">
+<meta property='og:description' content="SharePoint Framework で Web パーツプロジェクトを作成する際に指定するテンプレート「Minimal」「No framework」の違いを調査しました。">
+<meta property='og:url' content='http://localhost:1313/posts/2022/10601-web-minimal-no-framework/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='#Webparts' /><meta property='article:tag' content='M365Dev' /><meta property='article:tag' content='Microsoft365dev' /><meta property='article:tag' content='SharePoint' /><meta property='article:tag' content='SPFx' /><meta property='article:published_time' content='2022-05-21T16:12:29&#43;09:00'/><meta property='article:modified_time' content='2022-05-21T16:12:29&#43;09:00'/>
+<meta name="twitter:title" content="Web パーツプロジェクト生成時の「Minimal」と「No framework」の違い">
+<meta name="twitter:description" content="SharePoint Framework で Web パーツプロジェクトを作成する際に指定するテンプレート「Minimal」「No framework」の違いを調査しました。">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "\"Web パーツプロジェクト生成時の「Minimal」と「No framework」の違い\"",
+  "description": "\"SharePoint Framework で Web パーツプロジェクトを作成する際に指定するテンプレート「Minimal」「No framework」の違いを調査しました。\"",
+  "url": "\"http://localhost:1313/posts/2022/10601-web-minimal-no-framework/\"",
+  "datePublished": "\"2022-05-21T16:12:29+09:00\"",
+  "dateModified": "\"2022-05-21T16:12:29+09:00\"",
+  
+  "author": {
+    "@type": "Person",
+    "name": "\"Your Name\""
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "\"SharePoint Developer\"",
+    "url": "\"http://localhost:1313/\""
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "\"http://localhost:1313/posts/2022/10601-web-minimal-no-framework/\""
+  }
+  ,
+  "keywords": "[\"#Webparts\",\"M365Dev\",\"Microsoft365dev\",\"SharePoint\",\"SPFx\"]"
+  
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SharePoint / Microsoft 365 / Power Platform の開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/your-github-id'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/your-twitter-id'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>ブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+            
+        
+            
+                <div class="widget--recent-posts widget">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+    </div>
+    <h2 class="widget-title section-title">新着記事</h2>
+    <div class="widget-body">
+        <ol class="recent-posts-list"><li>
+                <a href="/posts/m365dev-nodeversion/">SPFx、Office Web アドイン開発でありがちな Node.js のバージョンが環境ごとに異なる場合の開発環境の工夫（チーム開発前提）</a>
+                <span class="recent-posts-date">2026年3月8日</span>
+            </li><li>
+                <a href="/posts/2025/10761-outlook/">新しいOutlookのイベントチャームのアイコン名</a>
+                <span class="recent-posts-date">2025年6月21日</span>
+            </li><li>
+                <a href="/posts/2025/10754-azure-bicep/">Azure環境を自動的に構築するBicepが超便利！</a>
+                <span class="recent-posts-date">2025年4月12日</span>
+            </li><li>
+                <a href="/posts/2025/10745-graph-api/">Graph API で定期予定の一連の予定を取得する</a>
+                <span class="recent-posts-date">2025年2月9日</span>
+            </li><li>
+                <a href="/posts/2025/10725-graph-api-transitivemembers/">Graph API の transitiveMembers の制限を調べてみた</a>
+                <span class="recent-posts-date">2025年2月2日</span>
+            </li></ol>
+    </div>
+</div>
+            
+        
+            
+                <div class="widget--adsense-sidebar widget">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/sharepoint/" style="background-color: hsl(86, 60%, 84%); color: hsl(86, 60%, 15%);">
+                SharePoint
+            </a>
+        
+            
+            
+            
+            <a href="/categories/spfx/" style="background-color: hsl(104, 60%, 84%); color: hsl(104, 60%, 15%);">
+                SPFx
+            </a>
+        
+            
+            
+            
+            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/" style="background-color: hsl(206, 60%, 84%); color: hsl(206, 60%, 15%);">
+                開発とプログラミング
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/2022/10601-web-minimal-no-framework/">Web パーツプロジェクト生成時の「Minimal」と「No framework」の違い</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            SharePoint Framework で Web パーツプロジェクトを作成する際に指定するテンプレート「Minimal」「No framework」の違いを調査しました。
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2022-05-21T16:12:29&#43;09:00'>2022年5月21日</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        読了時間: 1分
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+
+    <section class="article-content">
+    
+    
+    <h1 id="はじめに">はじめに
+</h1><p>SharePoint Framework で Web パーツプロジェクトを作成する際に指定するテンプレートの選択肢には SharePoint Framework V1.14 時点で「Minimal」「No framework」「React」の 3 種類があります。
+<a class="link" href="/wp-content/uploads/2022/05/webpartminimal1.png" ><img class="gallery-image" data-flex-basis="426px" data-flex-grow="177" height="350" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2022/10601-web-minimal-no-framework/webpartminimal1.png" width="622"></a>
+React はその名の通り React のライブラリを組み込んだプロジェクトが出来上がるのですが、Minimal と No framework の違いが分からないので調べてみました。</p>
+<h1 id="minimal-と-no-framework-の比較">Minimal と No framework の比較
+</h1><p>No framework は SharePoint Framework ができた当初から存在するオプションでしたが、Minimal は最近追加されたものになります。
+この二つの違いを調べるために、プロジェクトの生成時間、生成されたファイルの合計サイズ、ファイル数を調べてみました。
+結果がこちら。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>テンプレート</td>
+          <td>生成時間</td>
+          <td>ファイルサイズ</td>
+          <td>ファイル数</td>
+      </tr>
+      <tr>
+          <td>Minimal</td>
+          <td>192 秒</td>
+          <td>598 MB</td>
+          <td>60,801</td>
+      </tr>
+      <tr>
+          <td>No framework</td>
+          <td>184 秒</td>
+          <td>598 MB</td>
+          <td>60,803</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>あれ・・・全然変わらないですね。
+生成時間は逆転してますが、まぁ、誤差の範囲ですね。
+これでは何が変わったのか分からないので生成されたソースも見てみました。
+左が Minimal、右がNo framework です。
+<a class="link" href="/wp-content/uploads/2022/05/webpartminimal2.png" ><img class="gallery-image" data-flex-basis="189px" data-flex-grow="79" height="856" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2022/10601-web-minimal-no-framework/webpartminimal2.png" width="677"></a>
+違いは、黄色枠箇所の assets フォルダの有無だけでした。
+assets フォルダ内の png ファイルは、No framework で作成された際にデフォルトで作られるサンプルプログラムの中で読み込まれている画像ファイルです。
+Minimal にこれのファイルが無いのは、Mnimal だとサンプルプログラムが生成されないためのようです。
+ 
+続いて主要なファイルの中身を比較してみました。
+結果、ファイルの中で違っていたのは以下のファイルでした。</p>
+<ul>
+<li>src\webparts{プロジェクト名}\loc\en-us.js</li>
+<li>src\webparts{プロジェクト名}\loc\mystrings.d.ts</li>
+<li>src\webparts{プロジェクト名}{プロジェクト名}WebPart.module.scss</li>
+<li>src\webparts{プロジェクト名}{プロジェクト名}WebPart.ts</li>
+</ul>
+<p>違いとしては、WebPart.ts 内のコードの違いで、Minimal の場合は本当に最小限のコードしか生成されていませんでしたが、No framework はサンプルプログラムとして以下の実装がされていました。</p>
+<ul>
+<li>サンプル HTML の出力</li>
+<li>リソースファイルの読み込み</li>
+<li>SharePoint、Teams のどちらで動いているかの判定</li>
+<li>テーマに応じたダークモードへの切り替え</li>
+<li>プロパティパネル対応</li>
+</ul>
+<p> 
+ということで、現時点では全然違いはありませんでした。
+どちらでも好きな方を使いましょう。</p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%23webparts/">#Webparts</a>
+        
+            <a href="/tags/m365dev/">M365Dev</a>
+        
+            <a href="/tags/microsoft365dev/">Microsoft365dev</a>
+        
+            <a href="/tags/sharepoint/">SharePoint</a>
+        
+            <a href="/tags/spfx/">SPFx</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside>
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="subsection-list">
+        <div class="article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/2022/10550-sharepoint-framework-viva-connections/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SharePoint Framework による Viva Connections アプリの開発</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/posts/2022/10545-sharepoint-framework-v1-14/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SharePoint Framework v1.14 の変更点</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/posts/2021/10530-sharepoint-framework-web-1/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SharePoint Framework による Web パーツ開発 #1　プロジェクトの作成</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/posts/2020/10402-sharepoint-framework/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SharePoint Framework 拡張機能開発 ハンズオン</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/posts/2021/10539-sharepoint-framework-v1-13/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SharePoint Framework v1.13 の変更点</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 SharePoint Developer
+    </section>
+    
+    <section class="powerby">
+        
+            SharePoint Developer Blog <br/>
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.b6cba74c66971621e3d63b383da290b07bdfa1de7fc236c60e3aede2e3133a80.js" defer></script>
+
+
+    </body>
+</html>

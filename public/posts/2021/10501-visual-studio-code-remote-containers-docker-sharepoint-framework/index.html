@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SharePoint Framework 開発環境に Docker を利用することによる利点は数多くありますが、プロジェクト作成後に Docker を使うための事前作業を行う必要がありました。この事前作業が SharePoint Frame…">
+<title>Visual Studio Code Remote - Containers と Docker による SharePoint Framework 開発環境構築</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="Visual Studio Code Remote - Containers と Docker による SharePoint Framework 開発環境構築">
+<meta property='og:description' content="SharePoint Framework 開発環境に Docker を利用することによる利点は数多くありますが、プロジェクト作成後に Docker を使うための事前作業を行う必要がありました。この事前作業が SharePoint Frame…">
+<meta property='og:url' content='http://localhost:1313/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Docker' /><meta property='article:tag' content='M365Dev' /><meta property='article:tag' content='SharePoint' /><meta property='article:tag' content='SPFx' /><meta property='article:tag' content='VSCode' /><meta property='article:tag' content='開発環境' /><meta property='article:published_time' content='2021-08-17T11:23:34&#43;09:00'/><meta property='article:modified_time' content='2021-08-17T11:23:34&#43;09:00'/>
+<meta name="twitter:title" content="Visual Studio Code Remote - Containers と Docker による SharePoint Framework 開発環境構築">
+<meta name="twitter:description" content="SharePoint Framework 開発環境に Docker を利用することによる利点は数多くありますが、プロジェクト作成後に Docker を使うための事前作業を行う必要がありました。この事前作業が SharePoint Frame…">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "\"Visual Studio Code Remote - Containers と Docker による SharePoint Framework 開発環境構築\"",
+  "description": "\"SharePoint Framework 開発環境に Docker を利用することによる利点は数多くありますが、プロジェクト作成後に Docker を使うための事前作業を行う必要がありました。この事前作業が SharePoint Frame…\"",
+  "url": "\"http://localhost:1313/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/\"",
+  "datePublished": "\"2021-08-17T11:23:34+09:00\"",
+  "dateModified": "\"2021-08-17T11:23:34+09:00\"",
+  
+  "author": {
+    "@type": "Person",
+    "name": "\"Your Name\""
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "\"SharePoint Developer\"",
+    "url": "\"http://localhost:1313/\""
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "\"http://localhost:1313/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/\""
+  }
+  ,
+  "keywords": "[\"Docker\",\"M365Dev\",\"SharePoint\",\"SPFx\",\"VSCode\",\"開発環境\"]"
+  
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SharePoint / Microsoft 365 / Power Platform の開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/your-github-id'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/your-twitter-id'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>ブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目次</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li><a href="#remote---containers-拡張機能のインストール">Remote - Containers 拡張機能のインストール</a></li>
+    <li><a href="#dockerfile-の準備">Dockerfile の準備</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#ソースファイル格納先フォルダの作成">ソースファイル格納先フォルダの作成</a></li>
+    <li><a href="#visual-studio-code-でのコンテナの準備">Visual Studio Code でのコンテナの準備</a></li>
+    <li><a href="#dockerfile-ファイルの移動任意">Dockerfile ファイルの移動（任意）</a></li>
+    <li><a href="#プロジェクトをコンテナで開く">プロジェクトをコンテナで開く</a></li>
+    <li><a href="#sharepoint-framework-プロジェクトの作成">SharePoint Framework プロジェクトの作成</a></li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+            
+                <div class="widget--recent-posts widget">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+    </div>
+    <h2 class="widget-title section-title">新着記事</h2>
+    <div class="widget-body">
+        <ol class="recent-posts-list"><li>
+                <a href="/posts/m365dev-nodeversion/">SPFx、Office Web アドイン開発でありがちな Node.js のバージョンが環境ごとに異なる場合の開発環境の工夫（チーム開発前提）</a>
+                <span class="recent-posts-date">2026年3月8日</span>
+            </li><li>
+                <a href="/posts/2025/10761-outlook/">新しいOutlookのイベントチャームのアイコン名</a>
+                <span class="recent-posts-date">2025年6月21日</span>
+            </li><li>
+                <a href="/posts/2025/10754-azure-bicep/">Azure環境を自動的に構築するBicepが超便利！</a>
+                <span class="recent-posts-date">2025年4月12日</span>
+            </li><li>
+                <a href="/posts/2025/10745-graph-api/">Graph API で定期予定の一連の予定を取得する</a>
+                <span class="recent-posts-date">2025年2月9日</span>
+            </li><li>
+                <a href="/posts/2025/10725-graph-api-transitivemembers/">Graph API の transitiveMembers の制限を調べてみた</a>
+                <span class="recent-posts-date">2025年2月2日</span>
+            </li></ol>
+    </div>
+</div>
+            
+        
+            
+                <div class="widget--adsense-sidebar widget">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            
+            
+            
+            <a href="/categories/office-365/" style="background-color: hsl(21, 60%, 84%); color: hsl(21, 60%, 15%);">
+                Office 365
+            </a>
+        
+            
+            
+            
+            <a href="/categories/spfx/" style="background-color: hsl(104, 60%, 84%); color: hsl(104, 60%, 15%);">
+                SPFx
+            </a>
+        
+            
+            
+            
+            <a href="/categories/%E3%82%B3%E3%83%BC%E3%83%89%E3%82%B9%E3%83%8B%E3%83%9A%E3%83%83%E3%83%88/" style="background-color: hsl(52, 60%, 84%); color: hsl(52, 60%, 15%);">
+                コードスニペット
+            </a>
+        
+            
+            
+            
+            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0/" style="background-color: hsl(206, 60%, 84%); color: hsl(206, 60%, 15%);">
+                開発とプログラミング
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/">Visual Studio Code Remote - Containers と Docker による SharePoint Framework 開発環境構築</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            SharePoint Framework 開発環境に Docker を利用することによる利点は数多くありますが、プロジェクト作成後に Docker を使うための事前作業を行う必要がありました。この事前作業が SharePoint Frame…
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2021-08-17T11:23:34&#43;09:00'>2021年8月17日</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        読了時間: 4分
+                    </time>
+                
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目次</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li><a href="#remote---containers-拡張機能のインストール">Remote - Containers 拡張機能のインストール</a></li>
+    <li><a href="#dockerfile-の準備">Dockerfile の準備</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#ソースファイル格納先フォルダの作成">ソースファイル格納先フォルダの作成</a></li>
+    <li><a href="#visual-studio-code-でのコンテナの準備">Visual Studio Code でのコンテナの準備</a></li>
+    <li><a href="#dockerfile-ファイルの移動任意">Dockerfile ファイルの移動（任意）</a></li>
+    <li><a href="#プロジェクトをコンテナで開く">プロジェクトをコンテナで開く</a></li>
+    <li><a href="#sharepoint-framework-プロジェクトの作成">SharePoint Framework プロジェクトの作成</a></li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <h1 id="はじめに">はじめに
+</h1><p>SharePoint Framework 開発環境に Docker を利用することによる利点は数多くありますが、プロジェクト作成後に Docker を使うための事前作業を行う必要がありました。
+この事前作業が SharePoint Framework のバージョンによって異なったりするため、かなり骨の折れる作業でした。
+ここまで手間をかけてまで Docker を使う必要があるのか・・・と悩んだりもしましたが、ここにきて良い解決策が見つかりました！
+それが今回紹介する Visual Studio Code の拡張機能である「Remote- Containers」です。
+この拡張機能を使うことで Docker を使うための煩わしい事前作業を無くすことができるため、Docker を使った SharePoint Framework 開発環境がこれまでよりも簡単に構築できるようになります。
+より手軽に Docker の恩恵が受けられるようになるので、複数人開発や複数環境向けの開発を行っている場合は、ぜひこの拡張機能を利用してみてください。
+この記事では、Remote - Containers と Docker を使った SharePoint Framework 開発環境構築の手順を説明します。</p>
+<h1 id="前提条件">前提条件
+</h1><ul>
+<li>OS
+<ul>
+<li>Windows:  Windows 10</li>
+<li>Mac:  macOS 10.9 以降</li>
+<li>Linux:  Ubuntu、Debian、Red Hat、Fedora、SUSE</li>
+</ul>
+</li>
+<li><a class="link" href="https://code.visualstudio.com/"  target="_blank" rel="noopener"
+    >Visual Studio Code</a></li>
+<li>Docker
+<ul>
+<li>Windows:  Windows 10 Pro/Enterprise では <a class="link" href="https://www.docker.com/products/docker-desktop"  target="_blank" rel="noopener"
+    >Docker Desktop</a> 2.0 以降。Windows 10 Home (2004 +) では、Docker Desktop 2.3 以降と <a class="link" href="https://aka.ms/vscode-remote/containers/docker-wsl2"  target="_blank" rel="noopener"
+    >WSL 2 バックエンド</a>が必要。</li>
+<li>Mac:  <a class="link" href="https://www.docker.com/products/docker-desktop"  target="_blank" rel="noopener"
+    >Docker Desktop</a> 2.0 以降。</li>
+<li>Linux:  <a class="link" href="https://docs.docker.com/install/#supported-platforms"  target="_blank" rel="noopener"
+    >Docker CE/EE</a> 18.06 以降と <a class="link" href="https://docs.docker.com/compose/install"  target="_blank" rel="noopener"
+    >Docker Compose</a> 1.21 以降。</li>
+</ul>
+</li>
+</ul>
+<p>なお、この記事では Windows 10 を使用する前提で進めます。</p>
+<h1 id="事前準備">事前準備
+</h1><h2 id="remote---containers-拡張機能のインストール">Remote - Containers 拡張機能のインストール
+</h2><ol>
+<li>Visual Studio Code のアクティビティバーの拡張機能アイコンをクリックします。</li>
+<li>検索ボックスに「remote containers」と入力します。</li>
+<li>&ldquo;Remote - Containers&rdquo; の [インストール] ボタンをクリックします。
+<img class="gallery-image" data-flex-basis="562px" data-flex-grow="234" height="350" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev1.png" srcset="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev1_hu_f73d8ccacff2286f.png 800w, /posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev1.png 820w" width="820"></li>
+</ol>
+<h2 id="dockerfile-の準備">Dockerfile の準備
+</h2><p>SharePoint Framework の開発環境に必要な nodejs、gulp、yo などのパッケージをインストールしたイメージを作成するための Dockerfile を準備します。
+SharePoint Framework v1.12.1 の場合の例：</p>
+<pre tabindex="0"><code>FROM node:14.17.0
+EXPOSE 5432 4321 35729
+ENV NPM\_CONFIG\_PREFIX=/usr/app/.npm-global \
+PATH=$PATH:/usr/app/.npm-global/bin
+VOLUME /usr/app/spfx
+WORKDIR /usr/app/spfx
+RUN useradd --create-home --shell /bin/bash spfx &amp;&amp; \
+usermod -aG sudo spfx &amp;&amp; \
+chown -R spfx:spfx /usr/app
+USER spfx
+RUN npm i -g gulp@4 yo @microsoft/generator-sharepoint@1.12.1
+CMD /bin/bash
+</code></pre><p>なお、Dockerfile は私が SharePoint Framework のバージョンごとに作成して GitHub にアップしているので、良かったら使ってみてください。
+<a class="link" href="https://github.com/HiroakiOikawa/docker-spfx"  target="_blank" rel="noopener"
+    >HiroakiOikawa/docker-spfx: Docker Image for SharePoint Framework (github.com)</a></p>
+<h1 id="プロジェクトごとに行う環境構築手順">プロジェクトごとに行う環境構築手順
+</h1><p>ここからは、プロジェクトを作成する度に必要となる手順を記載します。</p>
+<h2 id="ソースファイル格納先フォルダの作成">ソースファイル格納先フォルダの作成
+</h2><p>プロジェクトのソースファイルを格納するフォルダをローカルストレージ上に作成します。
+ここでは「D:\Workspaces\RemoteDevTest」とします。</p>
+<h2 id="visual-studio-code-でのコンテナの準備">Visual Studio Code でのコンテナの準備
+</h2><p>事前準備で作成した Dockerfile をソースファイル格納先フォルダに保存します。
+次に、Visual Studio Code を起動してソースファイル格納先フォルダを開いた後、以下の手順でコンテナを作成するための準備をします。</p>
+<ol>
+<li>コマンドパレットを開きます。</li>
+<li>コマンドパレットに「add dev container」と入力します。</li>
+<li>[Remote - Containers: Add Development Container Configuration Files]を選択します。
+<img class="gallery-image" data-flex-basis="1096px" data-flex-grow="456" height="186" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev3.png" srcset="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev3_hu_920dce3b355bc0f2.png 800w, /posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev3.png 850w" width="850"></li>
+</ol>
+<p>続いて、既存の Dockerfile からコンテナを作成するためのオプション [From &lsquo;Dockerfile&rsquo;] を選択します。
+<img class="gallery-image" data-flex-basis="955px" data-flex-grow="398" height="218" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev4.png" srcset="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev4_hu_f00c550c3e6837a6.png 800w, /posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev4.png 868w" width="868">
+以上の設定を終えることで、「.devcontainer」フォルダ内にコンテナの情報を定義する「devcontainer.json」ファイルが作成されます。
+<img class="gallery-image" data-flex-basis="367px" data-flex-grow="153" height="230" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev5.png" width="352"></p>
+<h2 id="dockerfile-ファイルの移動任意">Dockerfile ファイルの移動（任意）
+</h2><p>ここまでの状態のままでも特に支障はないのですが、Dockerfile を .devcontainer フォルダ配下に移動することをお勧めします。
+今回は既存の Dockerfile を使用するようにしていますが、Dockerfile を Remote - Containers 拡張機能のオプションで自動作成する場合、Dockerfile は .devcontainer フォルダ配下に作成されます。
+この動作に合わせて、既存の Dockerfile を使用する場合も、.devcontainer フォルダ配下に移動した方が分かりやすくなるのではないかと思います。
+Dockerfile の場所を移動した場合、devcontainer.json ファイルの修正が必要となります。
+devcontainer.json ファイルには Dockerfile のパスが相対パスで記載されているため、これを修正します。
+修正箇所</p>
+<ul>
+<li>10行目：「../」を削除</li>
+</ul>
+<p>変更前の devcontainer.json</p>
+<pre tabindex="0"><code>// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.187.0/containers/docker-existing-dockerfile
+{
+&#34;name&#34;: &#34;Existing Dockerfile&#34;,
+// Sets the run context to one level up instead of the .devcontainer folder.
+&#34;context&#34;: &#34;..&#34;,
+// Update the &#39;dockerFile&#39; property if you aren&#39;t using the standard &#39;Dockerfile&#39; filename.
+&#34;dockerFile&#34;: &#34;../Dockerfile&#34;,
+// Set \*default\* container specific settings.json values on container create.
+&#34;settings&#34;: {},
+// Add the IDs of extensions you want installed when the container is created.
+&#34;extensions&#34;: []
+// Use &#39;forwardPorts&#39; to make a list of ports inside the container available locally.
+// &#34;forwardPorts&#34;: [],
+// Uncomment the next line to run commands after the container is created - for example installing curl.
+// &#34;postCreateCommand&#34;: &#34;apt-get update &amp;&amp; apt-get install -y curl&#34;,
+// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
+// &#34;runArgs&#34;: [ &#34;--cap-add=SYS\_PTRACE&#34;, &#34;--security-opt&#34;, &#34;seccomp=unconfined&#34; ],
+// Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
+// &#34;mounts&#34;: [ &#34;source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind&#34; ],
+// Uncomment to connect as a non-root user if you&#39;ve added one. See https://aka.ms/vscode-remote/containers/non-root.
+// &#34;remoteUser&#34;: &#34;vscode&#34;
+}
+</code></pre><p>変更後の devcontainer.json</p>
+<pre tabindex="0"><code>// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.187.0/containers/docker-existing-dockerfile
+{
+&#34;name&#34;: &#34;Existing Dockerfile&#34;,
+// Sets the run context to one level up instead of the .devcontainer folder.
+&#34;context&#34;: &#34;..&#34;,
+// Update the &#39;dockerFile&#39; property if you aren&#39;t using the standard &#39;Dockerfile&#39; filename.
+&#34;dockerFile&#34;: &#34;Dockerfile&#34;,
+// Set \*default\* container specific settings.json values on container create.
+&#34;settings&#34;: {},
+// Add the IDs of extensions you want installed when the container is created.
+&#34;extensions&#34;: []
+// Use &#39;forwardPorts&#39; to make a list of ports inside the container available locally.
+// &#34;forwardPorts&#34;: [],
+// Uncomment the next line to run commands after the container is created - for example installing curl.
+// &#34;postCreateCommand&#34;: &#34;apt-get update &amp;&amp; apt-get install -y curl&#34;,
+// Uncomment when using a ptrace-based debugger like C++, Go, and Rust
+// &#34;runArgs&#34;: [ &#34;--cap-add=SYS\_PTRACE&#34;, &#34;--security-opt&#34;, &#34;seccomp=unconfined&#34; ],
+// Uncomment to use the Docker CLI from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker.
+// &#34;mounts&#34;: [ &#34;source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind&#34; ],
+// Uncomment to connect as a non-root user if you&#39;ve added one. See https://aka.ms/vscode-remote/containers/non-root.
+// &#34;remoteUser&#34;: &#34;vscode&#34;
+}
+</code></pre><p>以上で Visual Studio Code Remote - Containers 拡張機能を使うための準備が整いました。</p>
+<h2 id="プロジェクトをコンテナで開く">プロジェクトをコンテナで開く
+</h2><p>続いてこれから開発を進めるプロジェクトをコンテナ上で開きます。</p>
+<ol>
+<li>コマンドパレットを開きます。</li>
+<li>コマンドパレットに「reopen in container」と入力します。
+<img class="gallery-image" data-flex-basis="1126px" data-flex-grow="469" height="176" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev6.png" srcset="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev6_hu_420c04faacdc5dff.png 800w, /posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev6.png 826w" width="826"></li>
+</ol>
+<p>すると Visual Studio Code が開き直されて下図のように画面下部のステータスバーに「リモートを開いています&hellip;」と表示されます。
+なお、コンテナの初回接続時はコンテナがビルドされるため、接続されるまで数分かかることがありますので気長に待ちましょう。
+<img class="gallery-image" data-flex-basis="1730px" data-flex-grow="721" height="142" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev7.png" srcset="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev7_hu_d5cdcf88aaa99c24.png 800w, /posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev7.png 1024w" width="1024">
+その後、しばらくするとステータスバーの表示が「Dev Container: Node.js」に変わり、コンテナ上でプロジェクトが開かれた状態になります。
+<img class="gallery-image" data-flex-basis="1721px" data-flex-grow="717" height="143" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev8.png" srcset="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev8_hu_ca63b2c6e88a1242.png 800w, /posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev8.png 1026w" width="1026">
+この状態でターミナルを開くと以下の通り bash シェルが起動した状態になっています。
+<img class="gallery-image" data-flex-basis="1396px" data-flex-grow="581" height="126" loading="lazy" sizes="(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px" src="/posts/2021/10501-visual-studio-code-remote-containers-docker-sharepoint-framework/vscoderemotedev9.png" width="733"></p>
+<h2 id="sharepoint-framework-プロジェクトの作成">SharePoint Framework プロジェクトの作成
+</h2><p>ここまでの手順により、プロジェクトをコンテナ上で開いて開発を始める準備ができたので、ここからは通常の SharePoint Framework プロジェクトの作成手順に入ります。
+SharePoint Framework プロジェクトの作成手順については <a class="link" href="https://docs.microsoft.com/ja-jp/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part?WT.mc_id=M365-MVP-4012897"  target="_blank" rel="noopener"
+    >docs</a> に詳細が載っているので参考にしてください。
+とはいえ、分かりづらい部分もあるかと思いますので、Remote - Containers 拡張機能を使う前提での SharePoint Framework プロジェクトの作成手順を別記事でまとめたいと思います。
+本当は過去に書いた記事が使えればよかったのですが、Remote - Containers 拡張機能は使わず直接 Docker を使う手順の一貫として SharePoint Framework プロジェクトの作成手順を書いていたため不要な手順なども含まれており、そちらの記事への参照で済ますという手法を断念しました。
+ということで、この後執筆する別記事もご覧いただければと。
+[AdSense-B]</p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/docker/">Docker</a>
+        
+            <a href="/tags/m365dev/">M365Dev</a>
+        
+            <a href="/tags/sharepoint/">SharePoint</a>
+        
+            <a href="/tags/spfx/">SPFx</a>
+        
+            <a href="/tags/vscode/">VSCode</a>
+        
+            <a href="/tags/%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83/">開発環境</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside>
+    <h2 class="section-title">関連するコンテンツ</h2>
+    <div class="subsection-list">
+        <div class="article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/2019/9998-docker-sharepoint-framework/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker を使った SharePoint Framework 開発環境の構築 その３</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/posts/2019/9965-docker-sharepoint-framework/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker を使った SharePoint Framework 開発環境の構築 その２</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/posts/2019/9954-docker-sharepoint-framework/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker を使った SharePoint Framework 開発環境の構築 その１</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/posts/2021/10483-sharepoint-framework/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SharePoint  Framework の各種パッケージを最新化する</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/posts/2020/10402-sharepoint-framework/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">SharePoint Framework 拡張機能開発 ハンズオン</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 SharePoint Developer
+    </section>
+    
+    <section class="powerby">
+        
+            SharePoint Developer Blog <br/>
+        <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> で構築されています。 <br />
+        テーマ <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.0">Stack</a></b> は <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> によって設計されています。
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.b6cba74c66971621e3d63b383da290b07bdfa1de7fc236c60e3aede2e3133a80.js" defer></script>
+
+
+    </body>
+</html>

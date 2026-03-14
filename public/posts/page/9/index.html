@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<title>Page 9 - Posts</title>
+
+
+<link rel="canonical" href="http://localhost:1313/posts/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+<link rel="stylesheet" href="/scss/style.min.d6f5011aa62288f150553ff77ceecb802c869888527f0086b2cbc898ee3e26fc.css"><meta property='og:title' content="Posts">
+<meta property='og:description' content="SPFx, Office/TeamsアドインなどM365開発情報を発信">
+<meta property='og:url' content='http://localhost:1313/posts/'>
+<meta property='og:site_name' content='SharePoint Developer'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content=' 2026-03-08T10:00:00&#43;09:00 '/>
+<meta name="twitter:title" content="Posts">
+<meta name="twitter:description" content="SPFx, Office/TeamsアドインなどM365開発情報を発信"><link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/posts/index.xml">
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDGCB768NW"></script>
+      <script>
+        var doNotTrack = false;
+        if ( true ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-BDGCB768NW');
+        }
+      </script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0222647894387929"
+     crossorigin="anonymous"></script><link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="メニューを開く・閉じる">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.png" 
+                        width="400"
+                        height="400"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">SharePoint Developer</a></h1>
+            <h2 class="site-description">SPFx, Office/TeamsアドインなどM365開発情報を発信</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/HiroakiOikawa'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/HiroakiOikawa'
+                        
+                        title="Twitter/X"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>アーカイブ</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>サイト内検索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>このブログについて</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>ダークモード</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+    
+
+    <div class="article-list--tile">
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9791-powerapps/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">PowerApps をざっくりさわってみた</h2>
+                        
+                        <p class="article-summary"><p>先日発表のあった PowerApss を知るために、サンプルをざっくりさわってみました。
+その内容を PowerPoint にまとめたので、Docs と SlideShare で公開します。
+今回はサンプルをさわっただけですが、この後は簡単なところからオリジナルのアプリを開発してみるつもりです。
+ちなみにこの PowerApss、使う前は SharePoint 2013 時代に登場した Cloud Business App の後継かなと思ってましたが、実際に使ってみたところ、Cloud Business App とは似て非なるものなのかなと感じました。
+Cloud Business App は開発者向けでコーディングを加えることで様々なカスタマイズが可能ですが、PowerApps はレゴブロックを組み立てる感覚で Cloud Business App よりも手軽に開発ができますが、Cloud Business App 程の柔軟性は持っていない感じです。
+とはいえ、PowerApps だけでも十分に使えるアプリの開発が可能な感じなので、これから活用される場面は増えていくのではないかと思います。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2016年5月7日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9788-jpsps-5-21-sharepoint-framework/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B">お知らせ</a>
+                            
+                            <a href="/categories/%E5%8B%89%E5%BC%B7%E4%BC%9A%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AA%E3%81%A9">勉強会・イベントなど</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">JPSPS 5/21 にて SharePoint Framework を見据えた開発の話をします</h2>
+                        
+                        <p class="article-summary"><p>5/4 の The Future of SharePoint というイベントをオンラインで視聴された方もいらっしゃるかと思いますが、このイベントの中で今後の SharePoint 開発に関して「SharePoint Framework」というクライアントサイドのフレームワークについての紹介がありました。
+SharePoint Framework は今年の夏にリリース予定なのでまだ情報はないのですが、イベントの中で紹介されたキーワードから SharePoint Framework がどのようなものになるかはある程度想像ができそうです。
+そんな中、5/21 に Japan SharePoint Group の勉強会が開催されるわけですが、今回は SharePoint 2016 に関する話を中心にセッションが組まれる予定で、私は開発系のセッションとして一コマ担当することになりました。
+折角の機会なので、イベントの中で出てきたキーワードをもとに 2016 時代の SharePoint 開発について想像し、今年の夏に向けて学んでおくと良さそうな技術を実例を交えてご紹介できればと考えています。
+レベル的にはマニアックな方に向けた難しい内容ではなく、ある程度軽めの感じの内容にする予定です。
+SharePoint デベロッパーの皆さん、お時間あればぜひご参加ください！
+<a class="link" href="http://jpsps.com/event/20160521/"  target="_blank" rel="noopener"
+    >http://jpsps.com/event/20160521/</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2016年5月6日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9784-sharepoint-add-ins-angularjs-typescript/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Add-ins 開発で AngularJS と TypeScript を使う</h2>
+                        
+                        <p class="article-summary"><p>この投稿は、<a class="link" href="http://www.adventar.org/calendars/790"  target="_blank" rel="noopener"
+    >Office 365 Advent Calendar 2015</a> の 22日目の記事です。
+またまた久しぶりの投稿になってしまいました。
+今回は、最近私が本業のシステム開発で活用している、AngularJS と TypeScript を使った SharePoint Add-ins の開発方法をちょっとだけですがご紹介します。
+AngularJS も TypeScript も SharePoint 開発とは直接的な関係は無い、一般的な Web 開発でも使われる技術ですが、こういった最近の Web 技術を取り入れて開発をすることができるのが、SharePoint Add-ins 開発の良いところかと思います。
+特に AngularJS と TypeScript の組み合わせは、業務システムの開発をするのにも非常に効果を発揮してくれます。
+現に、私は現在 SharePoint Add-ins の開発に携わっており、フロントエンドは AngularJS + TypeScript で実装し、バックエンドの SharePoint REST API やその他の REST API を呼び出してフローを回す業務システムを開発しています。
+いずれは業務システム開発でこれらの技術を使う場合の勘所をご紹介したいと思いますが、今回はそれよりもだいぶ手前の初歩的なところだけお伝えします。
+本当はソースコードも載せてその解説までと思いましたが、公開に間に合いませんでした。
+ソースコードは用意してあるので、後日ソースコードの掲載と説明を書き加えたいと思います。
+ということで、以下が記事へのリンクとなります。
+<a class="link" href="http://sharepoint-dev.orivers.jp/index.php/AngularJS_%2B_TypeScript_%2B_SharePoint_Add-ins"  target="_blank" rel="noopener"
+    >AngularJSとは</a>
+<a class="link" href="http://sharepoint-dev.orivers.jp/index.php/SharePoint_Add-ins_%E9%96%8B%E7%99%BA%E3%81%A7_AnguarJS_%E3%81%A8_TypeScript%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AE%E6%89%8B%E9%A0%86"  target="_blank" rel="noopener"
+    >SharePoint add-ins開発でAngularJSとTypeScriptを使用するための手順</a>
+AnguarJSとTypeScriptによるSharePoint add-insのサンプル開発 -&gt; 後日！</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2015年12月22日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9770-microsoft-mvp/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Microsoft MVP プログラムの大幅アップデート</h2>
+                        
+                        <p class="article-summary"><p>このたび、MVP プログラムが大幅にアップデートされました！
+MVP プログラムサイトにアップデート内容が記載されています。
+<a class="link" href="https://mvp.microsoft.com/en-us/pages/mvp-award-update"  target="_blank" rel="noopener"
+    >https://mvp.microsoft.com/en-us/pages/mvp-award-update</a>
+何がどうなったかというと、これまで製品カットだったカテゴリが、製品ではなくソリューションというか製品よりももう一段上の括りでカテゴライズされることになりました。
+私が受賞した「SharePoint Server」は、新プログラムでは「Office Servers and Services」というカテゴリに変わり、SharePoint だけでなくOffice 365 や Exchange と同じカテゴリになります。
+今回の新プログラム、注目すべきは開発系かなと勝手に思ってます。
+というのも、カテゴリとして「Office Development」というのが追加されたんですね。
+Office Development は、Office365 API、Office アドイン、SharePoint アドインの開発に関するカテゴリで、私が最近愛用している AngularJS なんかもこのカテゴリに入っていたりします。
+AngularJS のような JavaScript フレームワークは、Office 開発では必須の技術になってきますからね。
+さらにさらに、新プログラムでは複数カテゴリの受賞というのが可能になりました！
+という訳で、私としては「Office Servers and Services」カテゴリについては SharePoint を中心に活動を続け、開発者として「Office Development」カテゴリでも活躍できるようになりたいなと思う今日この頃。
+MVP アワードの新カテゴリは、これからマイクロソフトが何にフォーカスしていくかという部分を表したものになっているので、MVP を目指す方もそうでない方も、一度このカテゴリを確認いただいて、これからの動きを考えてみるのも良いのではないかと思います。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2015年10月8日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9768-microsoft-mvp/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B">お知らせ</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Microsoft MVP を再受賞しました！</h2>
+                        
+                        <p class="article-summary"><p>おかげさまで、今年も <a class="link" href="https://www.mvp.microsoft.com/ja-jp"  target="_blank" rel="noopener"
+    >Microsoft MVP (Most Valuable Professional)</a> を SharePoint Server の分野で受賞いたしました！
+これで連続８年になりましたー。
+これまでもこれからも、SI 現場の最前線で得た知識と経験を、SharePoint に関わる開発者の方々に向けて発信していきたいと思います。
+今後ともよろしくお願いいします！</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2015年10月2日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+                <div class="article-list--item adsense-wrapper">
+                    <div class="adsense-in-list">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-0222647894387929"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+                </div>
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9745-sharepoint-server-2016-preview/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/sharepoint-2016">SharePoint 2016</a>
+                            
+                            <a href="/categories/%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9">ニュース</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Server 2016 Preview がリリースされました</h2>
+                        
+                        <p class="article-summary"><p>久しぶりの更新になってしまいました。。。
+ついに、SharePoint Server 2016 のプレビュー版がリリースされました。
+現在、ダウンロードセンターからダウンロード可能な状態になっています。
+最初から日本語の言語パックも用意されているようなので、これは検証しないわけにはいかないですね！
+<a class="link" href="http://www.microsoft.com/en-us/download/details.aspx?id=48712"  target="_blank" rel="noopener"
+    >ダウンロードセンター</a>
+SharePoint Server 2016 の新機能については、以下の公式ブログで少しだけ紹介されています。
+<a class="link" href="https://blogs.office.com/2015/08/24/announcing-availability-of-sharepoint-server-2016-it-preview-and-cloud-hybrid-search/"  target="_blank" rel="noopener"
+    >Announcing availability of SharePoint Server 2016 IT Preview and cloud hybrid search</a>
+上記ブログによると、
+・タッチへの最適化
+・アプリケーションランチャー
+・大きなファイル(10GB)のサポート
+などが紹介されています。
+また、SharePoint Server 2016 Previewの紹介ビデオも公開されているようです。
+<a class="link" href="https://youtu.be/rV6PVzGs51I"  target="_blank" rel="noopener"
+    >https://youtu.be/rV6PVzGs51I</a>
+英語ですが11分程度の短いビデオで、いくつかの新機能が紹介されています。
+さらに詳しく知りたいぞという方は、TechNetをご確認ください。
+<a class="link" href="https://technet.microsoft.com/en-us/library/cc303422%28v=office.16%29.aspx"  target="_blank" rel="noopener"
+    >SharePoint Server 2016 Preview</a>
+さー、明日からSharePoint 2016をはじめてみましょう！
+#私はまだまだ手を付けられそうにないのですが・・・</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2015年8月25日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9711-azure-lamp-wordpress/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/azure">Azure</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">Azure 仮想マシンに LAMP 環境を構築し WordPress を立ち上げる -その４-</h2>
+                        
+                        <p class="article-summary"><p>いよいよ本シリーズも最後になりました。
+<a class="link" href="http://sharepoint.orivers.jp/article/9679"  target="_blank" rel="noopener"
+    >前回</a>までで WordPress をインストールする準備が整ったので、今回は WordPress をインストールして初期設定を行い、WordPress が利用できる状態まで持って行きたいと思います。</p>
+<h2 id="wordpress-用データベースの作成">WordPress 用データベースの作成
+</h2><p>WordPress のインストールを行うため、まずはデータベースを作成します。</p>
+<ol>
+<li>MySQL にログインする
+TeraTarm でサーバーに接続して以下のコマンドを実行し、パスワードを入力して MySQL に接続します。</li>
+</ol>
+<pre tabindex="0"><code>mysql -u root -p
+</code></pre><p>すると下記のようなメッセージが表示されます。</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2015年6月8日</time>
+                            <span>読了時間: 2分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9721-sharepoint-add-ins-angularjs/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E9%96%8B%E7%99%BA%E3%81%A8%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">開発とプログラミング</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint Add-ins で AngularJS を使う</h2>
+                        
+                        <p class="article-summary"><p>あまり更新が進んでいない SharePoint-Dev のサイトに SharePoint Add-ins で 今話題の AngularJS を使う方法を記載することにしました。
+<a class="link" href="http://sharepoint-dev.orivers.jp/index.php/AngularJS_%2B_SharePoint_Add-ins"  target="_blank" rel="noopener"
+    >AngularJS + SharePoint Add-ins</a>
+まだ初回の記事しか書いてないですが、とりあえずご紹介。
+次回から実際にコードを書いて行く予定です。
+AngularJS、非常に便利ですね！
+・・・その前に、そもそも SharePoint Add-ins (旧 apps for SharePoint) の開発ってどうやるの？　という方は、まずはこちらのビデオで勉強しましょう。
+こちらのビデオは、マイクロソフトが提供する公式オンラインビデオ教材ですので安心です。
+・<a class="link" href="http://www.microsoftvirtualacademy.com/training-courses/introduction-to-office-365-development_jpn?prid=mvp-4012897"  target="_blank" rel="noopener"
+    >Office 365 開発の概要</a>
+・<a class="link" href="http://www.microsoftvirtualacademy.com/training-courses/deep-dive-into-the-office-365-app-model_jpn?prid=mvp-4012897"  target="_blank" rel="noopener"
+    >Office 365 アプリモデルの詳細</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2015年6月5日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9713-de-code-2015/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/%E5%85%A8%E8%88%AC">全般</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">de:code 2015 に行ってきました</h2>
+                        
+                        <p class="article-summary"><p>久しぶりのポストになってしまいました・・・
+5/26、5/27に開催された日本マイクロソフトの技術者向けイベント「de:code」に行ってきたので、簡単にご報告を。
+今回の de:code の主な内容は Windows 10、Visual Studio 2015、Azure の最近のアップデートといったところでした。
+そして、裏番組的な位置づけで、SharePoint 2016、Office 365 API の話がありました。
+SharePoint 2016 については、既に<a class="link" href="http://shanqiai.weblogs.jp/sharepoint_technical_note/2015/05/sharepoint-2016-yamjam.html"  target="_blank" rel="noopener"
+    >山崎愛さんのブログ</a>や太田さんのブログにある<a class="link" href="http://idea.tostring.jp/?p=1777"  target="_blank" rel="noopener"
+    >Igniteセッションのまとめ</a>で紹介されている範囲の話だったので、de:code に参加できなかった方はそちらを参照していただくのが良いかと思います。
+Office 365 API 関係では、
+・Apps for Office が改名して Office Add-ins  になった
+⇒Apps for SharePoint も同様に SharePoint Add-ins という風に変わるそうです
+・リボンコマンドのサポート
+⇒リボンにボタンを組み込んで、ボタンクリックでJavaScriptを実行できます
+・Office 365 ファイルハンドラ―
+⇒独自の拡張子のファイルに対して独自のアクションを追加できる
+・Office 365 Unified API
+⇒一つの REST エンドポイントからOffice 365の基本的な処理を実行できる API
+といったところが紹介されていました。
+スピーカーは松崎さんでしたので、<a class="link" href="http://blogs.msdn.com/b/tsmatsuz/"  target="_blank" rel="noopener"
+    >松崎さんのブログ</a>も必見ですね。
+Office 365 API については色々とできることがあり、自分で作ったアプリとの連携なども手軽に実装できるので、今後色々な Addin やサービスが登場してくるのではないかと思います。
+今から準備して、その時に備えましょう。
+そんな Office 365 開発をこれからはじめようという方、以下のビデオが役に立つかと思います。
+Microsoft Virtual Academy というマイクロソフトが提供するビデオ学習サイトに公開されている日本語字幕付きの Office 365 API  関係の学習コンテンツです。
+結構な大作なので、お時間あるときにちょっとずつでも見てみてください。
+■<a class="link" href="http://www.microsoftvirtualacademy.com/training-courses/introduction-to-office-365-development_jpn?prid=mvp-4012897"  target="_blank" rel="noopener"
+    >Office 365 開発の概要</a>
+■<a class="link" href="http://www.microsoftvirtualacademy.com/training-courses/deep-dive-into-the-office-365-app-model_jpn?prid=mvp-4012897"  target="_blank" rel="noopener"
+    >Office 365 アプリモデルの詳細</a></p></p>
+                        
+                        <footer class="article-time">
+                            <time>2015年5月28日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+
+            
+            
+
+            
+            
+            <article class="">
+                <a href="/posts/9705-sharepoint-2013/">
+                    
+                    <div class="article-details">
+                        
+                        <div class="article-category">
+                            
+                            <a href="/categories/office-365">Office 365</a>
+                            
+                            <a href="/categories/sharepoint-2013">SharePoint 2013</a>
+                            
+                            <a href="/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B">お知らせ</a>
+                            
+                        </div>
+                        
+                        <h2 class="article-title">SharePoint 2013 コミュニティサイトに記事を掲載していただきました</h2>
+                        
+                        <p class="article-summary"><p>インフォシェア株式会社様が運営されている<a class="link" href="http://sharepoint.jp.net/SitePages/%E3%83%9B%E3%83%BC%E3%83%A0.aspx"  target="_blank" rel="noopener"
+    >SharePoint 2013 コミュニティ サイト</a>に、以下2本の記事を掲載していただきました。</p>
+<ul>
+<li><a class="link" href="http://sharepoint.jp.net/tips/AdvancedSolution/Lists/Posts/Post.aspx?ID=16"  target="_blank" rel="noopener"
+    >クラウドビジネスアプリでリストを操作する</a></li>
+<li><a class="link" href="http://sharepoint.jp.net/tips/AdvancedSolution/Lists/Posts/Post.aspx?ID=14"  target="_blank" rel="noopener"
+    >URLクエリ文字列を検索条件に使用し、検索結果Webパーツで検索をする方法</a></li>
+</ul>
+<p>SharePoint 2013 コミュニティサイト及び Tips 集には他にも色々なコンテンツがあるので、合わせてご覧ください！</p></p>
+                        
+                        <footer class="article-time">
+                            <time>2015年4月17日</time>
+                            <span>読了時間: 1分</span>
+                        </footer>
+                    </div>
+                </a>
+            </article>
+
+        
+    </div>
+
+    <nav class="pagination" role="navigation" aria-label="pagination"><a class="page-link "href="/posts/page/8/"aria-label="Previous page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6" /></svg>
+    </a><a class="page-link " aria-label="Page 1"href="/posts/">
+        1
+    </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/posts/page/5/"
+                aria-label="Page 5">
+                5
+            </a><a class="page-link "href="/posts/page/6/"
+                aria-label="Page 6">
+                6
+            </a><a class="page-link "href="/posts/page/7/"
+                aria-label="Page 7">
+                7
+            </a><a class="page-link "href="/posts/page/8/"
+                aria-label="Page 8">
+                8
+            </a><a class="page-link current"aria-current="page"href="/posts/page/9/"
+                aria-label="Page 9">
+                9
+            </a><a class="page-link "href="/posts/page/10/"
+                aria-label="Page 10">
+                10
+            </a><a class="page-link "href="/posts/page/11/"
+                aria-label="Page 11">
+                11
+            </a><a class="page-link "href="/posts/page/12/"
+                aria-label="Page 12">
+                12
+            </a><a class="page-link "href="/posts/page/13/"
+                aria-label="Page 13">
+                13
+            </a><span class="page-link pagination-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-dots"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /><path d="M19 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /></svg>
+    </span><a class="page-link "href="/posts/page/28/"aria-label="Page 28">
+        28
+    </a><a class="page-link "href="/posts/page/10/"aria-label="Next page">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+    </a>
+</nav>
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/ts/main.8d947595b64946203f420b9c7f5e64d000b36fa4cb8a3746418bd50684ac19ae.js" defer></script>
+
+
+    </body>
+</html>

@@ -1,19 +1,159 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>お知らせ on Microsoft 365 Developer</title>
-    <link>http://localhost:1313/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</link>
-    <description>Recent content in お知らせ on Microsoft 365 Developer</description>
-    <generator>Hugo -- 0.157.0</generator>
-    <language>ja</language>
-    <lastBuildDate>Sun, 01 Mar 2026 09:00:00 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>ブログを始めました</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
-      <pubDate>Sun, 01 Mar 2026 09:00:00 +0900</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
-      <description>技術ブログを開設しました。扱うトピックや発信方針を紹介します。</description>
-    </item>
-  </channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>お知らせ on SharePoint Developer</title>
+        <link>http://localhost:1313/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/</link>
+        <description>Recent content in お知らせ on SharePoint Developer</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>ja</language>
+        <lastBuildDate>Sat, 15 Jul 2017 12:07:19 +0900</lastBuildDate><atom:link href="http://localhost:1313/categories/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Qiita はじめました</title>
+            <link>http://localhost:1313/posts/9853-qiita/</link>
+            <pubDate>Sat, 15 Jul 2017 12:07:19 +0900</pubDate>
+            <guid>http://localhost:1313/posts/9853-qiita/</guid>
+            <description>&lt;p&gt;細々と、Qiita はじめました。&#xA;&lt;a class=&#34;link&#34; href=&#34;http://qiita.com/HiroakiOikawa&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://qiita.com/HiroakiOikawa&lt;/a&gt;&#xA; &#xA;ちょっとしたサンプルコードとかは、 Qiita に掲載していこうと思います。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>MVP アワードを再受賞しました</title>
+            <link>http://localhost:1313/posts/9808-mvp/</link>
+            <pubDate>Sun, 02 Oct 2016 11:48:23 +0900</pubDate>
+            <guid>http://localhost:1313/posts/9808-mvp/</guid>
+            <description>&lt;p&gt;Microsoft MVP アワードを再受賞いたしました！！&#xA;早いもので、初めて受賞した時から10年が経ちました。&#xA;皆様の支えのおかげです。ありがとうございます。&#xA;MVP制度は2015年にカテゴリが大きく変わりました。&#xA;私は、2007年度から2014年度までは「SharePoint Server」というカテゴリのMVPでした。&#xA;2015年度はカテゴリが変わり、「Office Servers and Services」になりました。&#xA;どちらかというとこのカテゴリはITPro系に分類されるものになります。&#xA;そして2016年度、今年は「Office Development」というOffice 365などマイクロソフトのOffice製品、サービスを使ったアプリケーション開発の領域のカテゴリでの受賞になります。&#xA;念願かなって、私自身の仕事により近い「開発系」のMVPになります。&#xA;これで名実ともに開発系ですので、これからは開発系中心にブログ、勉強会、オンライン資料などなど、注力していきたいと思います。&#xA;ということで、これからまた一年、よろしくお願いいたします！&#xA;これからMVPを目指すぞ！とか、MVPって何だろう？という疑問を持たれた方は、こちらのサイトをご覧ください。&#xA;&lt;a class=&#34;link&#34; href=&#34;https://mvp.microsoft.com/ja-jp/Overview&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;https://mvp.microsoft.com/ja-jp/Overview&lt;/a&gt;&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>JPSPS 5/21 にて SharePoint Framework を見据えた開発の話をします</title>
+            <link>http://localhost:1313/posts/9788-jpsps-5-21-sharepoint-framework/</link>
+            <pubDate>Fri, 06 May 2016 19:30:02 +0900</pubDate>
+            <guid>http://localhost:1313/posts/9788-jpsps-5-21-sharepoint-framework/</guid>
+            <description>&lt;p&gt;5/4 の The Future of SharePoint というイベントをオンラインで視聴された方もいらっしゃるかと思いますが、このイベントの中で今後の SharePoint 開発に関して「SharePoint Framework」というクライアントサイドのフレームワークについての紹介がありました。&#xA;SharePoint Framework は今年の夏にリリース予定なのでまだ情報はないのですが、イベントの中で紹介されたキーワードから SharePoint Framework がどのようなものになるかはある程度想像ができそうです。&#xA;そんな中、5/21 に Japan SharePoint Group の勉強会が開催されるわけですが、今回は SharePoint 2016 に関する話を中心にセッションが組まれる予定で、私は開発系のセッションとして一コマ担当することになりました。&#xA;折角の機会なので、イベントの中で出てきたキーワードをもとに 2016 時代の SharePoint 開発について想像し、今年の夏に向けて学んでおくと良さそうな技術を実例を交えてご紹介できればと考えています。&#xA;レベル的にはマニアックな方に向けた難しい内容ではなく、ある程度軽めの感じの内容にする予定です。&#xA;SharePoint デベロッパーの皆さん、お時間あればぜひご参加ください！&#xA;&lt;a class=&#34;link&#34; href=&#34;http://jpsps.com/event/20160521/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://jpsps.com/event/20160521/&lt;/a&gt;&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>Microsoft MVP を再受賞しました！</title>
+            <link>http://localhost:1313/posts/9768-microsoft-mvp/</link>
+            <pubDate>Fri, 02 Oct 2015 23:18:33 +0900</pubDate>
+            <guid>http://localhost:1313/posts/9768-microsoft-mvp/</guid>
+            <description>&lt;p&gt;おかげさまで、今年も &lt;a class=&#34;link&#34; href=&#34;https://www.mvp.microsoft.com/ja-jp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;Microsoft MVP (Most Valuable Professional)&lt;/a&gt; を SharePoint Server の分野で受賞いたしました！&#xA;これで連続８年になりましたー。&#xA;これまでもこれからも、SI 現場の最前線で得た知識と経験を、SharePoint に関わる開発者の方々に向けて発信していきたいと思います。&#xA;今後ともよろしくお願いいします！&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>SharePoint 2013 コミュニティサイトに記事を掲載していただきました</title>
+            <link>http://localhost:1313/posts/9705-sharepoint-2013/</link>
+            <pubDate>Fri, 17 Apr 2015 11:12:03 +0900</pubDate>
+            <guid>http://localhost:1313/posts/9705-sharepoint-2013/</guid>
+            <description>&lt;p&gt;インフォシェア株式会社様が運営されている&lt;a class=&#34;link&#34; href=&#34;http://sharepoint.jp.net/SitePages/%E3%83%9B%E3%83%BC%E3%83%A0.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;SharePoint 2013 コミュニティ サイト&lt;/a&gt;に、以下2本の記事を掲載していただきました。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://sharepoint.jp.net/tips/AdvancedSolution/Lists/Posts/Post.aspx?ID=16&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;クラウドビジネスアプリでリストを操作する&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;http://sharepoint.jp.net/tips/AdvancedSolution/Lists/Posts/Post.aspx?ID=14&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;URLクエリ文字列を検索条件に使用し、検索結果Webパーツで検索をする方法&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;SharePoint 2013 コミュニティサイト及び Tips 集には他にも色々なコンテンツがあるので、合わせてご覧ください！&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>今年もよろしくお願いいたします</title>
+            <link>http://localhost:1313/posts/9571-post/</link>
+            <pubDate>Thu, 01 Jan 2015 00:05:45 +0900</pubDate>
+            <guid>http://localhost:1313/posts/9571-post/</guid>
+            <description>&lt;p&gt;新年あけましておめでとうございます。&#xA;昨年は勉強会にブログにフォーラムにと、色々お世話になりました。&#xA;毎年同じようなことを言っている気がしますが、今年は昨年以上にしっかりとMVP活動を続けていきたいと思います。&#xA;ということで、今年から新企画！&#xA;Office 365 の登場により、これからもSharePointが活躍する場が増えるでしょうから、SharePoint開発者の需要はこれからも変わらずあり続けることになるかと思います。&#xA;そんなSharePoint開発者が必要としている情報はMSDNに掲載されているものの、量が膨大でどこから読んでいいのか分からないということをよく聞きます。&#xA;そこで、SharePointの開発者人口を増やすべく、SharePoint開発者向けの情報を共有するためのサイトを立ち上げました！&#xA;これまでブログやフォーラムで情報共有をしてきましたが、ブログはどちらかというとフロー情報を共有するためのツールで、ストック情報を共有するには若干不向きかなと思い、ブログではなくWikiを使うようにしてみました。&#xA;ブログでも引き続き情報提供を続けますが、ストックするべき情報はWikiにも掲載するようにしていこうと思います。&#xA;なお、Wikiサイトは以下になります。&#xA;&lt;a class=&#34;link&#34; href=&#34;http://sharepoint-dev.orivers.jp&#34;  title=&#34;http://sharepoint-dev.orivers.jp&#34;&#xD;&#xA;     target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://sharepoint-dev.orivers.jp&lt;/a&gt;&#xA;さらに、既にお気づきかと思いますがこのブログもリニューアルしました！&#xA;時代の流れに合わせて、WordPressをAzure Web Siteの上で立ち上げました。&#xA;ちなみに、WikiもMediaWikiをAzure Web Siteでホストしています。&#xA;ということで、2015年もよろしくお願いいたします！&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>Microsoft MVP for SharePoint Server を再受賞しました！</title>
+            <link>http://localhost:1313/posts/5691-microsoft-mvp-for-sharepoint-server/</link>
+            <pubDate>Thu, 02 Oct 2014 08:41:37 +0900</pubDate>
+            <guid>http://localhost:1313/posts/5691-microsoft-mvp-for-sharepoint-server/</guid>
+            <description>&lt;p&gt;今年も無事に Microsoft MVP を SharePoint Server の分野で受賞することができました！&#xA;今回で連続 8 年目になりますー。&#xA;これもひとえに皆様のおかげです。&#xA;今後ともよろしくお願いいたします。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>Microsoft MVP アワード再受賞させていただきました</title>
+            <link>http://localhost:1313/posts/5511-microsoft-mvp/</link>
+            <pubDate>Wed, 02 Oct 2013 02:40:29 +0900</pubDate>
+            <guid>http://localhost:1313/posts/5511-microsoft-mvp/</guid>
+            <description>&lt;p&gt;毎年更新できるかどうかハラハラドキドキしながらこの日を迎えるわけですが、おかげさまで今年もSharePoint ServerカテゴリのMVPアワードを再受賞することができました。&#xA;これで7年連続・・・かな！？&#xA;本当にありがとうございます。&#xA;現場にいると、MVPって何！？みたいな反応がまだまだ多いので、MVPそのものの知名度を上げていく活動をしつつ、SharePoint MVPとして、これからも技術者への情報提供はもちろんのこと、ユーザーの方々にも有益な情報を届けていくことができればと思っています。&#xA;今後ともどうぞよろしくお願いいたします。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>Twitter での投稿を連動させるようにしました</title>
+            <link>http://localhost:1313/posts/4951-twitter/</link>
+            <pubDate>Sun, 28 Oct 2012 01:51:07 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4951-twitter/</guid>
+            <description>&lt;p&gt;Twitter で参考となるようなページを見つけてツイートしても、それが残らず流れて行ってしまって見失うことが多いので、Twitter のツイートをこのブログに連動するようにしました。&#xA;といっても、ツイートをそのまま掲載するのではなく、ツイートされた内容を一度私がチェックとカテゴライズをしたのち、公開するようにします。&#xA;ツイートなだけに、整っていない文章になることが多いと思いますが、その点はご了承ください。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>アドバンスド・ソリューション株式会社をよろしくお願い致します</title>
+            <link>http://localhost:1313/posts/4761-post/</link>
+            <pubDate>Sun, 21 Oct 2012 23:42:54 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4761-post/</guid>
+            <description>&lt;p&gt;この度、これまでお世話になった会社を卒業し、新たにアドバンスド・ソリューション株式会社という会社を立ち上げました。&lt;/p&gt;&#xA;&lt;p&gt;この会社は、SharePointを中心に、マイクロソフト社の製品を活用したエンタープライズソリューションを展開していくことをメイン事業としています。&lt;/p&gt;&#xA;&lt;p&gt;立ち上げたばかりの小さな会社なので大きなことはできませんが、その分小回りの利く会社として、SharePointを利用している、あるいはこれから利用しようと考えている企業様の発展のために、少しでも貢献できればと思っております。&lt;/p&gt;&#xA;&lt;p&gt;SharePointに関する夢や希望、今抱えていらっしゃる課題など、誰かに話したくてしょうがないということがあれば、ぜひ弊社にご連絡いただければと思います。&#xA;また、今後サービスメニュー等も拡充させて参りますので、ご期待ください。&lt;/p&gt;&#xA;&lt;p&gt;弊社へのお問い合わせ、ご連絡は、弊社ホームページの問い合わせフォームからお願い致します。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;http://www.advanced-solution.jp&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://www.advanced-solution.jp&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;ということで、アドバンスド・ソリューション株式会社を、よろしくお願い致します！&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>サイトをリニューアルしました</title>
+            <link>http://localhost:1313/posts/4751-post/</link>
+            <pubDate>Sun, 21 Oct 2012 17:45:07 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4751-post/</guid>
+            <description>&lt;p&gt;この度、本サイトをリニューアルしました。&#xA;もしかしたら正しく動かないところとかあるかもしれません。&#xA;何か見つけたら連絡いただけるとありがたいです。&#xA;また、今回の変更でRSSやURLも前のものから変えてしまいました・・・&#xA;お手数おかけいたしますが、リンクなど張っている個所があれば修正いただければと思います。&#xA;今後ともよろしくお願いいたします。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>Microsoft MVP Global Summit 2012</title>
+            <link>http://localhost:1313/posts/4721-microsoft-mvp-global-summit-2012/</link>
+            <pubDate>Sat, 13 Oct 2012 02:08:03 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4721-microsoft-mvp-global-summit-2012/</guid>
+            <description>&lt;p&gt;私はおかげさまで5年ほど、SharePoint MVPの端くれとして活動をさせていただいておりますが、MVPだけが参加できる毎年恒例のClosedイベント「MVP Global Summit」には、過去一度しか参加したことがありませんでした。&#xA;今年はどうしようかなぁと悩んでいたら、SharePoint MVP仲間からぐいっと背中を押されたので、今年は参加する方向で考えてみることにしました。&#xA;取りあえずホテルの予約は完了。&#xA;次はスケジュールの確保です。&#xA;ちょっと課題はあるのですが、何とかクリアして、今年こそMVP Global Summitに参加できるようにがんばろう！&#xA;最後に・・・MVPって何ぞや？という方のために、MVPサイトをご紹介。&#xA;&lt;a class=&#34;link&#34; href=&#34;http://www.microsoft.com/ja-jp/communities/mvp/default.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://www.microsoft.com/ja-jp/communities/mvp/default.aspx&lt;/a&gt;&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>AD RMS を立てる</title>
+            <link>http://localhost:1313/posts/4681-ad-rms/</link>
+            <pubDate>Sat, 23 Apr 2011 11:03:32 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4681-ad-rms/</guid>
+            <description>&lt;p&gt;我が家の環境には AD RMS が立っていません。&#xA;ということで、AD RMS を立てる方法を学ぶため、環境構築をしてみることにしました。&#xA;最終的には SharePoint 統合まで行きたいと思います。&lt;/p&gt;&#xA;&lt;p&gt;なお、AD RMS を立てる部分については、以下の自習書が役に立ちそうです。&#xA;&lt;a class=&#34;link&#34; href=&#34;http://technet.microsoft.com/ja-jp/activedirectory/ee853259.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://technet.microsoft.com/ja-jp/activedirectory/ee853259.aspx&lt;/a&gt;&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>コメントスパム対策をしました</title>
+            <link>http://localhost:1313/posts/4661-post/</link>
+            <pubDate>Sat, 16 Apr 2011 11:01:31 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4661-post/</guid>
+            <description>&lt;p&gt;最近、このブログへのコメントスパムがひどい状況になっていたので、コメントリストに対してイベントレシーバを追加し、自前のプログラムでコメントスパム​対策をしました。&lt;/p&gt;&#xA;&lt;p&gt;コメントスパムの内容に合わせたピンポイントな処理を入れたので、通常のコメント投稿にはおそらく影響ないかと思いますが、万が一おかしな点があればtwitterなどで報告いただければと。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>Microsoft Pinpoint</title>
+            <link>http://localhost:1313/posts/4651-microsoft-pinpoint/</link>
+            <pubDate>Thu, 31 Mar 2011 11:00:52 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4651-microsoft-pinpoint/</guid>
+            <description>&lt;p&gt;こんなサイトがあったんですねー。&#xA;Microsoft Pinpointは、Microsoft製品に関連するサービスやパッケージ製品を検索するためのサイトです。&#xA;&lt;a class=&#34;link&#34; href=&#34;http://pinpoint.microsoft.com/ja-JP/default.aspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://pinpoint.microsoft.com/ja-JP/default.aspx&lt;/a&gt;&#xA;ちょっと使ってみましたが、うちの会社は登録されていないようで、でてきませんでした。。。&#xA;色々製品を探していらっしゃる方は、一度利用されてみてはいかがでしょうか。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>サイトをSharePoint2010でリニューアルしました</title>
+            <link>http://localhost:1313/posts/4631-sharepoint2010/</link>
+            <pubDate>Sun, 06 Mar 2011 10:58:30 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4631-sharepoint2010/</guid>
+            <description>&lt;p&gt;半年もサイトの更新をさぼってしまいましたが、ようやく SharePoint 2010 を使ってサイトをリニューアルすることができました。&#xA;（実はまだまだ更新途中なんですが、もうこれ以上時間をかけられないと思い公開することにしました・・・）&lt;/p&gt;&#xA;&lt;p&gt;まだ途中なので、今後もデザインが変わったりURLが変わったりすることがあるかと思います。&#xA;色々不都合も起きるかと思いますが、これまでと同様に足を運んでいただければと思います。&lt;/p&gt;&#xA;&lt;p&gt;なお、リニューアルに伴い各コンテンツのURLが変わってしまっています。&#xA;コンテンツに直リンクしているものがあれば、お手数をおかけいたしますがリンクしなおしてください。&#xA;また、RSSも変わってしまっているので、こちらもあわせて変更をお願いします。&lt;/p&gt;&#xA;&lt;p&gt;では、今後ともよろしくお願いします！&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>Tech Fielders コラム出揃いました</title>
+            <link>http://localhost:1313/posts/4611-tech-fielders/</link>
+            <pubDate>Mon, 23 Aug 2010 10:56:10 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4611-tech-fielders/</guid>
+            <description>&lt;p&gt;前に紹介させていただいた、Tech Fielders ですが、先日出揃ったので改めて紹介させていただきます。&#xA;&lt;strong&gt;SharePoint Server 2010 が備える業務システムプラットフォームとしての機能&lt;/strong&gt;&#xA;&lt;a class=&#34;link&#34; href=&#34;http://www.microsoft.com/japan/powerpro/TF/column/ho3_01_1.mspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://www.microsoft.com/japan/powerpro/TF/column/ho3_01_1.mspx&lt;/a&gt;&#xA;この回では、タイトルの通り SharePoint 2010 を業務システムプラットフォームとして利用する場合にどんな機能が使えるのかということを紹介しています。&#xA;&lt;strong&gt;SharePoint Server 2010 による業務システム構築 前編&lt;/strong&gt;&#xA;&lt;a class=&#34;link&#34; href=&#34;http://www.microsoft.com/japan/powerpro/TF/column/ho3_02_1.mspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://www.microsoft.com/japan/powerpro/TF/column/ho3_02_1.mspx&lt;/a&gt;&#xA;この回では、リストと標準機能の組み合わせによる簡単なアプリケーション構築の方法を、画面ショットをふんだんに使いながら紹介しています。&#xA;&lt;strong&gt;SharePoint Server 2010 による業務システム構築 後編&lt;/strong&gt;&#xA;&lt;a class=&#34;link&#34; href=&#34;http://www.microsoft.com/japan/powerpro/TF/column/ho3_03_1.mspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://www.microsoft.com/japan/powerpro/TF/column/ho3_03_1.mspx&lt;/a&gt;&#xA;この回では、InfoPath 2010 と SharePoint 2010 から新たに加わった機能 Business Connectivity Services (BCS) を使ったアプリケーション構築方法を、画面ショットをふんだんに使いながら紹介しています。&#xA;SharePoint 2010 を使ってアプリケーション構築をする場合の取っ掛かりにはなると思うので、興味ある方は是非ご一読ください。​&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>Tech Fielders にてコラム公開</title>
+            <link>http://localhost:1313/posts/4601-tech-fielders/</link>
+            <pubDate>Sat, 03 Jul 2010 10:56:27 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4601-tech-fielders/</guid>
+            <description>&lt;p&gt;マイクロソフトのTech Fieldersというサイトに、私が書いたコラムが公開されました。&#xA;SharePoint Server 2010をビジネスアプリケーションプラットフォームとして利用するという観点で、私が行った検証とその評価結果が書いてあります。&#xA;コラムは連載形式になっており、私は５回から７回までを担当しています。&#xA;ちょっと時間をかけすぎてしまい、企画元の方々には色々とご迷惑をかけてしまいました・・・&#xA;でも、こういったコンテンツを作るのは初めてだったので、とても良い経験になりました！&#xA;もしよかったら、お時間あるときにでも読んでみてください。&#xA;&lt;a class=&#34;link&#34; href=&#34;http://www.microsoft.com/japan/powerpro/TF/column/ho3_01_1.mspx&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;http://www.microsoft.com/japan/powerpro/TF/column/ho3_01_1.mspx&lt;/a&gt;&#xA;さてと・・・&#xA;重たい仕事が終わったので、これからまたこのサイトで情報発信をしていこうと思います。&#xA;今後ともよろしくお願いします！​&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>サーバー復旧しました。ご迷惑おかけいたしました。</title>
+            <link>http://localhost:1313/posts/4571-post/</link>
+            <pubDate>Sun, 23 May 2010 10:54:21 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4571-post/</guid>
+            <description>&lt;p&gt;​みなさん、長い間突然サイトが表示できなくなってしまい、申し訳ございませんでした。&#xA;ようやく復旧することができたので、これまでの分も含めて情報発信していきたいと思います。&#xA;今後ともよろしくお願いします。​&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>MVPアワード再受賞できました</title>
+            <link>http://localhost:1313/posts/4451-mvp/</link>
+            <pubDate>Sat, 03 Oct 2009 10:41:10 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4451-mvp/</guid>
+            <description>&lt;p&gt;私事で恐縮ですが、おかげさまで今年もMVPアワードをいただくことができました。&#xA;これからの１年は、SharePointの次期バージョンの話とかも絡んでくると思うので、ますます気合を入れていかないといけないですね！&#xA;ということで、今後もSharePointのMVPとして頑張って活動していきたいと思いますので、みなさん、よろしくお願いいたします。​&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>旧サイトのコンテンツを徐々に移行します</title>
+            <link>http://localhost:1313/posts/4421-post/</link>
+            <pubDate>Tue, 01 Sep 2009 10:38:09 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4421-post/</guid>
+            <description>&lt;p&gt;旧サイトのコンテンツですが、そのまま前のサイトに置いておいてもいいのですが検索機能が使えないので、新サイトに順次移行しようと思っています。&#xA;旧サイトには約100件の投稿があるのですが、使えそうなものだけを選んで新サイトのリファレンスに移します。&#xA;ただし、数が多いので気が向いたときにゆっくり移行していくつもりです。&#xA;旧サイトは、コンテンツ移行後もこれまでにいただいた貴重なコメントと共に、今後も残しておきたいと思います。​&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>コメント登録を受け付けるようにしました</title>
+            <link>http://localhost:1313/posts/4401-post/</link>
+            <pubDate>Mon, 31 Aug 2009 10:37:38 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4401-post/</guid>
+            <description>&lt;p&gt;まだコメントスパム対策は完成していないのですが、貴重なご意見をいただく機会が全くないのももったいないので、思い切ってコメント登録を受け付けるようにしました。&#xA;みなさま、色々とご意見ください。&#xA;よろしくお願いします。​&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>ブログへのコメント登録はしばらくお待ちを</title>
+            <link>http://localhost:1313/posts/4381-post/</link>
+            <pubDate>Thu, 30 Jul 2009 10:35:21 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4381-post/</guid>
+            <description>&lt;p&gt;現在、ここのブログに対してコメントを登録することができなくなっています。&#xA;インターネットに公開して、しかも匿名でコメントを受け付けるようにしたいと思っているので、コメントスパム対策機能をイベントレシーバを使って実装しようとしています。&#xA;しかしこれがうまくいっていなくて、匿名ユーザーがコメントを登録しようとコメントを送信ボタンをクリックすると、なぜかメモリ不足エラーが出てしまいます。&#xA;認証済みユーザーがコメントを送信する分にはうまく動くんですけど。&#xA;ということで、匿名でのコメント受け付けは現在停止しています。&#xA;エラーの原因は現在調査中です。&#xA;直ったら解決策とともにお知らせしますので、今しばらくお待ちください。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>早速問題発見</title>
+            <link>http://localhost:1313/posts/4351-post/</link>
+            <pubDate>Fri, 24 Jul 2009 10:33:52 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4351-post/</guid>
+            <description>&lt;p&gt;昨日リニューアルオープンしましたが、早速問題を発見しました。&#xA;画面右上の検索ボックスから検索した場合、エラーになってしまいうまくいきません。&lt;/p&gt;&#xA;&lt;p&gt;検索の範囲（「すべてのサイト」とかを選ぶ部分）が悪さをしているようで、URLのクエリ文字列から「s=xxx」の部分を取り除くとうまく動きます。&lt;/p&gt;&#xA;&lt;p&gt;これが匿名ユーザーの場合と、認証済みユーザーとの場合でまた挙動が違うようです。&lt;/p&gt;&#xA;&lt;p&gt;これから調査に入ります。&lt;/p&gt;&#xA;</description>
+        </item><item>
+            <title>リニューアルオープンしました</title>
+            <link>http://localhost:1313/posts/4341-post/</link>
+            <pubDate>Thu, 23 Jul 2009 10:30:24 +0900</pubDate>
+            <guid>http://localhost:1313/posts/4341-post/</guid>
+            <description>&lt;p&gt;みなさん、大変お待たせいたしました。&#xA;ようやくサイトのWSS化が完了しました！&#xA;All SharePoint テクノロジーのWebサイトの完成です。&lt;/p&gt;&#xA;&lt;p&gt;これにより使いやすくなるのか、使いにくくなるのか、なんとも言えませんが、みなさんにご活用いただければと思います。&lt;/p&gt;&#xA;&lt;p&gt;サイトのトップページに、コンテンツの説明など書いてありますので、ご一読ください。&#xA;それから一つお詫びですが、なるべく一ヵ所に情報を集めたほうが、情報を探すのに便利なので、これまで運営していたフォーラムを凍結することにしました。&#xA;今後、SharePointのことで質問がある場合には、&lt;a class=&#34;link&#34; href=&#34;http://social.technet.microsoft.com/Forums/ja-JP/category/sharepoint&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xD;&#xA;    &gt;Microsoftのフォーラム&lt;/a&gt;をご利用ください。&#xA;ご不便をおかけし申し訳ございませんが、ご了承ください。&lt;/p&gt;&#xA;&lt;p&gt;今後、このブログではSharePointに関するネタがあれば些細なことでも書き込みをします。&#xA;技術情報だけがほしいという方は、このブログではなくリファレンスの方のRSSを登録してください。&lt;/p&gt;&#xA;&lt;p&gt;ということで、今後は精力的に更新していきますので、今後ともなにとぞよろしくお願いいたします！&lt;/p&gt;&#xA;</description>
+        </item></channel>
 </rss>

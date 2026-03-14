@@ -27,7 +27,7 @@ summaryLength = 20
   favicon = "/favicon.svg"
 
   [params.footer]
-    since = 2025
+    since = 2006
     customText = "SharePoint Developer"
 
   [params.dateFormat]
@@ -35,7 +35,7 @@ summaryLength = 20
     lastUpdated = "2006年1月2日 15:04"
 
   [params.sidebar]
-    subtitle = "SPFx, Office/TeamsアドインなどM365開発情報を発信"
+    subtitle = "SPFx, Office/TeamsアドインなどM365開発情報を発信しています。"
     position = "right"  # "left" または "right"
     avatar = "img/avatar.png"
 
@@ -64,6 +64,9 @@ summaryLength = 20
     enabled = false
 
   [[params.widgets.homepage]]
+    type = "adsense-sidebar"
+
+  [[params.widgets.homepage]]
     type = "search"
 
   [[params.widgets.homepage]]
@@ -79,9 +82,6 @@ summaryLength = 20
 
   [[params.widgets.homepage]]
     type = "useful-links"
-
-  [[params.widgets.homepage]]
-    type = "adsense-sidebar"
 
   [[params.widgets.page]]
     type = "toc"
@@ -109,8 +109,8 @@ summaryLength = 20
   [params.adsense]
     enabled       = true
     clientId      = "ca-pub-0222647894387929"  # ← Publisher ID に変更
-    listAdSlot    = "XXXXXXXXXX"                # ← 記事一覧用スロット ID に変更
-    sidebarAdSlot = "XXXXXXXXXX"               # ← サイドバー用スロット ID に変更
+    listAdSlot    = "2404781683"                # ← 記事一覧用スロット ID に変更
+    sidebarAdSlot = "9263166638"               # ← サイドバー用スロット ID に変更
 
 
 [markup]

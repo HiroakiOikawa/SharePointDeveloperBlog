@@ -1,7 +1,7 @@
 ---
 title: "Azure Functions (Node.js) で Node バージョンを固定して VSCode でデバッグする方法"
 date: 2026-03-22T10:00:00+09:00
-draft: true
+draft: false
 description: "複数のプロジェクトで Node のバージョンが異なる状況において、VSCode を使ってデバッグをする方法をまとめました。"
 slug: "functions-nodeversion-debug"
 tags:

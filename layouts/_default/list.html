@@ -33,10 +33,10 @@
                     </div>
                     {{ end }}
                     <div class="article-details">
-                        {{ with $page.Params.categories }}
+                        {{ with ($page.GetTerms "categories") }}
                         <div class="article-category">
                             {{ range . }}
-                            <a href="{{ (printf "/categories/%s" . | urlize) | relURL }}">{{ . }}</a>
+                            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
                             {{ end }}
                         </div>
                         {{ end }}

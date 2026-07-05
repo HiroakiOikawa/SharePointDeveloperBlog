@@ -1,6 +1,9 @@
 ---
 title: "GitHub Spec Kitによる業務システム開発実践記録（第1回: 環境構築とConstitution作成）"
 date: 2026-07-05
+draft: false
+description: "GitHub Spec Kitを使って業務システムを開発する実践記録の第一弾として、環境構築手順とConstitution作成の流れをまとめました。"
+slug: "github-speckit-dev-01"
 tags:
   - GitHub Copilot
   - Spec Kit
@@ -9,7 +12,9 @@ tags:
   - Constitution
   - React
   - Azure Functions
-draft: false
+categories: ["AI駆動開発"]
+showToc: true
+tocopen: true
 ---
 
 # GitHub Spec Kitによる業務システム開発実践記録（第1回: 環境構築とConstitution作成）

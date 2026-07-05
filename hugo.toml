@@ -43,14 +43,14 @@ summaryLength = 20
   [[menu.social]]
     identifier = "github"
     name = "GitHub"
-    url = "https://github.com/HiroakiOikawa"  # ← GitHub ID に変更
+    url = "https://github.com/HiroakiOikawa"
     [menu.social.params]
       icon = "brand-github"
 
   [[menu.social]]
     identifier = "twitter"
     name = "Twitter/X"
-    url = "https://twitter.com/HiroakiOikawa"  # ← Twitter/X ID に変更
+    url = "https://twitter.com/HiroakiOikawa"
     [menu.social.params]
       icon = "brand-twitter"
 

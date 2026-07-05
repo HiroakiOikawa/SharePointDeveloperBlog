@@ -1,4 +1,51 @@
 {{ define "main" }}
+    {{ if eq .Kind "taxonomy" }}
+    <header>
+        <h3 class="section-title">{{ T "list.section" }}</h3>
+        <div class="section-card">
+            <div class="section-details">
+                <h3 class="section-count">{{ len .Data.Terms }}件</h3>
+                <h1 class="section-term">{{ .Title }}</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="article-list--compact">
+        {{ range .Data.Terms.ByCount }}
+        <article>
+            <a href="{{ .Page.RelPermalink }}">
+                <div class="article-details">
+                    <h2 class="article-title">{{ .Page.LinkTitle }}</h2>
+                    <footer class="article-meta">
+                        <span class="article-description">{{ printf "%d件の記事" .Count }}</span>
+                    </footer>
+                </div>
+            </a>
+        </article>
+        {{ end }}
+    </section>
+    {{ else if eq .Kind "term" }}
+    <header>
+        <h3 class="section-title">{{ .Data.Plural | title }}</h3>
+        <div class="section-card">
+            <div class="section-details">
+                <h3 class="section-count">{{ printf "%d件の記事" (len .Pages) }}</h3>
+                <h1 class="section-term">{{ .Title }}</h1>
+            </div>
+        </div>
+    </header>
+
+    {{ $paginator := partial "helper/paginator.html" . }}
+    {{ with $paginator }}
+    <section class="article-list--compact">
+        {{ range .Pages }}
+            {{ partial "article-list/compact" . }}
+        {{ end }}
+    </section>
+    {{ end }}
+
+    {{ partial "pagination.html" . }}
+    {{ else }}
     {{ $paginator := .Paginator }}
 
     <div class="article-list--tile">
@@ -56,4 +103,5 @@
     </div>
 
     {{ partial "pagination.html" . }}
+    {{ end }}
 {{ end }}

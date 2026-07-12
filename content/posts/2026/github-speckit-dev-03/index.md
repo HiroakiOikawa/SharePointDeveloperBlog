@@ -21,7 +21,7 @@ tocopen: true
 
 ## はじめに
 
-前回は GitHub Copilot Spec Kit を利用して、最初の Spec を作成しました。
+前回は GitHub Spec Kit を利用して、最初の Spec を作成しました。
 
 前回の記事はこちらです。<br/>
 [GitHub Spec Kitによる業務システム開発実践記録（第2回: 最初のSpecを作成してみる）](https://sharepoint.orivers.jp/posts/github-speckit-dev-02/)

@@ -1,5 +1,5 @@
 ---
-title: "GitHub Copilot Spec Kitによる業務システム開発実践記録（第3回: Plan・Tasks・Analyzeで実装準備を整える）"
+title: "GitHub Spec Kitによる業務システム開発実践記録（第3回: Plan・Tasks・Analyzeで実装準備を整える）"
 date: 2026-07-11
 draft: false
 description: "GitHub Spec Kitを使って業務システムを開発する実践記録の第三弾として、実装に入る前段階となるPlan、Tasks、Analyzeの実施についてまとめました。"
@@ -17,7 +17,7 @@ showToc: true
 tocopen: true
 ---
 
-# GitHub Copilot Spec Kitによる業務システム開発実践記録（第3回: Plan・Tasks・Analyzeで実装準備を整える）
+# GitHub Spec Kitによる業務システム開発実践記録（第3回: Plan・Tasks・Analyzeで実装準備を整える）
 
 ## はじめに
 

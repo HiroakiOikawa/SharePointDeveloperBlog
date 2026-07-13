@@ -1,6 +1,6 @@
 ---
 title: "GitHub Spec Kitによる業務システム開発実践記録（第3回: Plan・Tasks・Analyzeで実装準備を整える）"
-date: 2026-07-11
+date: 2026-07-13
 draft: false
 description: "GitHub Spec Kitを使って業務システムを開発する実践記録の第三弾として、実装に入る前段階となるPlan、Tasks、Analyzeの実施についてまとめました。"
 slug: "github-speckit-dev-03"

@@ -1,6 +1,6 @@
 ﻿---
 title: "GitHub Spec Kitによる業務システム開発実践記録（第4回: 実装とテスト）"
-date: 2026-07-19
+date: 2026-07-18
 draft: false
 description: "GitHub Spec Kitを使って業務システムを開発する実践記録の第四弾として、質問定義ファイル公開管理機能の実装とテストの流れをまとめました。"
 slug: "github-speckit-dev-04"
@@ -33,15 +33,15 @@ tocopen: true
 
 ## 実際の作業の流れ（Wave 進行の全体像）
 
-前回、1 機能を 6 つの Wave に分割して実装を進めることにしたため、以下の流れで実装と試験を進めていきました。
+前回、1 機能を 6 つの Wave に分割して実装を進めることにしたため、以下の流れで作業を進めていきました。
 
-- Wave 1 実装
-- Wave 2 実装（途中でやり直しあり） → Gate チェック
-- Wave 3 実装 → Gate チェック
-- Wave 4 実装 → Gate チェック
-- Wave 5 実装 → Gate チェック
-- Wave 6 実装 → Gate チェック
-- 最後に Converge
+- Wave 1 実装 → Gate チェック → Commit
+- Wave 2 実装（途中でやり直しあり） → Gate チェック → Commit
+- Wave 3 実装 → Gate チェック → Commit
+- Wave 4 実装 → Gate チェック → Commit
+- Wave 5 実装 → Gate チェック → Commit
+- Wave 6 実装 → Gate チェック → Commit
+- 最後に Converge → Commit → Pull Request
 
 ## Wave 1：実装とレビュー方法の確立
 

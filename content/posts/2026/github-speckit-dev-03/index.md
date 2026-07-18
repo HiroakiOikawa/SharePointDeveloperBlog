@@ -8,8 +8,11 @@ tags:
   - GitHub Copilot
   - Spec Kit
   - AI 駆動開発
-  - 要件定義
-  - spec.md
+  - Plan
+  - Tasks
+  - Analyze
+  - plan.md
+  - tasks.md
   - React
   - Azure Functions
 categories: ["AI駆動開発"]

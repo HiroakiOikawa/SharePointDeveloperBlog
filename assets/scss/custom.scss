@@ -201,3 +201,39 @@
     }
   }
 }
+
+// ============================================================
+// 記事本文内画像の視認性向上
+// ============================================================
+
+.article-content {
+  img {
+    display: block;
+    margin: 20px auto;
+    padding: 12px;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: var(--card-background);
+    background: color-mix(in srgb, var(--card-background) 90%, var(--card-text-color-main) 10%);
+    border-top: 0.5px solid var(--card-separator-color);
+    border-bottom: 0.5px solid var(--card-separator-color);
+    border-radius: 8px;
+  }
+
+  figure.gallery-image {
+    margin: 20px 0;
+    padding: 10px 0;
+    background: var(--card-background);
+    background: color-mix(in srgb, var(--card-background) 90%, var(--card-text-color-main) 10%);
+    border-top: 0.5px solid var(--card-separator-color);
+    border-bottom: 0.5px solid var(--card-separator-color);
+
+    img {
+      margin: 0 auto;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+    }
+  }
+}

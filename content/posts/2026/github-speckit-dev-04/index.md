@@ -23,6 +23,9 @@ tocopen: true
 
 前回の記事では、質問定義ファイル公開管理機能について、Plan・Tasks・Analyze までを進め、実装に入る準備が整ったところまでをまとめました。
 
+前回の記事はこちらです。<br/>
+[GitHub Spec Kitによる業務システム開発実践記録（第3回: Plan・Tasks・Analyzeで実装準備を整える）](https://sharepoint.orivers.jp/posts/github-speckit-dev-03/)
+
 今回はその続きをとして、Implement から Converge までの実際の作業を、チャットログと作業ログをもとに時系列で振り返っていきます。
 
 今回の実装では、あらかじめ機能を6つの Wave に分解し、その単位で開発を進めました。<br/>

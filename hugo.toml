@@ -5,6 +5,7 @@ theme = "hugo-theme-stack"
 defaultContentLanguage = "ja"
 enableRobotsTXT = true
 summaryLength = 20
+buildFuture = true
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
